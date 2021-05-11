@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   ScrollView,
@@ -8,22 +8,18 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native'
-import { Brand } from '@/Components'
 import { useTheme } from '@/Theme'
 import FetchOne from '@/Store/User/FetchOne'
 import { useTranslation } from 'react-i18next'
 import ChangeTheme from '@/Store/Theme/ChangeTheme'
+import Video from 'react-native-video';
 
-const IndexExampleContainer = () => {
+
+const IndexWalkContainer = () => {
   const { t } = useTranslation()
   const { Common, Fonts, Gutters, Layout } = useTheme()
   const dispatch = useDispatch()
-
-  const user = useSelector(state => state.user.item)
-  const fetchOneUserLoading = useSelector(state => state.user.fetchOne.loading)
-  const fetchOneUserError = useSelector(state => state.user.fetchOne.error)
-
-  const [userId, setUserId] = useState('1')
+  const audioRef = useRef()
 
   const fetch = id => {
     setUserId(id)
@@ -34,11 +30,17 @@ const IndexExampleContainer = () => {
     dispatch(ChangeTheme.action({ theme, darkMode }))
   }
 
+  audioRef.paused = false
+
   return (
     <View style={[Layout.fill, Layout.colCenter, Gutters.smallHPadding]}>
-      <Text style={Fonts.textRegular}>Hallo Riminis</Text>
+      <Text style={Fonts.textRegular}>Eh</Text>
+      <Video
+        ref={audioRef}
+        source={{uri: "https://angry-fermi-c85f46.netlify.app/medias/de01.mp3"}}   // Can be a URL or a local file.
+       />
     </View>
   )
 }
 
-export default IndexExampleContainer
+export default IndexWalkContainer
