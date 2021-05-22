@@ -15,11 +15,12 @@ import { configureStore } from '@reduxjs/toolkit'
 import startup from './Startup'
 import user from './User'
 import theme from './Theme'
+import menu from './TheWalksIndex'
 
 const reducers = combineReducers({
   startup,
-  user,
   theme,
+  menu,
 })
 
 const persistConfig = {

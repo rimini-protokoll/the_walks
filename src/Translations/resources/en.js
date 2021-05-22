@@ -1,5 +1,5 @@
 export default {
-  welcome: 'Welcome to React Native the_walks by TheCodingMachine',
+  welcome: 'Welcome to a performance series developed by Rimini Protokoll',
   actions: {
     continue: 'Continue',
   },
