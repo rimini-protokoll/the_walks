@@ -1,50 +1,35 @@
-import React from 'react'
-import { Platform, Text, Pressable } from 'react-native'
+import React, {useEffect} from 'react'
+import { Platform, View, Text, Pressable, LinearGradient } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
-import { createStackNavigator } from '@react-navigation/stack'
-import { MenuContainer } from '@/Containers'
-import { IndexWalkContainer } from '@/Containers'
+import { createDrawerNavigator } from '@react-navigation/drawer'
 import { useTheme } from '@/Theme'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { navigate } from './Root'
+import WalksNavigator from '@/Navigators/Walks'
+import LanguagesContainer from '@/Containers/Language'
+import AboutContainer from '@/Containers/About'
+import NewsContainer from '@/Containers/News'
+import { useTranslation } from 'react-i18next'
+import { navigateAndSimpleReset } from '@/Navigators/Root'
 
-const Stack = createStackNavigator()
+
+const Drawer = createDrawerNavigator()
 
 // @refresh reset
 const MainNavigator = () => {
-	const { Fonts, Colors } = useTheme()
-  const walks = useSelector(state => {
-    //console.log('Navigator Main.js', Platform.OS, state)
-  })
+  const { Fonts, Colors } = useTheme()
   const dispatch = useDispatch()
-  
-  const headerRight = () => {
-    return (
-      <Pressable onPress={ chooseLanguage }>
-        <Icon name="language-outline" style={{ paddingRight:10 }} size={35} color={Colors.text} />
-      </Pressable>
-    )
-  }
-  const chooseLanguage = () => {
-    console.log('chooseLanguage')
-    navigate('Language')
-  }
+  const { t } = useTranslation()
+  const selectedLanguage = useSelector(state => state.language.selectedLanguage)
+
   return (
-    <Stack.Navigator>
-      <Stack.Screen 
-      	name='The Walks' 
-      	component={ MenuContainer } 
-      	options={{
-      		headerTitle : () => <Text style={Fonts.textRegular}>The Walks</Text>,
-      		headerRight
-        }}/>
-      <Stack.Screen
-      	name='Vor dem Theater'
-      	component={ IndexWalkContainer }
-      />
-    </Stack.Navigator>
+    <Drawer.Navigator drawerPosition="right">
+      {selectedLanguage ? <Drawer.Screen name="The Walks" component={WalksNavigator} /> : null}
+      <Drawer.Screen name={t('language')} component={LanguagesContainer} />
+      <Drawer.Screen name={t('about')} component={AboutContainer} />
+      <Drawer.Screen name={t('news')} component={NewsContainer} />
+    </Drawer.Navigator>
   )
 }
 
 export default MainNavigator
-

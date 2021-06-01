@@ -15,18 +15,22 @@ import { configureStore } from '@reduxjs/toolkit'
 import startup from './Startup'
 import user from './User'
 import theme from './Theme'
-import menu from './TheWalksIndex'
+import language from './Language'
+import walks from './Walks'
+import player from './Player'
 
 const reducers = combineReducers({
   startup,
   theme,
-  menu,
+  language,
+  walks,
+  player
 })
 
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['theme'],
+  whitelist: ['language'],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

@@ -23,17 +23,17 @@ export default function ({ FontSize, Colors }) {
       color: Colors.text,
     },
     titleSmall: {
-      fontSize: FontSize.small * 2,
+      fontSize: FontSize.small * 1.5,
       fontWeight: 'bold',
       color: Colors.text,
     },
     titleRegular: {
-      fontSize: FontSize.regular * 2,
+      fontSize: FontSize.regular * 1.5,
       fontWeight: 'bold',
       color: Colors.text,
     },
     titleLarge: {
-      fontSize: FontSize.large * 2,
+      fontSize: FontSize.large * 1.5,
       fontWeight: 'bold',
       color: Colors.text,
     },

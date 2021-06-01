@@ -5,18 +5,25 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native'
+import { useDispatch } from 'react-redux'
 import { useTheme } from '@/Theme'
+import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import FitImage from 'react-native-fit-image'
 
 
-const Tile = ({ navigation, title, iconUri, style }) => {
+const Tile = ({ navigation, identifier, title, iconUri, style }) => {
   const { Fonts } = useTheme()
+  const dispatch = useDispatch()
+  const selectWalk = () => {
+    dispatch(ChangeWalk.action(identifier))
+    navigation.navigate(title)
+  }
   return (
     <TouchableOpacity 
       style={[ style, {
         width: '50%'
       }]}
-      onPress={() => navigation.navigate(title) }>
+      onPress={selectWalk}>
       <FitImage 
         originalWidth={100}
         originalHeight={100}

@@ -5,10 +5,12 @@ import {
   TouchableOpacity,
   Image
 } from 'react-native'
+import { useTranslation } from 'react-i18next'
 import { useTheme } from '@/Theme'
 import Tile from './TilePartner'
 
 const PartnersList = () => {
+  const { t } = useTranslation()
   const { Layout, Fonts } = useTheme()
   const partners = [
     {
@@ -33,7 +35,7 @@ const PartnersList = () => {
       flexWrap: 'wrap',
       flexDirection: 'row'
       }}>
-      <Text style={[ Fonts.titleRegular, { width: "100%" }]}>Partners</Text>
+      <Text style={[ Fonts.titleRegular, { width: "100%" }]}>{t('partners')}</Text>
       { partners.map(({title, iconUri}, i) => (<Tile key={i} title={title} iconUri={iconUri} />)) }
     </View>
   )

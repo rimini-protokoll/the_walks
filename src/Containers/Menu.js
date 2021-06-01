@@ -7,35 +7,55 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  Image
+  Image,
+  Button,
 } from 'react-native'
 import { useTheme } from '@/Theme'
-import FetchOne from '@/Store/User/FetchOne'
 import { useTranslation } from 'react-i18next'
-import ChangeTheme from '@/Store/Theme/ChangeTheme'
 import WalksList from '@/Components/WalksList'
-import PartnersList from '@/Components/PartnersList'
+import PurchaseWalks from '@/Store/Walks/PurchaseWalks'
 
-
-const Menu = ({ navigation }) => {
+const Menu = ({ navigation, route }) => {
   const { t } = useTranslation()
   const { Common, Fonts, Gutters, Layout } = useTheme()
   const dispatch = useDispatch()
 
-  const fetch = id => {
-    setUserId(id)
-    dispatch(FetchOne.action(id))
+  const walks = useSelector(state => {
+    const walks = state.walks.fetchWalks.walks
+    if (walks) {
+      return walks.filter(
+        walk => walk.listed && (!walk.paid || state.walks.purchased),
+      )
+    } else {
+      return []
+    }
+  })
+  const walksPurchased = useSelector(state => state.walks.purchased)
+
+  const purchase = () => {
+    dispatch(PurchaseWalks.action())
   }
 
-  const changeTheme = ({ theme, darkMode }) => {
-    dispatch(ChangeTheme.action({ theme, darkMode }))
+  const voucherCodeChange = ({nativeEvent}) => {
+    if (nativeEvent.text == '1234') {
+      dispatch(PurchaseWalks.action())
+    }
   }
 
   return (
-    <ScrollView style={ Gutters.smallHPadding }>
-      <Text style={[ Fonts.textRegular, Gutters.smallVPadding ]}>"The Walks" is a performance series developed by Rimini Protokoll for specific kinds of places and bodies in motion. An app will function like a stage for the project.</Text>
-      <WalksList navigation={ navigation }/>
-      <PartnersList/>
+    <ScrollView style={[Gutters.smallHPadding, Gutters.smallVPadding]}>
+      <WalksList navigation={navigation} walks={walks} />
+      {walksPurchased ? null : (
+        <View>
+          <TouchableOpacity onPress={purchase} style={Common.button.outline}>
+            <Text>{t('purchase')}</Text>
+          </TouchableOpacity>
+          <TextInput
+            onChange={voucherCodeChange}
+            style={Common.textInput}
+            placeholder={t('voucher')} />
+        </View>
+      )}
     </ScrollView>
   )
 }

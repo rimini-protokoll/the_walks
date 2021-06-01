@@ -8,70 +8,9 @@ import {
 import { useTheme } from '@/Theme'
 import Tile from './Tile'
 
-const WalksList = ({ navigation }) => {
+const WalksList = ({ navigation, walks }) => {
   const { Layout } = useTheme()
-  const walks = [
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-    {
-      title: 'Vor dem Theater',
-      iconUri: 'https://angry-fermi-c85f46.netlify.app/icons/VordemTheater.jpg'
-    },
-  ]
+  
   return (
     <View style={{
       flex: 1,
@@ -81,13 +20,18 @@ const WalksList = ({ navigation }) => {
       flexWrap: 'wrap',
       flexDirection: 'row'
       }}>
-      { walks.map(({title, iconUri}, i) => (
+      { walks.map(({id, title, iconUri}, i) => (
         <Tile   
           style={{ 
             paddingRight: (i % 2) == 0 ? 5 : 0,
             paddingLeft: (i % 2) == 1 ? 5 : 0,
           }} 
-          key={i} navigation={navigation} title={title} iconUri={iconUri} />
+          key={i}
+          identifier={id}
+          navigation={navigation}
+          title={title}
+          iconUri={iconUri}
+          />
       ))}
     </View>
   )

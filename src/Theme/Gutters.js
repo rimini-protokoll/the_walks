@@ -43,6 +43,10 @@ export default function ({ MetricsSizes }) {
           marginHorizontal: value,
         },
         /* Paddings */
+        [`${key}Padding`]: {
+          paddingVertical: value,
+          paddingHorizontal: value,
+        },
         [`${key}BPadding`]: {
           paddingBottom: value,
         },

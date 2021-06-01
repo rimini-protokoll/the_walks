@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { IndexStartupContainer } from '@/Containers'
 import LanguagesContainer  from '@/Containers/Language'
@@ -15,26 +15,44 @@ import {
 import { useTheme } from '@/Theme'
 import VideoControls from '@/Components/VideoControls'
 import ChangeTheme from '@/Store/Theme/ChangeTheme'
+import PlayerOnLoad from '@/Store/Player/OnLoad'
+import PlayerOnProgress from '@/Store/Player/OnProgress'
+import SeekPlayer from '@/Store/Player/Seek'
 import Icon from 'react-native-vector-icons/Ionicons'
+import { navigateAndSimpleReset } from '@/Navigators/Root'
+import Video from 'react-native-video'
+import { useTranslation } from 'react-i18next'
+
 
 const Stack = createStackNavigator()
 
 let MainNavigator
 
 // @refresh reset
-const ApplicationNavigator = () => {
+const ApplicationNavigator = ({ store }) => {
   const { Fonts, Layout, darkMode, NavigationTheme, Colors } = useTheme()
   const { colors } = NavigationTheme
   const [isApplicationLoaded, setIsApplicationLoaded] = useState(false)
   const applicationIsLoading = useSelector(state => state.startup.loading)
   const dispatch = useDispatch()
-  const SafeViewAndroid = { 
-    //paddingBottom: Platform.OS === "android" ? 30 : 0
-  }
+  const audioRef = useRef()
+  const { t } = useTranslation()
 
-  dispatch(ChangeTheme.action({ theme:"default", darkMode: false }))
+  const activeWalk = useSelector((state) => state.walks.activeWalk )
+
+  const playerUri = useSelector(state => {
+    if (activeWalk) {
+      return state.walks.fetchWalks.walks.filter(walk => {
+        return walk.id == activeWalk
+      })[0].srcUri
+    }
+  })
+
+  const playerSeek = useSelector((state) => state.player.seek )
+  const playerPaused = useSelector(state => state.player.paused)
 
   useEffect(() => {
+    //dispatch(ChangeTheme.action({ theme: 'default', darkMode: false }))
     if (MainNavigator == null && !applicationIsLoading) {
       MainNavigator = require('@/Navigators/Main').default
       setIsApplicationLoaded(true)
@@ -50,43 +68,57 @@ const ApplicationNavigator = () => {
     [],
   )
 
+  useEffect(() => {
+    if(isApplicationLoaded && MainNavigator != null) {
+      navigateAndSimpleReset('Main')
+    }
+  }, [isApplicationLoaded])
+
+  useEffect(() => {
+    if (playerSeek !== null) {
+      audioRef.current.seek(playerSeek)
+      dispatch(SeekPlayer.action(null))
+    }
+  }, [playerSeek])
+
+  const playerOnLoad = payload => dispatch(PlayerOnLoad.action(payload))
+  const playerOnProgress = payload => dispatch(PlayerOnProgress.action(payload))
+
   return (
-    <SafeAreaView style={[Layout.fill, SafeViewAndroid, { backgroundColor: colors.card }]}>
+    <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator
-          screenOptions= {({ route, navigation }) => {
-            if(route.name == 'Startup'){
-              return { headerShown: false }
-            }else if(route.name == 'The Walks'){
-              return { headerShown: false }
-            }else if( route.name == 'Language'){
-              return { headerShown: true }
-            }
-          }}>
-          <Stack.Screen name="Startup" component={IndexStartupContainer} />
+          screenOptions= {{ headerShown: false }}>
+          <Stack.Screen name='Startup' component={IndexStartupContainer} />
           {isApplicationLoaded && MainNavigator != null && (
             <Stack.Screen
-              name="The Walks"
+              name='Main'
               component={MainNavigator}
               options={{
                 animationEnabled: false,
               }}
             />
           )}
-          {isApplicationLoaded && (
-            <Stack.Screen
-              name='Language'
-              component={ LanguagesContainer }
-              options={{
-                headerTitle : () => <Icon name="language-outline" style={{ paddingRight:10 }} size={35} color={Colors.text} />,
-            }}/>
-          )}
         </Stack.Navigator>
       </NavigationContainer>
-      <View style={{ height: 40 }}>
-        <VideoControls />
-      </View>
+      { activeWalk ? (
+        <View>
+          <VideoControls/>
+          <Video
+            ref={audioRef}
+            paused={playerPaused}
+            source={{uri: playerUri}}
+            onLoad={playerOnLoad}
+            onProgress={playerOnProgress}
+            playInBackground={true}
+            playWhenInactive={true}
+            ignoreSilentSwitch="ignore"
+            audioOnly={true}
+          />
+        </View>
+        ) : null
+      }
     </SafeAreaView>
   )
 }
