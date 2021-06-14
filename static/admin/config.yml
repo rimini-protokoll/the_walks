@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: rimini-protokoll/the_walks
   branch: content
 
 site_url: https://the-walks.netlify.app/admin/
@@ -7,6 +8,18 @@ media_folder: static/icons
 
 
 collections:
+  - name: news-index
+    label: News Index
+    file: static/news/index.md
+    extension: md
+    fields:
+      - label: News
+        name: news
+        widget: relation
+        collection: news
+        searchFields: [title, date, body]
+        valueField: slug
+        multiple: true
   - name: news
     label: News
     folder: static/news
