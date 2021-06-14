@@ -1,6 +1,6 @@
 ---
 title: News 1
-excerpt: Bla bla bli blub
+excerpt: Bli bla bli blub
 date: 2021-06-14T18:48:08.563Z
 ---
 # H1
