@@ -9,16 +9,17 @@ media_folder: static/icons
 
 collections:
   - name: news-index
-    label: News Index
-    file: static/news/index.md
-    extension: md
+    label: "News Index"
+    folder: static/
+    file: static/news_index.md
     fields:
       - label: News
         name: news
         widget: relation
         collection: news
-        searchFields: [title, date, body]
-        valueField: slug
+        search_fields: [title, date, body]
+        value_field: id
+        display_fields: title
         multiple: true
   - name: news
     label: News
@@ -26,6 +27,7 @@ collections:
     create: true
     media_folder: static/news/media
     fields:
+      - {label: "Id", name: "id", widget: "string"}
       - label: "Title"
         name: "title"
         widget: "string"
