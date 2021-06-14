@@ -1,0 +1,94 @@
+---
+id: noong4Th
+medias:
+- id: Eer0quuj
+  paid: false
+  listed: true
+  title: Vor dem Theater
+  excerpt: Das Bühnenhaus ist vor dem Hebbel am Ufer.
+  description: My apologies, I noticed that you mistyped a similar place name. The
+    correct name is "Vor dem Theater".
+  duration: 756.48
+  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01.mp3
+  iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle109.jpg
+  hasCountdown: false
+  userPrompt:
+  - title: Bist du am Ziel?
+    triggerTime: 600
+    srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+    actions:
+    - title: Angekommen!
+      action: continue
+  - title: Zeig den Ort an den du geführt wurdest.
+    triggerTime: 756
+    srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+    actions:
+    - title: Mach ein Foto
+      action: picture
+      postAction: map
+    - title: Nein
+      action: map
+  popups:
+  - type: ''
+    title: ''
+    triggerTime: ''
+    uri: ''
+  userMedia: []
+- id: Apheek3e
+  paid: true
+  listed: true
+  title: An einer Straße
+  excerpt: Das Bühnenhaus ist vor dem Hebbel am Ufer.
+  description: My apologies, I noticed that you mistyped a similar place name. The
+    correct name is "Vor dem Theater".
+  duration: 1178.52
+  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de02.mp3
+  iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle111.jpg
+  hasCountdown: false
+  userPrompt:
+  - title: Finden einen Mülleimer und mache ein Foto.
+    triggerTime: 20
+    srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+    actions:
+    - title: Mach ein Foto
+      action: picture
+      postAction: map
+    - title: kein Foto
+      action: continue
+  popups:
+  - type: ''
+    title: ''
+    triggerTime: ''
+    uri: ''
+  userMedia: []
+- id: Udie9hoh
+  paid: true
+  listed: true
+  title: Gehen mit Steff
+  excerpt: Das Bühnenhaus ist vor dem Hebbel am Ufer.
+  description: My apologies, I noticed that you mistyped a similar place name. The
+    correct name is "Vor dem Theater".
+  duration: 940.632
+  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de03.mp3
+  iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle110.jpg
+  hasCountdown: false
+  userPrompt:
+  - title: Finden einen Mülleimer und mache ein Foto.
+    triggerTime: 20
+    srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+    actions:
+    - title: Mach ein Foto
+      action: picture
+      postAction: continue
+    - title: kein Foto
+      action: continue
+  popups: []
+  userMedia: []
+---
+"The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren.
+Um einen Audio-Walk selber zu machen, reichen schon ca. 20 Minuten. Gehe los, wann immer du willst. Du kannst selber entscheiden, wie viele der Walks du in welcher Reihenfolge machen möchtest.
+Die Geschichten und Klangwelten der Kurzhörspiele lassen sich weltweit erleben. So verbindet "The Walks" Menschen rund um den Globus in einer lokalen Erfahrung durch eine grundlegende menschliche Handlung: Das Gehen.
+
+Mit der Corona-Pandemie erhielt das Gehen im öffentlichen Raum eine neue Bedeutung. Eine uraltes und alltägliches Ritual wurde zu einem zentralen Bestandteil der neuen Normalität: Menschen treffen sich, spazieren, schreiten durch Nachbarschaften, spielen in Landschaften und nehmen mit jedem Gang ihre Umgebung neu wahr.
+
+"The Walks" versteht das Gehen als theatrales Szenario: Ein audio-geführter Spaziergang in Parks, ein inszenierter Spaziergang in Supermärkten oder getaktete Interaktionen an Flussufern. In jeder Stadt werden mit Stimmen, Geräuschen und Musik vertraute Orte Schritt für Schritt zu Schauplätzen und Landschaften zu Bühnen: durch Erzählungen, dialogische Situationen, choreografische Erkundungen oder musikalisch-rhythmische Variationen des Gehens. Der Titel jedes Walks zeigt dir an, wo oder wie er aufgeführt wird: "Walk für einen Friedhof", "Walk am Wasser" oder "Walk für eine Verkehrsinsel".
