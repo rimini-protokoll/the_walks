@@ -15,12 +15,17 @@ collections:
     fields:
       - label: News
         name: news
-        widget: relation
-        collection: news
-        search_fields: [title, date, body]
-        value_field: id
-        display_fields: title
-        multiple: true
+        widget: list
+        collapsed: false
+        add_to_top: true
+        field:
+          name: news-item
+          widget: relation
+          collection: news
+          search_fields: [title, date, body]
+          value_field: id
+          display_fields:
+            - title
   - name: news
     label: News
     folder: static/news
