@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: content
 
-site_url: https://the-walks.netlify.app
+site_url: https://the-walks.netlify.app/admin/
 media_folder: static/icons
 
 collections:
