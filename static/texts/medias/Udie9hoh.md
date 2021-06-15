@@ -3,7 +3,6 @@ id: Udie9hoh
 paid: true
 listed: true
 title: Gehen mit Steff
-excerpt: Das Bühnenhaus ist vor dem Hebbel am Ufer.
 duration: 940.632
 srcUri: https://angry-fermi-c85f46.netlify.app/medias/de03.mp3
 iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle110.jpg

@@ -3,7 +3,6 @@ id: Eer0quuj
 paid: false
 listed: true
 title: Vor dem Theater
-excerpt: Das Bühnenhaus ist vor dem Hebbel am Ufer.
 duration: 756.48
 srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01.mp3
 iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle109.jpg
@@ -25,4 +24,4 @@ userPrompt:
     action: map
 popups: []
 ---
-My apologies, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
+My *apologies*, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".

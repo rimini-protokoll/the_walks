@@ -3,7 +3,6 @@ id: Apheek3e
 paid: true
 listed: true
 title: An einer Straße
-excerpt: Das Bühnenhaus ist vor dem Hebbel am Ufer.
 duration: 1178.52
 srcUri: https://angry-fermi-c85f46.netlify.app/medias/de02.mp3
 iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle111.jpg
