@@ -1,10 +1,16 @@
+# backend:
+#   name: git-gateway
+#   branch: content
 backend:
-  name: github
-  repo: rimini-protokoll/the_walks
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
   branch: content
 
 site_url: https://the-walks.netlify.app/admin/
 media_folder: static/icons
+editor:
+  preview: false
+show_preview_links: false
 
 
 collections:
@@ -12,34 +18,40 @@ collections:
     label: "News Index"
     folder: static/
     file: static/news_index.md
+    identifier_field: news
+    summary: Published news
     fields:
-      - label: News
+      - label: Published news
         name: news
         widget: list
         collapsed: false
         add_to_top: true
+        summary: Post
         field:
-          name: news-item
+          name: post
           widget: relation
           collection: news
           search_fields: [title, date, body]
           value_field: id
-          display_fields:
-            - title
+          display_fields: ["{{title}} - {{date | date('DD.MM.YY')}}"]
   - name: news
     label: News
+    summary: "{{title}} - {{date | date('DD.MM.YY')}}"
+    sortable_fields: ['date']
     folder: static/news
     create: true
     media_folder: static/news/media
+    identifier_field: id
+    slug: id
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - label: "Title"
         name: "title"
         widget: "string"
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
       - label: "Publish Date"
         name: "date"
-        widget: "datetime"
+        widget: "date"
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
       - label: "Body"
         name: "body"
         widget: "markdown"
