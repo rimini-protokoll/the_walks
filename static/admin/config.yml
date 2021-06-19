@@ -1,19 +1,121 @@
-# backend:
-#   name: git-gateway
-#   branch: content
 backend:
-  name: proxy
-  proxy_url: http://localhost:8081/api/v1
+  name: git-gateway
   branch: content
+# backend:
+#   name: proxy
+#   proxy_url: http://localhost:8081/api/v1
+#   branch: content
 
 site_url: https://the-walks.netlify.app/admin/
-media_folder: static/icons
+media_folder: /static/medias/
 editor:
   preview: false
 show_preview_links: false
 
 
 collections:
+  - name: languages
+    label: "Languages"
+    folder: static/texts/
+    slug: languageCode
+    identifier_field: languageCode
+    media_folder: /static/medias/
+    fields:
+      - label: Id
+        name: id
+        widget: string
+      - label: Language Code
+        name: languageCode
+        widget: string
+      - label: About
+        name: body
+        widget: markdown
+      - label: Medias
+        name: medias
+        widget: list
+        collapsed: false
+        add_to_top: true
+        field:
+          name: walk
+          widget: relation
+          collection: walks
+          search_fields: [title, body]
+          value_field: id
+          display_fields: ["{{title}}"]
+  - name: walks
+    label: "Walks"
+    folder: static/texts/medias/
+    slug: id
+    identifier_field: id
+    summary: "{{title}}"
+    fields:
+      - label: Id
+        name: id
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+      - label: Paid
+        name: paid
+        widget: boolean
+      - label: Listed
+        name: listed
+        widget: boolean
+      - duration: Duration
+        name: duration
+        widget: string
+      - label: Audio File
+        name: srcUri
+        widget: file
+        media_library:
+          config:
+            multiple: false
+            media_folder: /static/medias
+      - label: Walk icon
+        name: iconUri
+        widget: image
+        media_library:
+          config:
+            multiple: false
+            media_folder: /static/icons
+      - label: User Prompts
+        name: userPrompt
+        widget: list
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Trigger Time (seconds)
+            name: triggerTime
+            widget: number
+          - label: Loop Audio File
+            name: srcUri
+            widget: file
+            media_library:
+              config:
+                multiple: false
+                media_folder: /static/medias/
+          - label: Actions
+            name: actions
+            widget: list
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Action
+                name: action
+                widget: string
+              - label: Post Action
+                name: postAction
+                widget: string
+                required: false
+
+
+        
   - name: news-index
     label: "News Index"
     folder: static/
@@ -40,7 +142,7 @@ collections:
     sortable_fields: ['date']
     folder: static/news
     create: true
-    media_folder: static/news/media
+    media_folder: /static/news/media/
     identifier_field: id
     slug: id
     fields:
