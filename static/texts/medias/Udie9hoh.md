@@ -4,12 +4,12 @@ paid: true
 listed: true
 title: Gehen mit Steff
 duration: 940.632
-srcUri: https://angry-fermi-c85f46.netlify.app/medias/de03.mp3
-iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle110.jpg
+srcUri: https://the-walks.netlify.app/medias/de03.mp3
+iconUri: https://the-walks.netlify.app/icons/Rectangle110.jpg
 userPrompt:
 - title: Finden einen Mülleimer und mache ein Foto.
   triggerTime: 20
-  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+  srcUri: https://the-walks.netlify.app/medias/de01Loop.mp3
   actions:
   - title: Mach ein Foto
     action: picture

@@ -3,8 +3,6 @@ id: Mohnae9a
 languageCode: ro
 medias:
 - Eer0quuj
-- Apheek3e
-- Udie9hoh
 ---
 
 „The Walks” este o colecție de piese scurte de radio pentru locații specifice din orașul dvs. și o invitație de a vă redescoperi împrejurimile și de a interacționa cu ele. Aproximativ 20 de minute sunt suficiente pentru a face o plimbare audio. Mergeți ori de câte ori doriți. Puteți decide singuri câte dintre plimbări doriți să faceți în ce ordine. Poveștile și peisajele sonore ale pieselor scurte de radio pot fi trăite în întreaga lume. Astfel „Plimbările” conectează oamenii din întreaga lume într-o experiență locală printr-un act uman fundamental: mersul pe jos.

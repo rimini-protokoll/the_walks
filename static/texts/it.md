@@ -3,7 +3,6 @@ id: Koo3Tei8
 languageCode: it
 medias:
 - Eer0quuj
-- Apheek3e
 - Udie9hoh
 ---
 
