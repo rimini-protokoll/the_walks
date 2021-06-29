@@ -1,10 +1,7 @@
 ---
 id: Eme5ceLi
 languageCode: es
-medias:
-- Eer0quuj
-- Apheek3e
-- Udie9hoh
+medias: []
 ---
 
 "The Walks" es una colección de obras de radio breves para lugares específicos de tu ciudad y una invitación a redescubrir tu entorno e interactuar con ellos. Aproximadamente 20 minutos son suficientes para hacer una caminata de audio usted mismo. Ve cuando quieras. Puedes decidir por ti mismo cuántas caminatas quieres hacer y en qué orden. Las historias y paisajes sonoros de las obras de radio breves se pueden experimentar en todo el mundo. Así, "The Walks" conecta a personas de todo el mundo en una experiencia local a través de un acto humano fundamental: caminar.

@@ -1,10 +1,7 @@
 ---
 id: dooPoru8
 languageCode: fr
-medias:
-- Eer0quuj
-- Apheek3e
-- Udie9hoh
+medias: []
 ---
 
 "The Walks" est une collection de courtes pièces radiophoniques pour des endroits spécifiques de votre ville et une invitation à redécouvrir votre environnement et à interagir avec eux. Environ 20 minutes suffisent pour faire vous-même une promenade audio. Allez quand vous voulez. Vous pouvez décider vous-même combien de promenades vous voulez faire et dans quel ordre. Les histoires et les paysages sonores des courtes pièces radiophoniques peuvent être expérimentés dans le monde entier. Ainsi "The Walks" connecte les gens du monde entier dans une expérience locale à travers un acte humain fondamental : marcher.
