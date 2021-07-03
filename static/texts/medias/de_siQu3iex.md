@@ -6,7 +6,7 @@ listed: true
 title: Roundabout
 duration: 1202
 srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
-iconUri: https://the-walks.netlify.app/icons/Rectangle111.jpg
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon4.png
 userPrompt:
 - title: Halt fest, was du siehst.
   triggerTime: 350

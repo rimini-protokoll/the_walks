@@ -6,7 +6,7 @@ listed: true
 title: An einer Straße
 duration: 1178.52
 srcUri: https://the-walks.netlify.app/medias/de02.mp3
-iconUri: https://the-walks.netlify.app/icons/Rectangle111.jpg
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon2.png
 userPrompt:
 - title: Finden einen Mülleimer und mache ein Foto.
   triggerTime: 20
