@@ -1,7 +1,7 @@
 ---
 id: Kai3quae
 languages:
-- title: German
+- title: Deutsch
   languageCode: de
   language: germany
 - title: English

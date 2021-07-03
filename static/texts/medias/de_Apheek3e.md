@@ -1,9 +1,8 @@
 ---
 id: Apheek3e
 language: de
-paid: true
 listed: true
-title: An einer Straße
+title: Straße
 duration: 1178.52
 srcUri: https://the-walks.netlify.app/medias/de02.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon2.png

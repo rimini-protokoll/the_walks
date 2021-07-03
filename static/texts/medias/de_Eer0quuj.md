@@ -1,7 +1,6 @@
 ---
 id: Eer0quuj
 language: de
-paid: false
 listed: true
 title: Theater
 duration: 778.057143

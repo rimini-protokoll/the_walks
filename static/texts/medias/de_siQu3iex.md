@@ -1,7 +1,6 @@
 ---
 id: siQu3iex
 language: de
-paid: true
 listed: true
 title: Roundabout
 duration: 1202
