@@ -4,19 +4,19 @@ language: de
 paid: false
 listed: true
 title: Theater
-duration: 756.48
-srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01.mp3
+duration: 778.057143
+srcUri: https://angry-fermi-c85f46.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://angry-fermi-c85f46.netlify.app/icons/Rectangle109.jpg
 userPrompt:
 - title: Ja, ich bin am Ziel angekommen!
-  triggerTime: 600
-  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+  triggerTime: 621
+  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Weiter
     action: continue
 #- title: Bild hochladen und fortfahren.
 #  triggerTime: 726
-#  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+#  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de_Eer0quuj_loop.mp3
 #  actions:
 #  - title: Foto
 #    action: picture
@@ -24,8 +24,8 @@ userPrompt:
 #  - title: Nein Danke
 #    action: continue
 - title: Bild hochladen und fortfahren.
-  triggerTime: 756
-  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de01Loop.mp3
+  triggerTime: 777
+  srcUri: https://angry-fermi-c85f46.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Foto
     action: picture
