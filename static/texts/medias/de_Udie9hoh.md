@@ -6,7 +6,7 @@ listed: true
 title: Gehen mit Steff
 duration: 940.632
 srcUri: https://the-walks.netlify.app/medias/de03.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon4.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon3.png
 userPrompt:
 - title: Finden einen Mülleimer und mache ein Foto.
   triggerTime: 20
