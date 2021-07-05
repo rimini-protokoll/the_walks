@@ -23,14 +23,22 @@ userPrompt:
   - title: Nein
     action: continue
 - title: Bild hochladen und fortfahren.
-  triggerTime: 777
+  triggerTime: 754
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Foto
     action: picture
-    postAction: map
+    postAction: continue
   - title: Nein
+    action: continue
+- title: Weiter zur Gallerie
+  triggerTime: 777
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Ja
     action: map
+  - title: Nein
+    action: continue
 popups: []
 ---
 My *apologies*, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
