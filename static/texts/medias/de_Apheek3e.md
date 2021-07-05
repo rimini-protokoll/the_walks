@@ -9,7 +9,7 @@ iconUri: https://the-walks.netlify.app/icons/Walk-Icon2.png
 userPrompt:
 - title: Finden einen Mülleimer und mache ein Foto.
   triggerTime: 20
-  srcUri: https://the-walks.netlify.app/medias/de01Loop.mp3
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Mach ein Foto
     action: picture

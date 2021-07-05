@@ -9,7 +9,7 @@ iconUri: https://the-walks.netlify.app/icons/Walk-Icon4.png
 userPrompt:
 - title: Halt fest, was du siehst.
   triggerTime: 350
-  srcUri: https://the-walks.netlify.app/medias/de01Loop.mp3
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Mach ein Foto
     action: picture
@@ -18,7 +18,7 @@ userPrompt:
     action: continue
 - title: Mach ein Foto deiner Bewegung.
   triggerTime: 1201
-  srcUri: https://the-walks.netlify.app/medias/de01Loop.mp3
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Foto
     action: picture

@@ -13,15 +13,15 @@ userPrompt:
   actions:
   - title: Weiter
     action: continue
-#- title: Bild hochladen und fortfahren.
-#  triggerTime: 726
-#  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
-#  actions:
-#  - title: Foto
-#    action: picture
-#    postAction: continue
-#  - title: Nein Danke
-#    action: continue
+- title: Bild hochladen und fortfahren.
+  triggerTime: 730
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Foto
+    action: picture
+    postAction: continue
+  - title: Nein
+    action: continue
 - title: Bild hochladen und fortfahren.
   triggerTime: 777
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
@@ -29,7 +29,7 @@ userPrompt:
   - title: Foto
     action: picture
     postAction: map
-  - title: Nein Danke
+  - title: Nein
     action: map
 popups: []
 ---
