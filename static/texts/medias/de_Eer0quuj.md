@@ -8,7 +8,7 @@ srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
 userPrompt:
 - title: Ja, ich bin am Ziel angekommen!
-  triggerTime: 621
+  triggerTime: 612
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Weiter
