@@ -3,40 +3,40 @@ id: Eer0quuj
 language: de
 listed: true
 title: Theater
-preTitle: Vor dem
+preTitle: In front of the
 duration: 778.057143
-srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
+srcUri: https://the-walks.netlify.app/medias/en_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
 userPrompt:
-- title: Ja, ich bin am Ziel angekommen
+- title: Yes, I have arrived at my destination
   triggerTime: 612
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Weiter
     action: continue
-- title: Bild machen und hochladen
+- title: Take picture and upload
   triggerTime: 730
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: Bild
+  - title: Picture
     action: picture
     postAction: continue
-  - title: Nein
+  - title: 'No'
     action: continue
-- title: Bild machen und hochladen
+- title: Take picture and upload
   triggerTime: 754
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: Bild
+  - title: Picture
     action: picture
     postAction: continue
-  - title: Nein
+  - title: 'No'
     action: continue
-- title: Weiter zur Bildergalerie
+- title: Continue to the gallery
   triggerTime: 777
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: Galerie
+  - title: 'Gallery'
     action: map
 popups: []
 ---
