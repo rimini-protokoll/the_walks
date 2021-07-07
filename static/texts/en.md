@@ -1,7 +1,8 @@
 ---
 id: eLee2Xei
 languageCode: en
-medias: []
+medias: 
+	- en_Eer0quuj
 ---
 
 "The Walks" is a collection of short radio plays for specific locations in your city and an invitation to rediscover your surroundings and to interact with them. About 20 minutes are enough to do an audio walk yourself. Go whenever you want. You can decide for yourself how many of the walks you want to do in which order. The stories and soundscapes of the short radio plays can be experienced worldwide. Thus "The Walks" connects people around the globe in a local experience through a fundamental human act: walking.
