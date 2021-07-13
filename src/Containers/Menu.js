@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   View,
   ScrollView,
-  ActivityIndicator,
+  RefreshControl,
   Text,
   TextInput,
   TouchableOpacity,
@@ -12,50 +12,62 @@ import {
 } from 'react-native'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
+import FetchWalks from '@/Store/Walks/FetchWalks'
 import WalksList from '@/Components/WalksList'
-import PurchaseWalks from '@/Store/Walks/PurchaseWalks'
 
 const Menu = ({ navigation, route }) => {
   const { t } = useTranslation()
-  const { Common, Fonts, Gutters, Layout } = useTheme()
+  const { Common, Fonts, Gutters, Layout, Colors } = useTheme()
   const dispatch = useDispatch()
+  const language = useSelector(state => state.language.selectedLanguage)
+  useEffect(() => {
+    console.log('useEffect language', language)
+    dispatch(FetchWalks.action({language}))
+  }, [language])
 
   const walks = useSelector(state => {
     const walks = state.walks.fetchWalks.walks
     if (walks) {
       return walks.filter(
-        walk => walk.listed && (!walk.paid || state.walks.purchased),
+        ({data}) => data.listed,
       )
     } else {
       return []
     }
   })
-  const walksPurchased = useSelector(state => state.walks.purchased)
 
-  const purchase = () => {
-    dispatch(PurchaseWalks.action())
-  }
+  const [refreshing, setRefreshing] = useState(false)
 
-  const voucherCodeChange = ({nativeEvent}) => {
-    if (nativeEvent.text == '1234') {
-      dispatch(PurchaseWalks.action())
-    }
-  }
+  const onRefresh = useCallback(() => {
+    setRefreshing(true)
+    // setTimeout(() => setRefreshing(false), 3000)
+    dispatch(FetchWalks.action({language}))
+    setRefreshing(false)
+  })
 
   return (
-    <ScrollView style={[Gutters.smallHPadding, Gutters.smallVPadding]}>
-      <WalksList navigation={navigation} walks={walks} />
-      {walksPurchased ? null : (
-        <View>
-          <TouchableOpacity onPress={purchase} style={Common.button.outline}>
-            <Text>{t('purchase')}</Text>
-          </TouchableOpacity>
-          <TextInput
-            onChange={voucherCodeChange}
-            style={Common.textInput}
-            placeholder={t('voucher')} />
-        </View>
-      )}
+    <ScrollView
+      style={[Gutters.smallHPadding, Gutters.smallVPadding]}
+      refreshControl={
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={onRefresh}
+        />
+      }
+    >
+      <View style={{height: 50}}/>
+      <Text
+        style={[
+        Gutters.smallBMargin,
+        Fonts.titleLarge,
+        Fonts.textCenter
+        ]}>
+      The Walks
+      </Text>
+      {!refreshing ? (
+        <WalksList navigation={navigation} walks={walks} />) :
+          null
+      }
     </ScrollView>
   )
 }

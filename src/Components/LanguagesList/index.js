@@ -9,10 +9,9 @@ const LanguagesList = ({ navigation, languages }) => {
     <View
       style={[
         Layout.fullSize,
+        Layout.center,
         {
-          flex: 1,
-          justifyContent: 'space-evenly',
-          alignItems: 'center',
+          flex: 1
         },
       ]}
     >

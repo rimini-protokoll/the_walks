@@ -1,13 +1,17 @@
 export default {
+  back: 'Galerie schließen',
   partners: 'Partner',
   language: 'Sprache',
+  credits: 'Credits',
   about: 'Informationen',
   news: 'Neuigkeiten',
-  purchase: 'Walks kaufen',
-  voucher: 'Gutscheincode einlösen',
+  purchase: 'The Walks kaufen',
+  activation: 'Aktivierung',
+  preview: 'Vorschau ohne Aktivierung',
+  voucher: 'Ativierungs-Code einlösen:',
   walk: {
-    start: 'Beginne den Walk',
-    pictures: 'Bilder der Besucher',
-    action: 'Besucher Aktion'
+    start: 'Walk starten',
+    pictures: 'Galerie',
+    noPictures: 'Noch keine Bilder',
   },
 }

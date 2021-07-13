@@ -11,7 +11,7 @@ import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import FitImage from 'react-native-fit-image'
 
 
-const Tile = ({ navigation, identifier, title, iconUri, style }) => {
+const Tile = ({ navigation, local, identifier, title, iconUri, style }) => {
   const { Fonts } = useTheme()
   const dispatch = useDispatch()
   const selectWalk = () => {
@@ -21,16 +21,18 @@ const Tile = ({ navigation, identifier, title, iconUri, style }) => {
   return (
     <TouchableOpacity 
       style={[ style, {
-        width: '50%'
+        width: '33%'
       }]}
       onPress={selectWalk}>
-      <FitImage 
-        originalWidth={100}
-        originalHeight={100}
-        source={{ uri:iconUri }}
-      />
+      <View style={{padding: 15}}>
+        <FitImage 
+          originalWidth={100}
+          originalHeight={100}
+          source={{ uri: iconUri }}
+        />
+      </View>
       <View>
-        <Text style={[Fonts.textRegular, { textAlign:'center', padding:10 }]}>{title}</Text>
+        <Text style={[Fonts.textSmall, { textAlign:'center' }]}>{title}</Text>
       </View>
     </TouchableOpacity>
   )

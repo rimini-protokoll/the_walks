@@ -4,10 +4,8 @@ import { Provider, useSelector } from 'react-redux'
 import { PersistGate } from 'redux-persist/lib/integration/react'
 import { store, persistor } from '@/Store'
 import { ApplicationNavigator } from '@/Navigators'
-import './Translations'
 
 const App = () => {
-
   return (
     <Provider store={store}>
       {/**

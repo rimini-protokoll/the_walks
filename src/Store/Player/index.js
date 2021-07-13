@@ -1,8 +1,7 @@
 import { buildSlice } from '@thecodingmachine/redux-toolkit-wrapper'
 import ChangePlayer from './ChangePlayer'
-import OnLoad from './OnLoad'
-import OnProgress from './OnProgress'
-import Seek from './Seek'
+import UserPrompt from './UserPrompt'
+import StartWalk from './StartWalk'
 
 const sliceInitialState = {
   paused: true,
@@ -12,4 +11,4 @@ const sliceInitialState = {
   seek: null
 }
 
-export default buildSlice('player', [ChangePlayer, OnLoad, OnProgress, Seek], sliceInitialState).reducer
+export default buildSlice('player', [ChangePlayer, UserPrompt, StartWalk], sliceInitialState).reducer

@@ -7,7 +7,7 @@ import InitStartup from '@/Store/Startup/Init'
 import { Brand } from '@/Components'
 
 const IndexStartupContainer = () => {
-  const { Layout, Gutters, Fonts } = useTheme()
+  const { Layout, Gutters, Fonts, Colors } = useTheme()
 
   const { t } = useTranslation()
 
@@ -18,10 +18,9 @@ const IndexStartupContainer = () => {
   }, [dispatch])
 
   return (
-    <View style={[Layout.fill, Layout.colCenter]}>
+    <View style={[Layout.fullSize, Layout.fill]}>
       <Brand />
-      <ActivityIndicator size={'large'} style={[Gutters.largeVMargin]} />
-      <Text style={Fonts.textCenter}>{t('welcome')}</Text>
+      <ActivityIndicator size={'large'} color={Colors.primary}  style={{position: 'absolute', left: '50%', marginLeft: -20, bottom: 20}} />
     </View>
   )
 }

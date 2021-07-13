@@ -4,5 +4,5 @@ import ChangeTheme from '@/Store/Theme/ChangeTheme'
 
 export default buildSlice('theme', [DefaultTheme, ChangeTheme], {
   theme: null,
-  darkMode: null,
+  darkMode: false,
 }).reducer

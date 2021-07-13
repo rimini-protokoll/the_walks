@@ -8,6 +8,7 @@ plugins.push([
     extensions: ['.js', '.json'],
     alias: {
       '@': './src',
+      assets: './src/assets',
     },
   },
 ])

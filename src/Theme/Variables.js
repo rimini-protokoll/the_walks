@@ -11,26 +11,32 @@
 export const Colors = {
   // Example colors:
   transparent: 'rgba(0,0,0,0)',
-  inputBackground: '#FFFFFF',
+  inputBackground: '#FAFAFA',
+  background: 'rgb(239,239,241)',
   white: '#ffffff',
   text: '#212529',
-  primary: '#E14032',
+  primary: '#555',
+  secondary: '#AAA',
   success: '#28a745',
   error: '#dc3545',
-  card: '#fafafa'
+  card: 'rgb(239,239,241)'
 }
 
 export const NavigationColors = {
   primary: Colors.primary,
+  background: Colors.background,
+  card: Colors.background,
+  text: Colors.text,
 }
 
 /**
  * FontSize
  */
 export const FontSize = {
-  small: 16,
+  small: 18,
   regular: 20,
-  large: 40,
+  button: 20,
+  large: 30,
 }
 
 /**

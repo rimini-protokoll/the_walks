@@ -1,163 +1,357 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  ActivityIndicator,
+  Vibration
+} from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
+import { store } from '@/Store'
+import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import ChangePlayer from '@/Store/Player/ChangePlayer'
-import StartWalk from '@/Store/Walks/StartWalk'
-import UserPrompt from '@/Store/Walks/UserPrompt'
-import SeekPlayer from '@/Store/Player/Seek'
+import StartWalk from '@/Store/Player/StartWalk'
+import UserPrompt from '@/Store/Player/UserPrompt'
 import { navigate } from '@/Navigators/Root'
-import MusicControl from 'react-native-music-control'
 import { useTranslation } from 'react-i18next'
+import TrackPlayer, {
+  RepeatMode,
+  useProgress,
+  useTrackPlayerEvents,
+  getState,
+  Event
+} from 'react-native-track-player'
+import BackgroundService from 'react-native-background-actions'
+
+
+const sleep = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000))
+}
+
+const backgroundTask = async (args) => {
+  const { navigate, dispatch, t, prompts, walk } = args
+  if (!walk) {
+    return
+  }
+  const promptsList = prompts.map(prompt => ({...prompt}))
+  console.log('start background loop')
+  while (BackgroundService.isRunning()) {
+    const state = store.getState()
+    const activeWalk = state.player.activeWalk
+    const userPrompt = state.player.userPrompt
+    if (!activeWalk) {
+      // console.log('return, no activeWalk')
+      return
+    } if (userPrompt) {
+      // console.log('continue, userPrompt')
+      await sleep()
+      continue
+    }
+
+    const position = await TrackPlayer.getPosition()
+    let prompt = promptsList.filter(
+      (prompt) => {
+        return (!prompt.completed)
+      })
+    if (!prompt.length) {
+      // console.log('return, no prompt')
+      return
+    }
+    // console.log('prompt length', prompt.length)
+
+    prompt = prompt.filter(
+      (prompt) => {
+        return (position >= prompt.triggerTime)
+      })[0]
+    // console.log(prompt)
+
+    if (prompt && !userPrompt) {
+      promptsList[prompt.index].completed = true
+      // console.log('prompt', promptsList[prompt.index])
+      await TrackPlayer.setRepeatMode(RepeatMode.Track)
+      // console.log('repeat mode set')
+      await TrackPlayer.skipToNext()
+      await TrackPlayer.play()
+      // console.log('skip to next')
+      await store.dispatch(ChangeWalk.action(walk.id))
+      await store.dispatch(UserPrompt.action(prompt))
+      // console.log('UserPrompt action')
+      await navigate('walk.action')
+      // console.log('navigate', 'walk.action')
+      Vibration.vibrate(500)
+    }
+    await sleep()
+  }
+}
 
 const str_pad_left = (string, pad, length) => {
-	return (new Array(length + 1).join(pad) + string).slice(-length)
+  return (new Array(length + 1).join(pad) + string).slice(-length)
 }
 
 const timeToString = time => {
-	const minutes = Math.floor(time / 60)
-	const seconds = Math.floor(time % 60)
-	return str_pad_left(minutes, '0', 2) + ':' + str_pad_left(seconds, '0', 2)
+  const minutes = Math.floor(time / 60)
+  const seconds = Math.floor(time % 60)
+  return str_pad_left(minutes, '0', 2) + ':' + str_pad_left(seconds, '0', 2)
 }
 
-const VideoControl = ({ isPaused }) => {
-	const { Fonts, Colors, Gutters } = useTheme()
-	const { t } = useTranslation()
-	const dispatch = useDispatch()
-	const paused = useSelector(state => state.player.paused)
-	const progress = useSelector(state => state.player.progress)
-	const duration = useSelector(state => state.player.duration)
-	const durationRemaining = useSelector(state => state.player.duration - state.player.currentTime)
-	const currentTime = useSelector(state => state.player.currentTime)
-	const title = useSelector(state => state.player.title)
-	const userPrompt = useSelector(state => state.walks.userPrompt)
-	const walk = useSelector(state => {
-		const walk = state.walks.fetchWalks.walks.filter(
-			walk => walk.id == state.walks.activeWalk,
-		)[0]
-		return walk
-	})
+const createTrack = item => ({
+  id: item.id,
+  url: item.srcUri,
+  title: item.title,
+  artist: 'The Walks',
+  artwork: item.iconUri
+})
 
-	useEffect(() => {
-		const prompts = walk.userPrompt.map((prompt, index) => ({...prompt, index}))
-		const prompt = prompts.filter(
-			(prompt, index) => {
-				return currentTime >= prompt.triggerTime && !prompt.completed
-		})[0]
-		
-		if (prompt) {
-			dispatch(UserPrompt.action(prompt))
-			dispatch(ChangePlayer.action({ paused: true }))
-			navigate(t('walk.action'))
-		}
-	}, [progress])
+const VideoControl = () => {
+  const { Fonts, Colors, Gutters, NavigationTheme } = useTheme()
+  const { colors } = NavigationTheme
+  const { t } = useTranslation()
+  const dispatch = useDispatch()
+  const paused = useSelector(state => state.player.paused)
+  const userPrompt = useSelector(state => state.player.userPrompt)
+  const activeWalk = useSelector(state => state.player.activeWalk)
+  const seekTo = useSelector(state => state.player.position)
+  const walk = useSelector(state => {
+    if (activeWalk) {
+      return state.walks.fetchWalks.walks.filter(
+        walk => walk.data.id == state.player.activeWalk,
+      )[0].data
+    }
+  })
+  const progress = useProgress()
+  const [promptState, setPromptState] = useState([]) 
+  const [setup, setSetup] = useState(true)
 
-	MusicControl.enableControl('play', true)
+  useTrackPlayerEvents([Event.PlaybackQueueEnded], () => {
+    if (!setup) {
+      dispatch(StartWalk.action(false))
+    }
+  })
 
-	const playPause = () => {
-		dispatch(ChangePlayer.action({ paused: !paused }))
+  useEffect(() => {
+    setSetup(true)
+    TrackPlayer.reset()
+    TrackPlayer.removeUpcomingTracks().then(() => {
+      if (walk) {
+        const walkTrack = createTrack(walk)
+        const tracks = [walkTrack]
+        const prompts = []
+        walk.userPrompt.forEach((prompt, i) => {
+          prompts.push({
+            ...prompt,
+            index: i,
+            completed: false
+          })
 
-		MusicControl.setNowPlaying({
-			title: title,
-			artwork: walk.iconUri,
-			artist: 'Rimini Protokoll',
-			album: 'The Walks',
-			genre: 'Audiowalk',
-			duration: duration || 0,
-		})
-		//MusicControl.resetNowPlaying()
-	}
+          tracks.push(createTrack({
+            id: walk.id + i,
+            srcUri: prompt.srcUri,
+            title: prompt.title,
+            iconUri: walk.iconUri
+          }))
+          tracks.push(walkTrack)
+        })
+        setPromptState(prompts)
 
-	const seek = direction => {
-		dispatch(SeekPlayer.action(currentTime + 15 * direction))
-	}
+        const options = {
+          taskName: 'Example',
+          taskTitle: 'ExampleTask title',
+          taskDesc: 'ExampleTask description',
+          color: '#ff00ff',
+          taskIcon: {
+            name: 'ic_launcher',
+            type: 'mipmap',
+          },
+          parameters: {
+            prompts,
+            walk,
+            navigate,
+            dispatch,
+            t
+          },
+        };
+        TrackPlayer.add(tracks).then(() => {
+          BackgroundService.start(backgroundTask, options).then(() => {
+            TrackPlayer.play()
+            dispatch(ChangePlayer.action({ paused: false }))
+            console.log('walk init') 
+            setSetup(false)
+          })
+        })
+      }
+    })
 
-	const durationString = timeToString(durationRemaining)
-	const currentTimeString = timeToString(currentTime)
-	if (userPrompt) return null;
+  }, [walk])
 
-	return (
-		<View style={Gutters.largeBPadding}>
-			<View style={{ flexDirection: 'row' }}>
-				<TouchableOpacity
-					style={[{ flex: 1 }, Gutters.smallTMargin, Gutters.smallLPadding]}
-					onPress={() => navigate(title)}
-				>
-					<Text style={Fonts.textRegular}>{title}</Text>
-				</TouchableOpacity>
-				<TouchableOpacity
-					style={[Gutters.smallRPadding, { alignItems: 'flex-end' }]}
-					onPress={() => dispatch(StartWalk.action(false))}
-				>
-					<Icon name="close" size={iconSize} color={Colors.text} />
-				</TouchableOpacity>
-			</View>
-			<View
-				style={[
-					{ flexDirection: 'row' },
-					Gutters.smallVMargin,
-					Gutters.smallHMargin,
-				]}
-			>
-				<Text style={[{ width: 60, textAlign: 'center' }, Fonts.textSmall]}>
-					{currentTimeString}
-				</Text>
-				<View style={{ flex: 1, justifyContent: 'center' }}>
-					<View
-						style={{
-							backgroundColor: Colors.primary,
-							height: 5,
-							width: `${progress}%`,
-						}}
-					/>
-					<View
-						style={{
-							position: 'absolute',
-							left: `${progress}%`,
-							translateX: -5,
-							backgroundColor: Colors.primary,
-							height: 10,
-							width: 10,
-							borderRadius: 5,
-						}}
-					/>
-				</View>
-				<Text style={[{ width: 60, textAlign: 'center' }, Fonts.textSmall]}>
-					-{durationString}
-				</Text>
-			</View>
-			<View
-				style={{
-					flex: 1,
-					flexWrap: 'wrap',
-					flexDirection: 'row',
-					justifyContent: 'space-around',
-				}}
-			>
-				<TouchableOpacity style={styles.iconSize} onPress={() => seek(-1)}>
-					<Icon name="play-back" color={Colors.text} size={iconSize} />
-				</TouchableOpacity>
-				<TouchableOpacity style={styles.iconSize} onPress={playPause}>
-					<Icon
-						name={!paused ? 'pause' : 'play'}
-						color={Colors.text}
-						size={iconSize}
-					/>
-				</TouchableOpacity>
-				<TouchableOpacity style={styles.iconSize} onPress={() => seek(1)}>
-					<Icon name="play-forward" color={Colors.text} size={iconSize} />
-				</TouchableOpacity>
-			</View>
-		</View>
-	)
+  useEffect(() => {
+    if (seekTo) {
+      TrackPlayer.seekTo(seekTo).then(() => {
+        if (Math.abs(progress.position - seekTo) <= 1) {
+          TrackPlayer.setVolume(1)
+          dispatch(ChangePlayer.action({ position: null }))
+        }
+      })
+    }
+    // TrackPlayer.getQueue().then(queue => console.log(queue))
+  }, [progress])
+
+  useEffect(() => {
+    paused ? TrackPlayer.pause() : TrackPlayer.play()
+  }, [paused])
+
+  const playPause = useCallback(() => {
+    dispatch(ChangePlayer.action({ paused: !paused }))
+  })
+
+  const seek = direction => {
+    let position = progress.position + 30 * direction * (direction == 1 ? 2 : 1)
+    position = Math.min(progress.duration - 1, position)
+    TrackPlayer.seekTo(position)
+  }
+
+  const [state, setState] = useState({
+    durationString: '',
+    currentTimeString: '',
+    progressPercentage: 0,
+    bufferedPercentage: 0
+  })
+
+  useEffect(() => {
+    if (!userPrompt) {
+      setState({
+        durationString: timeToString(progress.duration - progress.position),
+        currentTimeString: timeToString(progress.position),
+        progressPercentage: progress.position / progress.duration * 100,
+        bufferedPercentage: walk?.srcUri.startsWith('file') ? 100 : progress.buffered / progress.duration * 100
+      })
+    }
+  }, [progress])
+
+  const closeControls = useCallback(() => {
+    dispatch(StartWalk.action(false))
+  })
+
+  const playPauseIcon = !paused ? require('Assets/Icons/Pause.png') : require('Assets/Icons/Play.png')
+  
+  if (!activeWalk || userPrompt) return null;
+
+  if (setup || !progress.duration || seekTo) {
+    return (
+      <View style={{height: 150, backgroundColor: colors.card}}>
+        <View style={{ flexDirection: 'row', alignSelf: 'flex-end' }}>
+          <TouchableOpacity
+            style={[Gutters.smallRPadding]}
+            onPress={closeControls}
+          >
+            <Icon name="close" size={iconSize} color={Colors.text} />
+          </TouchableOpacity>
+        </View>
+        <ActivityIndicator
+          size="large"
+          color={Colors.primary}
+          style={[Gutters.largePadding, {backgroundColor: colors.card}]}
+        />
+      </View>
+    )
+  }
+  return (
+    <View style={{height: 150, backgroundColor: colors.card}}>
+      <View style={{ flexDirection: 'row' }}>
+        <TouchableOpacity
+          style={[{ flex: 1 }, Gutters.smallTMargin, Gutters.smallLPadding]}
+          onPress={() => navigate(walk.title)}
+        >
+          <Text style={Fonts.textButton}>{walk.title}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[Gutters.smallRPadding, Gutters.smallVPadding,{ alignItems: 'flex-end' }]}
+          onPress={closeControls}
+        >
+          <Image
+            style={{width:20, height:20}}
+            source={require('Assets/Icons/Close.png')}
+          />
+        </TouchableOpacity>
+      </View>
+      <View
+        style={[
+          { flexDirection: 'row' },
+          Gutters.smallVMargin,
+          Gutters.smallHMargin,
+        ]}
+      >
+        <Text style={[{ width: 65, textAlign: 'left' }, Fonts.textSmall]}>
+          {state.currentTimeString}
+        </Text>
+        <View style={{ flex: 1, justifyContent: 'center' }}>
+          <View
+            style={{
+              position: 'absolute',
+              left: 0,
+              backgroundColor: Colors.secondary,
+              height: 5,
+              width: `${state.bufferedPercentage}%`,
+            }}
+          />
+          <View
+            style={{
+              position: 'absolute',
+              left: 0,
+              backgroundColor: Colors.primary,
+              height: 5,
+              width: `${state.progressPercentage}%`,
+            }}
+          />
+          <View
+            style={{
+              position: 'absolute',
+              left: `${state.progressPercentage}%`,
+              translateX: -5,
+              backgroundColor: Colors.primary,
+              height: 10,
+              width: 10,
+              borderRadius: 5,
+            }}
+          />
+        </View>
+        <Text style={[{ width: 70, textAlign: 'left' }, Gutters.smallLPadding, Fonts.textSmall]}>
+          -{state.durationString}
+        </Text>
+      </View>
+      <View
+        style={{
+          flex: 1,
+          flexWrap: 'wrap',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+        }}
+      >
+        <TouchableOpacity style={styles.iconSize} onPress={() => seek(-1)}>
+          <Icon name="play-back" color={Colors.text} size={iconSize} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconSize} onPress={playPause}>
+          <Image
+            style={{width:40, height:40}}
+            source={playPauseIcon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconSize} onPress={() => seek(1)}>
+          <Icon name="play-forward" color={Colors.text} size={iconSize} />
+        </TouchableOpacity>
+      </View>
+    </View>
+  )
 }
 
 const iconSize = 40
 const styles = StyleSheet.create({
-	iconSize: {
-		width: iconSize,
-		height: iconSize,
-	},
+  iconSize: {
+    width: iconSize,
+    height: iconSize,
+  },
 })
 export default VideoControl

@@ -14,6 +14,9 @@
     "@formatjs/intl-datetimeformat": "^4.1.2",
     "@react-native-async-storage/async-storage": "^1.14.1",
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-firebase/app": "^12.0.0",
+    "@react-native-firebase/firestore": "^12.0.0",
+    "@react-native-firebase/storage": "^12.1.0",
     "@react-navigation/bottom-tabs": "^5.11.8",
     "@react-navigation/drawer": "^5.12.5",
     "@react-navigation/native": "^5.9.3",
@@ -21,6 +24,8 @@
     "@reduxjs/toolkit": "^1.5.1",
     "@thecodingmachine/redux-toolkit-wrapper": "2.0.1",
     "axios": "^0.21.1",
+    "buffer": "^6.0.3",
+    "gray-matter": "^4.0.3",
     "i18next": "^19.9.2",
     "intl": "^1.2.5",
     "jsc-android": "^250230.2.1",
@@ -29,10 +34,14 @@
     "react-i18next": "^11.8.10",
     "react-intl": "^5.18.1",
     "react-native": "0.64.1",
+    "react-native-background-actions": "^2.6.1",
     "react-native-fit-image": "^1.5.5",
     "react-native-flipper": "^0.75.1",
+    "react-native-fs": "^2.18.0",
+    "react-native-geolocation-service": "https://github.com/rimini-protokoll/react-native-geolocation-service",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-ico-flags": "^3.3.1",
+    "react-native-image-picker": "https://github.com/rimini-protokoll/react-native-image-picker",
     "react-native-localize": "^2.1.0",
     "react-native-maps": "^0.28.0",
     "react-native-markdown-display": "^7.0.0-alpha.2",
@@ -41,8 +50,10 @@
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^2.18.1",
     "react-native-svg": "^12.1.1",
+    "react-native-track-player": "^2.0.0-rc15",
     "react-native-vector-icons": "^8.1.0",
     "react-native-video": "^5.1.1",
+    "react-native-webview": "^11.6.2",
     "react-redux": "^7.2.2",
     "redux": "^4.1.0",
     "redux-flipper": "^1.4.2",
@@ -84,5 +95,6 @@
     "transformIgnorePatterns": [
       "/node_modules/(?!@react-native|react-native)"
     ]
-  }
+  },
+  "isSwift": true
 }

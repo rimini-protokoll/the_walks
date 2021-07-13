@@ -1,4 +1,6 @@
 import axios from 'axios'
+global.Buffer = global.Buffer || require('buffer').Buffer
+import matter from 'gray-matter'
 import handleError from '@/Services/utils/handleError'
 import { Config } from '@/Config'
 
@@ -7,12 +9,26 @@ const instance = axios.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
+    'Cache-Control': 'no-cache'
   },
   timeout: 3000,
 })
 
 instance.interceptors.response.use(
-  response => response,
+  response => {
+    try {
+      const data = matter(response.data)
+      return {
+        ...response,
+        data: {
+          data: data.data,
+          content: data.content
+        }
+      }
+    } catch (e) {
+      return response
+    }
+  },
   ({ message, response: { data, status } }) => {
     return handleError({ message, data, status })
   },

@@ -14,16 +14,28 @@ const PartnersList = () => {
   const { Layout, Fonts } = useTheme()
   const partners = [
     {
-      title: 'Vor dem Theater',
-      iconUri: 'https://cdn.reservix.com/core/img/resource/topevent/61/5cdd2f72f3860190516113754.png'
+      iconUri: 'https://the-walks.netlify.app/partners/1_teatelli.png'
     },
     {
-      title: 'Vor dem Theater',
-      iconUri: 'https://cdn.reservix.com/core/img/resource/topevent/61/5cdd2f72f3860190516113754.png'
+      iconUri: 'https://the-walks.netlify.app/partners/2_borderlight.png'
     },
     {
-      title: 'Vor dem Theater',
-      iconUri: 'https://cdn.reservix.com/core/img/resource/topevent/61/5cdd2f72f3860190516113754.png'
+      iconUri: 'https://the-walks.netlify.app/partners/3_europeanforumalpbach.png'
+    },
+    {
+      iconUri: 'https://the-walks.netlify.app/partners/4_fondazionearmoniedarte.png'
+    },
+    {
+      iconUri: 'https://the-walks.netlify.app/partners/6_hellerau.png'
+    },
+    {
+      iconUri: 'https://the-walks.netlify.app/partners/7_kampnagel.png'
+    },
+    {
+      iconUri: 'https://the-walks.netlify.app/partners/8_zonak.jpg'
+    },
+    {
+      iconUri: 'https://the-walks.netlify.app/partners/9_perspectives.jpg'
     },
   ]
   return (
@@ -35,9 +47,10 @@ const PartnersList = () => {
       flexWrap: 'wrap',
       flexDirection: 'row'
       }}>
-      <Text style={[ Fonts.titleRegular, { width: "100%" }]}>{t('partners')}</Text>
+      {/*<Text style={[ Fonts.titleRegular, { width: "100%" }]}>{t('partners')}</Text>*/}
       { partners.map(({title, iconUri}, i) => (<Tile key={i} title={title} iconUri={iconUri} />)) }
     </View>
   )
 }
 export default PartnersList 
+

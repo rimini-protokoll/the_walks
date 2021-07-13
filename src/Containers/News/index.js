@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { createStackNavigator } from '@react-navigation/stack'
 import {
@@ -7,73 +7,42 @@ import {
   TouchableOpacity,
   ScrollView,
   VirtualizedList,
+  ActivityIndicator
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import FitImage from 'react-native-fit-image'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import NewsArticle from './NewsArticle'
+import api, { handleError } from '@/Services'
 
 const Stack = createStackNavigator()
-const md = `
-# H1
-![News image](https://www.rimini-protokoll.de/website/cache/images/remotex/Remote%20Belgrad/1280-20.09.BGnaDaljinski%20photoSonjaZugic15.jpg)
-## H2
-### H3
-1. one
-2. two
-3. three
-- a
-  - a.1
-  - a.2
-- b
-- c
-
-**The Walks** is a performance series _developed_ by Rimini Protokoll for specific kinds of places and bodies in motion. An app will function like a stage for the project.
-`
-const news = [
-  {
-    date: 'Sat May 29 2021',
-    title: 'News 1',
-    image:
-      'https://www.rimini-protokoll.de/website/cache/images/remotex/Remote%20Belgrad/1280-20.09.BGnaDaljinski%20photoSonjaZugic15.jpg',
-    excerpt: 'Bla bla bli blub',
-    newsBody: md,
-  },
-  {
-    date: 'Fri May 28 2021',
-    title: 'News 2',
-    image: '',
-    excerpt: 'Bla bla bli blub',
-    newsBody: md,
-  },
-  {
-    date: 'Sat May 22 2021',
-    title: 'News 3',
-    image:
-      'https://www.rimini-protokoll.de/website/cache/images/URBAN%20NATURE/1280-UrbanNature_PressPicture_%C2%A9DominicHuber.jpg',
-    excerpt: 'Bla bla bli blub',
-    newsBody: md,
-  },
-  {
-    date: 'Sat May 15 2021',
-    title: 'News 4',
-    image:
-      'https://www.rimini-protokoll.de/website/cache/images/Temple/1280-StefanKaegi_TempleDuPresent_Gimel_201107_197_%C2%A9%20Philippe%20Weissbrodt.jpg',
-    excerpt: 'Bla bla bli blub',
-    newsBody: md,
-  },
-]
 
 const dateString = (date, locale) => {
-  console.log(locale, Intl.DateTimeFormat(locale, {dateStyle: 'full'}).format(new Date(date)))
+  //console.log(locale, Intl.DateTimeFormat(locale, {dateStyle: 'full'}).format(new Date(date)))
   return Intl.DateTimeFormat(locale, {dateStyle: 'full'}).format(new Date(date))
 }
 
-const News = ({ navigation }) => {
-  const { Gutters, Fonts } = useTheme()
+const News = ({ route, navigation }) => {
+  const { Gutters, Fonts, Colors } = useTheme()
   const { t, i18n } = useTranslation()
   const userLocale = useSelector(state => state.language.userLocale)
+  const [news, setNews] = useState({loading: true, items: []})
+  useEffect(() => {
+    const _news = []
+    setNews({loading: true})
+    api.get('/news_index.md').then(({data}) => {
+      data.data.news.forEach(newsId => {
+        api.get(`/news/${newsId}.md`).then(response => {
+          const itemData = response.data
+          _news.push(itemData)
+          if (_news.length == data.data.news.length) {
+            setNews({loading: false, items: _news})
+          }
+        })
+      })
+    })
+  }, [])
   const NewsItem = ({ date, title, image, excerpt, newsBody }) => (
     <TouchableOpacity
       onPress={() => navigation.navigate(title, { newsBody })}
@@ -93,33 +62,59 @@ const News = ({ navigation }) => {
       <Text style={Fonts.textRegular}>{excerpt}</Text>
     </TouchableOpacity>
   )
-  const getItemCount = () => news.length
+  const getItemCount = () => news.items.length
   const renderItem = ({ item }) => (
     <NewsItem
-      date={item.date}
-      title={item.title}
-      image={item.image}
-      excerpt={item.excerpt}
-      newsBody={item.newsBody}
+      date={item.data.date}
+      title={item.data.title}
+      image={item.data.image}
+      excerpt={item.data.excerpt}
+      newsBody={item.content}
     />
   )
+  if (news.loading) {
+    return (
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+        <ActivityIndicator size='large' color={Colors.primary}/>
+      </View>
+    )
+  }
   return (
-    <VirtualizedList
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={Gutters.smallHPadding}
-      data={news}
-      initialNumToRender={4}
-      renderItem={renderItem}
-      keyExtractor={(item, index) => index}
-      getItemCount={getItemCount}
-      getItem={(data, index) => data[index]}
-    />
+    <View style={ Gutters.smallHPadding }>
+      <View style={{height: 50}}/>
+      <Text style={[Fonts.titleLarge, Fonts.textCenter]}>{t('news')}</Text>
+      <VirtualizedList
+        contentContainerStyle={{ flexGrow: 1 }}
+        style={Gutters.smallHPadding}
+        data={news.items}
+        initialNumToRender={4}
+        renderItem={renderItem}
+        keyExtractor={(item, index) => index}
+        getItemCount={getItemCount}
+        getItem={(data, index) => data[index]}
+      />
+    </View>
   )
 }
 
 const NewsStack = ({ navigation }) => {
   const { Colors, Fonts } = useTheme()
   const { t } = useTranslation()
+  const [news, setNews] = useState({loading: true, items: []})
+  useEffect(() => {
+    const _news = []
+    api.get('/news_index.md').then(({data}) => {
+      data.data.news.forEach(newsId => {
+        api.get(`/news/${newsId}.md`).then(response => {
+          const itemData = response.data
+          _news.push(itemData)
+          if (_news.length == data.data.news.length) {
+            setNews({loading: false, items: _news})
+          }
+        })
+      })
+    })
+  }, [])
 
   const headerRight = () => {
     return (
@@ -140,35 +135,24 @@ const NewsStack = ({ navigation }) => {
         component={News}
         options={{
           headerRight,
+          headerTitle: null,
+          headerTransparent: true
         }}
+        initialParams={{news}}
       />
-      {news.map((item, index) => (
+      {news.items.map((item, index) => (
         <Stack.Screen
           key={index}
-          name={item.title}
+          name={item.data.title}
           component={NewsArticle}
           options={{
             headerRight,
           }}
+          initialParams={item}
         />
       ))}
     </Stack.Navigator>
   )
 }
-const newsText = `
-# H1
-## H2
-### H3
-1. one
-2. two
-3. three
-- a
-  - a.1
-  - a.2
-- b
-- c
-
-**The Walks** is a performance series _developed_ by Rimini Protokoll for specific kinds of places and bodies in motion. An app will function like a stage for the project.
-`
 
 export default NewsStack

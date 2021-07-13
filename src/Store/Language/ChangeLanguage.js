@@ -5,10 +5,10 @@ export default {
   initialState: {},
   action: createAction('language/changeLanguage'),
   reducers(state, { payload }) {
-    console.log('payload', state)
+    console.log('payload', payload)
     if (typeof payload !== 'undefined') {
-    	i18n.changeLanguage(payload)
       state.selectedLanguage = payload
+      i18n.changeLanguage(payload)
     }
   },
 }

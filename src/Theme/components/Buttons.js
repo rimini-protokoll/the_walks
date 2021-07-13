@@ -4,8 +4,9 @@ export default function ({ Colors, Gutters, Layout }) {
   const base = {
     ...Layout.center,
     ...Gutters.largeHPadding,
-    height: 40,
     backgroundColor: Colors.primary,
+    paddingBottom: 8,
+    maxWidth: 180
   }
   const rounded = {
     ...base,
@@ -18,7 +19,7 @@ export default function ({ Colors, Gutters, Layout }) {
     outline: {
       ...base,
       backgroundColor: Colors.transparent,
-      borderWidth: 2,
+      borderWidth: 3,
       borderColor: Colors.primary,
     },
     outlineRounded: {

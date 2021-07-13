@@ -12,10 +12,11 @@ import FitImage from 'react-native-fit-image'
 const TilePartner = ({ navigation, title, iconUri }) => {
   const { Fonts } = useTheme()
   return (
-    <TouchableOpacity style={{ width: '50%' }}>
+    <TouchableOpacity style={{ width: '70%' }}>
       <FitImage 
         originalWidth={100}
         originalHeight={100}
+        resizeMode="contain"
         source={{uri: iconUri}}
       />
     </TouchableOpacity>

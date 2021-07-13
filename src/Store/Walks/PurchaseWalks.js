@@ -5,5 +5,6 @@ export default {
   action: createAction('walks/purchaseWalks'),
   reducers(state, { payload }) {
     state.purchased = true
+    state.voucherCode = payload
   },
 }

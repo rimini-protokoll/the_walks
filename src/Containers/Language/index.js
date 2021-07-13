@@ -39,7 +39,6 @@ const Languages = ({ navigation }) => {
 
 const LanguagesStack = ({ navigation }) => {
   const { Colors, Fonts } = useTheme()
-  const headerTitle = () => <Icon name='language-outline' size={35} color={Colors.text}/>
   const headerRight = () => {
     return (
       <TouchableOpacity onPress={ navigation.openDrawer }>
@@ -53,8 +52,9 @@ const LanguagesStack = ({ navigation }) => {
         name='Language'
         component={Languages}
         options={{
-          headerTitle,
-          headerRight
+          headerTitle: null,
+          headerRight,
+          headerTransparent: true
         }}
         />
     </Stack.Navigator>

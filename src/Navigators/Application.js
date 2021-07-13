@@ -13,15 +13,16 @@ import {
   Platform 
 } from 'react-native'
 import { useTheme } from '@/Theme'
+import TrackPlayer, { useProgress, Capability } from 'react-native-track-player'
 import VideoControls from '@/Components/VideoControls'
 import ChangeTheme from '@/Store/Theme/ChangeTheme'
-import PlayerOnLoad from '@/Store/Player/OnLoad'
-import PlayerOnProgress from '@/Store/Player/OnProgress'
-import SeekPlayer from '@/Store/Player/Seek'
+import ChangePlayer from '@/Store/Player/ChangePlayer'
+import StartWalk from '@/Store/Player/StartWalk'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { navigateAndSimpleReset } from '@/Navigators/Root'
-import Video from 'react-native-video'
-import { useTranslation } from 'react-i18next'
+import '@/Translations'
+import i18n from 'i18next'
+import BackgroundService from 'react-native-background-actions'
 
 
 const Stack = createStackNavigator()
@@ -35,25 +36,12 @@ const ApplicationNavigator = ({ store }) => {
   const [isApplicationLoaded, setIsApplicationLoaded] = useState(false)
   const applicationIsLoading = useSelector(state => state.startup.loading)
   const dispatch = useDispatch()
-  const audioRef = useRef()
-  const { t } = useTranslation()
-
-  const activeWalk = useSelector((state) => state.walks.activeWalk )
-
-  const playerUri = useSelector(state => {
-    if (activeWalk) {
-      return state.walks.fetchWalks.walks.filter(walk => {
-        return walk.id == activeWalk
-      })[0].srcUri
-    }
-  })
-
-  const playerSeek = useSelector((state) => state.player.seek )
-  const playerPaused = useSelector(state => state.player.paused)
+  const selectedLanguage = useSelector((state) => state.language.selectedLanguage)
 
   useEffect(() => {
-    //dispatch(ChangeTheme.action({ theme: 'default', darkMode: false }))
+    dispatch(ChangeTheme.action({ theme: 'default', darkMode: false }))
     if (MainNavigator == null && !applicationIsLoading) {
+      i18n.changeLanguage(selectedLanguage)
       MainNavigator = require('@/Navigators/Main').default
       setIsApplicationLoaded(true)
     }
@@ -64,28 +52,46 @@ const ApplicationNavigator = ({ store }) => {
     () => () => {
       setIsApplicationLoaded(false)
       MainNavigator = null
+      TrackPlayer.reset()
+      TrackPlayer.destroy()
+      dispatch(StartWalk.action(false))
+      BackgroundService.stop()
+      console.log('destroy')
     },
     [],
   )
 
   useEffect(() => {
     if(isApplicationLoaded && MainNavigator != null) {
-      navigateAndSimpleReset('Main')
+      TrackPlayer.removeUpcomingTracks()
+      TrackPlayer.setupPlayer({
+        maxCacheSize: 50000
+      })
+        .then(() => TrackPlayer.updateOptions({
+          stopWithApp: true,
+          capabilities: [
+            Capability.Play,
+            Capability.Pause,
+            Capability.Stop
+          ],
+          notificationCapabilites: [
+            Capability.Play,
+            Capability.Pause,
+            Capability.Stop
+          ],
+          compactCapabilites: [
+            Capability.Play,
+            Capability.Pause,
+            Capability.Stop
+          ],
+          waitForBuffer: true
+        }))
+        .then(() => navigateAndSimpleReset('Main'))
     }
   }, [isApplicationLoaded])
 
-  useEffect(() => {
-    if (playerSeek !== null) {
-      audioRef.current.seek(playerSeek)
-      dispatch(SeekPlayer.action(null))
-    }
-  }, [playerSeek])
-
-  const playerOnLoad = payload => dispatch(PlayerOnLoad.action(payload))
-  const playerOnProgress = payload => dispatch(PlayerOnProgress.action(payload))
-
   return (
-    <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
+    <SafeAreaView style={[Layout.fill, {backgroundColor: colors.card}]}>
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
         <Stack.Navigator
@@ -102,22 +108,9 @@ const ApplicationNavigator = ({ store }) => {
           )}
         </Stack.Navigator>
       </NavigationContainer>
-      { activeWalk ? (
-        <View>
-          <VideoControls/>
-          <Video
-            ref={audioRef}
-            paused={playerPaused}
-            source={{uri: playerUri}}
-            onLoad={playerOnLoad}
-            onProgress={playerOnProgress}
-            playInBackground={true}
-            playWhenInactive={true}
-            ignoreSilentSwitch="ignore"
-            audioOnly={true}
-          />
-        </View>
-        ) : null
+      { isApplicationLoaded && MainNavigator != null ? (
+        <VideoControls/>
+      ) : null
       }
     </SafeAreaView>
   )

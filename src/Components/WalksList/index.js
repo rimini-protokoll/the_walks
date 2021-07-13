@@ -10,7 +10,6 @@ import Tile from './Tile'
 
 const WalksList = ({ navigation, walks }) => {
   const { Layout } = useTheme()
-  
   return (
     <View style={{
       flex: 1,
@@ -20,17 +19,13 @@ const WalksList = ({ navigation, walks }) => {
       flexWrap: 'wrap',
       flexDirection: 'row'
       }}>
-      { walks.map(({id, title, iconUri}, i) => (
-        <Tile   
-          style={{ 
-            paddingRight: (i % 2) == 0 ? 5 : 0,
-            paddingLeft: (i % 2) == 1 ? 5 : 0,
-          }} 
+      { walks.map(({data}, i) => (
+        <Tile
           key={i}
-          identifier={id}
+          identifier={data.id}
           navigation={navigation}
-          title={title}
-          iconUri={iconUri}
+          title={data.title}
+          iconUri={data.iconUri}
           />
       ))}
     </View>

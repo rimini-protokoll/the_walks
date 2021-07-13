@@ -8,9 +8,9 @@ import {
 import { useDispatch } from 'react-redux'
 import { useTheme } from '@/Theme'
 import IconLanguage from 'react-native-ico-flags'
-import { navigateAndSimpleReset } from '@/Navigators/Root'
 import ChangeLanguage from '@/Store/Language/ChangeLanguage'
-import StartWalk from '@/Store/Walks/StartWalk'
+import StartWalk from '@/Store/Player/StartWalk'
+import { navigateAndReset } from '@/Navigators/Root'
 
 const TileLanguage = ({ navigation, title, language, languageCode }) => {
   const { Fonts, Gutters, Layout } = useTheme()
@@ -18,21 +18,23 @@ const TileLanguage = ({ navigation, title, language, languageCode }) => {
   const chooseLanguage = (l) => {
     dispatch(ChangeLanguage.action(l))
     dispatch(StartWalk.action(false))
-    navigateAndSimpleReset('The Walks')
+    navigation.reset({index: 0, routes: [{name: 'Main', state: {routes: ['The Walks']}}]})
   }
   return (
     <TouchableOpacity
       onPress={() => chooseLanguage(languageCode) }
-      style={[ Gutters.mediumVPadding, { 
+      style={[ Gutters.regularVPadding, { 
         width: '100%',
-        alignItems: 'center',
+        alignItems: 'center'
       }]}>
+      {/*
       <IconLanguage
         name={ language }
         height="50" 
         width="50"
       />
-      <Text style= { Fonts.textRegular }>{ title }</Text>
+      */}
+      <Text style= { Fonts.textLarge }>{ title }</Text>
     </TouchableOpacity>
   )
 }
