@@ -4,7 +4,7 @@ language: de
 listed: true
 title: Theater
 preTitle: Vor dem
-duration: 778.057143
+duration: 20 Minuten
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
 userPrompt:
@@ -40,4 +40,4 @@ userPrompt:
     action: map
 popups: []
 ---
-My *apologies*, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
+Wann warst Du das letzte Mal in einem Theater? Hast Menschen neben Dir atmen hören und denen auf der Bühne applaudiert? Mach Dich auf den Weg und besuche ein Theater in Deiner Nähe. Nimm einen Zettel und einen Stift mit und starte den Walk, sobald es in Sichtweite ist.

@@ -7,9 +7,6 @@ languages:
 - title: English
   languageCode: en
   language: united-kingdom
-- title: Italiano
-  languageCode: it
-  language: italy
 - title: Français
   languageCode: fr
   language: france

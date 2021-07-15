@@ -2,8 +2,8 @@
 id: siQu3iex
 language: de
 listed: true
-title: Roundabout
-duration: 1202
+title: Kreisverkehr
+duration: 20 Minuten
 srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon4.png
 userPrompt:
@@ -27,4 +27,4 @@ userPrompt:
     action: map
 popups: []
 ---
-My apologies, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
+Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviele solcher Kreisel gibt es dort, wo Du wohnst? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.

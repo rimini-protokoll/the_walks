@@ -6,6 +6,7 @@ medias:
 - de_Apheek3e
 - de_Udie9hoh
 - de_siQu3iex
+- de_ChaiJ0yo
 ---
 
 "The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren.

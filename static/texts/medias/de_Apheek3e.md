@@ -3,7 +3,7 @@ id: Apheek3e
 language: de
 listed: true
 title: Straße
-duration: 1178.52
+duration: 25 Minuten
 srcUri: https://the-walks.netlify.app/medias/de02.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon2.png
 userPrompt:
@@ -18,4 +18,4 @@ userPrompt:
     action: continue
 popups: []
 ---
-My apologies, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
+Wie werden Städte geplant? Wie lässt sich planlos gehen? Und was hat das mit der Verhässlichung deiner Umgebung zu tun? Dieser Walk beginnt an irgendeiner Straße in Deiner Nachbarschaft. Unterwegs mit der psychologischen Beraterin Katja Otto und dem Spaziergangswissenschaftler Martin Schmitz.
