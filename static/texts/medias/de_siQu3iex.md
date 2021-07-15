@@ -3,9 +3,9 @@ id: siQu3iex
 language: de
 listed: true
 title: Kreisverkehr
-duration: 20 Minuten
+duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon4.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
 userPrompt:
 - title: Halt fest, was du siehst.
   triggerTime: 350

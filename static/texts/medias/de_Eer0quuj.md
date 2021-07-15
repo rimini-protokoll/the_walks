@@ -4,9 +4,9 @@ language: de
 listed: true
 title: Theater
 preTitle: Vor dem
-duration: 20 Minuten
+duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: Ja, ich bin am Ziel angekommen
   triggerTime: 612

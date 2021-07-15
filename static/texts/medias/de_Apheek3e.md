@@ -3,9 +3,9 @@ id: Apheek3e
 language: de
 listed: true
 title: Straße
-duration: 25 Minuten
+duration: ~ 25 Min
 srcUri: https://the-walks.netlify.app/medias/de02.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon2.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon5.png
 userPrompt:
 - title: Finden einen Mülleimer und mache ein Foto.
   triggerTime: 20

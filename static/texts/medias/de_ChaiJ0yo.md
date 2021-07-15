@@ -3,18 +3,18 @@ id: ChaiJ0yo
 language: de
 listed: true
 title: Friedhof
-duration: 30 Minuten
+duration: ~ 30 Min
 srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon5.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon6.png
 userPrompt:
-- title: Finden einen Mülleimer und mache ein Foto.
-  triggerTime: 20
+- title: Bild machen und hochladen
+  triggerTime: 631.6
   srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_1.mp3
   actions:
-  - title: Mach ein Foto
+  - title: Bild
     action: picture
     postAction: continue
-  - title: kein Foto
+  - title: Nein
     action: continue
 popups: []
 ---
