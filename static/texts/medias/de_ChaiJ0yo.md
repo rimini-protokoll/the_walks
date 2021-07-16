@@ -7,9 +7,21 @@ duration: ~ 30 Min
 srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon6.png
 userPrompt:
+- title: Nächsten Track
+  triggerTime: 277.333
+  srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_1.mp3
+  actions:
+  - title: Starten
+    action: continue
+- title: Nächsten Track
+  triggerTime: 450
+  srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_2.mp3
+  actions:
+  - title: Starten
+    action: continue
 - title: Bild machen und hochladen
   triggerTime: 631.6
-  srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_1.mp3
+  srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_3.mp3
   actions:
   - title: Bild
     action: picture

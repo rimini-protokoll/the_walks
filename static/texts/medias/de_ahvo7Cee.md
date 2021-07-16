@@ -4,7 +4,7 @@ language: de
 listed: true
 title: Park
 duration: ~ 20 Min
-srcUri: [airie8Ke, eeJee2ke]
+srcUri: [de_airie8Ke, de_eeJee2ke]
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon8.png
 userPrompt: []
 popups: []
