@@ -2,12 +2,18 @@
 id: Eer0quuj
 language: de
 listed: true
-title: Theater 1
-preTitle: Vor dem HALLO
+title: Theater 2
+preTitle: Vor dem
 duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
+- title: Ja, ich bin am Ziel angekommen
+  triggerTime: 212,4
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Weiter
+    action: continue
 - title: Ja, ich bin am Ziel angekommen
   triggerTime: 612
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
