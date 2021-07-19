@@ -7,6 +7,8 @@ medias:
 - de_siQu3iex
 - de_Apheek3e
 - de_ChaiJ0yo
+credits: >
+  Dies sind credits
 ---
 
 "The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren.

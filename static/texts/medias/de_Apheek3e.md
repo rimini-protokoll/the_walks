@@ -2,6 +2,7 @@
 id: Apheek3e
 language: de
 listed: true
+shortTitle: Straße
 title: Straße
 duration: ~ 25 Min
 srcUri: https://the-walks.netlify.app/medias/de02.mp3

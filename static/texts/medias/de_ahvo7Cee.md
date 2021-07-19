@@ -2,9 +2,11 @@
 id: ahvo7Cee
 language: de
 listed: true
+shortTitle: Park
 title: Park
+credits: [MeMeMe, AndSoOnAndOn niceOne]
 duration: ~ 20 Min
-srcUri: [de_airie8Ke, de_eeJee2ke]
+srcUri: [de_eeJee2ke, de_airie8Ke]
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon8.png
 userPrompt: []
 popups: []

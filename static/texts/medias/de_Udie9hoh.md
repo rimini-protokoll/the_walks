@@ -2,7 +2,8 @@
 id: Udie9hoh
 language: de
 listed: true
-title: Steff
+shortTitle: Ampel
+title: Gehen mit Steff
 duration: 940.632
 srcUri: https://the-walks.netlify.app/medias/de03.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon3.png

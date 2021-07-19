@@ -2,7 +2,10 @@
 id: siQu3iex
 language: de
 listed: true
-title: Kreisverkehr
+shortTitle: Kreisverkehr
+preTitle: Um eine
+title: Verkehrsinsel
+afterTitle: herum
 duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png

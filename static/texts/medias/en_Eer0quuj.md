@@ -2,8 +2,9 @@
 id: Eer0quuj
 language: de
 listed: true
+shortTitle: Theater
+preTitle: In front of a
 title: Theater
-preTitle: In front of the
 duration: 778.057143
 srcUri: https://the-walks.netlify.app/medias/en_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png

@@ -2,8 +2,9 @@
 id: Eer0quuj
 language: de
 listed: true
-title: Theater 2
+shortTitle: Theater
 preTitle: Vor dem
+title: Theater
 duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png

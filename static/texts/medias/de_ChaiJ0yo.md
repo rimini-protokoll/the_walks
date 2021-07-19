@@ -2,6 +2,7 @@
 id: ChaiJ0yo
 language: de
 listed: true
+shortTitle: Friedhof
 title: Friedhof
 duration: ~ 30 Min
 srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo.mp3
