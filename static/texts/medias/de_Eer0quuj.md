@@ -2,15 +2,14 @@
 id: Eer0quuj
 language: de
 listed: true
-title: Theater 3
+title: Theater
 preTitle: Vor dem
 duration: ~ 20 Min
-twoPerson: true
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
-iconUri: https://the-walks.netlify.app/icons/Theater.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: Nächsten Track
-  triggerTime: 262.800
+  triggerTime: 234
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Starten
