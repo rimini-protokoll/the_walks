@@ -2,10 +2,11 @@
 id: Eer0quuj
 language: de
 listed: true
-title: Theater 3
+title: Theater
 preTitle: Vor dem
+shortTitle: Theater
 duration: ~ 20 Min
-twoPerson: true
+penPaper: true
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
@@ -45,6 +46,8 @@ userPrompt:
   actions:
   - title: Galerie
     action: map
+  - title: Nein
+    action: continue
 popups: []
 ---
 Wann warst Du das letzte Mal in einem Theater? Hast Menschen neben Dir atmen hören und denen auf der Bühne applaudiert? Mach Dich auf den Weg und besuche ein Theater in Deiner Nähe. Nimm einen Zettel und einen Stift mit und starte den Walk, sobald es in Sichtweite ist.

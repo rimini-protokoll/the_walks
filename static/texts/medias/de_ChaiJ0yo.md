@@ -35,6 +35,14 @@ userPrompt:
   actions:
   - title: Starten
     action: continue
+- title: Weiter zur Bildergalerie
+  triggerTime: 1101
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Galerie
+    action: map
+  - title: Nein
+    action: continue
 popups: []
 ---
 Was wäre wenn Daten statt Steine von Menschen übrigblieben? Sind Friedhöfe für Tote oder Lebende? Was suchen Tiere hier? Es gibt viel Platz zum Nachdenken – nicht nur für Hinterbliebene. Besuche einen Friedhof und starte den Walk am ersten Grab. 

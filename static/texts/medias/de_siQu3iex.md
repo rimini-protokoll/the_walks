@@ -28,6 +28,14 @@ userPrompt:
     postAction: map
   - title: Nein
     action: map
+- title: Weiter zur Bildergalerie
+  triggerTime: 1202
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Galerie
+    action: map
+  - title: Nein
+    action: continue
 popups: []
 ---
 Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviele solcher Kreisel gibt es dort, wo Du wohnst? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.

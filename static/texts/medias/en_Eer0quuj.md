@@ -37,8 +37,10 @@ userPrompt:
   triggerTime: 777
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: 'Gallery'
+  - title: Gallery
     action: map
+  - title: 'No'
+    action: continue
 popups: []
 ---
 My *apologies*, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
