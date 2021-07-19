@@ -8,10 +8,10 @@ shortTitle: Theater
 duration: ~ 20 Min
 penPaper: true
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
-iconUri: https://the-walks.netlify.app/icons/Theater.png
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: Nächsten Track
-  triggerTime: 262.800
+  triggerTime: 231
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Starten
