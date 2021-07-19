@@ -1,21 +1,23 @@
 ---
 id: ooZohb7c
-language: de
-listed: false
-shortTitle: Supermarkt B
-title: Supermarkt B
+language: en
+listed: true
+shortTitle: Supermarket B
+title: Supermarket B
 duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_uma9ooK4_B.mp3
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt: 
-	- title: Bild machen und hochladen
+- title: take a synchronized photo when together
   triggerTime: 607
-  srcUri: https://the-walks.netlify.app/medias/de_uma9ooK4_B_loop.mp3
+  srcUri: https://the-walks.netlify.app/medias/de_uma9ooK4_A_loop.mp3
   actions:
-  - title: Bild
+  - title: Picture
     action: picture
     postAction: continue
-  - title: Nein
+  - title: 'No'
     action: continue
 popups: []
 ---
+
+

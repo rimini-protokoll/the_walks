@@ -5,8 +5,9 @@ listed: true
 title: Theater 3
 preTitle: Vor dem
 duration: ~ 20 Min
+twoPerson: true
 srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
+iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
 - title: Nächsten Track
   triggerTime: 262.800

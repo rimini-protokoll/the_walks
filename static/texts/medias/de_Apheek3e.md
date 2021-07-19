@@ -6,7 +6,7 @@ shortTitle: Straße
 title: Straße
 duration: ~ 25 Min
 srcUri: https://the-walks.netlify.app/medias/de02.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon5.png
+iconUri: https://the-walks.netlify.app/icons/Straße.png
 userPrompt:
 - title: Finden einen Mülleimer und mache ein Foto.
   triggerTime: 20

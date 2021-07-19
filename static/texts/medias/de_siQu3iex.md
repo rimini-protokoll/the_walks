@@ -8,7 +8,7 @@ title: Verkehrsinsel
 afterTitle: herum
 duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
+iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 userPrompt:
 - title: Halt fest, was du siehst.
   triggerTime: 350

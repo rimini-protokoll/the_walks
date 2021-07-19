@@ -6,7 +6,7 @@ shortTitle: Friedhof
 title: Friedhof
 duration: ~ 30 Min
 srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon6.png
+iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 userPrompt:
 - title: Nächsten Track
   triggerTime: 277.333

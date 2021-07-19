@@ -1,21 +1,23 @@
 ---
 id: thie3IVu
-language: de
+language: en
 listed: false
-shortTitle: Supermarkt A
-title: Supermarkt A
+shortTitle: Supermarket A
+title: Supermarket A
 duration: ~ 20 Min
 srcUri: https://the-walks.netlify.app/medias/de_uma9ooK4_A.mp3
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt: 
-	- title: Bild machen und hochladen
+- title: take a synchronized photo when together
   triggerTime: 607
   srcUri: https://the-walks.netlify.app/medias/de_uma9ooK4_A_loop.mp3
   actions:
-  - title: Bild
+  - title: Picture
     action: picture
     postAction: continue
-  - title: Nein
+  - title: 'No'
     action: continue
 popups: []
 ---
+
+

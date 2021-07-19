@@ -7,7 +7,7 @@ preTitle: In front of a
 title: Theater
 duration: 778.057143
 srcUri: https://the-walks.netlify.app/medias/en_Eer0quuj.mp3
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon1.png
+iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
 - title: Yes, I have arrived at my destination
   triggerTime: 612
