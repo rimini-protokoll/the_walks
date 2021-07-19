@@ -9,7 +9,7 @@ srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: Nächsten Track
-  triggerTime: 226.800
+  triggerTime: 262.800
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Starten
