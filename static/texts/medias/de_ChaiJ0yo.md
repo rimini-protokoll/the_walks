@@ -27,6 +27,8 @@ userPrompt:
   triggerTime: 658
   srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_3.mp3
   actions:
+  - title: Starten
+    action: continue
 - title: Nächsten Track
   triggerTime: 829
   srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_1.mp3
