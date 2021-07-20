@@ -2,7 +2,7 @@
 id: ChaiJ0yo
 language: de
 listed: true
-shortTitle: Friedhof
+shortTitle: Friedhof 1
 title: Friedhof
 duration: ~ 30 Min
 srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo.mp3
@@ -32,7 +32,7 @@ userPrompt:
 - title: Nächsten Track
   triggerTime: 829
   srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_1.mp3
-  actions: continue
+  actions: 
   - title: Starten
     action: continue
 - title: Weiter zur Bildergalerie
