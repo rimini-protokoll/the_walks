@@ -8,8 +8,6 @@ duration: ~ 30 Min
 srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo.mp3
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 userPrompt:
-  - title: Starten
-    action: continue
 - title: Nächsten Track
   triggerTime: 450
   srcUri: https://the-walks.netlify.app/medias/de_ChaiJ0yo_loop_2.mp3
