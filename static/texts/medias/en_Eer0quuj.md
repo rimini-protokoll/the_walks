@@ -9,6 +9,12 @@ duration: 778.057143
 srcUri: https://the-walks.netlify.app/medias/en_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
+- title: Next track
+  triggerTime: 231
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Start
+    action: continue
 - title: Yes, I have arrived at my destination
   triggerTime: 612
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
