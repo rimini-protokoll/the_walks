@@ -18,7 +18,7 @@ userPrompt:
   - title: 'No'
     action: continue
 - title: Continue to the gallery
-  triggerTime: 1377
+  triggerTime: 1375.5
   srcUri: https://the-walks.netlify.app/medias/de_uma9ooK4_A_loop.mp3
   actions:
   - title: Gallery
