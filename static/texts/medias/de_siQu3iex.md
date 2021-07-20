@@ -38,4 +38,4 @@ userPrompt:
     action: continue
 popups: []
 ---
-Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviele solcher Kreisel gibt es dort, wo Du wohnst? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.
+Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviel Kreisel gibt es dort, wo Du wohnst? Und was, wenn alle Bewegung angehalten wird? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.

@@ -49,4 +49,4 @@ userPrompt:
     action: continue
 popups: []
 ---
-My *apologies*, I noticed that you mistyped a similar place name. The correct name is "Vor dem Theater".
+When was the last time you went to the theatre? Heard people breath next to you and applauded others that were on stage. Set off to find a theatre near you. Take a slip of paper and a writing utensil with you and begin your walk, as soon as the theatre is within sight.

@@ -10,4 +10,4 @@ iconUri: https://the-walks.netlify.app/icons/Strasse.png
 userPrompt: []
 popups: []
 ---
-Wie werden Städte geplant? Wie lässt sich planlos gehen? Und was hat das mit der Verhässlichung deiner Umgebung zu tun? Dieser Walk beginnt an irgendeiner Straße in Deiner Nachbarschaft. Unterwegs mit der psychologischen Beraterin Katja Otto und dem Spaziergangswissenschaftler Martin Schmitz.
+Wie werden Städte geplant? Wie lässt sich planlos gehen? Bei diesem Walk bist Du unterwegs mit der psychologischen Beraterin Katja Otto und dem Spaziergangswissenschaftler Martin Schmitz. Es geht los an einer Straße Deiner Wahl. Halte an und starte dann den Walk.

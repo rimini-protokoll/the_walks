@@ -45,4 +45,4 @@ userPrompt:
     action: continue
 popups: []
 ---
-Was wäre wenn Daten statt Steine von Menschen übrigblieben? Sind Friedhöfe für Tote oder Lebende? Was suchen Tiere hier? Es gibt viel Platz zum Nachdenken – nicht nur für Hinterbliebene. Besuche einen Friedhof und starte den Walk am ersten Grab. 
+Sind Friedhöfe für Tote oder Lebende? Was suchen Tiere hier? Was wäre wenn Daten statt Steine von Menschen übrigblieben? Besuche einen Friedhof und starte den Walk am ersten Grab.
