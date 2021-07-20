@@ -44,5 +44,8 @@ userPrompt:
   - title: Nein
     action: continue
 popups: []
+credits: "Sprecher*innen
+
+*Margot Gödros*"
 ---
 Sind Friedhöfe für Tote oder Lebende? Was suchen Tiere hier? Was wäre wenn Daten statt Steine von Menschen übrigblieben? Besuche einen Friedhof und starte den Walk am ersten Grab.

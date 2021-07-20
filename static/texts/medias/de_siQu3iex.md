@@ -37,5 +37,20 @@ userPrompt:
   - title: Nein
     action: continue
 popups: []
+credits: "Expert*innen / Mitwirkende
+
+*Erdem Gunduz*
+
+
+Sprecher*innen
+
+*Kamran Sorusch*
+
+
+Danke an
+
+*Jannis Grimm
+
+Institut für Protest und Bewegungsforschung*"
 ---
 Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviel Kreisel gibt es dort, wo Du wohnst? Und was, wenn alle Bewegung angehalten wird? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.

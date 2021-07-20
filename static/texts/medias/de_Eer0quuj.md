@@ -49,5 +49,8 @@ userPrompt:
   - title: Nein
     action: continue
 popups: []
+credits: "Sprecher*innen
+
+*Alexandra Lauck*"
 ---
 Wann warst Du das letzte Mal in einem Theater? Hast Menschen neben Dir atmen hören und anderen, die auf die Bühne gingen, applaudiert? Mach Dich auf den Weg und besuche ein Theater in Deiner Nähe. Nimm einen Zettel und einen Stift mit und starte den Walk, sobald es in Sichtweite ist.

@@ -19,7 +19,7 @@ userPrompt:
   - title: Nein
     action: continue
 - title: Weiter zur Bildergalerie
-  triggerTime: 984
+  triggerTime: 983
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Galerie
@@ -27,5 +27,20 @@ userPrompt:
   - title: Nein
     action: continue
 popups: []
+credits: "Expert*innen / Mitwirkende
+
+*Stephanie Haug*
+
+
+Sprecher*innen
+
+*Alexandra Lauck
+
+Stephanie Haug*
+
+
+Komposition
+
+*Rimini Protokoll*"
 ---
 Triff Steff an einer Fußgängerampel und starte dort den Walk. Wenn möglich, trage Schuhe, in denen Du auch schnell laufen kannst.

@@ -8,8 +8,86 @@ medias:
 - de_Apheek3e
 - de_ChaiJ0yo
 - de_Udie9hoh
-credits: >
-  Dies sind credits
+credits: "Text, Regie
+
+*Helgard Haug, Stefan Kaegi, Daniel Wetzel*
+
+
+Idee, Dramaturgie
+
+*Cornelius Puschke*
+
+
+App-Development
+
+*Steffen Klaue, Alexander Morosow*
+
+
+Sound
+
+*Frank Böhle*
+
+
+Musik / Komposition
+
+*Frank Böhle u.a. (siehe Einzel Walks)*
+
+
+Grafik
+
+*Ilona Marti*
+
+
+Sprachaufnahmen
+
+*Rimini Protokoll, studio lärm und Lorenz Rollhäuser*
+
+
+Dokumentation/Trailer
+
+*Expander Film (Lili Kuschel, Stefan Korsinsky)*
+
+
+Produktionsleitung
+
+*Maitén Arns*
+
+
+Mitarbeit Produktion
+
+*Steven Sander*
+
+
+Mitarbeit App-Development
+
+*Gaétan Langlois-Meurinne*
+
+
+Übersetzung
+
+*Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+
+
+Expert*innen / Mitwirkende
+
+*Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+
+
+Sprecher*innen
+
+*Mats Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lene Calvez, Maimouna Coulibaly, Louisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Kofi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+
+
+Danke an
+
+*Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
+ 
+
+Eine Produktion von Rimini Apparat.
+
+In Koproduktion mit creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.
+
+Gefördert vom Fonds Darstellende Künste aus Mitteln der Beauftragten der Bundesregierung für Kultur und Medien und der Senatsverwaltung für Kultur und Europa."
 ---
 
 "The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren.
