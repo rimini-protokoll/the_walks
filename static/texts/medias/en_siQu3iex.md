@@ -19,7 +19,7 @@ userPrompt:
   - title: No
     action: continue
 - title: Take a photo of your movement.
-  triggerTime: 1201
+  triggerTime: 1071
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
   - title: Take a photo
@@ -27,14 +27,6 @@ userPrompt:
     postAction: map
   - title: No
     action: map
-- title: Continue to the picture gallery
-  triggerTime: 1202
-  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
-  actions:
-  - title: Gallery
-    action: map
-  - title: No
-    action: continue
 popups: []
 credits: "Experts / Contributors
 
