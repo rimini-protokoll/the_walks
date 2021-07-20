@@ -18,6 +18,14 @@ userPrompt:
     postAction: continue
   - title: Nein
     action: continue
+- title: Weiter zur Bildergalerie
+  triggerTime: 984
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Galerie
+    action: map
+  - title: Nein
+    action: continue
 popups: []
 ---
 Triff Steff an einer Fußgängerampel und starte dort den Walk. Wenn möglich, trage Schuhe, in denen Du auch schnell laufen kannst.
