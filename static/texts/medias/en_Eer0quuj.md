@@ -5,10 +5,16 @@ listed: true
 shortTitle: Theater
 preTitle: In front of a
 title: Theater
-duration: 778.057143
+duration: ~ 20min
 srcUri: https://the-walks.netlify.app/medias/en_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
+- title: Next track
+  triggerTime: 231
+  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
+  actions:
+  - title: Start
+    action: continue
 - title: Yes, I have arrived at my destination
   triggerTime: 612
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
