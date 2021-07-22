@@ -3,7 +3,6 @@ id: Koo3Tei8
 languageCode: it
 medias: []
 ---
-
 "The Walks" è una raccolta di brevi radiodrammi per luoghi specifici della tua città e un invito a riscoprire l'ambiente circostante e ad interagire con esso. Circa 20 minuti sono sufficienti per fare da soli una passeggiata audio. Vai quando vuoi. Puoi decidere tu stesso quante passeggiate vuoi fare in quale ordine. Le storie e i paesaggi sonori dei brevi radiodrammi possono essere vissuti in tutto il mondo. Così "The Walks" collega le persone di tutto il mondo in un'esperienza locale attraverso un atto umano fondamentale: camminare.
 
 Con la pandemia di corona, camminare negli spazi pubblici ha assunto un nuovo significato. Un rituale antico e quotidiano è diventato una componente centrale della nuova normalità: le persone si incontrano, camminano, attraversano i quartieri, giocano nei paesaggi e percepiscono di nuovo l'ambiente circostante ad ogni passeggiata.

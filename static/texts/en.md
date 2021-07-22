@@ -5,6 +5,8 @@ medias:
 - en_Eer0quuj
 - en_Apheek3e
 - en_siQu3iex
+- en_ChaiJ0yo
+- en_bee5Zah7
 - en_uma9ooK4
 credits: "Script, Direction
 
@@ -91,9 +93,10 @@ Supported by Fonds Darstellende Künste with funds from the Federal Government C
 
 "
 ---
+The Walks is a collection of short audio experiences for specific places in your city and an invitation to rediscover and interact with your environment. 
+It only takes approx. 20 minutes to do an audio walk. Get going whenever you want. You decide how many of the walks you’d like to do and in what order.
+The stories and soundscapes in the short audio experiences are global in scope. The Walks connects people around the world in a local experience via the fundamental human action of walking.
 
-"The Walks" is a collection of short radio plays for specific locations in your city and an invitation to rediscover your surroundings and to interact with them. About 20 minutes are enough to do an audio walk yourself. Go whenever you want. You can decide for yourself how many of the walks you want to do in which order. The stories and soundscapes of the short radio plays can be experienced worldwide. Thus "The Walks" connects people around the globe in a local experience through a fundamental human act: walking.
+Walking in public gained new meaning with the COVID-19 pandemic. An ancient, daily ritual became an integral part of the new normality. People meet, walk, stroll through neighbourhoods, play in landscapes, and perceive their environment anew with every stride.
 
-With the corona pandemic, walking in public spaces took on a new meaning. An ancient and everyday ritual became a central component of the new normal: people meet, walk, stride through neighborhoods, play in landscapes and perceive their surroundings anew with every walk.
-
-"The Walks" understands walking as a theatrical scenario: an audio-guided walk in parks, a staged walk in supermarkets or timed interactions on river banks. In every city, places familiar with voices, noises and music gradually become scenes and landscapes become stages: through narratives, dialogical situations, choreographic explorations or musical-rhythmic variations of walking. The title of each walk shows you where or how it is performed: "Walk for a cemetery", "Walk on the water" or "Walk for a traffic island".
+The Walks understands walking as a theatrical scenario – an audio-guided walk in parks, a staged walk in supermarkets or timed interactions on riverbanks. In every city, voices, sounds, and music turn familiar places into sites and landscapes into stages, step by step through storytelling, dialogical situations, choreographic discoveries, or musical and rhythmic variations on walking. The title of every walk indicates where or how to do it: “Walk for a cemetery”, “Walk along the water” or “Walk at a roundabout”
