@@ -1,13 +1,15 @@
 ---
 id: dooPoru8
 languageCode: fr
-medias: []
+medias: 
+- fr_siQu3iex
 credits: >
   ce sont des crédits
 ---
+«The Walks» est une série de courtes pièces audio conçues pour des lieux spécifiques de ta ville et une invitation à redécouvrir et interagir avec ton environnement.
+Pour faire une promenade audioguidée, 20 minutes sont suffisantes. Tu peux commencer à n’importe quel moment et décider toi-même l’ordre et le nombre de promenades que tu souhaites faire..
+Les histoires et les univers sonores des pièces audio peuvent être écoutés dans le monde entier. Ainsi, «The Walks» relie des personnes tout autour du globe dans une expérience locale à travers une activité humaine fondamentale: la marche.
 
-"The Walks" est une collection de courtes pièces radiophoniques pour des endroits spécifiques de votre ville et une invitation à redécouvrir votre environnement et à interagir avec eux. Environ 20 minutes suffisent pour faire vous-même une promenade audio. Allez quand vous voulez. Vous pouvez décider vous-même combien de promenades vous voulez faire et dans quel ordre. Les histoires et les paysages sonores des courtes pièces radiophoniques peuvent être expérimentés dans le monde entier. Ainsi "The Walks" connecte les gens du monde entier dans une expérience locale à travers un acte humain fondamental : marcher.
+Avec la pandémie de Covid-19, la marche dans les espaces publics a acquis une nouvelle importance. Un rituel immémorial et quotidien est devenu un élément central de la nouvelle normalité: les gens se rencontrent, se promènent, parcourent le voisinage, jouent dans les paysages et portent à chaque marche un regard nouveau sur leur environnement.
 
-Avec la pandémie de corona, marcher dans les espaces publics a pris un nouveau sens. Un rituel ancien et quotidien est devenu un élément central de la nouvelle normalité : les gens se rencontrent, marchent, arpentent les quartiers, jouent dans les paysages et perçoivent leur environnement à nouveau à chaque promenade.
-
-"The Walks" comprend la marche comme un scénario théâtral : une promenade audio-guidée dans les parcs, une promenade mise en scène dans les supermarchés ou des interactions chronométrées sur les berges des rivières. Dans chaque ville, les lieux familiers des voix, des bruits et de la musique deviennent progressivement des scènes et des paysages deviennent des scènes : à travers des récits, des situations dialogiques, des explorations chorégraphiques ou des variations musico-rythmiques de la marche. Le titre de chaque promenade vous indique où et comment elle est réalisée : "Marcher pour un cimetière", "Marcher sur l'eau" ou "Marcher pour un îlot de circulation".
+«The Walks» conçoit la marche comme un scenario théâtral: une promenade audioguidée dans des parcs, une promenade mise en scène dans des supermarchés ou des interactions cadencées sur des berges. Dans chaque ville, des voix, des sons et de la musique transforment pas à pas des lieux familiers en théâtres et des paysages en scènes: grâce à des récits, des dialogues, des explorations chorégraphiques ou des variations musicales et rythmiques de la marche. L’endroit et le type d’expérience sont indiqués dans le titre de chaque promenade  : «Promenade pour un cimetière», «Promenade au bord de l’eau» ou «Promenade pour un rond pointîlot directionnel».

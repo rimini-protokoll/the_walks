@@ -43,11 +43,6 @@ Sprachaufnahmen
 *Rimini Protokoll, studio lärm und Lorenz Rollhäuser*
 
 
-Dokumentation/Trailer
-
-*Expander Film (Lili Kuschel, Stefan Korsinsky)*
-
-
 Produktionsleitung
 
 *Maitén Arns*
@@ -75,7 +70,13 @@ Expert*innen / Mitwirkende
 
 Sprecher*innen
 
-*Mats Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lene Calvez, Maimouna Coulibaly, Louisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Kofi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lene Calvez, Maimouna Coulibaly, Louisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+
+
+Dokumentation/Trailer
+
+*Expander Film (Stefan Korsinsky, Lilli Kuschel)
+Danke an:  Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
 
 
 Danke an
@@ -86,6 +87,7 @@ Danke an
 Eine Produktion von Rimini Apparat.
 
 In Koproduktion mit creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.
+
 
 Gefördert vom Fonds Darstellende Künste aus Mitteln der Beauftragten der Bundesregierung für Kultur und Medien und der Senatsverwaltung für Kultur und Europa."
 ---

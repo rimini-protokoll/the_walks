@@ -1,43 +1,38 @@
 ---
 id: Eer0quuj
-language: de
+language: en
 listed: true
 shortTitle: Theater
 preTitle: In front of a
 title: Theater
 duration: ~ 20min
+penPaper: true
 srcUri: https://the-walks.netlify.app/medias/en_Eer0quuj.mp3
 iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
-- title: Next track
-  triggerTime: 231
+- title: Yes, I have arrived at the destination! Let’s go on!
+  triggerTime: 632.470
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: Start
+  - title: Continue
     action: continue
-- title: Yes, I have arrived at my destination
-  triggerTime: 612
+- title: Take a photo and continue or continue without photo.
+  triggerTime: 742.588
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: Weiter
-    action: continue
-- title: Take picture and upload
-  triggerTime: 730
-  srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
-  actions:
-  - title: Picture
+  - title: With Photo
     action: picture
     postAction: continue
-  - title: 'No'
+  - title: Without photo
     action: continue
-- title: Take picture and upload
-  triggerTime: 754
+- title: Take a photo and continue or continue without photo.
+  triggerTime: 770.823
   srcUri: https://the-walks.netlify.app/medias/de_Eer0quuj_loop.mp3
   actions:
-  - title: Picture
+  - title: With Photo
     action: picture
     postAction: continue
-  - title: 'No'
+  - title: Without photo
     action: continue
 - title: Continue to the gallery
   triggerTime: 777

@@ -1,12 +1,11 @@
 ---
-id: siQu3iex
+id: bee5Zah7
 language: de
 listed: true
-shortTitle: Kreisverkehr
-preTitle: Um eine
-title: Verkehrsinsel
-afterTitle: herum
-duration: ~ 20 Min
+shortTitle: Aufbruch
+title: Aufbruch,
+afterTitle: los raus jetzt!
+duration: ~ 16 Min
 srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 userPrompt:
@@ -45,4 +44,4 @@ Danke an
 
 Institut für Protest und Bewegungsforschung*"
 ---
-Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviel Kreisel gibt es dort, wo Du wohnst? Und was, wenn alle Bewegung angehalten wird? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.
+Warst du heute schon draußen? Bist einen deiner gewohnten Wege gegangen? Zielsicher – wie immer? Wann hast du deine gewohnten Wege das letzte Mal verlassen? Pack einen Stift und einen Zettel ein, setz deine Kopfhörer auf und starte den Walk in deinen eigenen vier Wänden. Wohin er dich führt, wirst du dann sehen.

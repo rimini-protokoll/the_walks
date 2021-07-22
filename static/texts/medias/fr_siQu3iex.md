@@ -1,13 +1,12 @@
 ---
 id: siQu3iex
-language: de
+language: fr
 listed: true
-shortTitle: Kreisverkehr
-preTitle: Um eine
-title: Verkehrsinsel
-afterTitle: herum
+shortTitle: Rond-point
+preTitle: Autour d’un
+title: rond-point
 duration: ~ 20 Min
-srcUri: https://the-walks.netlify.app/medias/de_siQu3iex.mp3
+srcUri: https://the-walks.netlify.app/medias/fr_siQu3iex.mp3
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 userPrompt:
 - title: Halt fest, was du siehst.
@@ -45,4 +44,4 @@ Danke an
 
 Institut für Protest und Bewegungsforschung*"
 ---
-Dieser Walk beginnt an einem Kreisverkehr. Ein Ort, wo sich alles dreht und in Bewegung ist. Ein Ort für eine Revolution? Wieviel Kreisel gibt es dort, wo Du wohnst? Und was, wenn alle Bewegung angehalten wird? Such Dir einen aus und starte den Walk, sobald Du ihn erreicht hast.
+Cette promenade commence au niveau d'un rond-point. Un lieu où tout tourne et tout est en mouvement. Un lieu pour une révolution ? Combien y a-t-il de ronds-points là où tu habites ? Et si tous les mouvements étaient arrêtés ? Choisis un rond-point et commence la promenade dès que tu y es arrivé.
