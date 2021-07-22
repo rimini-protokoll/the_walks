@@ -1,0 +1,5 @@
+[[headers]]
+  # Set the default header to the one we want for documents
+  for = "/medias/*.mp3"
+    [headers.values]
+      Content-Type: "audio/mpeg"
