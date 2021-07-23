@@ -28,18 +28,12 @@ userPrompt:
 popups: []
 credits: "Experts / Contributors
 
-	*Martin Schmitz
-
-	Katja Otto*
+	*Martin Schmitz, Katja Otto*
 	
 	
 	Speakers
 
-	*Melanie Baxter-Jones
-
-	Melissa Holroyd
-
-	Joshua Lerner*
+	*Melanie Baxter-Jones, Melissa Holroyd, Joshua Lerner*
 
 
 	Composition
@@ -51,4 +45,4 @@ credits: "Experts / Contributors
 
 	*Ant Hampton*"
 ---
-How are cities planned? How can you walk without a plan? On this walk you will be accompanied by psychological counsellor Katja Otto and strollologistst Martin Schmitz, an expert in pedestrial walking. You may start this walk at any street of your choice.
+How are cities planned? How can you walk without a plan? On this walk you will be accompanied by psychological counsellor Katja Otto and strollologist Martin Schmitz, an expert in pedestrial walking. You may start this walk at any street of your choice.

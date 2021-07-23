@@ -47,4 +47,4 @@ credits: "Speakers
 
 *Lena Bondeson*"
 ---
-When was the last time you went to the theatre? Heard people breath next to you and applauded others that were on stage. Set off to find a theatre near you. Take a slip of paper and a writing utensil with you and begin your walk, as soon as the theatre is within sight.
+When was the last time you went to the theatre? Heard people breath next to you and applauded others that walked on stage. Set off to find a nearby theatre. Take a piece of paper and a pen with you. Begin your walk as soon as you see the theatre.

@@ -6,16 +6,17 @@ shortTitle: Departure
 title: Departure,
 afterTitle:  let’s go!
 duration: ~ 16 Min
+penPaper: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_bee5Zah7.mp3?alt=media&token=0a51a0e1-f911-439b-a616-627685bc1786
 iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 userPrompt:
-- title: Yes – I’m ready. Let’s continue!
+- title: Yes - I’m ready. Let’s continue!
   triggerTime: 72.545
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_bee5Zah7_loop_1.mp3?alt=media&token=7e3d611e-0b3a-44f2-b07e-e52771cfee1c
   actions:
   - title: Continue
     action: continue
-- title: Yes – I have found a spot. Let’s go on!
+- title: Yes - I have found a spot. Let’s go on!
   triggerTime: 430.909
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_bee5Zah7_loop_2.mp3?alt=media&token=9ab059fc-f3c2-4cd5-9fc1-e6300d589c4e
   actions:

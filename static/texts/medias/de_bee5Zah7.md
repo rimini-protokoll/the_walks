@@ -6,6 +6,7 @@ shortTitle: Aufbruch
 title: Aufbruch,
 afterTitle: los raus jetzt!
 duration: ~ 16 Min
+penPaper: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_bee5Zah7.mp3?alt=media&token=da4bc6b8-7c28-4a14-b546-dc2045c7de0b
 iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 userPrompt:
@@ -40,20 +41,18 @@ userPrompt:
   - title: Kein Foto
     action: map
 popups: []
-credits: "Expert*innen / Mitwirkende
+credits: "Sprecher*innen
 
-*Erdem Gunduz*
+*Bente Bausum*
 
 
-Sprecher*innen
+Komposition
 
-*Kamran Sorusch*
+*Frank Böhle*
 
 
 Danke an
 
-*Jannis Grimm
-
-Institut für Protest und Bewegungsforschung*"
+*Barbara Morgenstern, Aljoscha Begrich*"
 ---
 Warst du heute schon draußen? Bist einen deiner gewohnten Wege gegangen? Zielsicher – wie immer? Wann hast du deine gewohnten Wege das letzte Mal verlassen? Pack einen Stift und einen Zettel ein, setz deine Kopfhörer auf und starte den Walk in deinen eigenen vier Wänden. Wohin er dich führt, wirst du dann sehen.
