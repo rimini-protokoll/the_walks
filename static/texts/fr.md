@@ -3,8 +3,88 @@ id: dooPoru8
 languageCode: fr
 medias: 
 - fr_siQu3iex
-credits: >
-  ce sont des crédits
+credits: "Scénario, Realisation
+
+*Helgard Haug, Stefan Kaegi, Daniel Wetzel*
+
+
+Idée, Dramaturgie
+
+*Cornelius Puschke*
+
+
+Développement d'application
+
+*Steffen Klaue, Alexander Morosow*
+
+
+Design sonore / Mastering
+
+*Frank Böhle*
+
+
+Musique / Composition
+
+*Frank Böhle u.a. (siehe Einzel-Walks)*
+
+
+Design graphique
+
+*Ilona Marti*
+
+
+Enregistrements sonores
+
+*Rimini Protokoll, studio lärm et Lorenz Rollhäuser*
+
+
+Administration de production
+
+*Maitén Arns* 
+
+
+Assistant de production
+
+*Steven Sander*
+
+
+Assistant développement d'application
+
+*Gaétan Langlois-Meurinne*
+
+
+ 
+Traduction
+
+*Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+
+
+Expertes / contributeurs
+
+*Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+
+
+Narrateurs
+
+*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maimouna Coulibaly, Louisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+
+
+Documentation / Trailer
+
+*Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+
+
+Merci à
+
+*Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institute for the Study of Protest and Social Movements), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
+ 
+Une production de Rimini Apparat.
+
+
+En coproduction avec creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, Forum Européen Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Centre européen des arts, Festival international d'été Kampnagel, Zona K, Festival PERSPECTIVES.
+
+
+Subventionnée par le Fonds Darstellende Künste et Senatsverwaltung für Kultur und Europa"
 ---
 «The Walks» est une série de courtes pièces audio conçues pour des lieux spécifiques de ta ville et une invitation à redécouvrir et interagir avec ton environnement.
 Pour faire une promenade audioguidée, 20 minutes sont suffisantes. Tu peux commencer à n’importe quel moment et décider toi-même l’ordre et le nombre de promenades que tu souhaites faire..
