@@ -41,4 +41,4 @@ Danke an
 *Ant Hampton*
 "
 ---
-Wie werden Städte geplant? Wie lässt sich planlos gehen? Bei diesem Walk bist Du unterwegs mit der psychologischen Beraterin Katja Otto und dem Spaziergangswissenschaftler Martin Schmitz. Es geht los an einer Straße Deiner Wahl. Halte an und starte dann den Walk.
+Wie werden Städte geplant? Wie lässt sich planlos gehen? Bei diesem Walk bist du unterwegs mit der psychologischen Beraterin Katja Otto und dem Spaziergangswissenschaftler Martin Schmitz. Es geht los an einer Straße deiner Wahl. Halte an und starte dann den Walk.

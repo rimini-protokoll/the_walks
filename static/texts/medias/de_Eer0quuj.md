@@ -22,7 +22,7 @@ userPrompt:
   actions:
   - title: Foto machen
     action: picture
-  - title: Ohne Foto
+  - title: Kein Foto
     action: continue
 - title: Foto machen und fortfahren oder ohne Foto fortfahren.
   triggerTime: 770.823
@@ -30,7 +30,7 @@ userPrompt:
   actions:
   - title: Foto machen
     action: picture
-  - title: Ohne Foto
+  - title: Kein Foto
     action: continue
 - title: Weiter zur Bildergalerie
   triggerTime: 791
@@ -43,6 +43,11 @@ userPrompt:
 popups: []
 credits: "Sprecher*innen
 
-*Alexandra Lauck*"
+*Alexandra Lauck*
+
+
+Komposition
+
+*Frank Böhle*"
 ---
-Wann warst Du das letzte Mal in einem Theater? Hast Menschen neben Dir atmen hören und anderen, die auf die Bühne gingen, applaudiert? Mach Dich auf den Weg und besuche ein Theater in Deiner Nähe. Nimm einen Zettel und einen Stift mit und starte den Walk, sobald es in Sichtweite ist.
+Wann warst du das letzte Mal in einem Theater? Hast Menschen neben dir atmen hören und anderen, die auf die Bühne gingen, applaudiert? Mach dich auf den Weg und besuche ein Theater in deiner Nähe. Nimm einen Zettel und einen Stift mit und starte den Walk, sobald es in Sichtweite ist.

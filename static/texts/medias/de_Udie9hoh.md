@@ -43,4 +43,4 @@ Komposition
 
 *Rimini Protokoll*"
 ---
-Triff Steff an einer Fußgängerampel und starte dort den Walk. Wenn möglich, trage Schuhe, in denen Du auch schnell laufen kannst.
+Triff Steff an einer Fußgängerampel und starte dort den Walk. Wenn möglich, trage Schuhe, in denen du auch schnell laufen kannst.
