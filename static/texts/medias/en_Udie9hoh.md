@@ -6,7 +6,7 @@ shortTitle: Pedestrian Lights
 preTitle: Walking with
 title: Steff
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Udie9hoh.mp3?alt=media&token=32fff1c0-2e3d-4d07-b635-bd1dcb3a54d8
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh.mp3?alt=media&token=b4dcab93-b391-4fca-bd28-5f3cc412a08e
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 userPrompt:
 - title: Take a photo and continue.
