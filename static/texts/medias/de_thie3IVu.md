@@ -1,23 +1,23 @@
 ---
 id: thie3IVu
-language: en
+language: de
 listed: false
 shortTitle: A
-title: Supermarket A
+title: Super Markt A
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_uma9ooK4_A.mp3?alt=media&token=633c8a53-b883-4ece-a7fc-78225f6144d7
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_thie3IVu.mp3?alt=media&token=00568ce1-249c-4df9-b78c-e9745f4cdacd
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt: 
-- title: Take a photo and continue.
+- title: Foto machen und fortfahren oder ohne Foto fortfahren.
   triggerTime: 619.749
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_uma9ooK4_A_loop.mp3?alt=media&token=753b7a64-da91-4f70-8304-77693a5d3e5b
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_uma9ooK4_loop_1.mp3?alt=media&token=e2eeee6c-c6e8-4432-8e07-228bdecf0ec6
   actions:
-  - title: Photo
+  - title: Foto
     action: picture
     postAction: continue
-  - title: 'No'
+  - title: Nein
     action: continue
-- title: Continue to the gallery
+- title: Weiter zur Bildergalerie
   triggerTime: 1328
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:

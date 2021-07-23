@@ -2,9 +2,9 @@
 id: uma9ooK4
 language: en
 listed: true
-shortTitle: Supermarket
-preTitle: Duet in the
-title: Supermarket
+shortTitle: Super Market
+title: Super Market
+afterTitle: Duet
 duration: ~ 17 Min
 twoPerson: true
 srcUri:
