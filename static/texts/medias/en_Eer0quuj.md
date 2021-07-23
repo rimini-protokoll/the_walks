@@ -12,13 +12,13 @@ iconUri: https://the-walks.netlify.app/icons/Theater.png
 userPrompt:
 - title: Yes, I have arrived at the destination! Let’s go on!
   triggerTime: 632.470
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=343f6878-9a37-4a07-bbcd-b53cc6048f1b
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=d5ae65db-cdd5-4d16-974b-2337da49711d
   actions:
   - title: Continue
     action: continue
 - title: Take a photo and continue or continue without photo.
   triggerTime: 742.588
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=abd4d2f9-fbdc-40c4-bf72-5980d7210bb9
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=06c94fbf-df5a-4e56-84bf-1798ae46b08f
   actions:
   - title: With Photo
     action: picture

@@ -6,12 +6,12 @@ shortTitle: Roundabout
 preTitle: Around a
 title: Roundabout
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_siQu3iex.mp3?alt=media&token=034ccda5-e899-4fc1-8adf-18b1211e300e
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_siQu3iex%2Fen_siQu3iex.mp3?alt=media&token=257bd656-0a3f-4cc9-a787-ebee8f139a41
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 userPrompt:
 - title: Take a photo and continue or continue without photo.
   triggerTime: 381
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_1.mp3?alt=media&token=108baec2-420c-4710-bec0-4598ffd48b0d
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_1.mp3?alt=media&token=b61e87ce-8b2a-4487-9228-48aea41ef080
   actions:
   - title: Take photo
     action: picture
@@ -20,13 +20,13 @@ userPrompt:
     action: continue
 - title: Yes, I have arrived. Let’s continue!
   triggerTime: 546
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_2.mp3?alt=media&token=b978b083-8eaa-49e9-8334-c8f614055dc8
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_2.mp3?alt=media&token=526b31b3-a79b-471e-8211-1135f7bf2ed2
   actions:
   - title: Continue
     action: continue
 - title: Take a photo and continue or continue without photo.
   triggerTime: 1051
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_3.mp3?alt=media&token=a22170b8-94e3-45d5-af9a-0a4e9da283d8
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_3.mp3?alt=media&token=50af56ea-017f-4069-b055-350c10ac56aa
   actions:
   - title: Take photo
     action: picture
