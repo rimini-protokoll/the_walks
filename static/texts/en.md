@@ -95,10 +95,10 @@ Supported by Fonds Darstellende Künste with funds from the Federal Government C
 
 "
 ---
-The Walks is a collection of short audio experiences for specific places in your city and an invitation to rediscover and interact with your environment. 
-It only takes approx. 20 minutes to do an audio walk. Get going whenever you want. You decide how many of the walks you’d like to do and in what order.
-The stories and soundscapes in the short audio experiences are global in scope. The Walks connects people around the world in a local experience via the fundamental human action of walking.
+The Walks is an app with a collection of audio walks by Rimini Protokoll. Each walk is a short audio experience covering specific locations in your city and an invitation to rediscover and interact with your environment. 
+It only takes 20 minutes to do an audio walk. Get going whenever you want. You decide how many of the walks you’d like to do and in what order.
+The stories and soundscapes in the short audio experiences are global in scope. The Walks connects people around the world in a local experience via the fundamental human act of walking.
 
-Walking in public gained new meaning with the COVID-19 pandemic. An ancient, daily ritual became an integral part of the new normality. People meet, walk, stroll through neighbourhoods, play in landscapes, and perceive their environment anew with every stride.
+Walking in public gained new meaning with the pandemic. An ancient and every-day ritual became an integral part of the new normality. People meet, walk, stroll through districts, play in landscapes, and perceive their environment anew with every stride.
 
-The Walks understands walking as a theatrical scenario – an audio-guided walk in parks, a staged walk in supermarkets or timed interactions on riverbanks. In every city, voices, sounds, and music turn familiar places into sites and landscapes into stages, step by step through storytelling, dialogical situations, choreographic discoveries, or musical and rhythmic variations on walking. The title of every walk indicates where or how to do it: “Walk for a cemetery”, “Walk along the water” or “Walk at a roundabout”
+The Walks grasps walking as a theatrical scenario – an audio-guided walk in parks, a staged walk in supermarkets or timed interactions on riverbanks. In every city, voices, sounds, and music turn familiar places into sites and landscapes into stages, step by step through storytelling, dialogical situations, choreographed discoveries, or musical and rhythmic variations on walking. The short title of every walk indicates where or how to do it: “Cemetery”, “Water” or “Roundabout.”
