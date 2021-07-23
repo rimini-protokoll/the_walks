@@ -34,7 +34,7 @@ userPrompt:
   - title: No photo
     action: continue
 - title: Continue to the picture gallery
-  triggerTime: 1201
+  triggerTime: 1066
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:
   - title: Gallery
@@ -52,8 +52,13 @@ Speakers
 *Kamran Sorusch*
 
 
+Composition
+
+*Frank Böhle*
+
+
 Thank you
 
 *Jannis Grimm, Institut für Protest und Bewegungsforschung*"
 ---
-This walk starts at a roundabout. A place where everything is revolving and in motion. A place for a revolution? How many roundabouts are there where you live? And what if all that motion were to stop? Choose a roundabout and start your walk as soon as you arrive.
+This walk starts at a roundabout. A place where everything is revolving and in circular motion. A place for a revolution? How many roundabouts are there where you live? And what if all that motion were to stop? Choose a roundabout and start your walk as soon as you arrive.

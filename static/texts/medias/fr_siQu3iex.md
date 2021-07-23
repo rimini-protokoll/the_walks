@@ -34,7 +34,7 @@ userPrompt:
   - title: Pas photo
     action: continue
 - title: Continuer vers la galerie de photos
-  triggerTime: 1201
+  triggerTime: 1066
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:
   - title: Galerie
@@ -42,20 +42,23 @@ userPrompt:
   - title: Non
     action: continue
 popups: []
-credits: "Expert*innen / Mitwirkende
+credits: "Expert / Contributeur
 
 *Erdem Gunduz*
 
 
-Sprecher*innen
+Narrateurs
 
-*Kamran Sorusch*
+*Koffi Kra*
 
 
-Danke an
+Composition
 
-*Jannis Grimm
+*Frank Böhle*
 
-Institut für Protest und Bewegungsforschung*"
+
+Merci à
+
+*Jannis Grimm, Institute for the Study of Protest and Social Movements*"
 ---
 Cette promenade commence au niveau d'un rond-point. Un lieu où tout tourne et tout est en mouvement. Un lieu pour une révolution ? Combien y a-t-il de ronds-points là où tu habites ? Et si tous les mouvements étaient arrêtés ? Choisis un rond-point et commence la promenade dès que tu y es arrivé.
