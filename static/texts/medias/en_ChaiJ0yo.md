@@ -5,7 +5,7 @@ listed: true
 shortTitle: Cemetery
 title: Cemetery
 duration: ~ 30 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo.mp3?alt=media&token=f8feb045-ee5c-40f7-a1f2-3652934c343a
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo.mp3?alt=media&token=e5404fc4-aa1f-463c-b21e-03a9142a9f84
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 userPrompt:
 - title: "Exercise: find some living people.
@@ -30,7 +30,7 @@ Then start the next track."
 
 Take it."
   triggerTime: 816
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_3.mp3?alt=media&token=b4c8e675-6388-4320-b404-272956d57f7e
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo_loop_3.mp3?alt=media&token=94279463-9d0c-4ef4-96cd-e4ca88d70bc5
   actions:
   - title: Foto machen
     action: picture
