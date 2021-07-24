@@ -2,9 +2,9 @@
 id: uma9ooK4
 language: de
 listed: true
-shortTitle: Super Markt
+shortTitle: Supermarkt
 preTitle: Duett im
-title: Super Markt
+title: Supermarkt
 duration: ~ 17 Min
 twoPerson: true
 srcUri:

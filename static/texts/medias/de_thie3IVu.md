@@ -3,7 +3,7 @@ id: thie3IVu
 language: de
 listed: false
 shortTitle: A
-title: Super Markt A
+title: Supermarkt A
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_thie3IVu.mp3?alt=media&token=00568ce1-249c-4df9-b78c-e9745f4cdacd
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png

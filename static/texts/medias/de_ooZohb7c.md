@@ -3,7 +3,7 @@ id: ooZohb7c
 language: de
 listed: true
 shortTitle: B
-title: Super Markt B
+title: Supermarkt B
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_uma9ooK4_B.mp3?alt=media&token=0ce28db5-6077-4a27-9303-eb4d0731983d
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png

@@ -20,7 +20,7 @@ userPrompt:
   - title: Kein Foto
     action: continue
 - title: Ja, ich bin angekommen! Es kann weitergehen!
-  triggerTime: 546
+  triggerTime: 545
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_2.mp3?alt=media&token=b978b083-8eaa-49e9-8334-c8f614055dc8
   actions:
   - title: Weiter
