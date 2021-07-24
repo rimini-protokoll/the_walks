@@ -50,15 +50,15 @@ And then start the next track."
   - title: Next track
     action: continue
 - title: Continue to the gallery
-  triggerTime: 1119
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=eec5a9a1-0504-489a-888d-7a2a31f2adac
+  triggerTime: 1.098
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:
   - title: Gallery
     action: map
   - title: "No"
     action: continue
 popups: []
-credits: "Speacker
+credits: "Speaker
 
 *Mmakgosi Kgabi*
 
