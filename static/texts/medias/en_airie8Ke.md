@@ -5,12 +5,12 @@ listed: false
 shortTitle: B
 title: Park B
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_airie8Ke.mp3?alt=media&token=241c594f-67ab-49a0-85b4-4f6fe7e69162
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_airie8Ke.mp3?alt=media&token=befeb53e-e00f-4dcd-930f-cde108302055
 iconUri: https://the-walks.netlify.app/icons/Park.png
 userPrompt:
 - title: Take a photo or continue without taking a picture.
   triggerTime: 705.642
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_1.mp3?alt=media&token=949ab2a4-f56d-4ca8-a9e5-f9e469961551
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_1.mp3?alt=media&token=e76eba89-d8cf-47fe-be22-ea09e8ff7869
   actions:
   - title: Photo
     action: picture
@@ -19,7 +19,7 @@ userPrompt:
     action: continue
 - title: Take a photo or continue without taking a picture.
   triggerTime: 902.713
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_2.mp3?alt=media&token=95cfd911-c1fe-44c9-b04e-d5e3bc023a39
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_2.mp3?alt=media&token=8341c203-2f27-497d-99c0-f22b254c37bd
   actions:
   - title: Photo
     action: picture
