@@ -5,7 +5,7 @@ listed: true
 shortTitle: Friedhof
 title: Friedhof
 duration: ~ 30 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo.mp3?alt=media&token=18f01cbe-0dd0-457a-b5e2-0f9ef8f2e5f2
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo.mp3?alt=media&token=3c463c71-1516-435c-976a-04bcedc4b2b6
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 userPrompt:
 - title: "Aufgabe: Lebende suchen.
@@ -30,7 +30,7 @@ Dann den nächsten Track starten."
 
 Festhalten."
   triggerTime: 816
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_3.mp3?alt=media&token=bb468257-a240-4726-b7a3-ea7a447d6942
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_3.mp3?alt=media&token=350f7eb2-5fe6-4b43-9884-3c00969b5939
   actions:
   - title: Foto machen
     action: picture

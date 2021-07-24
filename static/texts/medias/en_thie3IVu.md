@@ -5,12 +5,12 @@ listed: false
 shortTitle: A
 title: Supermarket A
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_uma9ooK4_A.mp3?alt=media&token=633c8a53-b883-4ece-a7fc-78225f6144d7
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_uma9ooK4%2Fen_thie3IVu.mp3?alt=media&token=8db39e95-63a9-4ad6-a095-f7ed69559c81
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt: 
 - title: Take a photo and continue.
-  triggerTime: 619.749
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_uma9ooK4_A_loop.mp3?alt=media&token=753b7a64-da91-4f70-8304-77693a5d3e5b
+  triggerTime: 645
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_uma9ooK4%2Fen_uma9ooK4_loop_1.mp3?alt=media&token=1d4b0e96-b246-4199-ae0c-a54644cd5a70
   actions:
   - title: Photo
     action: picture

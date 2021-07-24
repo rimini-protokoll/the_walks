@@ -1,7 +1,0 @@
----
-id: niTh3eix
-title: App Launch
-date: 2021-07-27T12:00:00.000Z
----
-# App Launch
-**The Walks** is a performance series *developed* by Rimini Protokoll for specific kinds of places and bodies in motion. An app will function like a stage for the project.

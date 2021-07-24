@@ -6,12 +6,12 @@ shortTitle: Rond-point
 preTitle: Autour d’un
 title: rond-point
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Ffr_siQu3iex.mp3?alt=media&token=a3e70d19-ad58-4756-9023-bcdace8836b0
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_siQu3iex%2Ffr_siQu3iex.mp3?alt=media&token=2c389821-2cb7-409c-8f7d-429f19407426
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 userPrompt:
 - title: Prendre une photo et continuer ou continuer sans photo.
   triggerTime: 381
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_1.mp3?alt=media&token=108baec2-420c-4710-bec0-4598ffd48b0d
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_1.mp3?alt=media&token=b61e87ce-8b2a-4487-9228-48aea41ef080
   actions:
   - title: Prendre photo
     action: picture
@@ -20,13 +20,13 @@ userPrompt:
     action: continue
 - title: Oui, je suis arrivé! On continue!
   triggerTime: 545
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_2.mp3?alt=media&token=b978b083-8eaa-49e9-8334-c8f614055dc8
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_2.mp3?alt=media&token=526b31b3-a79b-471e-8211-1135f7bf2ed2
   actions:
   - title: Continuer
     action: continue
 - title: Prendre une photo et continuer ou continuer sans photo.
   triggerTime: 1051
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_3.mp3?alt=media&token=a22170b8-94e3-45d5-af9a-0a4e9da283d8
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_3.mp3?alt=media&token=50af56ea-017f-4069-b055-350c10ac56aa
   actions:
   - title: Prendre photo
     action: picture

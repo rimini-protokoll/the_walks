@@ -11,7 +11,7 @@ iconUri: https://the-walks.netlify.app/icons/Ampel.png
 userPrompt:
 - title: Take a photo and continue.
   triggerTime: 111.983
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Udie9hoh_loop.mp3?alt=media&token=de4b8108-bef8-46cc-91d5-8d5a8ddf3982
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh_loop_1.mp3?alt=media&token=91db6ba4-7f54-4086-af67-935a2a27cfe9
   actions:
   - title: Take photo
     action: picture
