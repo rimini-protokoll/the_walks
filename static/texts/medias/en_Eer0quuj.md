@@ -2,9 +2,9 @@
 id: Eer0quuj
 language: en
 listed: true
-shortTitle: Theater
+shortTitle: Theatre
 preTitle: In front of a
-title: Theater
+title: Theatre
 duration: ~ 20min
 penPaper: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fen_Eer0quuj.mp3?alt=media&token=2ade96b9-877c-46f7-9160-b2c01d64bf21

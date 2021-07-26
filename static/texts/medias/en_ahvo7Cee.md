@@ -6,7 +6,6 @@ shortTitle: Park
 title: Park
 duration: ~ 20 Min
 twoPerson: true
-penPaper: true
 srcUri:
 - en_eeJee2ke
 - en_airie8Ke

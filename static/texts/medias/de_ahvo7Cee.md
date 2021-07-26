@@ -6,7 +6,6 @@ shortTitle: Park
 title: Park
 duration: ~ 20 Min
 twoPerson: true
-penPaper: true
 srcUri:
 - de_eeJee2ke
 - de_airie8Ke
@@ -20,10 +19,10 @@ credits: "Sprecher*innen
 Was führt Politiker*innen ins Grüne? Was ist das Politische an einer Zweier-beziehung mit einer anderen Person? Beginne diesen Walk, indem du dich in einem Park verabredest.
 
 
-Ihr werdet gleichzeitig unterschiedliche Tracks hören. Klärt durch einen Münzwurf, wer A und wer B hört. Damit die simultane Wiedergabe eurer Walks gewährleistet ist:
+Ihr werdet gleichzeitig unterschiedliche Tracks hören. Klärt durch einen Münzwurf, wer A und wer B hört. Damit die simultane Wiedergabe eurer Walks gewährleistet ist,
 
-_ wählt unten die download-option 
-_ stellt eure Handys auf “Nicht stören”. Das ist nicht der Flugmodus und erhält die Internet-Verbindung.
+→ wählt unten die Download-Option 
+→ stellt eure Handys auf “Nicht stören”. Das ist nicht der Flugmodus und erhält die Internet-Verbindung:
 
 
 [iOS] → Einstellungen → Nicht stören
