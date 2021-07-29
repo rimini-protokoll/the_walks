@@ -37,9 +37,17 @@ userPrompt:
   actions:
   - title: Take photo
     action: picture
-    postAction: map
+    postAction: continue
   - title: No photo
+    action: continue
+- title: Continue to the gallery
+  triggerTime: 776
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_3.mp3?alt=media&token=eee75c2a-c745-4e38-9bba-83d277346aa0
+  actions:
+  - title: Gallery
     action: map
+  - title: "No"
+    action: continue
 popups: []
 credits: "Speakers
 

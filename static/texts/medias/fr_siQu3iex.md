@@ -16,7 +16,7 @@ userPrompt:
   - title: Prendre photo
     action: picture
     postAction: continue
-  - title: Pas photo
+  - title: Pas de photo
     action: continue
 - title: Oui, je suis arrivé! On continue!
   triggerTime: 545
@@ -31,7 +31,7 @@ userPrompt:
   - title: Prendre photo
     action: picture
     postAction: continue
-  - title: Pas photo
+  - title: Pas de photo
     action: continue
 - title: Continuer vers la galerie de photos
   triggerTime: 1066
