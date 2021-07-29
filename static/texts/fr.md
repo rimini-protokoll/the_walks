@@ -3,8 +3,11 @@ id: dooPoru8
 languageCode: fr
 medias:
 - fr_bee5Zah7
+- fr_Udie9hoh
 - fr_siQu3iex
 - fr_ChaiJ0yo
+- fr_Eer0quuj
+- fr_Apheek3e
 credits: "Scénario, Realisation
 
 *Helgard Haug, Stefan Kaegi, Daniel Wetzel*
