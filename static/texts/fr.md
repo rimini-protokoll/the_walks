@@ -4,6 +4,7 @@ languageCode: fr
 medias:
 - fr_bee5Zah7
 - fr_siQu3iex
+- fr_ChaiJ0yo
 credits: "Scénario, Realisation
 
 *Helgard Haug, Stefan Kaegi, Daniel Wetzel*
