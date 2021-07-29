@@ -1,43 +1,43 @@
 ---
 id: uma9ooK4
-language: de
+language: fr
 listed: true
-shortTitle: Supermarkt
-preTitle: Duett im
-title: Supermarkt
+shortTitle: Supermarché
+preTitle: Duo au
+title: supermarché
 duration: ~ 17 Min
 twoPerson: true
 srcUri:
-- de_thie3IVu
-- de_ooZohb7c
+- fr_thie3IVu
+- fr_ooZohb7c
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt: []
 popups: []
-credits: "Expert*innen / Mitwirkende
+credits: "Expert / Contributeur:
 
 *Antonio Tagliarini*
 
 
-Sprecher*innen
+Narrateurs:
 
-*Timur Isik*
+*Steve Mekoudja*
 
 
-Komposition
+Composition:
 
-*Rimini Protokoll unter Verwendung von Musik von Anton Rose & Thomas Mielmann, sowie aus dem Film “Four rebounds to death” von Laurids Koehne und Tibor Koehne, Komponiert von Linus Rogsch, Produziert von: Laurids Koehne und Tibor Koehne.*"
+*Rimini Protokoll utilisant la musique d'Anton Rose & Thomas Mielmann, et du film "Four Rebounds to Death" de Laurids Koehne et Tibor Koehne, composé par Linus Rogsch, produit par Laurids Koehne et Tibor Koehne. Sons supplémentaires par Rimini Protokoll*"
 ---
-Dies ist ein Duett. Verabrede dich mit jemandem vor demselben Supermarkt. Wenn du Englisch verstehst, empfehlen wir dir die englische Version dieses Walks ( → Menü → Sprache).
+Il s'agit d'un duo. Prends rendez-vous avec quelqu'un devant un supermarché. Pour garantir l'écoute simultanée de vos promenades,
 
 
-Damit die simultane Wiedergabe eurer Walks gewährleistet ist
+→ choisis l’option du téléchargement ci-dessous
 
-_ wählt unten die download-option 
-_ stellt eure Handys auf “Nicht stören”. Das ist nicht der Flugmodus und erhält die Internet-Verbindung
-
-
-[iOS] → Einstellungen → Nicht stören
-[Android] → Einstellungen → Töne → Nicht stören
+→ réglez vos téléphones portables sur "ne pas déranger". Ce n’est pas le mode Avion, la connexion Internet est maintenue :
 
 
-Eine Person wählt A, die andere B. Zählt gemeinsam von 3 zurück und startet gleichzeitig eure Walks.
+[iOS] → Paramètres → Ne pas déranger
+
+[Android] → Paramètres → Sons → Ne pas déranger
+
+
+Vous entendrez différentes pistes en même temps. Une personne choisit A, l'autre choisit B. Faites un décompte à partir de 3. A 0, commencez vos promenades en même temps.
