@@ -4,7 +4,7 @@ languageCode: fr
 medias:
 - fr_bee5Zah7
 - fr_Udie9hoh
-- de_uma9ooK4
+- fr_uma9ooK4
 - fr_siQu3iex
 - fr_ChaiJ0yo
 - fr_Eer0quuj
