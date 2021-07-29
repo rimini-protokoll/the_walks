@@ -53,14 +53,14 @@ Ensuite: démarrer la prochaine piste."
   actions: 
   - title: Prochaine piste
     action: continue
-- title: Weiter zur Bildergalerie
-  triggerTime: 1119
+- title: Continuer vers la galerie de photos
+  triggerTime: 1100
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=eec5a9a1-0504-489a-888d-7a2a31f2adac
   actions:
   - title: Galerie
     action: map
-  - title: Nein
-    action: Non
+  - title: Non
+    action: continue
 popups: []
 credits: "Narrateurs
 
