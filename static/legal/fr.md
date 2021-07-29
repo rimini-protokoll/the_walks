@@ -1,13 +1,15 @@
 ---
-languageCode: 'de'
+languageCode: 'fr'
 agreements:
-  one: Ich habe die Datenschutzerklärung zur Kenntnis genommen.
-  two: Zustimmung zum Datentransfer in die USA im Fall einer Bezahlung über Stripe oder im Fall eines freiwilligen Foto-Uploads mit Geo-Standort.
-  three: Ich habe die Nutzungsbedingungen zur Kenntnis genommen.
-  four: Ich stimme zu, dass Rimini Protokoll mit der Ausführung des Vertrages vor Ablauf meiner Widerrufsfrist beginnen darf und dass ich Kenntnis darüber habe, dass ich durch diese Zustimmung mit Beginn der Ausführung des Vertrages (Beginn der Nutzung der Walks) mein Widerrufsrecht verliere. Die Widerrufsbelehrung und das Muster-Widerrufsformular habe ich zur Kenntnis genommen.
+  one: J’ai pris connaissance de la déclaration sur la protection des données.
+  two: Consentement au transfert de données vers les États-Unis en cas de paiement via Stripe ou de téléchargement volontaire de photos avec géolocalisation.
+  three: J’ai pris connaissance des conditions d’utilisation.
+  four: J’accepte expressément que Rimini Protokoll puisse débuter l’exécution du contrat avant l’expiration de mon délai de rétractation et je suis conscient par ce consentement, que je perds mon droit de rétractation avec le début de l’exécution du contrat (début de l’utilisation des Promenades). J’ai pris connaissance de l’information sur le droit de rétractation et du modèle du formulaire de rétractation.
 ---
-"The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren. Um einen Audio-Walk selber zu machen, reichen schon 20 Minuten. Du kannst in der App alle Inhalte (Walks) auf einmal freischalten. Den dafür nötigen Vertrag über die Nutzung (d.h. z.B. Abspielen) schließt Du entweder in dem Du einen Aktivierungscode eingibst oder durch verbindliche Bezahlung in Geld. Der Preis für die Bezahlung in Geld beträgt EUR 4,99.
+« The Walks » est une collection de courtes pièces radiophoniques pour des lieux spécifiques de votre ville, une invitation à redécouvrir et à interagir avec son environnement. Pour que vous réalisiez vous-même un guide audio, il vous suffira 20 minutes. Vous pouvez activer tous les contenus (Promenades) de l’application en une seule fois. Vous concluez le contrat, nécessaire à l’utilisation, (c’est-à-dire, par ex. la lecture) soit en saisissant un code d’activation, soit en effectuant un paiement obligatoire. Le prix du paiement s’élève à 4,99 €.
 
-Bevor wir den Vertrag abschließen können, bitten wir Dich, aufmerksam unseren Hinweis sowie unsere [Datenschutzerklärung](), unsere [Nutzungsbedingungen]() und unsere [Widerrufsbelehrung]() zur Kenntnis zu nehmen und uns Deine Zustimmung zum [Datentransfer]() (bei Nutzung von Stripe und beim freiwilligen Hochladen von Fotos) sowie zur vorzeitigen Zurverfügungstellung der Inhalte noch vor Ablauf Deiner Widerrufsfrist zu erteilen.
 
-Warnhinweis: Rimini Protokoll weist Dich darauf hin, dass Du unsere Walks hören kannst, während Du dich im öffentlichen Verkehrsraum bewegst. Bitte bewege Dich achtsam und beachte die Regeln der verkehrsrechtlichen Vorschriften (z.B. StVO).
+Avant de pouvoir conclure le contrat, nous vous prions de bien vouloir lire attentivement notre information ainsi que notre [déclaration sur la protection des données](https://www.rimini-protokoll.de/website/media/The%20Walks/Datenschutzerklarung%20.pdf), nos [conditions d’utilisation](https://www.rimini-protokoll.de/website/media/The%20Walks/Nutzungsbedingungen.pdf) et notre [information sur le droit de rétractation](https://www.rimini-protokoll.de/website/media/The%20Walks/Widerrufsbelehrung.pdf), et de nous donner votre [consentement au transfert de données](https://www.rimini-protokoll.de/website/media/The%20Walks/Datentransfer%20.pdf) (en cas d’utilisation de Stripe et de téléchargement volontaire de photos) et de fournir au préalable le contenu avant la fin de votre délai de rétractation :
+
+
+Avertissement : Rimini Protokoll vous informe que vous pouvez écouter nos Promenades tout en vous déplaçant sur la voie publique. Nous vous prions de bien vouloir vous déplacer avec précaution et respecter les dispositions en matière de législation des transports (par exemple, le code de la route (StVO)).
