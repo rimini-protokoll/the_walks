@@ -4,6 +4,6 @@ title: Opening ARMONIED’ARTEFESTIVAL
 place: Borgia (Italy)
 language: IT
 linkUri: https://www.armoniedarte.com/
-date: 2021-08-25T18:00:00.000Z
+date: 'August 25th 2021'
 ---
 
