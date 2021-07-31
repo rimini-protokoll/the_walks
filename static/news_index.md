@@ -1,7 +1,5 @@
 ---
 news:
-  - aiNg3cu4
-  - Shaesha3
   - Kareeh6i
   - eC7uxo0o
   - Ahxaw3su
