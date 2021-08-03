@@ -72,7 +72,7 @@ Expertes / contributeurs
 
 Narrateurs
 
-*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Louisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
 Documentation / Trailer
@@ -92,11 +92,10 @@ En coproduction avec creart / Teatrelli, BorderLight – International Theatre +
 
 Subventionnée par le Fonds Darstellende Künste et Senatsverwaltung für Kultur und Europa"
 ---
-«The Walks» est une série de courtes pièces audio conçues pour des lieux spécifiques de ta ville et une invitation à redécouvrir et interagir avec ton environnement.
-Pour faire une promenade audioguidée, 20 minutes sont suffisantes. Tu peux commencer à n’importe quel moment et décider toi-même l’ordre et le nombre de promenades que tu souhaites faire..
-Les histoires et les univers sonores des pièces audio peuvent être écoutés dans le monde entier. Ainsi, «The Walks» relie des personnes tout autour du globe dans une expérience locale à travers une activité humaine fondamentale: la marche.
+« The Walks » est une application qui contient une série de promenades audioguidées de Rimini Protokoll. Chaque promenade est une courte pièce audio conçue pour un lieu spécifique de ta ville et une invitation à redécouvrir ton environnement et à interagir avec. Pour faire une promenade-audio, il faut compter environ 20 minutes. Tu peux les faire quand tu veux  et en décider toi-même l’ordre et le nombre.
+Les histoires et les univers sonores de ces pièces-audio peuvent être écoutés dans le monde entier. Ainsi, « The Walks » relie des personnes tout autour du globe par une expérience locale, la pratique d´une activité humaine fondamentale : la marche.
 
-Avec la pandémie, la marche dans les espaces publics a acquis une nouvelle importance. Un rituel immémorial et quotidien est devenu un élément central de la nouvelle normalité: les gens se rencontrent, se promènent, parcourent le voisinage, jouent dans les paysages et portent à chaque marche un regard nouveau sur leur environnement.
+Avec la pandémie, la promenade dans l’espace public a acquis une nouvelle importance. Ce rituel quotidien vieux comme le monde -est devenu central dans “la nouvelle normalité” : les gens se rencontrent, se promènent, vont dans les quartiers voisins, jouent dans le paysage et redécouvrent ainsi à chaque pas leur environnement.
 
-«The Walks» conçoit la marche comme un scenario théâtral: une promenade audioguidée dans des parcs, une promenade mise en scène dans des supermarchés ou des interactions cadencées sur des berges. Dans chaque ville, des voix, des sons et de la musique transforment pas à pas des lieux familiers en théâtres et des paysages en scènes: grâce à des récits, des dialogues, des explorations chorégraphiques ou des variations musicales et rythmiques de la marche. L’endroit et le type d’expérience sont indiqués dans le titre de chaque promenade  : «Cimetière», «L’eau» ou «Rond point».
-
+« The Walks » considère la marche comme un scénario théâtral : une promenade guidée dans un parc, une visite d'un supermarché mise en scène  ou une interaction chronométrée au bord de l’eau. Dans chaque ville, les lieux familiers et les paysages – accompagnés de voix, de sons et de musique – deviennent des scènes de théâtre :à travers des récits, des situations de dialogue, des explorations chorégraphiques ou encore grâce aux variations musicales et rythmiques de la marche. 
+Le titre court indique où et comment se déroule chaque promenade-audio: « Cimetière », « Eau » ou « Rond-point ».

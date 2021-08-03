@@ -7,18 +7,18 @@ preTitle: Vor dem
 shortTitle: Theater
 duration: ~ 20 Min
 penPaper: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj.mp3?alt=media&token=45bc539e-e395-448f-a512-2e946c760016
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj.mp3?alt=media&token=7f363b6f-032e-4bed-9c14-2581cee96c29
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: 'Ja, ich bin am Ziel angekommen! Weiter geht’s!'
   triggerTime: 632.470
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=343f6878-9a37-4a07-bbcd-b53cc6048f1b
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=d5ae65db-cdd5-4d16-974b-2337da49711d
   actions:
   - title: Weiter
     action: continue
 - title: Foto machen und fortfahren oder ohne Foto fortfahren.
   triggerTime: 742.588
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=abd4d2f9-fbdc-40c4-bf72-5980d7210bb9
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=06c94fbf-df5a-4e56-84bf-1798ae46b08f
   actions:
   - title: Foto machen
     action: picture
@@ -26,7 +26,7 @@ userPrompt:
     action: continue
 - title: Foto machen und fortfahren oder ohne Foto fortfahren.
   triggerTime: 770.823
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_3.mp3?alt=media&token=1b47c2d6-0ff0-456d-9cd7-23734926441e
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_3.mp3?alt=media&token=1b47c2d6-0ff0-456d-9cd7-23734926441e
   actions:
   - title: Foto machen
     action: picture

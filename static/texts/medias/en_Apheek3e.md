@@ -9,7 +9,7 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
 userPrompt: 
 - title: Take a photo or continue without taking a picture.
-  triggerTime: 1143.371
+  triggerTime: 1141
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
   actions:
   - title: Photo

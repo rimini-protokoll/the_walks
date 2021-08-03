@@ -71,7 +71,7 @@ Experts / Contributors
 
 Speakers
 
-*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Louisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
 Documentation / Trailer
@@ -95,9 +95,6 @@ Supported by Fonds Darstellende Künste with funds from the Federal Government C
 
 "
 ---
-The Walks
-by Rimini Protokoll
-
 The Walks is an app with a collection of audio walks by Rimini Protokoll. Each walk is a short audio experience covering specific locations in your city and an invitation to rediscover and interact with your environment. 
 It only takes 20 minutes to do an audio walk. Get going whenever you want. You decide how many of the walks you’d like to do and in what order.
 The stories and soundscapes in the short audio experiences are global in scope. The Walks connects people around the world in a local experience via the fundamental human act of walking.
