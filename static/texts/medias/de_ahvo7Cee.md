@@ -7,14 +7,14 @@ title: Park
 duration: ~ 20 Min
 twoPerson: true
 srcUri:
-- de_eeJee2ke
-- de_airie8Ke
-iconUri: https://the-walks.netlify.app/icons/Park.png
+  - de_eeJee2ke
+  - de_airie8Ke
+iconUri: 'https://the-walks.netlify.app/icons/Park.png'
 userPrompt: []
 popups: []
-credits: "Sprecher*innen
-
-*Lara Körte*"
+credits: |-
+  Sprecher*innen
+  *Lara Körte*
 ---
 Was führt Politiker*innen ins Grüne? Was ist das Politische an einer Zweier-beziehung mit einer anderen Person? Beginne diesen Walk, indem du dich in einem Park verabredest.
 

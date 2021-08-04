@@ -7,14 +7,14 @@ title: Park
 duration: ~ 20 Min
 twoPerson: true
 srcUri:
-- en_eeJee2ke
-- en_airie8Ke
-iconUri: https://the-walks.netlify.app/icons/Park.png
+  - en_eeJee2ke
+  - en_airie8Ke
+iconUri: 'https://the-walks.netlify.app/icons/Park.png'
 userPrompt: []
 popups: []
-credits: "Sprecher*innen
-
-*Lara Körte*"
+credits: |-
+  Sprecher*innen
+  *Lara Körte*
 ---
 What leads politicians to green spaces? What is political about a relationship between two people. Start this walk by arranging to meet someone in a park.
 

@@ -1,99 +1,111 @@
 ---
 id: eLee2Xei
 languageCode: en
-medias: 
-- en_bee5Zah7
-- en_Udie9hoh
-- en_uma9ooK4
-- en_siQu3iex
-- en_ChaiJ0yo
-- en_Eer0quuj
-- en_Apheek3e
-credits: "Script, Direction
+medias:
+  - en_bee5Zah7
+  - en_Udie9hoh
+  - en_uma9ooK4
+  - en_siQu3iex
+  - en_ChaiJ0yo
+  - en_Eer0quuj
+  - en_Apheek3e
+credits: >+
+  Script, Direction
 
-*Helgard Haug, Stefan Kaegi, Daniel Wetzel*
-
-
-Idea, Dramaturgy
-
-*Cornelius Puschke*
+  *Helgard Haug, Stefan Kaegi, Daniel Wetzel*
 
 
-App Development
+  Idea, Dramaturgy
 
-*Steffen Klaue, Alexander Morosow*
-
-
-Sounddesign / Mastering
-
-*Frank Böhle*
+  *Cornelius Puschke*
 
 
-Music / Composition
+  App Development
 
-*Frank Böhle et al. (see individual walks)*
-
-
-Graphic Design
-
-*Ilona Marti*
+  *Steffen Klaue, Alexander Morosow*
 
 
-Voice Recordings
+  Sounddesign / Mastering
 
-*Rimini Protokoll, studio lärm, and Lorenz Rollhäuser*
-
-
-Production Manager
-
-*Maitén Arns*
+  *Frank Böhle*
 
 
-Production Assistant
+  Music / Composition
 
-*Steven Sander*
-
-
-App Development Assistant
-
-*Gaétan Langlois-Meurinne*
+  *Frank Böhle et al. (see individual walks)*
 
 
-Translation
+  Graphic Design
 
-*Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
-
-
-Experts / Contributors
-
-*Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+  *Ilona Marti*
 
 
-Speakers
+  Voice Recordings
 
-*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
-
-
-Documentation / Trailer
-
-*Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+  *Rimini Protokoll, studio lärm, and Lorenz Rollhäuser*
 
 
-Thank you
+  Production Manager
 
-*Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institute for the Study of Protest and Social Movements), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
-
- 
-A production by  Rimini Apparat.
+  *Maitén Arns*
 
 
-In co-production with creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – European Centre for the Arts, International Summer Festival Kampnagel, Zona K, Festival PERSPECTIVES.
+  Production Assistant
+
+  *Steven Sander*
 
 
-Supported by Fonds Darstellende Künste with funds from the Federal Government Commissioner for Culture and the Media and the Senate Department for Culture and Europe.
+  App Development Assistant
+
+  *Gaétan Langlois-Meurinne*
 
 
-"
+  Translation
+
+  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia,
+  Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+
+
+  Experts / Contributors
+
+  *Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+
+
+  Speakers
+
+  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez,
+  Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane
+  Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi
+  Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie
+  Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+
+
+  Documentation / Trailer
+
+  *Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+
+
+  Thank you
+
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha
+  Begrich, Andreas Fischbach, Jannis Grimm (Institute for the Study of Protest
+  and Social Movements), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara
+  Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel,
+  SA, Gustavo Ramon Wilhelmi*
+
+
+  A production by  Rimini Apparat.
+
+
+  In co-production with creart / Teatrelli, BorderLight – International Theatre
+  + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie
+  d’Arte, HAU – Hebbel am Ufer, Hellerau – European Centre for the Arts,
+  International Summer Festival Kampnagel, Zona K, Festival PERSPECTIVES.
+
+
+  Supported by Fonds Darstellende Künste with funds from the Federal Government
+  Commissioner for Culture and the Media and the Senate Department for Culture
+  and Europe.
 ---
 The Walks is an app with a collection of audio walks by Rimini Protokoll. Each walk is a short audio experience covering specific locations in your city and an invitation to rediscover and interact with your environment. 
 It only takes 20 minutes to do an audio walk. Get going whenever you want. You decide how many of the walks you’d like to do and in what order.
