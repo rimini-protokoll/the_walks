@@ -5,7 +5,7 @@ listed: true
 shortTitle: Cimetière
 title: Cimetière
 duration: ~ 30 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Ffr_ChaiJ0yo.mp3?alt=media&token=2cc69c35-b67d-4ff4-a5c2-ae8ee2d0f1b7
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ChaiJ0yo%2Ffr_ChaiJ0yo.mp3?alt=media&token=2cc69c35-b67d-4ff4-a5c2-ae8ee2d0f1b7
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 userPrompt:
 - title: "La mission: 
@@ -14,7 +14,7 @@ trouver des vivants.
 
 Ensuite démarrer la prochaine piste."
   triggerTime: 384
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=eec5a9a1-0504-489a-888d-7a2a31f2adac
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=7d3b45a7-12e5-4400-8c15-33886e2204a1
   actions:
   - title: Prochaine piste
     action: continue
@@ -24,7 +24,7 @@ Ensuite:
 
 Démarrer la prochaine piste."
   triggerTime: 618
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_2.mp3?alt=media&token=8c612db1-8df2-4ccc-96fa-c5577c4742d9
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_2.mp3?alt=media&token=375131c9-94b6-4097-b026-003be5056fbc
   actions:
   - title: Prochaine piste
     action: continue
@@ -33,8 +33,8 @@ Démarrer la prochaine piste."
 3, 2, 1,
 
 Immortaliser."
-  triggerTime: 816
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_3.mp3?alt=media&token=350f7eb2-5fe6-4b43-9884-3c00969b5939
+  triggerTime: 800
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ChaiJ0yo%2Ffr_ChaiJ0yo_loop_3.mp3?alt=media&token=ba58d740-4384-4b67-aa71-13b55d0c97d9
   actions:
   - title: Prendre une photo
     action: picture
@@ -48,14 +48,14 @@ Trouver un endroit pour s'asseoir.
 Un lieu tranquille.
 
 Ensuite: démarrer la prochaine piste."
-  triggerTime: 848
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_4.mp3?alt=media&token=f4c3c9b3-3de6-4b74-aa67-86a859299873
+  triggerTime: 832
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_4.mp3?alt=media&token=ffd6fa93-15dd-4036-bbf7-b173a7c67e9e
   actions: 
   - title: Prochaine piste
     action: continue
 - title: Continuer vers la galerie de photos
   triggerTime: 1100
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=eec5a9a1-0504-489a-888d-7a2a31f2adac
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:
   - title: Galerie
     action: map

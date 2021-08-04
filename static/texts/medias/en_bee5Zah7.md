@@ -4,26 +4,26 @@ language: en
 listed: true
 shortTitle: Departure
 title: Departure,
-afterTitle:  let’s go!
+afterTitle: let’s go!
 duration: ~ 16 Min
 penPaper: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_bee5Zah7%2Fen_bee5Zah7.mp3?alt=media&token=f9392f56-8d77-41e1-8e07-3d6a61850e6f
 iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 userPrompt:
 - title: Yes - I’m ready. Let’s continue!
-  triggerTime: 72.545
+  triggerTime: 72
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_1.mp3?alt=media&token=61c4d8ff-7332-4b83-8ca9-d0951f94261c
   actions:
   - title: Continue
     action: continue
 - title: Yes - I have found a spot. Let’s go on!
-  triggerTime: 430.909
+  triggerTime: 431
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_2.mp3?alt=media&token=5cc78231-0772-44cb-b4bb-7efd873ad045
   actions:
   - title: Continue
     action: continue
 - title: Take a photo and continue or continue without photo.
-  triggerTime: 488.727
+  triggerTime: 489
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_3.mp3?alt=media&token=eee75c2a-c745-4e38-9bba-83d277346aa0
   actions:
   - title: Take photo
@@ -32,7 +32,7 @@ userPrompt:
   - title: No photo
     action: continue
 - title: Take a photo and continue or continue without photo.
-  triggerTime: 747.273
+  triggerTime: 744
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_4.mp3?alt=media&token=3df62014-aaec-4560-8d39-4b792913f7ce
   actions:
   - title: Take photo
@@ -42,7 +42,7 @@ userPrompt:
     action: continue
 - title: Continue to the gallery
   triggerTime: 776
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_3.mp3?alt=media&token=eee75c2a-c745-4e38-9bba-83d277346aa0
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:
   - title: Gallery
     action: map

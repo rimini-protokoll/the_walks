@@ -11,13 +11,13 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: 'Ja, ich bin am Ziel angekommen! Weiter geht’s!'
-  triggerTime: 632.470
+  triggerTime: 632
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=d5ae65db-cdd5-4d16-974b-2337da49711d
   actions:
   - title: Weiter
     action: continue
 - title: Foto machen und fortfahren oder ohne Foto fortfahren.
-  triggerTime: 742.588
+  triggerTime: 743
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=06c94fbf-df5a-4e56-84bf-1798ae46b08f
   actions:
   - title: Foto machen
@@ -25,7 +25,7 @@ userPrompt:
   - title: Kein Foto
     action: continue
 - title: Foto machen und fortfahren oder ohne Foto fortfahren.
-  triggerTime: 770.823
+  triggerTime: 771
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_3.mp3?alt=media&token=1b47c2d6-0ff0-456d-9cd7-23734926441e
   actions:
   - title: Foto machen

@@ -10,8 +10,8 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 userPrompt:
 - title: Take a photo and continue.
-  triggerTime: 111.983
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh_loop_1.mp3?alt=media&token=91db6ba4-7f54-4086-af67-935a2a27cfe9
+  triggerTime: 112
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh_loop_1.mp3?alt=media&token=a4d3c98e-d01b-4638-b307-6709e3babc7b
   actions:
   - title: Take photo
     action: picture
@@ -20,7 +20,7 @@ userPrompt:
     action: continue
 - title: Continue to the gallery
   triggerTime: 983
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=343f6878-9a37-4a07-bbcd-b53cc6048f1b
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
   actions:
   - title: Gallery
     action: map

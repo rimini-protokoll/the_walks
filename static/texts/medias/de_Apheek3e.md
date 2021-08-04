@@ -5,12 +5,12 @@ listed: true
 shortTitle: Straße
 title: Straße
 duration: ~ 25 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Apheek3e.mp3?alt=media&token=87b613f2-369b-42a9-adcb-ec36e7a1cd3e
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
 userPrompt:
 - title: Bild machen oder ohne Foto fortfahren.
   triggerTime: 1141
-  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Apheek3e_loop.mp3?alt=media&token=11ae3b0f-12b6-4cd2-8e54-03232e99b7ca
+  srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
   actions:
   - title: Foto machen
     action: picture

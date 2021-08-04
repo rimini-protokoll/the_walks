@@ -9,7 +9,7 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt: 
 - title: Prendre une photo et continuer ou continuer sans photo.
-  triggerTime: 619.749
+  triggerTime: 645
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_uma9ooK4%2Ffr_uma9ooK4_loop_1.mp3?alt=media&token=1c9f1b7c-1917-4c97-90ed-84e2e50a6b99
   actions:
   - title: Prendre une photo

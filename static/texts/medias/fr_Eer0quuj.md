@@ -11,13 +11,13 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 userPrompt:
 - title: 'Oui, je suis arrivé à destination ! On continue !'
-  triggerTime: 632.470
+  triggerTime: 632
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=343f6878-9a37-4a07-bbcd-b53cc6048f1b
   actions:
   - title: Continuer
     action: continue
 - title: Prendre une photo et continuer ou continuer sans photo.
-  triggerTime: 742.588
+  triggerTime: 743
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=abd4d2f9-fbdc-40c4-bf72-5980d7210bb9
   actions:
   - title: Prendre une photo
@@ -25,7 +25,7 @@ userPrompt:
   - title: Pas de photo
     action: continue
 - title: Prendre une photo et continuer ou continuer sans photo.
-  triggerTime: 770.823
+  triggerTime: 771
   srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_3.mp3?alt=media&token=1b47c2d6-0ff0-456d-9cd7-23734926441e
   actions:
   - title: Prendre une photo
