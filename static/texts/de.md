@@ -2,94 +2,110 @@
 id: noong4Th
 languageCode: de
 medias:
-- de_bee5Zah7
-- de_Udie9hoh
-- de_uma9ooK4
-- de_siQu3iex
-- de_ChaiJ0yo
-- de_Eer0quuj
-- de_Apheek3e
-credits: "Text, Regie
+  - de_bee5Zah7
+  - de_Udie9hoh
+  - de_uma9ooK4
+  - de_siQu3iex
+  - de_ChaiJ0yo
+  - de_Eer0quuj
+  - de_ahvo7Cee
+  - de_Apheek3e
+credits: >-
+  Text, Regie
 
-*Helgard Haug, Stefan Kaegi, Daniel Wetzel*
-
-
-Idee, Dramaturgie
-
-*Cornelius Puschke*
+  *Helgard Haug, Stefan Kaegi, Daniel Wetzel*
 
 
-App-Development
+  Idee, Dramaturgie
 
-*Steffen Klaue, Alexander Morosow*
-
-
-Sounddesign / Mischung
-
-*Frank Böhle*
+  *Cornelius Puschke*
 
 
-Musik / Komposition
+  App-Development
 
-*Frank Böhle u.a. (siehe Einzel Walks)*
-
-
-Grafikdesign
-
-*Ilona Marti*
+  *Steffen Klaue, Alexander Morosow*
 
 
-Sprachaufnahmen
+  Sounddesign / Mischung
 
-*Rimini Protokoll, studio lärm und Lorenz Rollhäuser*
-
-
-Produktionsleitung
-
-*Maitén Arns*
+  *Frank Böhle*
 
 
-Mitarbeit Produktion
+  Musik / Komposition
 
-*Steven Sander*
-
-
-Mitarbeit App-Development
-
-*Gaétan Langlois-Meurinne*
+  *Frank Böhle u.a. (siehe Einzel Walks)*
 
 
-Übersetzung
+  Grafikdesign
 
-*Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
-
-
-Expert*innen / Mitwirkende
-
-*Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+  *Ilona Marti*
 
 
-Sprecher*innen
+  Sprachaufnahmen
 
-*Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
-
-
-Dokumentation/Trailer
-
-*Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+  *Rimini Protokoll, studio lärm und Lorenz Rollhäuser*
 
 
-Danke an
+  Produktionsleitung
 
-*Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
- 
-
-Eine Produktion von Rimini Apparat.
-
-In Koproduktion mit creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.
+  *Maitén Arns*
 
 
-Gefördert vom Fonds Darstellende Künste aus Mitteln der Beauftragten der Bundesregierung für Kultur und Medien und der Senatsverwaltung für Kultur und Europa."
+  Mitarbeit Produktion
+
+  *Steven Sander*
+
+
+  Mitarbeit App-Development
+
+  *Gaétan Langlois-Meurinne*
+
+
+  Übersetzung
+
+  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia,
+  Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+
+
+  Expert*innen / Mitwirkende
+
+  *Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+
+
+  Sprecher*innen
+
+  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez,
+  Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane
+  Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi
+  Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie
+  Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+
+
+  Dokumentation/Trailer
+
+  *Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+
+
+  Danke an
+
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha
+  Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und
+  Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara
+  Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel,
+  SA, Gustavo Ramon Wilhelmi*
+
+
+  Eine Produktion von Rimini Apparat.
+
+  In Koproduktion mit creart / Teatrelli, BorderLight – International Theatre +
+  Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte,
+  HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste,
+  Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.
+
+
+  Gefördert vom Fonds Darstellende Künste aus Mitteln der Beauftragten der
+  Bundesregierung für Kultur und Medien und der Senatsverwaltung für Kultur und
+  Europa.
 ---
 „The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren.
 Um einen Audio-Walk zu machen, reichen schon 20 Minuten. Gehe los, wann immer du willst. Du kannst selber entscheiden, wie viele der Walks du in welcher Reihenfolge machen möchtest.
