@@ -45,22 +45,37 @@ collections:
   - name: walks
     label: "Walks"
     folder: static/texts/medias/
-    slug: id
+    slug: "{{language}}_{{id}}"
     identifier_field: id
-    summary: "{{title}}"
+    summary: "{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
     fields:
       - label: Id
         name: id
         widget: string
+      - label: Language
+        name: language
+        widget: relation
+        collection: languages
+        search_fields: [languageCode, title]
+        value_field: languageCode
+        display_fields: ["{{languageCode}} {{title}}"]
+      - label: Short Title
+        name: shortTitle
+        widget: string
+      - label: Pre Title
+        name: preTitle
+        widget: string
+        required: false
       - label: Title
         name: title
         widget: string
+      - label: After Title
+        name: afterTitle
+        widget: string
+        required: false
       - label: Body
         name: body
         widget: markdown
-      - label: Paid
-        name: paid
-        widget: boolean
       - label: Listed
         name: listed
         widget: boolean
@@ -69,11 +84,7 @@ collections:
         widget: string
       - label: Audio File
         name: srcUri
-        widget: file
-        media_library:
-          config:
-            multiple: false
-            media_folder: /static/medias
+        widget: string
       - label: Walk icon
         name: iconUri
         widget: image
@@ -93,11 +104,7 @@ collections:
             widget: number
           - label: Loop Audio File
             name: srcUri
-            widget: file
-            media_library:
-              config:
-                multiple: false
-                media_folder: /static/medias/
+            widget: string
           - label: Actions
             name: actions
             widget: list
