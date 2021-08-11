@@ -15,7 +15,7 @@ userPrompt:
     srcUri: >-
       https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_1.mp3?alt=media&token=b61e87ce-8b2a-4487-9228-48aea41ef080
     actions:
-      - title: Prendre photo
+      - title: Prendre une photo
         action: picture
         postAction: continue
       - title: Pas de photo
@@ -32,7 +32,7 @@ userPrompt:
     srcUri: >-
       https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_siQu3iex%2Fde_siQu3iex_loop_3.mp3?alt=media&token=50af56ea-017f-4069-b055-350c10ac56aa
     actions:
-      - title: Prendre photo
+      - title: Prendre une photo
         action: picture
         postAction: continue
       - title: Pas de photo
