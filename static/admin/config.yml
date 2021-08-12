@@ -30,6 +30,7 @@ collections:
       - label: About
         name: body
         widget: markdown
+        required: false
       - label: Medias
         name: medias
         widget: list
