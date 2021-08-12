@@ -98,7 +98,7 @@ collections:
         fields:
           - label: Title
             name: title
-            widget: string
+            widget: text
           - label: Trigger Time (seconds)
             name: triggerTime
             widget: number
