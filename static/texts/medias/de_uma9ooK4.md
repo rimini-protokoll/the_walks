@@ -34,14 +34,14 @@ credits: >-
 Dies ist ein Duett. Verabrede dich mit jemandem vor demselben Supermarkt. Wenn du Englisch verstehst, empfehlen wir dir die englische Version dieses Walks ( → Menü → Sprache).
 
 
-Damit die simultane Wiedergabe eurer Walks gewährleistet ist
+Damit die simultane Wiedergabe eurer Walks gewährleistet ist,
 
-_ wählt unten die download-option 
-_ stellt eure Handys auf “Nicht stören”. Das ist nicht der Flugmodus und erhält die Internet-Verbindung
+→ wählt unten die Download-Option 
+→ stellt eure Handys auf “Nicht stören”. Das ist nicht der Flugmodus und erhält die Internet-Verbindung:
 
 
 [iOS] → Einstellungen → Nicht stören
 [Android] → Einstellungen → Töne → Nicht stören
 
 
-Eine Person wählt A, die andere B. Zählt gemeinsam von 3 zurück und startet gleichzeitig eure Walks.
+Zählt anschließend gemeinsam von 3 bis 0 und startet eure Tracks synchron.
