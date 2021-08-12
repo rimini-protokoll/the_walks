@@ -1,34 +1,31 @@
 ---
+popups: []
 id: airie8Ke
 language: en
-listed: false
 shortTitle: B
 title: Park B
+listed: false
 duration: ~ 20 Min
-srcUri: >-
-  https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_airie8Ke.mp3?alt=media&token=befeb53e-e00f-4dcd-930f-cde108302055
-iconUri: 'https://the-walks.netlify.app/icons/Park.png'
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_airie8Ke.mp3?alt=media&token=429edcc7-261c-4317-841d-f51be5496c47
+iconUri: https://the-walks.netlify.app/icons/Park.png
 userPrompt:
   - title: Take a photo or continue without taking a picture.
     triggerTime: 786
-    srcUri: >-
-      https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_1.mp3?alt=media&token=e76eba89-d8cf-47fe-be22-ea09e8ff7869
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_1.mp3?alt=media&token=2b841c2c-8813-46d6-a7e3-11915c7c157e
     actions:
       - title: Photo
         action: picture
         postAction: continue
-      - title: 'No'
+      - title: No
         action: continue
   - title: Take a photo or continue without taking a picture.
     triggerTime: 992
-    srcUri: >-
-      https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_2.mp3?alt=media&token=8341c203-2f27-497d-99c0-f22b254c37bd
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_ahvo7Cee_loop_2.mp3?alt=media&token=6295cdb3-4436-44bb-8ca2-f61352fe3122
     actions:
       - title: Photo
         action: picture
         postAction: map
-      - title: 'No'
+      - title: No
         action: map
-popups: []
 ---
-
+\-
