@@ -41,8 +41,8 @@ collections:
           widget: relation
           collection: walks
           search_fields: [title, body]
-          value_field: id
-          display_fields: ["{{title}}"]
+          value_field: "{{language}}_{{id}}"
+          display_fields: ["{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"]
   - name: walks
     label: "Walks"
     folder: static/texts/medias/
@@ -53,6 +53,10 @@ collections:
       - label: Id
         name: id
         widget: string
+      - label: Listed
+        name: listed
+        widget: boolean
+        default: true
       - label: Language
         name: language
         widget: relation
@@ -77,8 +81,11 @@ collections:
       - label: Body
         name: body
         widget: markdown
-      - label: Listed
-        name: listed
+      - label: Two person
+        name: twoPerson
+        widget: boolean
+      - label: Pen and Paper
+        name: penPaper
         widget: boolean
       - duration: Duration
         name: duration
@@ -93,6 +100,9 @@ collections:
           config:
             multiple: false
             media_folder: /static/icons
+      - label: Credits
+        name: credits
+        widget: markdown
       - label: User Prompts
         name: userPrompt
         widget: list
@@ -143,10 +153,10 @@ collections:
           collection: news
           search_fields: [title, date, body]
           value_field: id
-          display_fields: ["{{title}} - {{date | date('DD.MM.YY')}}"]
+          display_fields: ["{{title}} - {{date}}"]
   - name: news
     label: News
-    summary: "{{title}} - {{date | date('DD.MM.YY')}}"
+    summary: "{{title}} - {{date}}"
     sortable_fields: ['date']
     folder: static/news
     create: true
@@ -158,15 +168,17 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
-      - label: "Publish Date"
-        name: "date"
-        widget: "date"
-      - {label: "Excerpt", name: "excerpt", widget: "text"}
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
-      - label: "Image"
-        name: "image"
-        widget: "image"
+      - label: "Place"
+        name: "place"
+        widget: "string"
         required: false
+      - label: "Language"
+        name: "language"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "string"
+      - label: "Link"
+        name: "linkUri"
+        widget: "string"
 
