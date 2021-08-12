@@ -87,6 +87,7 @@ credits: >-
   Subventionnée par le Fonds Darstellende Künste et Senatsverwaltung für Kultur und Europa
 medias:
   - fr_bee5Zah7
+  - fr_ahvo7Cee
   - fr_Udie9hoh
   - fr_uma9ooK4
   - fr_siQu3iex
