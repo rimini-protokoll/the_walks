@@ -4,7 +4,7 @@ popups: []
 id: bee5Zah7
 listed: true
 language: de
-shortTitle: Aufbruch
+shortTitle: PAufbruch
 title: Aufbruch,
 afterTitle: los raus jetzt!
 penPaper: true
