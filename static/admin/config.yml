@@ -34,24 +34,26 @@ collections:
       - label: Credits
         name: credits
         widget: markdown
+        required: false
       - label: Medias
         name: medias
         widget: list
         collapsed: false
         add_to_top: true
+        required: false
         field:
           name: walk
           widget: relation
           collection: walks
           search_fields: [title, body]
           value_field: "{{language}}_{{id}}"
-          display_fields: ["{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"]
+          display_fields: [{{language}} "{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"]
   - name: walks
     label: "Walks"
     folder: static/texts/medias/
     slug: "{{language}}_{{id}}"
     identifier_field: id
-    summary: "{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
+    summary: "{{language}} {{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
     fields:
       - label: Id
         name: id
@@ -91,15 +93,19 @@ collections:
       - label: Pen and Paper
         name: penPaper
         widget: boolean
+        required: false
       - duration: Duration
         name: duration
         widget: string
+        required: false
       - label: Audio File
         name: srcUri
         widget: string
+        required: false
       - label: Walk icon
         name: iconUri
         widget: image
+        required: false
         media_library:
           config:
             multiple: false
@@ -111,6 +117,7 @@ collections:
       - label: User Prompts
         name: userPrompt
         widget: list
+        required: false
         fields:
           - label: Title
             name: title
