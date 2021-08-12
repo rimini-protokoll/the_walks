@@ -12,7 +12,7 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 credits: |-
   Sprecher*innen
-  *Margot Gödros*
+  Margot Gödros*
 
   Komposition
   *Frank Böhle*
