@@ -1,13 +1,23 @@
 ---
+twoPerson: false
 popups: []
 id: Apheek3e
+listed: true
 language: de
 shortTitle: Straße
 title: Straße
-listed: true
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
+credits: |-
+  Expert*innen / Mitwirkende
+  Martin Schmitz, Katja Otto*
+
+  Sprecher*innen
+  Alexandra Lauck*
+
+  Danke an
+  *Ant Hampton*
 userPrompt:
   - title: Bereitmachen zum Abdrücken, jetzt.
     triggerTime: 1141
@@ -26,14 +36,5 @@ userPrompt:
         action: map
       - title: Nein
         action: continue
-credits: |-
-  Expert*innen / Mitwirkende
-  *Martin Schmitz, Katja Otto*
-
-  Sprecher*innen
-  *Alexandra Lauck*
-
-  Danke an
-  *Ant Hampton*
 ---
 Wie werden Städte geplant? Wie lässt sich planlos gehen? Bei diesem Walk bist du unterwegs mit der psychologischen Beraterin Katja Otto und dem Spaziergangswissenschaftler Martin Schmitz. Es geht los an einer Straße deiner Wahl. Halte an und starte dann den Walk.
