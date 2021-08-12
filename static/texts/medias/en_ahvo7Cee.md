@@ -14,7 +14,7 @@ srcUri:
 iconUri: https://the-walks.netlify.app/icons/Park.png
 credits: |-
   Sprecher*innen
-  *Lara Körte*
+  Lara Körte*
 userPrompt: []
 ---
 What leads politicians to green spaces? What is political about a relationship between two people? Start this walk by arranging to meet someone in a park.
