@@ -10,36 +10,40 @@ title: Wasser
 penPaper: false
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi.mp3?alt=media&token=61fedcc9-aad0-447c-b9ee-eef38eeaf712
-iconUri: https://the-walks.netlify.app/icons/Friedhof.png
-credits: |-
+iconUri: https://the-walks.netlify.app/icons/Wasser.png
+credits: >-
   Expert*innen* / Mitwirkende
+
   *Mitarbeiter von Barcelona Cicle de l’Aigua*
 
+
   Sprecher*innen
+
   Christiane Hommelsheim, Daniel Wetzel*
 
+
   Komposition / Mischung
+
   *Rimini Protokoll sowie Anton Rose & Thomas Mielmann*
 
+
   Danke an
+
   *Enric Tello und die Kolleg:innen vom Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber und Gustavo Ramon Wilhelmi, Lilli Kuschel, Zoï Wetzel, Peter Breitenbach, Niki Neecke (Jardin Sonore)*
 userPrompt:
-  - title: |-
-      Aktiviere dann den nächsten Track.
+  - title: Aktiviere dann den nächsten Track.
     triggerTime: 90
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi_loop_1.mp3?alt=media&token=80d90ff6-37b7-4684-b179-0db1a7b40e47
     actions:
       - title: Nächster Track
         action: continue
-  - title: |-
-      Aktiviere wenn du dann möchtest den nächsten Track.
+  - title: Aktiviere wenn du dann möchtest den nächsten Track.
     triggerTime: 277
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi_loop_2.mp3?alt=media&token=851cb8fe-fa7d-4e24-8ff6-ced6ab2bfa34
     actions:
       - title: Nächster Track
         action: continue
-  - title: |-
-      Mache ein Foto von Deiner Flasche.
+  - title: Mache ein Foto von Deiner Flasche.
     triggerTime: 1105
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi_loop_3.mp3?alt=media&token=e8925308-eb83-4ffd-a52f-c4d865fb4045
     actions:
@@ -48,8 +52,7 @@ userPrompt:
         postAction: continue
       - title: Kein Foto
         action: continue
-  - title: |-
-      In der Bewegung abdrücken.
+  - title: In der Bewegung abdrücken.
     triggerTime: 1282
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi_loop_4.mp3?alt=media&token=1a0bfe01-7064-4e8f-a047-d5b90addb124
     actions:
