@@ -91,8 +91,8 @@ medias:
   - de_ChaiJ0yo
   - de_Eer0quuj
   - de_ahvo7Cee
-  - de_Apheek3e
   - de_ohPeu2zi
+  - de_Apheek3e
 ---
 „The Walks" ist eine Sammlung von Kurzhörspielen für bestimmte Orte in deiner Stadt und eine Einladung deine Umgebung neu zu entdecken und mit ihr zu interagieren.
 Um einen Audio-Walk zu machen, reichen schon 20 Minuten. Gehe los, wann immer du willst. Du kannst selber entscheiden, wie viele der Walks du in welcher Reihenfolge machen möchtest.
