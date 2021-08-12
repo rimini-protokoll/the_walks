@@ -92,6 +92,7 @@ medias:
   - en_siQu3iex
   - en_ChaiJ0yo
   - en_Eer0quuj
+  - en_ohPeu2zi
   - en_Apheek3e
 ---
 The Walks is an app with a collection of audio walks by Rimini Protokoll. Each walk is a short audio experience covering specific locations in your city and an invitation to rediscover and interact with your environment. 
