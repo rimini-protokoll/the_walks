@@ -1,13 +1,22 @@
 ---
+twoPerson: false
 popups: []
 id: Eer0quuj
+listed: true
+language: de
 shortTitle: Theater
 preTitle: Vor dem
 title: Theater
-listed: true
+penPaper: true
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj.mp3?alt=media&token=7f363b6f-032e-4bed-9c14-2581cee96c29
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
+credits: |-
+  Sprecher*innen
+  Alexandra Lauck*
+
+  Komposition
+  *Frank Böhle*
 userPrompt:
   - title: Ja, ich bin am Ziel angekommen! Weiter geht’s!
     triggerTime: 632
@@ -39,13 +48,5 @@ userPrompt:
         action: map
       - title: Nein
         action: continue
-penPaper: true
-language: de
-credits: |-
-  Sprecher*innen
-  *Alexandra Lauck*
-
-  Komposition
-  *Frank Böhle*
 ---
 Wann warst du das letzte Mal in einem Theater? Hast Menschen neben dir atmen hören und anderen, die auf die Bühne gingen, applaudiert? Mach dich auf den Weg und besuche ein Theater in deiner Nähe. Nimm einen Zettel und einen Stift mit und starte den Walk, sobald es in Sichtweite ist.
