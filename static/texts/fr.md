@@ -1,14 +1,6 @@
 ---
 id: dooPoru8
 languageCode: fr
-medias:
-  - fr_bee5Zah7
-  - fr_Udie9hoh
-  - fr_uma9ooK4
-  - fr_siQu3iex
-  - fr_ChaiJ0yo
-  - fr_Eer0quuj
-  - fr_Apheek3e
 credits: >-
   Scénario, Realisation
 
@@ -60,11 +52,9 @@ credits: >-
   *Gaétan Langlois-Meurinne*
 
 
-
   Traduction
 
-  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia,
-  Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
 
 
   Expertes / contributeurs
@@ -74,11 +64,7 @@ credits: >-
 
   Narrateurs
 
-  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez,
-  Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane
-  Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi
-  Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie
-  Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
   Documentation / Trailer
@@ -88,23 +74,25 @@ credits: >-
 
   Merci à
 
-  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha
-  Begrich, Andreas Fischbach, Jannis Grimm (Institute for the Study of Protest
-  and Social Movements), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara
-  Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel,
-  SA, Gustavo Ramon Wilhelmi*
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Zoï Wetzel, Gustavo Ramon Wilhelmi*
+
+  \
 
   Une production de Rimini Apparat.
 
 
-  En coproduction avec creart / Teatrelli, BorderLight – International Theatre +
-  Fringe Festival Cleveland, Forum Européen Alpbach, Fondazione Armonie d’Arte,
-  HAU – Hebbel am Ufer, Hellerau – Centre européen des arts, Festival
-  international d'été Kampnagel, Zona K, Festival PERSPECTIVES.
+  En coproduction avec creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, Forum Européen Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Centre européen des arts, Festival international d'été Kampnagel, Zona K, Festival PERSPECTIVES.
 
 
-  Subventionnée par le Fonds Darstellende Künste et Senatsverwaltung für Kultur
-  und Europa
+  Subventionnée par le Fonds Darstellende Künste et Senatsverwaltung für Kultur und Europa
+medias:
+  - fr_bee5Zah7
+  - fr_Udie9hoh
+  - fr_uma9ooK4
+  - fr_siQu3iex
+  - fr_ChaiJ0yo
+  - fr_Eer0quuj
+  - fr_Apheek3e
 ---
 « The Walks » est une application qui contient une série de promenades audioguidées de Rimini Protokoll. Chaque promenade est une courte pièce audio conçue pour un lieu spécifique de ta ville et une invitation à redécouvrir ton environnement et à interagir avec. Pour faire une promenade-audio, il faut compter environ 20 minutes. Tu peux les faire quand tu veux  et en décider toi-même l’ordre et le nombre.
 Les histoires et les univers sonores de ces pièces-audio peuvent être écoutés dans le monde entier. Ainsi, « The Walks » relie des personnes tout autour du globe par une expérience locale, la pratique d´une activité humaine fondamentale : la marche.
