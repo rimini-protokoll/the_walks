@@ -1,18 +1,17 @@
 ---
+popups: []
 id: Apheek3e
 language: de
-listed: true
 shortTitle: Straße
 title: Straße
+listed: true
 duration: ~ 25 Min
-srcUri: >-
-  https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
-iconUri: 'https://the-walks.netlify.app/icons/Strasse.png'
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
+iconUri: https://the-walks.netlify.app/icons/Strasse.png
 userPrompt:
-  - title: Bild machen oder ohne Foto fortfahren.
+  - title: Bereitmachen zum Abdrücken, jetzt.
     triggerTime: 1141
-    srcUri: >-
-      https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
     actions:
       - title: Foto machen
         action: picture
@@ -21,14 +20,12 @@ userPrompt:
         action: continue
   - title: Weiter zur Bildergalerie
     triggerTime: 1185
-    srcUri: >-
-      https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Galerie
         action: map
       - title: Nein
         action: continue
-popups: []
 credits: |-
   Expert*innen / Mitwirkende
   *Martin Schmitz, Katja Otto*
