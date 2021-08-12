@@ -31,6 +31,9 @@ collections:
         name: body
         widget: markdown
         required: false
+      - label: Credits
+        name: credits
+        widget: markdown
       - label: Medias
         name: medias
         widget: list
@@ -81,6 +84,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
+        required: false
       - label: Two person
         name: twoPerson
         widget: boolean
@@ -103,6 +107,7 @@ collections:
       - label: Credits
         name: credits
         widget: markdown
+        required: false
       - label: User Prompts
         name: userPrompt
         widget: list
