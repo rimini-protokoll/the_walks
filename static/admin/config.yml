@@ -47,7 +47,7 @@ collections:
           collection: walks
           search_fields: [title, body]
           value_field: "{{language}}_{{id}}"
-          display_fields: [{{language}} "{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"]
+          display_fields: ["{{preTitle}} {{language}} {{title}} {{afterTitle}} ({{language}}_{{id}})"]
   - name: walks
     label: "Walks"
     folder: static/texts/medias/
