@@ -11,7 +11,7 @@ srcUri: >-
 iconUri: 'https://the-walks.netlify.app/icons/Ampel.png'
 userPrompt:
   - title: Prendre une photo et continuer ou continuer sans photo.
-    triggerTime: 112
+    triggerTime: 114
     srcUri: >-
       https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_Udie9hoh%2Ffr_Udie9hoh_loop_1.mp3?alt=media&token=9d6d2ecd-eb5a-4dcb-983c-bd0f2f5ae9b6
     actions:
