@@ -61,9 +61,15 @@ userPrompt:
         postAction: continue
       - title: Kein Foto
         action: continue
-  - title: Weiter zur Bildergalerie
+  - title: Ende
     triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi_loop_5.mp3?alt=media&token=01bba94d-8141-44da-9791-f10a37c413b3
+    actions:
+      - title: Ende
+        action: continue
+  - title: Weiter zur Bildergalerie
+    triggerTime: 1305
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Galerie
         action: map
