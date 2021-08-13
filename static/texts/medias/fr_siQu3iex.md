@@ -4,7 +4,7 @@ language: fr
 listed: true
 shortTitle: Rond-point
 preTitle: Autour d’un
-title: rond-point
+title: Rond-point
 duration: ~ 20 Min
 srcUri: >-
   https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_siQu3iex%2Ffr_siQu3iex.mp3?alt=media&token=2c389821-2cb7-409c-8f7d-429f19407426
