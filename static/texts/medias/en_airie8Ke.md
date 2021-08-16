@@ -25,9 +25,9 @@ userPrompt:
     actions:
       - title: Photo
         action: picture
-        postAction: map
+        postAction: ""
       - title: No
-        action: map
+        action: continue
   - title: Continue to the gallery
     actions:
       - title: Gallery
