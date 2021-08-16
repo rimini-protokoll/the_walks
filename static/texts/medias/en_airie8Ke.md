@@ -25,7 +25,7 @@ userPrompt:
     actions:
       - title: Photo
         action: picture
-        postAction: ""
+        postAction: continue
       - title: No
         action: continue
   - title: Continue to the gallery
