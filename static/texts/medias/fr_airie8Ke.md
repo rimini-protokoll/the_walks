@@ -1,10 +1,11 @@
 ---
+twoPerson: true
 popups: []
 id: airie8Ke
+listed: false
 language: fr
 shortTitle: B
 title: Parc B
-listed: false
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ahvo7Cee%2Ffr_airie8Ke.mp3?alt=media&token=02e62240-31e6-4c0a-8d69-1ebd03360951
 iconUri: https://the-walks.netlify.app/icons/Park.png
