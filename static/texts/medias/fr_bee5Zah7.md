@@ -2,8 +2,8 @@
 popups: []
 id: bee5Zah7
 language: fr
-shortTitle: Départ, c'est parti!
-title: Départ
+shortTitle: Départ
+title: Départ, c'est parti!
 afterTitle: c’est parti!
 listed: true
 duration: ~ 16 Min
