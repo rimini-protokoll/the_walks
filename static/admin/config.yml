@@ -90,6 +90,7 @@ collections:
       - label: Two person
         name: twoPerson
         widget: boolean
+        required: false
       - label: Pen and Paper
         name: penPaper
         widget: boolean
