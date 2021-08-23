@@ -7,7 +7,7 @@ language: it
 shortTitle: Cimitero
 title: Cimitero
 duration: ~ 30 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo.mp3?alt=media&token=e5404fc4-aa1f-463c-b21e-03a9142a9f84
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo.mp3?alt=media&token=36fd8563-cc39-441d-9c2f-f4982dc7dbbc
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 credits: |-
   Speaker
@@ -37,7 +37,7 @@ userPrompt:
       3, 2, 1, 
       Immortalare.
     triggerTime: 800
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo_loop_3.mp3?alt=media&token=94279463-9d0c-4ef4-96cd-e4ca88d70bc5
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo_loop_3.mp3?alt=media&token=566d6f23-5cf6-49d8-8f08-7a3f787d3fd0
     actions:
       - title: Fare una foto
         action: picture
