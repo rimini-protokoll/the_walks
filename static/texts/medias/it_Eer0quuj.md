@@ -17,35 +17,37 @@ credits: |-
   Composizione\
   *Frank Böhle*
 userPrompt:
-  - title: Yes, I have arrived at the destination! Let’s go on!
+  - title: |-
+      Sì, sono arrivato alla meta! 
+      Partenza, andiamo!
     triggerTime: 632
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=d5ae65db-cdd5-4d16-974b-2337da49711d
     actions:
-      - title: Continue
+      - title: Continua
         action: continue
-  - title: Take a photo and continue or continue without photo.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 743
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_2.mp3?alt=media&token=06c94fbf-df5a-4e56-84bf-1798ae46b08f
     actions:
-      - title: With Photo
+      - title: Fare una foto
         action: picture
         postAction: continue
-      - title: Without photo
+      - title: Nessuna foto
         action: continue
-  - title: Take a photo and continue or continue without photo.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 771
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_Eer0quuj_loop_3.mp3?alt=media&token=1b47c2d6-0ff0-456d-9cd7-23734926441e
     actions:
-      - title: With Photo
+      - title: Fare una foto
         action: picture
         postAction: continue
-      - title: Without photo
+      - title: Nessuna foto
         action: continue
-  - title: Continue to the gallery
+  - title: Continua alla galleria
     triggerTime: 791
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
-      - title: Gallery
+      - title: Galleria
         action: map
       - title: No
         action: continue
