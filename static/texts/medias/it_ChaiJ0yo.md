@@ -42,7 +42,7 @@ userPrompt:
       - title: Fare una foto
         action: picture
         postAction: continue
-      - title: "senza foto "
+      - title: Nessuna foto
         action: continue
   - title: |-
       Compito: riposarsi. 
