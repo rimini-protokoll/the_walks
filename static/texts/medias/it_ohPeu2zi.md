@@ -4,76 +4,76 @@ popups: []
 id: ohPeu2zi
 listed: true
 language: it
-shortTitle: Water
-preTitle: A Walk by the
-title: Water
+shortTitle: Acqua
+preTitle: Lungo un
+title: corso d‘acqua
 penPaper: false
 duration: ~ 25 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi.mp3?alt=media&token=e0124ffd-760a-4e86-a568-ae488e69b368
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
 iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
-  Experts / Contributors
+  Esperti / collaboratori:\
 
-  *Staff of Barcelona Cicle de l’Aigua*
-
-
-  Speakers
-
-  *Mmakgosi Kgabi, Joshua Lerner*
+  *Mitarbeiter von Barcelona Cicle de l’Aigua,*
 
 
-  Composition / Mixing
+  Speakers: \
 
-  *Rimini Protokoll and Anton Rose & Thomas Mielmann*
+  *Rosario Bona, Simonetta Solder*
 
 
-  Thank you
+  Composizione / Mixing:\
 
-  *Enric Tello, all the people we met at Barcelona Cicle de l’Aigua, especially Ignasi Batalle Barber and Gustavo Ramon Wilhelmi, Lilli Kuschel, Zoï Wetzel, Peter Breitenbach, Niki Neecke (Jardin Sonore).*
+  *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann* 
+
+
+  Un ringraziamento a:\
+
+  *Enric Tello e alle colleghe e colleghi del Barcelona Cicle de l'Aigua, in particolare Ignasi Batalle Barber e Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel.*
 userPrompt:
-  - title: Then activate the next track.
+  - title: Attiva la traccia successiva.
     triggerTime: 90
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_1.mp3?alt=media&token=8069de2e-5093-430b-8d5b-bc3fb6922560
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_1.mp3?alt=media&token=5f4e8047-2ca7-4e3e-bcce-bb0503423400
     actions:
-      - title: Next track
+      - title: Prossima traccia
         action: continue
-  - title: Activate the next track when it suits you.
+  - title: Attiva la prossima traccia quando vuoi.
     triggerTime: 277
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_2.mp3?alt=media&token=03362bce-85e9-4f22-9b36-4a99a289a817
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_2.mp3?alt=media&token=64051fc3-af66-4baa-b5d0-b844a517b9d4
     actions:
-      - title: Next track
+      - title: Prossima traccia
         action: continue
-  - title: Take a picture of your bottle.
+  - title: Fai una foto della tua bottiglia.
     triggerTime: 1105
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_3.mp3?alt=media&token=9c1a754d-893e-4f29-9bd8-c4ea4922abbf
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_3.mp3?alt=media&token=d3fd3443-8285-4d88-9806-4269bcedb797
     actions:
-      - title: Photo
+      - title: Fare una foto
         action: picture
         postAction: continue
       - title: No
         action: continue
-  - title: Let the motion take the photo.
+  - title: Scattare in movimento.
     triggerTime: 1282
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_4.mp3?alt=media&token=70560651-2eb6-4d57-bd89-92ab067e108d
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_4.mp3?alt=media&token=7adb10bc-5d82-44de-b049-79b1bce21a18
     actions:
-      - title: Photo
+      - title: Fare una foto
         action: picture
         postAction: continue
       - title: No
         action: continue
-  - title: Stop
+  - title: Fine
     triggerTime: 1301
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_5.mp3?alt=media&token=7729457a-be8b-4f9a-a963-bf85b387c794
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_5.mp3?alt=media&token=b8e90627-a7ad-4c6a-80d9-44b61889fea3
     actions:
-      - title: Stop
+      - title: Fine
         action: continue
-  - title: Continue to the gallery
+  - title: Continua alla galleria
     triggerTime: 1305
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
-      - title: Gallery
+      - title: Galleria
         action: map
       - title: No
         action: continue
 ---
-Bring one litre of water with you in a transparent container. Where does this water come from – the tap? Take it with you to a larger body of water: a river, canal or a lake. You should also have a few houses in your vicinity.
+Procurati un litro d’acqua in una bottiglia trasparente. Da dove viene quest’acqua – dal rubinetto? Portala con te verso un corso o bacino d'acqua più grande: un fiume, un canale o un lago. Scegline uno con qualche casa nelle vicinanze.
