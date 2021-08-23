@@ -1,10 +1,10 @@
-backend:
-  name: git-gateway
-  branch: content
 # backend:
-#   name: proxy
-#   proxy_url: http://localhost:8081/api/v1
+#   name: git-gateway
 #   branch: content
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  branch: content
 
 site_url: https://the-walks.netlify.app/admin/
 media_folder: /static/medias/
@@ -194,4 +194,46 @@ collections:
       - label: "Link"
         name: "linkUri"
         widget: "string"
+  - name: imprint
+    label: Imprint
+    summary: "{{languageCode}}"
+    folder: static/imprint
+    create: true
+    slug: "{{languageCode}}"
+    fields:
+      - label: Language
+        name: languageCode
+        widget: relation
+        collection: languages
+        search_fields: [languageCode, title]
+        value_field: languageCode
+        display_fields: ["{{languageCode}} {{title}}"]
+      - label: "Body"
+        name: body
+        widget: markdown
+  - name: legal
+    label: Data Protection & Legal notices
+    summary: "{{languageCode}}"
+    folder: static/legal
+    create: true
+    slug: "{{languageCode}}"
+    fields:
+      - label: Language
+        name: languageCode
+        widget: relation
+        collection: languages
+        search_fields: [languageCode, title]
+        value_field: languageCode
+        display_fields: ["{{languageCode}} {{title}}"]
+      - label: "Agreements"
+        name: agreements
+        widget: object
+        fields:
+          - {label: First, name: one, widget: string}
+          - {label: Second, name: two, widget: string}
+          - {label: Third, name: three, widget: string}
+          - {label: Fourth, name: four, widget: string}
+      - label: "Body"
+        name: body
+        widget: markdown
 
