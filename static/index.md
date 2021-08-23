@@ -10,4 +10,7 @@ languages:
 - title: Français
   languageCode: fr
   language: france
+- title: Italiano
+  languageCode: it
+  language: italy
 ---
