@@ -27,7 +27,7 @@ credits: >-
 
   Danke an
 
-  *Enric Tello und die Kolleginnen von Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber und Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+  *Enric Tello und die Kolleg*innen von Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber und Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
 userPrompt:
   - title: Aktiviere dann den nächsten Track.
     triggerTime: 90
