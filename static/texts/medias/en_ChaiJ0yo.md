@@ -1,11 +1,11 @@
 ---
-twoPerson: false
-popups: []
 id: ChaiJ0yo
 listed: true
 language: en
 shortTitle: Cemetery
 title: Cemetery
+twoPerson: false
+popups: []
 duration: ~ 30 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo.mp3?alt=media&token=e5404fc4-aa1f-463c-b21e-03a9142a9f84
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
@@ -32,17 +32,14 @@ userPrompt:
     actions:
       - title: Next track
         action: continue
-  - title: |-
-      Focus.
-      3, 2, 1,
-      Take it.
+  - title: Take a photo and continue or continue without photo.
     triggerTime: 800
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo_loop_3.mp3?alt=media&token=94279463-9d0c-4ef4-96cd-e4ca88d70bc5
     actions:
-      - title: With Photo
+      - title: Take photo
         action: picture
         postAction: continue
-      - title: Without photo
+      - title: No photo
         action: continue
   - title: |-
       Exercise: Take a rest.
