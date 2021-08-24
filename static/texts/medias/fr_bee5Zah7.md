@@ -1,14 +1,24 @@
 ---
 popups: []
 id: bee5Zah7
+listed: true
 language: fr
 shortTitle: Départ
 title: Départ,
 afterTitle: c’est parti!
-listed: true
+penPaper: true
 duration: ~ 16 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_bee5Zah7%2Ffr_bee5Zah7.mp3?alt=media&token=6cd2fe63-aed6-4b53-ac82-42b941a1e46d
 iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
+credits: |-
+  Narrateur
+  *Max Lechat*
+
+  Composition
+  *Frank Böhle*
+
+  Merci à
+  *Barbara Morgenstern, Aljoscha Begrich*
 userPrompt:
   - title: |-
       Oui, je suis prêt. 
@@ -52,15 +62,5 @@ userPrompt:
         action: map
       - title: Non
         action: continue
-penPaper: true
-credits: |-
-  Expert / Contributeur
-  *Bente Bausum*
-
-  Composition
-  *Frank Böhle*
-
-  Merci à
-  *Barbara Morgenstern, Aljoscha Begrich*
 ---
 Es-tu sorti aujourd'hui ? As-tu fait l'un de tes trajets habituels ? Droit au but - comme toujours ? Quand t’es-tu détourné de tes trajets habituels pour la dernière fois ? Prends un crayon et une feuille de papier, mets ton casque et commence la promenade chez toi. Tu verras où cela te mène.
