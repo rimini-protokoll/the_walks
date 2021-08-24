@@ -43,23 +43,23 @@ userPrompt:
     actions:
       - title: Next track
         action: continue
-  - title: Take a picture of your bottle.
+  - title: Take a photo and continue or continue without photo.
     triggerTime: 1105
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_3.mp3?alt=media&token=9c1a754d-893e-4f29-9bd8-c4ea4922abbf
     actions:
-      - title: Photo
+      - title: Take photo
         action: picture
         postAction: continue
-      - title: No
+      - title: No photo
         action: continue
-  - title: Let the motion take the photo.
+  - title: Take a photo and continue or continue without photo.
     triggerTime: 1282
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_4.mp3?alt=media&token=70560651-2eb6-4d57-bd89-92ab067e108d
     actions:
-      - title: Photo
+      - title: Take photo
         action: picture
         postAction: continue
-      - title: No
+      - title: No photo
         action: continue
   - title: Stop
     triggerTime: 1301
