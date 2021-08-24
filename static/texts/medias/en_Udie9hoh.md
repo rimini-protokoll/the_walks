@@ -1,12 +1,12 @@
 ---
-twoPerson: false
-popups: []
 id: Udie9hoh
 listed: true
 language: en
 shortTitle: Pedestrian Lights
 preTitle: Walking with
 title: Steff
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh.mp3?alt=media&token=d1b9389e-02eb-4c5e-8940-c16925c3a87b
@@ -21,14 +21,14 @@ credits: |-
   Composition
   *Rimini Protokoll*
 userPrompt:
-  - title: Take a photo and continue.
+  - title: Take a photo and continue or continue without photo.
     triggerTime: 114
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh_loop_1.mp3?alt=media&token=a4d3c98e-d01b-4638-b307-6709e3babc7b
     actions:
       - title: Take photo
         action: picture
         postAction: continue
-      - title: No
+      - title: No photo
         action: continue
   - title: Continue to the gallery
     triggerTime: 983
