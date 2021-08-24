@@ -1,12 +1,12 @@
 ---
-twoPerson: false
-popups: []
 id: ohPeu2zi
 listed: true
 language: fr
 shortTitle: Eau
 preTitle: Promenade au bord
 title: de l‘eau
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ohPeu2zi%2Ffr_ohPeu2zi.mp3?alt=media&token=33a75a76-5dc5-483d-9a69-097b6bcff748
@@ -14,7 +14,7 @@ iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
   Expertes / Contributeurs
 
-  *Collaborateurs de Barcelona Cicle de l’Aigua,*
+  *Collaborateurs de Barcelona Cicle de l’Aigua*
 
 
   Narrateurs
@@ -29,7 +29,7 @@ credits: >-
 
   Merci à
 
-  *Enric Tello et les collaborateurs de Barcelona Cicle de l’Aigua, notamment Ignasi Batalle Barber et Gustavo Ramon Wilhelmi, Lilli Kuschel, Zoï Wetzel, Peter Breitenbach, Niki Neecke (Jardin Sonore).*
+  *Enric Tello et les collaborateurs de Barcelona Cicle de l’Aigua, notamment Ignasi Batalle Barber et Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
 userPrompt:
   - title: Active ensuite la prochaine piste.
     triggerTime: 90
