@@ -24,7 +24,7 @@ credits: >-
 
   Musica / composizione\
 
-  *Tra gli altri Frank Böhle (vedi singole passeggiate)* 
+  *Tra gli altri Frank Böhle (vedi singole walks)* 
 
 
   Design della grafica\
