@@ -24,7 +24,7 @@ credits: >-
 
   Musique / Composition
 
-  *Frank Böhle u.a. (siehe Einzel-Walks)*
+  *Frank Böhle entre autres (voir walks individuels)*
 
 
   Design graphique
@@ -64,7 +64,7 @@ credits: >-
 
   Narrateurs
 
-  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+  *Bente Bausum, Melanie Baxter-Jones, Rosario Bona, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Noa Eleodori, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Daniela Lucato, Steve Mekoudja, Lara-Sophie Milagro, Silvia Sassetti, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
   Documentation / Trailer
@@ -74,7 +74,7 @@ credits: >-
 
   Merci à
 
-  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Zoï Wetzel, Gustavo Ramon Wilhelmi*
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institute for the Study of Protest and Social Movements), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Zoï Wetzel, Gustavo Ramon Wilhelmi*
 
   \
 
@@ -84,7 +84,7 @@ credits: >-
   En coproduction avec creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, Forum Européen Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Centre européen des arts, Festival international d'été Kampnagel, Zona K, Festival PERSPECTIVES.
 
 
-  Subventionnée par le Fonds Darstellende Künste et Senatsverwaltung für Kultur und Europa
+  Subventionnée par Fonds Darstellende Künste with funds from the Federal Government Commissioner for Culture and the Media et le Senate Department for Culture and Europe.
 medias:
   - fr_bee5Zah7
   - fr_ahvo7Cee
