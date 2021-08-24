@@ -1,35 +1,32 @@
 ---
 id: uma9ooK4
-language: fr
 listed: true
+language: fr
 shortTitle: Supermarché
 preTitle: Duo au
 title: supermarché
-duration: ~ 17 Min
 twoPerson: true
+popups: []
+duration: ~ 17 Min
 srcUri:
   - fr_thie3IVu
   - fr_ooZohb7c
-iconUri: 'https://the-walks.netlify.app/icons/Supermarkt.png'
-userPrompt: []
-popups: []
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 credits: >-
-  Expert / Contributeur:
+  Expert / Contributeur
 
   *Antonio Tagliarini*
 
 
-  Narrateurs:
+  Narrateurs
 
   *Steve Mekoudja*
 
 
-  Composition:
+  Composition
 
-  *Rimini Protokoll utilisant la musique d'Anton Rose & Thomas Mielmann, et du
-  film 'Four Rebounds to Death' de Laurids Koehne et Tibor Koehne, composé par
-  Linus Rogsch, produit par Laurids Koehne et Tibor Koehne. Sons supplémentaires
-  par Rimini Protokoll*
+  *Rimini Protokoll utilisant la musique d'Anton Rose & Thomas Mielmann, et du film "Four Rebounds to Death" de Laurids Koehne et Tibor Koehne, composé par Linus Rogsch, produit par Laurids Koehne et Tibor Koehne*
+userPrompt: []
 ---
 Il s'agit d'un duo. Prends rendez-vous avec quelqu'un devant un supermarché. Pour garantir l'écoute simultanée de vos promenades,
 
