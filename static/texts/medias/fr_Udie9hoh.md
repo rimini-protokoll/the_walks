@@ -10,16 +10,16 @@ duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_Udie9hoh%2Ffr_Udie9hoh.mp3?alt=media&token=4351cec0-a0f2-4d46-a2c6-a0d9aaf62912
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
-  Experte / Contributeur:
+  Experte / Contributeur
   *Stephanie Haug*
 
-  Narrateurs:
+  Narrateurs
   *Maïmouna Coulibaly, Lucie Zelger*
 
-  Composition:
+  Composition
   *Rimini Protokoll*
 userPrompt:
-  - title: Prendre une photo et continuer.
+  - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 114
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_Udie9hoh%2Ffr_Udie9hoh_loop_1.mp3?alt=media&token=9d6d2ecd-eb5a-4dcb-983c-bd0f2f5ae9b6
     actions:
