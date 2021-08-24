@@ -1,12 +1,12 @@
 ---
-twoPerson: false
-popups: []
 id: ohPeu2zi
 listed: true
 language: en
 shortTitle: Water
 preTitle: A Walk by the
 title: Water
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi.mp3?alt=media&token=e0124ffd-760a-4e86-a568-ae488e69b368
@@ -29,7 +29,7 @@ credits: >-
 
   Thank you
 
-  *Enric Tello, all the people we met at Barcelona Cicle de l’Aigua, especially Ignasi Batalle Barber and Gustavo Ramon Wilhelmi, Lilli Kuschel, Zoï Wetzel, Peter Breitenbach, Niki Neecke (Jardin Sonore).*
+  *Enric Tello, all the people we met at Barcelona Cicle de l’Aigua, especially Ignasi Batalle Barber and Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
 userPrompt:
   - title: Then activate the next track.
     triggerTime: 90
