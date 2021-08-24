@@ -10,11 +10,12 @@ duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
 credits: |-
-  Expert*innen / Mitwirkende
-  *Martin Schmitz, Katja Otto*
+  Expert*innen / MitwirkendeMartin Schmitz, Katja Otto
 
-  Sprecher*innen
-  *Alexandra Lauck*
+  Sprecher*innenAlexandra Lauck
+
+  Komposition\
+  *Rimini Protokoll*
 
   Danke an
   *Ant Hampton*
