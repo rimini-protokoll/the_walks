@@ -11,10 +11,11 @@ duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh.mp3?alt=media&token=75603db2-b189-4fec-935c-1a4b1bdcab9f
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
-  Expert*inStephanie Haug
+  Expert*in\
+  Stephanie Haug
 
-  Sprecher*innen*
-  Alexandra Lauck, Stephanie Haug*
+  Spreche*innen
+  Alexandra Lauck, Stephanie Haug
 
   Komposition
   *Rimini Protokoll*
