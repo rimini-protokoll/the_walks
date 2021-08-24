@@ -43,23 +43,23 @@ userPrompt:
     actions:
       - title: Prossima traccia
         action: continue
-  - title: Fai una foto della tua bottiglia.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 1105
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_3.mp3?alt=media&token=d3fd3443-8285-4d88-9806-4269bcedb797
     actions:
       - title: Fare una foto
         action: picture
         postAction: continue
-      - title: No
+      - title: Nessuna foto
         action: continue
-  - title: Scattare in movimento.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 1282
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_4.mp3?alt=media&token=7adb10bc-5d82-44de-b049-79b1bce21a18
     actions:
       - title: Fare una foto
         action: picture
         postAction: continue
-      - title: No
+      - title: Nessuna foto
         action: continue
   - title: Fine
     triggerTime: 1301
