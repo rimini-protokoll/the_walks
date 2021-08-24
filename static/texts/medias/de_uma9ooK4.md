@@ -1,35 +1,28 @@
 ---
 id: uma9ooK4
-language: de
 listed: true
+language: de
 shortTitle: Supermarkt
 preTitle: Duett im
 title: Supermarkt
-duration: ~ 17 Min
 twoPerson: true
+popups: []
+duration: ~ 17 Min
 srcUri:
   - de_thie3IVu
   - de_ooZohb7c
-iconUri: 'https://the-walks.netlify.app/icons/Supermarkt.png'
-userPrompt: []
-popups: []
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 credits: >-
-  Expert*innen / Mitwirkende
-
-  *Antonio Tagliarini*
+  Expert*in:Antonio Tagliarini
 
 
-  Sprecher*innen
-
-  *Timur Isik*
+  Sprecher*in:Timur Isik
 
 
   Komposition
 
-  *Rimini Protokoll unter Verwendung von Musik von Anton Rose & Thomas Mielmann,
-  sowie aus dem Film “Four rebounds to death” von Laurids Koehne und Tibor
-  Koehne, Komponiert von Linus Rogsch, Produziert von: Laurids Koehne und Tibor
-  Koehne.*
+  *Rimini Protokoll unter Verwendung von Musik von Anton Rose & Thomas Mielmann, sowie aus dem Film “Four rebounds to death” von Laurids Koehne und Tibor Koehne, komponiert von Linus Rogsch, produziert von Laurids Koehne und Tibor Koehne*
+userPrompt: []
 ---
 Dies ist ein Duett. Verabrede dich mit jemandem vor demselben Supermarkt. Wenn du Englisch verstehst, empfehlen wir dir die englische Version dieses Walks ( → Menü → Sprache).
 
