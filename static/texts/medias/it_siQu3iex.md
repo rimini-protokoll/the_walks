@@ -13,14 +13,14 @@ credits: |-
   Esperti / collaboratori
   *Erdem Gunduz*
 
-  Speakers
+  Speaker
   *Paolo Eleodori*
 
   Composizione
   *Frank Böhle*
 
-  Un ringraziamento a:
-  *Jannis Grimm, Institute for the Study of Protest and Social Movements*
+  Un ringraziamento a
+  *Jannis Grimm (Institute for the Study of Protest and Social Movements)*
 userPrompt:
   - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 381
