@@ -14,7 +14,7 @@ srcUri:
 iconUri: https://the-walks.netlify.app/icons/Park.png
 credits: |-
   Speaker
-  *Lara Körte*
+  *Lara-Sophie Milagro*
 
   Composition\
   *Frank Böhle*
