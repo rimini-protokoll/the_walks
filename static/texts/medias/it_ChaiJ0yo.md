@@ -1,11 +1,11 @@
 ---
-twoPerson: false
-popups: []
 id: ChaiJ0yo
 listed: true
 language: it
 shortTitle: Cimitero
 title: Cimitero
+twoPerson: false
+popups: []
 duration: ~ 30 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo.mp3?alt=media&token=36fd8563-cc39-441d-9c2f-f4982dc7dbbc
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
@@ -32,10 +32,7 @@ userPrompt:
     actions:
       - title: Prossima traccia
         action: continue
-  - title: |-
-      Mettere a fuoco.
-      3, 2, 1, 
-      Immortalare.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 800
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo_loop_3.mp3?alt=media&token=566d6f23-5cf6-49d8-8f08-7a3f787d3fd0
     actions:
