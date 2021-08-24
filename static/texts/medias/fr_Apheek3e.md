@@ -1,13 +1,25 @@
 ---
 popups: []
 id: Apheek3e
+listed: true
 language: fr
 shortTitle: Rue
 title: Rue
-listed: true
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_Apheek3e%2Ffr_Apheek3e.mp3?alt=media&token=83922bde-71ec-466e-a257-1ae974a3df69
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
+credits: |-
+  Expertes: / Contributeurs:
+  *Martin Schmitz, Katja Otto*
+
+  Narrateurs:
+  *Lucie Zelger, Stéphane Hugel, Maïmouna Coulibaly*
+
+  Composition:
+  *Rimini Protokoll*
+
+  Merci à:
+  *Ant Hampton*
 userPrompt:
   - title: Prépare-toi à appuyer. Maintenant.
     triggerTime: 1141
@@ -26,19 +38,5 @@ userPrompt:
         action: map
       - title: Non
         action: continue
-credits: |-
-  Expertes: / Contributeurs:
-  *Martin Schmitz, Katja Otto*
-
-  Narrateurs:
-  *Lucie Zelger*
-  *Stéphane Hugel*
-  *Maïmouna Coulibaly*
-
-  Composition:
-  *Rimini Protokoll*
-
-  Merci à:
-  *Ant Hampton*
 ---
 Comment les villes sont-elles planifiées ? Comment se déplacer sans plan ? Au cours de cette promenade, tu seras accompagné de Katja Otto, conseillère en psychologie, et de Martin Schmitz, promenadologue. Elle commence dans une rue de ton choix.
