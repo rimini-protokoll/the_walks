@@ -1,18 +1,18 @@
 ---
-twoPerson: false
-popups: []
 id: ChaiJ0yo
 listed: true
 language: de
 shortTitle: Friedhof
 title: Friedhof
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 30 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo.mp3?alt=media&token=35f0a775-19ce-47eb-abde-5809c7fee3c6
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 credits: |-
   Sprecher*innen
-  Margot Gödros*
+  Margot Gödrös*
 
   Komposition
   *Frank Böhle*
