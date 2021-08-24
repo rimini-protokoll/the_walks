@@ -24,7 +24,7 @@ credits: >-
 
   Musik / Komposition
 
-  *Frank Böhle u.a. (siehe Einzel Walks)*
+  *Frank Böhle u.a. (siehe Einzel-Walks)*
 
 
   Grafikdesign
@@ -64,7 +64,7 @@ credits: >-
 
   Sprecher*innen*
 
-  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Margot Gödros, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+  *Bente Bausum, Melanie Baxter-Jones, Rosario Bona, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Noa Eleodori, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Daniela Lucato, Steve Mekoudja, Lara-Sophie Milagro, Silvia Sassetti, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
   Dokumentation/Trailer
@@ -74,7 +74,7 @@ credits: >-
 
   Danke an
 
-  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Zoï Wetzel, Gustavo Ramon Wilhelmi*
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Zoï Wetzel, Gustavo Ramon Wilhelmi*
 
 
   Eine Produktion von Rimini Apparat.
