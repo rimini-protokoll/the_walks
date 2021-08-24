@@ -1,22 +1,21 @@
 ---
-twoPerson: true
-popups: []
 id: ahvo7Cee
 listed: true
 language: fr
 shortTitle: Parc
 title: Parc
+twoPerson: true
+popups: []
 duration: ~ 20 Min
 srcUri:
   - fr_eeJee2ke
   - fr_airie8Ke
 iconUri: https://the-walks.netlify.app/icons/Park.png
 credits: |-
-  Narrateurs:
+  Narrateurs
   *Lène Calvez*
 
-
-  Composition:
+  Composition
   *Frank Böhle*
 userPrompt: []
 ---
