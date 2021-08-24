@@ -1,20 +1,20 @@
 ---
-twoPerson: false
-popups: []
 id: Apheek3e
 listed: true
 language: de
 shortTitle: Straße
 title: Straße
+twoPerson: false
+popups: []
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
 credits: |-
   Expert*innen / Mitwirkende
-  Martin Schmitz, Katja Otto*
+  *Martin Schmitz, Katja Otto*
 
   Sprecher*innen
-  Alexandra Lauck*
+  *Alexandra Lauck*
 
   Danke an
   *Ant Hampton*
