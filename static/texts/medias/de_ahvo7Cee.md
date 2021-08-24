@@ -12,8 +12,8 @@ srcUri:
   - de_airie8Ke
 iconUri: https://the-walks.netlify.app/icons/Park.png
 credits: |-
-  Sprecher*in*
-  Lara Körte*
+  Sprecher*in
+  *Lara Körte*
 
   Komposition \
   *Frank Böhle*
