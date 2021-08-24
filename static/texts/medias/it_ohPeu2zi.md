@@ -1,20 +1,20 @@
 ---
-twoPerson: false
-popups: []
 id: ohPeu2zi
 listed: true
 language: it
 shortTitle: Acqua
 preTitle: Lungo un
 title: corso d‘acqua
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
 iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
-  Esperti / collaboratori:\
+  Esperti / collaboratori\
 
-  *Mitarbeiter von Barcelona Cicle de l’Aigua,*
+  *I colleghe e colleghi del Barcelona Cicle de l’Aigua*
 
 
   Speakers: \
@@ -27,9 +27,9 @@ credits: >-
   *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann* 
 
 
-  Un ringraziamento a:\
+  Un ringraziamento a\
 
-  *Enric Tello e alle colleghe e colleghi del Barcelona Cicle de l'Aigua, in particolare Ignasi Batalle Barber e Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel.*
+  *Enric Tello e alle colleghe e colleghi del Barcelona Cicle de l'Aigua, in particolare Ignasi Batalle Barber e Gustavo Ramon Wilhelmi, Peter Breitenbach, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
 userPrompt:
   - title: Attiva la traccia successiva.
     triggerTime: 90
