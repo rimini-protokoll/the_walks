@@ -13,14 +13,14 @@ srcUri:
   - de_ooZohb7c
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 credits: >-
-  Expert*in:\
+  Expert*in\
 
-  Antonio Tagliarini
+  *Antonio Tagliarini*
 
 
-  Sprecher*in:\
+  Sprecher*in\
 
-  Timur Isik
+  *Timur Isik*
 
 
   Komposition
