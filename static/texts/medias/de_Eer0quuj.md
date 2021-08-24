@@ -1,19 +1,19 @@
 ---
-twoPerson: false
-popups: []
 id: Eer0quuj
 listed: true
 language: de
 shortTitle: Theater
 preTitle: Vor dem
 title: Theater
+twoPerson: false
+popups: []
 penPaper: true
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj.mp3?alt=media&token=7f363b6f-032e-4bed-9c14-2581cee96c29
 iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 credits: |-
-  Sprecher*innen
-  Alexandra Lauck*
+  Sprecher*in
+  *Alexandra Lauck*
 
   Komposition
   *Frank Böhle*
