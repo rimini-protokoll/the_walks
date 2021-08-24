@@ -1,6 +1,4 @@
 ---
-twoPerson: false
-popups: []
 id: siQu3iex
 listed: true
 language: de
@@ -8,19 +6,23 @@ shortTitle: Kreisverkehr
 preTitle: Um eine
 title: Verkehrsinsel
 afterTitle: herum
+twoPerson: false
+popups: []
 duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex.mp3?alt=media&token=f1069f05-3d13-4d87-a4e6-7866eb6dabbb
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 credits: |-
-  Expert*innen / Mitwirkende
-  Erdem Gunduz*
+  Expert*in
+  *Erdem Gunduz*
 
-  Sprecher*innen
-  Kamran Sorusch*
+  Sprecher*in
+  *Kamran Sorusch*
+
+  Komposition\
+  *Frank Böhle*
 
   Danke an
-  *Jannis Grimm
-  Institut für Protest und Bewegungsforschung*
+  *Jannis Grimm (Institut für Protest und Bewegungsforschung)*
 userPrompt:
   - title: |-
       Foto machen und fortfahren 
