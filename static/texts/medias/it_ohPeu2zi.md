@@ -17,12 +17,12 @@ credits: >-
   *I colleghe e colleghi del Barcelona Cicle de l’Aigua*
 
 
-  Speakers: \
+  Speakers \
 
   *Rosario Bona, Simonetta Solder*
 
 
-  Composizione / Mixing:\
+  Composizione / Mixing\
 
   *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann* 
 
