@@ -22,14 +22,14 @@ credits: |-
   Danke an
   *Ant Hampton*
 userPrompt:
-  - title: Bereitmachen zum Abdrücken, jetzt.
+  - title: Foto machen und fortfahren oder ohne Foto fortfahren.
     triggerTime: 1141
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
     actions:
       - title: Foto machen
         action: picture
         postAction: continue
-      - title: Ohne Foto
+      - title: Kein Foto
         action: continue
   - title: Weiter zur Bildergalerie
     triggerTime: 1173
