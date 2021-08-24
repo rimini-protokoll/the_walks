@@ -43,23 +43,23 @@ userPrompt:
     actions:
       - title: Prochaine piste
         action: continue
-  - title: Prends une photo de ta bouteille.
+  - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 1105
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ohPeu2zi%2Ffr_ohPeu2zi_loop_3.mp3?alt=media&token=da509132-be01-4a3c-86bd-f2ff2501dd6e
     actions:
       - title: Prendre une photo
         action: picture
         postAction: continue
-      - title: Non
+      - title: Pas de photo
         action: continue
-  - title: Appuie sur le déclencheur dans le mouvement.
+  - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 1282
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ohPeu2zi%2Ffr_ohPeu2zi_loop_4.mp3?alt=media&token=21a3cb9d-401a-42e9-b0e5-6251ff21d5cb
     actions:
       - title: Prendre une photo
         action: picture
         postAction: continue
-      - title: Non
+      - title: Pas de photo
         action: continue
   - title: Fin
     triggerTime: 1301
