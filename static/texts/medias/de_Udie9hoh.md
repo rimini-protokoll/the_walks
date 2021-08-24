@@ -14,7 +14,7 @@ credits: |-
   Expert*in\
   Stephanie Haug
 
-  Spreche*innen
+  Sprecher*innen
   Alexandra Lauck, Stephanie Haug
 
   Komposition
