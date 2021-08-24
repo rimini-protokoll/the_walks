@@ -20,14 +20,14 @@ credits: |-
   Komposition
   *Rimini Protokoll*
 userPrompt:
-  - title: Bild machen und fortfahren.
+  - title: Foto machen und fortfahren oder ohne Foto fortfahren.
     triggerTime: 114
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh_loop_1.mp3?alt=media&token=91db6ba4-7f54-4086-af67-935a2a27cfe9
     actions:
-      - title: Foto
+      - title: Foto machen
         action: picture
         postAction: continue
-      - title: Nein
+      - title: Kein Foto
         action: continue
   - title: Weiter zur Bildergalerie
     triggerTime: 983
