@@ -12,10 +12,10 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
   Expert*in\
-  Stephanie Haug
+  *Stephanie Haug*
 
   Sprecher*innen
-  Alexandra Lauck, Stephanie Haug
+  *Alexandra Lauck, Stephanie Haug*
 
   Komposition
   *Rimini Protokoll*
