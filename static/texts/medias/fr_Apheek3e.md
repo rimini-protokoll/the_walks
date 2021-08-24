@@ -9,19 +9,19 @@ duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_Apheek3e%2Ffr_Apheek3e.mp3?alt=media&token=83922bde-71ec-466e-a257-1ae974a3df69
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
 credits: |-
-  Expertes: / Contributeurs:
+  Expertes / Contributeurs
   *Martin Schmitz, Katja Otto*
 
-  Narrateurs:
+  Narrateurs
   *Lucie Zelger, Stéphane Hugel, Maïmouna Coulibaly*
 
-  Composition:
+  Composition
   *Rimini Protokoll*
 
-  Merci à:
+  Merci à
   *Ant Hampton*
 userPrompt:
-  - title: Prépare-toi à appuyer. Maintenant.
+  - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 1141
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
     actions:
