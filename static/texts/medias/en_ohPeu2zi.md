@@ -61,11 +61,11 @@ userPrompt:
         postAction: continue
       - title: No photo
         action: continue
-  - title: Stop
+  - title: If you don't want to listen anymore press END.
     triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi_loop_5.mp3?alt=media&token=7729457a-be8b-4f9a-a963-bf85b387c794
     actions:
-      - title: Stop
+      - title: END
         action: continue
   - title: Continue to the gallery
     triggerTime: 1305
