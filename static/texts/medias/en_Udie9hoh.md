@@ -9,7 +9,7 @@ preTitle: Walking with
 title: Steff
 penPaper: false
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh.mp3?alt=media&token=d1b9389e-02eb-4c5e-8940-c16925c3a87b
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh.mp3?alt=media&token=5ffd14db-3d37-4ac6-8c01-31cdbcf21dc3
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
   Expert / Contributor
@@ -31,7 +31,7 @@ userPrompt:
       - title: No photo
         action: continue
   - title: Continue to the gallery
-    triggerTime: 981
+    triggerTime: 985
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Gallery
