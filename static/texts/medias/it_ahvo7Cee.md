@@ -7,7 +7,9 @@ language: it
 shortTitle: Parco
 title: Parco
 duration: ~ 20 Min
-srcUri: List [ "it_eeJee2ke", "it_airie8Ke" ]
+srcUri: 
+  - it_eeJee2ke
+  - it_airie8Ke
 iconUri: https://the-walks.netlify.app/icons/Park.png
 credits: |-
   Speakers
