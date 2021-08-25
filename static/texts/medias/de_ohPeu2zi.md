@@ -61,11 +61,11 @@ userPrompt:
         postAction: continue
       - title: Kein Foto
         action: continue
-  - title: Ende
+  - title: Wenn Du nicht mehr hören willst, drücke ENDE.
     triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi_loop_5.mp3?alt=media&token=01bba94d-8141-44da-9791-f10a37c413b3
     actions:
-      - title: Ende
+      - title: ENDE
         action: continue
   - title: Weiter zur Bildergalerie
     triggerTime: 1305
