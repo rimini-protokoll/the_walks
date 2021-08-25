@@ -45,7 +45,7 @@ collections:
           name: walk
           widget: relation
           collection: walks
-          search_fields: [language, title, body]
+          search_fields: [language, title, preTitle, afterTitle, shortTitle, body]
           value_field: "{{language}}_{{id}}"
           display_fields: ["{{language}} {{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"]
   - name: walks
