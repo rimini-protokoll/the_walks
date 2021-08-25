@@ -10,13 +10,13 @@ duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Udie9hoh%2Fit_Udie9hoh.mp3?alt=media&token=47dcc5c9-20a2-4d95-a27e-3c91c26c3628
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
-  Experte / Contributeur
+  Esperti / collaboratori
   *Stephanie Haug*
 
   Narrateurs
-  *Maïmouna Coulibaly, Lucie Zelger*
+  *Daniela Lucato, Simonetta Solder*
 
-  Composition
+  Composizione
   *Rimini Protokoll*
 userPrompt:
   - title: Fare una foto e proseguire.
