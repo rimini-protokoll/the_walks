@@ -1,18 +1,18 @@
 ---
-twoPerson: true
-popups: []
 id: ahvo7Cee
 listed: true
 language: it
 shortTitle: Parco
 title: Parco
+twoPerson: true
+popups: []
 duration: ~ 20 Min
-srcUri: 
+srcUri:
   - it_eeJee2ke
   - it_airie8Ke
 iconUri: https://the-walks.netlify.app/icons/Park.png
 credits: |-
-  Speakers
+  Speaker
   *Silvia Sassetti*
 
   Composizione
