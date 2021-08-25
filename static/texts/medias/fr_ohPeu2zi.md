@@ -61,7 +61,7 @@ userPrompt:
         postAction: continue
       - title: Pas de photo
         action: continue
-  - title: FIN
+  - title: Si tu ne veux plus écouter, appuie FIN.
     triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ohPeu2zi%2Ffr_ohPeu2zi_loop_5.mp3?alt=media&token=09162d04-9bcc-4cc4-8ee2-f41d71120259
     actions:
