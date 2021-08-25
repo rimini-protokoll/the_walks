@@ -13,13 +13,13 @@ credits: |-
   Esperti / collaboratori
   *Stephanie Haug*
 
-  Narrateurs
+  Speakers
   *Daniela Lucato, Simonetta Solder*
 
   Composizione
   *Rimini Protokoll*
 userPrompt:
-  - title: Fare una foto e proseguire.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 114
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Udie9hoh%2Fit_Udie9hoh_loop_1.mp3?alt=media&token=1d9f9339-050c-4d0c-b7ba-c9215f19a08b
     actions:
