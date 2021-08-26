@@ -1,7 +1,7 @@
 ---
 languageCode: it
 ---
-# Impronta
+# Impressum
 
 Rimini Apparat GbR
 Helgard Haug, Jörg Karrenbauer, Stefan Kaegi, Daniel Wetzel
