@@ -1,8 +1,6 @@
 ---
 news:
-  - Ahxaw3su
-  - eC7uxo0o
-  - Jeel3kah
   - Oyoomo4o
+  - Jeel3kah
   - Hie9ceiX
 ---
