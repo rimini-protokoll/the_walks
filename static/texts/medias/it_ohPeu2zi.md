@@ -61,7 +61,7 @@ userPrompt:
         postAction: continue
       - title: Nessuna foto
         action: continue
-  - title: FINE
+  - title: Se non vuoi sentire altro, premi FINE.
     triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_5.mp3?alt=media&token=b8e90627-a7ad-4c6a-80d9-44b61889fea3
     actions:
