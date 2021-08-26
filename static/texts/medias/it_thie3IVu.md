@@ -1,34 +1,29 @@
 ---
+popups: []
 id: thie3IVu
-language: it
 listed: false
+language: it
 shortTitle: A
 title: Supermercato A
 duration: ~ 20 Min
-srcUri: >-
-  https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_uma9ooK4%2Ffr_thie3IVu.mp3?alt=media&token=7d342892-4256-4db1-a43d-be5c0ab5a697
-iconUri: 'https://the-walks.netlify.app/icons/Supermarkt.png'
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_uma9ooK4%2Fit_thie3IVu.mp3?alt=media&token=d695db38-fafb-41e8-bf03-b578a671188e
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt:
-  - title: Prendre une photo et continuer ou continuer sans photo.
+  - title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 645
-    srcUri: >-
-      https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_uma9ooK4%2Ffr_uma9ooK4_loop_1.mp3?alt=media&token=1c9f1b7c-1917-4c97-90ed-84e2e50a6b99
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_uma9ooK4%2Fit_uma9ooK4_loop_1.mp3?alt=media&token=045432f2-4c91-430f-a57e-5383544af85c
     actions:
-      - title: Prendre une photo
+      - title: Fare una foto
         action: picture
         postAction: continue
-      - title: Pas de photo
+      - title: Nessuna foto
         action: continue
-  - title: Continuer vers la galerie de photos
+  - title: Continua alla galleria
     triggerTime: 1328
-    srcUri: >-
-      https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
-      - title: Galerie
+      - title: Galleria
         action: map
-      - title: Non
+      - title: No
         action: continue
-popups: []
 ---
-
-
