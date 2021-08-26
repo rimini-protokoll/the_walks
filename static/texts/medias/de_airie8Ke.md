@@ -1,13 +1,13 @@
 ---
+twoPerson: true
+popups: []
 id: airie8Ke
 listed: false
 language: de
 shortTitle: B
 title: Park B
-twoPerson: true
-popups: []
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ahvo7Cee%2Fde_airie8Ke.mp3?alt=media&token=0b37828b-100c-41a2-b481-32ccc47b664d
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ahvo7Cee%2Fde_airie8Ke.mp3?alt=media&token=5047e4dd-7c06-470c-b445-12e53ded9446
 iconUri: https://the-walks.netlify.app/icons/Park.png
 userPrompt:
   - title: Foto machen und fortfahren oder ohne Foto fortfahren.
