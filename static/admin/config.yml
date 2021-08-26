@@ -119,6 +119,7 @@ collections:
         name: userPrompt
         widget: list
         required: false
+        collapsed: false
         fields:
           - label: Title
             name: title
