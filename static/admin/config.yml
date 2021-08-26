@@ -196,6 +196,7 @@ collections:
         name: "linkUri"
         widget: "string"
   - name: imprint
+    identifier_field: languageCode
     label: Imprint
     summary: "{{languageCode}}"
     folder: static/imprint
@@ -213,6 +214,7 @@ collections:
         name: body
         widget: markdown
   - name: legal
+    identifier_field: languageCode
     label: Data Protection & Legal notices
     summary: "{{languageCode}}"
     folder: static/legal
