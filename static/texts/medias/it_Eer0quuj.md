@@ -7,7 +7,7 @@ shortTitle: Teatro
 preTitle: Davanti ad un
 title: Teatro
 penPaper: true
-duration: ~ 20min
+duration: ~ 20 min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Eer0quuj%2Fit_Eer0quuj.mp3?alt=media&token=c1683779-08e3-4161-9559-29c4cd47b988
 iconUri: https://the-walks.netlify.app/icons/Theater.png
 credits: |-
