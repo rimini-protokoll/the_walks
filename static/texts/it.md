@@ -64,7 +64,7 @@ credits: >-
 
   Speakers\
 
-  *Bente Bausum, Melanie Baxter-Jones, Rosario Bona, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Noa Eleodori, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Daniela Lucato, Steve Mekoudja, Lara-Sophie Milagro, Silvia Sassetti, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+  *Bente Bausum, Melanie Baxter-Jones, Rosario Bona, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Luisa Devins, Noa Eleodori, Paolo Eleodori, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Daniela Lucato, Steve Mekoudja, Lara-Sophie Milagro, Silvia Sassetti, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
   Documentazione / trailer\
