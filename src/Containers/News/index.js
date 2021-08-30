@@ -7,7 +7,10 @@ import {
   TouchableOpacity,
   ScrollView,
   VirtualizedList,
-  ActivityIndicator
+  ActivityIndicator,
+  Image,
+  Linking,
+  StyleSheet
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import FitImage from 'react-native-fit-image'
@@ -15,6 +18,7 @@ import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import NewsArticle from './NewsArticle'
 import api, { handleError } from '@/Services'
+import MenuButton from '@/Components/MenuButton'
 
 const Stack = createStackNavigator()
 
@@ -24,7 +28,7 @@ const dateString = (date, locale) => {
 }
 
 const News = ({ route, navigation }) => {
-  const { Gutters, Fonts, Colors } = useTheme()
+  const { Gutters, Fonts, Colors, Layout } = useTheme()
   const { t, i18n } = useTranslation()
   const userLocale = useSelector(state => state.language.userLocale)
   const [news, setNews] = useState({loading: true, items: []})
@@ -43,35 +47,22 @@ const News = ({ route, navigation }) => {
       })
     })
   }, [])
-  const NewsItem = ({ date, title, image, excerpt, newsBody }) => (
+  const NewsItem = ({ date, title, language, place, linkUri }) => (
     <TouchableOpacity
-      onPress={() => navigation.navigate(title, { newsBody })}
-      style={[Gutters.regularVMargin]}
+      onPress={() => Linking.openURL(linkUri)}
+      disabled={!linkUri}
+      style={[Gutters.largeVPadding, Layout.center]}
     >
-      <View>
-        <Text style={Fonts.titleRegular}>{title}</Text>
-        <Text style={[
-          Fonts.textSmall,
-          Fonts.textRight,
-          Gutters.smallBMargin
-          ]}>{dateString(date, userLocale)}</Text>
-      </View>
-      {image ? (
-        <FitImage source={{ uri: image }} style={Gutters.smallBMargin} />
-      ) : null}
-      <Text style={Fonts.textRegular}>{excerpt}</Text>
+      <Text style={Fonts.textRegular}>*{date}*</Text>
+      <Text style={[{
+        ...Fonts.textBold, 
+        textAlign:'center',
+      },
+      linkUri ? Fonts.hyperlink : '']}>{title}</Text>
+      {place ? <Text style={Fonts.textItalic}>{place}</Text>:null}
     </TouchableOpacity>
   )
   const getItemCount = () => news.items.length
-  const renderItem = ({ item }) => (
-    <NewsItem
-      date={item.data.date}
-      title={item.data.title}
-      image={item.data.image}
-      excerpt={item.data.excerpt}
-      newsBody={item.content}
-    />
-  )
   if (news.loading) {
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -79,35 +70,44 @@ const News = ({ route, navigation }) => {
       </View>
     )
   }
+
+  const _newsSorted = [...news.items].sort((a, b) => {
+    return a.data.index - b.data.index;
+  });
+  
   return (
-    <View style={ Gutters.smallHPadding }>
+    <ScrollView contentContainerStyle={Gutters.smallHPadding}>
       <View style={{height: 50}}/>
-      <Text style={[Fonts.titleLarge, Fonts.textCenter]}>{t('news')}</Text>
-      <VirtualizedList
-        contentContainerStyle={{ flexGrow: 1 }}
-        style={Gutters.smallHPadding}
-        data={news.items}
-        initialNumToRender={4}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => index}
-        getItemCount={getItemCount}
-        getItem={(data, index) => data[index]}
-      />
-    </View>
+      <Text style={[Fonts.titleLarge, Fonts.textCenter, Gutters.largeBMargin]}>{t('news')}</Text>
+        {_newsSorted.map((item, i) => (
+          <NewsItem
+            key={i}
+            date={item.data.date}
+            title={item.data.title}
+            language={item.data.language}
+            place={item.data.place}
+            linkUri={item.data.linkUri}
+          />
+        ))}
+    </ScrollView>
   )
 }
 
 const NewsStack = ({ navigation }) => {
-  const { Colors, Fonts } = useTheme()
+  const { Gutters, Colors, Fonts } = useTheme()
   const { t } = useTranslation()
   const [news, setNews] = useState({loading: true, items: []})
   useEffect(() => {
     const _news = []
     api.get('/news_index.md').then(({data}) => {
-      data.data.news.forEach(newsId => {
+      data.data.news.forEach((newsId, i) => {
+
         api.get(`/news/${newsId}.md`).then(response => {
           const itemData = response.data
-          _news.push(itemData)
+        
+          _news[i] = itemData
+          _news[i].data.index = i
+
           if (_news.length == data.data.news.length) {
             setNews({loading: false, items: _news})
           }
@@ -116,18 +116,7 @@ const NewsStack = ({ navigation }) => {
     })
   }, [])
 
-  const headerRight = () => {
-    return (
-      <TouchableOpacity onPress={navigation.openDrawer}>
-        <Icon
-          name="menu-outline"
-          style={{ paddingRight: 10 }}
-          size={35}
-          color={Colors.text}
-        />
-      </TouchableOpacity>
-    )
-  }
+  const headerRight = MenuButton({navigation})
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -147,6 +136,10 @@ const NewsStack = ({ navigation }) => {
           component={NewsArticle}
           options={{
             headerRight,
+            headerBackTitleVisible: false,
+            headerTitle: null,
+            headerTransparent: true,
+            headerBackImage: () => <Image style={[Fonts.iconRegular, Gutters.smallTMargin]} source={require('@/Assets/Icons/Back.png')}/>,
           }}
           initialParams={item}
         />

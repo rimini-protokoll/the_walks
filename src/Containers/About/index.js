@@ -14,13 +14,14 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
 import PartnersList from '@/Components/PartnersList'
 import Markdown from '@/Components/Markdown'
+import MenuButton from '@/Components/MenuButton'
 import { useTranslation } from 'react-i18next'
 
 const Stack = createStackNavigator()
 
 const About = ({ navigation }) => {
   const { t } = useTranslation()
-  const { Gutters, Fonts } = useTheme()
+  const { Gutters, Fonts, Layout } = useTheme()
   const languages = useSelector(state => {
     const languages = state.language.fetchLanguages.languages
     if (languages) {
@@ -43,7 +44,14 @@ const About = ({ navigation }) => {
       {t('about')}
       </Text>
       <Markdown markdown={aboutText}/>
+      <View style={Layout.center}>
+        <Text style={[
+          Gutters.regularVMargin, 
+          Gutters.regularBPadding, 
+          Fonts.titleRegular]}>{t('support')}</Text>
+      </View>
       <PartnersList/>
+      <View style={{height: 50}}/>
     </ScrollView>
   )
 }
@@ -56,13 +64,7 @@ const AboutStack = ({ navigation }) => {
     <></>
     //<Icon name='information-outline' size={35} color={Colors.text}/>
   }
-  const headerRight = () => {
-    return (
-      <TouchableOpacity onPress={ navigation.openDrawer }>
-        <Icon name="menu-outline" style={{ paddingRight:10 }} size={35} color={Colors.text} />
-      </TouchableOpacity>
-    )
-  }
+  const headerRight = MenuButton({navigation})
   return (
     <Stack.Navigator>
       <Stack.Screen

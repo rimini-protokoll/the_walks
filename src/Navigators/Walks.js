@@ -4,7 +4,7 @@ import {
   View,
   Text,
   Pressable,
-  LinearGradient } from 'react-native'
+  Image } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import { createStackNavigator } from '@react-navigation/stack'
 import { 
@@ -23,12 +23,17 @@ const Stack = createStackNavigator()
 
 // @refresh reset
 const WalksNavigator = ({ navigation }) => {
-  const { Fonts, Colors, NavigationTheme } = useTheme()
+  const { Fonts, Colors, NavigationTheme, Gutters } = useTheme()
   const { colors } = NavigationTheme
   const dispatch = useDispatch()
   const { t } = useTranslation()
   
   const headerRight = MenuButton({navigation})
+  const headerBackImage = () => (
+    <Image
+      style={[{marginTop: 5, marginHorizontal: 10, backgroundColor: Colors.background}, Fonts.iconRegular]}
+      source={require('@/Assets/Icons/Back.png')}/>
+  )
 
   const walk = useSelector(state => {
     if (state.walks.selectedWalk) {
@@ -48,7 +53,8 @@ const WalksNavigator = ({ navigation }) => {
   })
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+    >
       { walks ?
         <Stack.Screen 
           name='The Walks' 
@@ -62,10 +68,12 @@ const WalksNavigator = ({ navigation }) => {
       }
       { walks.map((walk, index) => (
         <Stack.Screen
-          key={index}
-          name={walk.data.title}
+          key={walk.data.id}
+          name={walk.data.id}
           component={ IndexWalkContainer }
           options={{
+            headerBackImage,
+            headerBackTitleVisible: false,
             headerTitle: () => null,
             headerRight,
             headerTransparent: true
@@ -77,6 +85,8 @@ const WalksNavigator = ({ navigation }) => {
         name='Pictures'
         component={ IndexMapContainer }
         options={{
+          headerBackImage,
+          headerBackTitleVisible: false,
           headerTitle: null,
           headerTransparent: true,
           headerRight

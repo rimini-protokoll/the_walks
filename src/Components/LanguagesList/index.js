@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { useSelector } from 'react-redux'
 import { useTheme } from '@/Theme'
 import Tile from './TileLanguage'
 
 const LanguagesList = ({ navigation, languages }) => {
   const { Layout, Fonts } = useTheme()
+  const legalAccepted = useSelector(state => state.legal.accepted)
   return (
     <View
       style={[
@@ -21,6 +23,7 @@ const LanguagesList = ({ navigation, languages }) => {
           title={title}
           language={language}
           languageCode={languageCode}
+          legalAccepted={legalAccepted}
           navigation={navigation}
         />
       ))}

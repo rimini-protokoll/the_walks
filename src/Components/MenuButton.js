@@ -1,17 +1,21 @@
 import React from 'react'
 import { 
-  Pressable,
+  TouchableOpacity,
+  Image
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
 
 
 const MenuButton = ({ navigation }) => {
-  const { Colors } = useTheme()
+  const { Colors, Fonts } = useTheme()
   return (
-    <Pressable onPress={ navigation.openDrawer }>
-      <Icon name="menu-outline" style={{ paddingRight:10 }} size={35} color={Colors.text} />
-    </Pressable>
+    <TouchableOpacity onPress={ navigation.openDrawer }>
+      <Image
+        style={[Fonts.iconRegular, {backgroundColor: Colors.background, marginTop: 4, marginRight:20 }]}
+        source={require('Assets/Icons/Burger.png')}
+      />
+    </TouchableOpacity>
   )
 }
 

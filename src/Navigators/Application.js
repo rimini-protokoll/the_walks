@@ -10,7 +10,7 @@ import {
   StatusBar, 
   View, 
   Text,
-  Platform 
+  Linking
 } from 'react-native'
 import { useTheme } from '@/Theme'
 import TrackPlayer, { useProgress, Capability } from 'react-native-track-player'

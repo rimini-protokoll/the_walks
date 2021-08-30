@@ -8,6 +8,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import { useTheme } from '@/Theme'
 import Tile from './TilePartner'
+import FitImage from 'react-native-fit-image'
 
 const PartnersList = () => {
   const { t } = useTranslation()
@@ -39,17 +40,12 @@ const PartnersList = () => {
     },
   ]
   return (
-    <View style={{
-      flex: 1,
-      justifyContent: 'space-evenly',
-      alignItems: 'flex-start',
-      alignContent: 'baseline',
-      flexWrap: 'wrap',
-      flexDirection: 'row'
-      }}>
-      {/*<Text style={[ Fonts.titleRegular, { width: "100%" }]}>{t('partners')}</Text>*/}
-      { partners.map(({title, iconUri}, i) => (<Tile key={i} title={title} iconUri={iconUri} />)) }
-    </View>
+    <FitImage 
+      originalWidth={636}
+      originalHeight={1232}
+      resizeMode="contain"
+      source={{uri: 'https://the-walks.netlify.app/partners/Koproduzenten.png'}}
+    />
   )
 }
 export default PartnersList 

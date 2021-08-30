@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   StyleSheet,
@@ -8,14 +8,18 @@ import {
   TouchableOpacity,
   Text,
   Dimensions,
-  ActivityIndicator
+  ActivityIndicator,
+  VirtualizedList
 } from 'react-native'
 import MapView, { Marker } from 'react-native-maps'
+import RNPickerSelect from 'react-native-picker-select'
 import FitImage from 'react-native-fit-image'
 import { useTheme } from '@/Theme'
 import firestore from '@react-native-firebase/firestore'
 import { useTranslation } from 'react-i18next'
 import ChangeWalk from '@/Store/Walks/ChangeWalk'
+
+const AnimatedVirtualizedList = Animated.createAnimatedComponent(VirtualizedList)
 
 const { width, height } = Dimensions.get('window')
 const CARD_HEIGHT = height / 2
@@ -28,9 +32,13 @@ const IndexMapContainer = ({navigation, route}) => {
   const _map = React.useRef(null)
   const [mapState, setMapState] = React.useState({loading: true})
   const [markers, setMarkers] = React.useState([])
+  const [initial, setInitial] = React.useState(0)
   const { t } = useTranslation()
   const dispatch = useDispatch()
-
+  const completed = useSelector(state => state.walks.completed)
+  const walks = useSelector(state => {
+    return state.walks.fetchWalks.walks.filter(walk => completed.indexOf(walk.data.id) >= 0)
+  })
   const walk = useSelector(state => {
     if (route.params?.walk) {
       return route.params.walk
@@ -42,6 +50,7 @@ const IndexMapContainer = ({navigation, route}) => {
     }
   })
   // console.log('map', walk)
+  const mapstyles = useSelector(state => state.walks.mapstyles)
 
   useEffect(() => {
     // dispatch(ChangeWalk.action(walk.data.id))
@@ -74,8 +83,8 @@ const IndexMapContainer = ({navigation, route}) => {
               region: {
                 latitude: _markers[0].coordinate.latitude - 0.0225,
                 longitude: _markers[0].coordinate.longitude,
-                latitudeDelta: .09,
-                longitudeDelta: .09,
+                latitudeDelta: 5,
+                longitudeDelta: 5,
               },
             })
           }
@@ -90,13 +99,10 @@ const IndexMapContainer = ({navigation, route}) => {
   let mapIndex = 0
   let mapAnimation = new Animated.Value(0)
 
-  const dateString = (date, locale) => {
-    let _date = Intl.DateTimeFormat(locale, { timeStyle: 'short', dateStyle: 'short' }).format(date)
-
-    console.log(date, locale, _date)
-
+  const dateString = useCallback((date) => {
+    let _date = Intl.DateTimeFormat(userLocale, { timeStyle: 'short', dateStyle: 'short' }).format(date)
     return _date
-  }
+  }, [userLocale])
 
   //const dateString = (date, locale) => Intl.DateTimeFormat(locale, {dateStyle: 'short', timeStyle: 'short'}).format(new Date(date))
   const userLocale = useSelector(state => state.language.userLocale)
@@ -109,12 +115,19 @@ const IndexMapContainer = ({navigation, route}) => {
     _map.current.animateToRegion(
       {
         ...coordinate,
-        latitudeDelta: Math.min(.09, mapState.region.latitudeDelta),
-        longitudeDelta: Math.min(.09, mapState.region.longitudeDelta),
+        latitudeDelta: Math.min(5, mapState.region.latitudeDelta),
+        longitudeDelta: Math.min(5, mapState.region.longitudeDelta),
       },
       350,
     )
   }
+
+  useEffect(() => {
+    if (initial < 3 && !mapState.loading && markers.length) {
+      animateToCoordinate(markers[0].coordinate)
+      setInitial(initial + 1)
+    }
+  }, [mapState, markers])
 
   useEffect(() => {
     mapAnimation.addListener(({ value }) => {
@@ -157,19 +170,49 @@ const IndexMapContainer = ({navigation, route}) => {
   const onMarkerPress = mapEventData => {
     const markerID = mapEventData._targetInst.return.key
     const markerCoordinate = mapEventData.nativeEvent.coordinate
+    
+    console.log(markerID, markerCoordinate)
     animateToCoordinate(markerCoordinate)
+    const markerIndex = markers.map(marker => marker.id).indexOf(markerID)
 
-    let x = markerID * CARD_WIDTH + markerID * 20
+    let x = markerIndex * CARD_WIDTH + markerIndex * 20
     if (Platform.OS === 'ios') {
       x = x - SPACING_FOR_CARD_INSET
     }
 
-    _scrollView.current.scrollTo({ x: x, y: 0, animated: true })
+    _scrollView.current?.scrollToIndex({ index: markerIndex, animated: true })
   }
 
   const onRegionChange = region => {
     setMapState({ region })
   }
+
+  const renderItem = useCallback(({item}) => (
+    <View style={[
+      styles.card]}
+      key={'image' + item.id}>
+      <View style={[Gutters.smallHPadding]}>
+        <Text style={[Fonts.textSmall, Fonts.textCenter, Layout.selfStretch]}>
+          {item.date}
+        </Text>
+      </View>
+      <FitImage
+        style={{
+          height: Math.min(CARD_HEIGHT, CARD_WIDTH / (item.image.width / item.image.height)),
+          width: CARD_WIDTH
+        }}
+        resizeMode='contain'
+        originalWidth={item.image.width}
+        originalHeight={item.image.height}
+        source={{ uri: item.image.uri }}
+      />
+    </View>
+  ))
+
+  const getItem = (data, index) => ({
+    ...data[index]
+  })
+
   if (mapState.empty) {
     return (
       <View style={[Layout.fill, Layout.center]}>
@@ -189,8 +232,10 @@ const IndexMapContainer = ({navigation, route}) => {
       <MapView
         ref={_map}
         style={{ width: '100%', height: '100%' }}
+        provider='google'
         region={mapState.region}
         onRegionChangeComplete={onRegionChange}
+        customMapStyle={mapstyles}
       >
         {markers.map((marker, index) => {
           const scaleStyle = {
@@ -202,7 +247,8 @@ const IndexMapContainer = ({navigation, route}) => {
           }
           return (
             <Marker
-              key={'marker' + marker.id}
+              key={marker.id}
+              icon={require('@/Assets/Icons/Marker.png')}
               onPress={onMarkerPress}
               coordinate={marker.coordinate}
             >
@@ -210,11 +256,30 @@ const IndexMapContainer = ({navigation, route}) => {
           )
         })}
       </MapView>
-      <TouchableOpacity style={{position: 'absolute', top: 50, left: 0, width: '100%'}} onPress={() => navigation.navigate(walk.data.title, {walk})}>
-        <Text style={[Fonts.titleLarge, Fonts.textCenter, ]}>{walk.data.title}</Text>
-      </TouchableOpacity>
-      <Animated.ScrollView
+      <View
+        style={{position: 'absolute', top: 8, left: 0, width: '100%'}}
+      >
+      <RNPickerSelect
+        onValueChange={(value) => {
+          _scrollView.current.scrollToIndex({ index: 0, animated: true })
+          navigation.navigate('Pictures', {walk: value})
+        }}
+        style={pickerSelectStyles}
+        placeholder={{}}
+        items={walks.map(walk => ({...walk, label: walk.data.shortTitle, value: walk}))}
+      >
+        <Text style={[Fonts.hyperlink, Fonts.titleRegular, Fonts.textCenter, ]}>{walk.data.shortTitle}</Text>
+      </RNPickerSelect>
+      </View>
+      <AnimatedVirtualizedList
         ref={_scrollView}
+        data={markers}
+        initialNumToRender={1}
+        windowSize={3}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+        getItemCount={(data) => data.length}
+        getItem={getItem}
         horizontal
         pagingEnabled
         scrollEventThrottle={1}
@@ -245,30 +310,11 @@ const IndexMapContainer = ({navigation, route}) => {
           ],
           { useNativeDriver: true },
         )}
+        onScrollToIndexFailed={(data)=>{
+          console.log('onScrollToIndexFailed', data.index)
+        }}
       >
-        {markers.map((marker, index) => (
-          <View style={[
-            {width: CARD_WIDTH, backgroundColor:Colors.card},
-            styles.card]}
-            key={'image' + marker.id}>
-            <View style={Gutters.smallPadding}>
-              <Text style={Fonts.textSmall}>
-                {marker.date}
-              </Text>
-            </View>
-            <FitImage
-              style={{
-                height: Math.min(CARD_HEIGHT, CARD_WIDTH / (marker.image.width / marker.image.height)),
-                width: CARD_WIDTH
-              }}
-              resizeMode='contain'
-              originalWidth={marker.image.width}
-              originalHeight={marker.image.height}
-              source={{ uri: marker.image.uri }}
-            />
-          </View>
-        ))}
-      </Animated.ScrollView>
+      </AnimatedVirtualizedList>
     </View>
   )
 }
@@ -292,3 +338,26 @@ const styles = StyleSheet.create({
     overflow: 'visible'
   },
 })
+
+const pickerSelectStyles = StyleSheet.create({
+    inputIOS: {
+          fontSize: 16,
+          paddingVertical: 12,
+          paddingHorizontal: 10,
+          borderWidth: 1,
+          borderColor: 'gray',
+          borderRadius: 4,
+          color: 'black',
+          paddingRight: 30, // to ensure the text is never behind the icon
+        },
+    inputAndroid: {
+          fontSize: 16,
+          paddingHorizontal: 10,
+          paddingVertical: 8,
+          borderWidth: 0.5,
+          borderColor: 'purple',
+          borderRadius: 8,
+          color: 'black',
+          paddingRight: 30, // to ensure the text is never behind the icon
+        },
+});

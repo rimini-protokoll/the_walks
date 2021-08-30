@@ -8,8 +8,7 @@ import {
   Text,
   Button,
   TextInput,
-  TouchableOpacity,
-  PermissionsAndroid
+  TouchableOpacity
 } from 'react-native'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
@@ -23,12 +22,15 @@ import UserPrompt from '@/Store/Player/UserPrompt'
 import { navigateAndReset, navigate } from '@/Navigators/Root'
 import TrackPlayer, { RepeatMode } from 'react-native-track-player'
 import { uploadPicture } from './util'
+import BackgroundService from 'react-native-background-actions'
+import {useNetInfo} from "@react-native-community/netinfo";
 
 
 const IndexUserPromptContainer = ({ navigation }) => {
   const { t } = useTranslation()
   const { Common, Fonts, Gutters, Layout, Colors } = useTheme()
   const dispatch = useDispatch()
+  const netinfo = useNetInfo()
 
   const walk = useSelector(state => {
     if (state.player.activeWalk) {
@@ -46,17 +48,26 @@ const IndexUserPromptContainer = ({ navigation }) => {
       maxHeight: 2560,
       quality: .7
     }, response => uploadPicture({response, postAction, walk}))
+    if (BackgroundService.isRunning()) {
+      BackgroundService.updateNotification({description: ' '}).catch(() => {})
+    }
   }
   const resumeWalk = async () => {
     await TrackPlayer.setVolume(0)
     await TrackPlayer.setRepeatMode(RepeatMode.Off)
+    await TrackPlayer.pause()
     await TrackPlayer.skipToNext()
+    await TrackPlayer.play()
+    await TrackPlayer.seekTo(0)
     dispatch(ChangePlayer.action({ position: userPrompt.triggerTime }))
   }
   const continueWalk = useCallback(() => {
     resumeWalk().then(() => {
       dispatch(UserPrompt.action(false))
-      dispatch(ChangeWalk.action(walk.data.id))
+      if (userPrompt.isLast) {
+        dispatch(StartWalk.action(false))
+      }
+      // dispatch(ChangeWalk.action(walk.data.id))
       navigation.reset({
         index: 0,
         routes: [
@@ -65,23 +76,25 @@ const IndexUserPromptContainer = ({ navigation }) => {
             state: {
               routes: [
                 { name: 'The Walks' },
-                { name: walk.data.title, params: { walk } }
+                { name: walk.data.id, params: { walk } }
               ]
             }
           }
         ]
       })
+      if (BackgroundService.isRunning()) {
+        BackgroundService.updateNotification({description: ' '})
+      }
     })
   }, [walk])
 
   const map = () => {
     dispatch(UserPrompt.action(false))
     TrackPlayer.setRepeatMode(RepeatMode.Off)
-    if (userPrompt.index == walk.data.userPrompt.length - 1) {
+    if (userPrompt.isLast) {
       dispatch(StartWalk.action(false))
     }
 
-    dispatch(ChangeWalk.action(walk.data.id))      
     navigation.reset({
       index: 0,
       routes: [
@@ -90,13 +103,16 @@ const IndexUserPromptContainer = ({ navigation }) => {
           state: {
             routes: [
               { name: 'The Walks' },
-              { name: walk.data.title, params: { walk } },
+              { name: walk.data.id, params: { walk } },
               { name: 'Pictures', params: { walk } }
             ]
           }
         }
       ]
     })
+    if (BackgroundService.isRunning()) {
+      BackgroundService.updateNotification({taskDesc: ' '})
+    }
   }
   const actions = {
     continue: continueWalk,
@@ -111,7 +127,7 @@ const IndexUserPromptContainer = ({ navigation }) => {
     <ScrollView contentContainerStyle={[Layout.fill, Layout.rowCenter]}>
       <View style={[Layout.fill, Gutters.smallHPadding]}>
         <Text
-          style={[Fonts.textRegular, Gutters.smallVPadding, Fonts.textCenter]}
+          style={[Fonts.textRegular, Gutters.largeVPadding, Fonts.textCenter]}
         >
           {userPrompt.title}
         </Text>
@@ -125,7 +141,8 @@ const IndexUserPromptContainer = ({ navigation }) => {
             <TouchableOpacity
               key={index}
               onPress={() => actions[action.action](action)}
-              style={Common.button.outline}
+              style={[Common.button.outline, {opacity: !netinfo.isConnected && action.action == 'map' ? .5 : 1 }]}
+              disabled={!netinfo.isConnected && action.action == 'map'}
             >
               <Text style={[Fonts.textButton, Fonts.textCenter]}>{action.title}</Text>
             </TouchableOpacity>

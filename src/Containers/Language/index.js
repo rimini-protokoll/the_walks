@@ -14,6 +14,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import LanguagesList from '@/Components/LanguagesList'
+import MenuButton from '@/Components/MenuButton'
 
 const Stack = createStackNavigator()
 
@@ -36,15 +37,15 @@ const Languages = ({ navigation }) => {
 }
 
 
-
 const LanguagesStack = ({ navigation }) => {
   const { Colors, Fonts } = useTheme()
+  const language = useSelector(state => state.language.selectedLanguage)
+  const Button = MenuButton({navigation})
   const headerRight = () => {
-    return (
-      <TouchableOpacity onPress={ navigation.openDrawer }>
-        <Icon name="menu-outline" style={{ paddingRight:10 }} size={35} color={Colors.text} />
-      </TouchableOpacity>
-    )
+    if (!language) {
+      return null
+    }
+    return <Button/>
   }
   return (
     <Stack.Navigator>

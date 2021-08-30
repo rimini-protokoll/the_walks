@@ -1,6 +1,8 @@
 #import "AppDelegate.h"
 
 #import <Firebase.h>
+#import <GoogleMaps/GoogleMaps.h>
+#import "Constants.h"
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -13,6 +15,7 @@
 #import <FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h>
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
+
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -29,6 +32,7 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:GoogleMapApiKey]; // add this line using the api key obtained from Google Console
   if ([FIRApp defaultApp] == nil) {
       [FIRApp configure];
     }

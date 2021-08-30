@@ -3,30 +3,38 @@ import {
   Platform,
   View,
   Text,
-  Pressable,
+  TouchableOpacity,
 } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import { DrawerContentScrollView, DrawerItemList, DrawerItem, createDrawerNavigator } from '@react-navigation/drawer'
 import { useTheme } from '@/Theme'
 import Icon from 'react-native-vector-icons/Ionicons'
+import FetchWalks from '@/Store/Walks/FetchWalks'
 import { navigate } from './Root'
 import WalksNavigator from '@/Navigators/Walks'
+import ImprintContainer from '@/Containers/Imprint'
+import LegalContainer from '@/Containers/Legal'
 import LanguagesContainer from '@/Containers/Language'
 import AboutContainer from '@/Containers/About'
+import CreditsContainer from '@/Containers/Credits'
 import NewsContainer from '@/Containers/News'
 import ActivationContainer from '@/Containers/Activation'
 import PaymentContainer  from '@/Containers/Payment'
 import { useTranslation } from 'react-i18next'
-import { navigateAndReset, navigateAndSimpleReset } from '@/Navigators/Root'
-import ChangeWalk from '@/Store/Walks/ChangeWalk'
 
 
 const Drawer = createDrawerNavigator()
 const labelStyle = {
   fontFamily: 'Bambino-Regular',
   fontWeight: 'normal',
-  fontSize: 20,
-  color: 'black'
+  fontSize: 18,
+  color: 'black',
+}
+const walkLabelStyle = {
+  ...labelStyle,
+  fontSize: 22,
+  textDecorationLine: 'underline',
+  textDecorationColor: 'black'
 }
 
 const CustomDrawerContent = (props) => {
@@ -41,21 +49,23 @@ const CustomDrawerContent = (props) => {
     state,
     dispatch,
     Colors,
+    Fonts,
+    Gutters,
     ...rest
   } = props
   let routes = [
-    'The Walks', t('language'), t('about'), t('news')
+    'The Walks', 'about', 'news', 'language', 'credits'
   ]
   if (!walksPurchased) {
     routes.push(t('activation'))
   }
   routes = routes.map((name, i) => {
-    let onPress = () => navigation.navigate(name);
+    let onPress = () => navigation.navigate(t(name));
     if (name == 'The Walks') {
       onPress = () => navigation.reset({index: 0, routes: [{name: 'Main', state: {routes: [{name: 'The Walks'}]}}]})
     }
     return {
-      label: name,
+      label: t(name),
       focused: state.index == i,
       onPress,
       key: i,
@@ -64,16 +74,29 @@ const CustomDrawerContent = (props) => {
   })
   if(!galleryIsShown) {
     return (
-      <DrawerContentScrollView {...state} contentContainerStyle={{
-        justifyItems: 'center'
-      }}>
-        {routes.map(route => <DrawerItem {...route}/>)}
-        {walksPurchased ? (
+      <DrawerContentScrollView {...state} contentContainerStyle={[{
+        justifyItems: 'center',
+        flex: 1,
+      }, Gutters.largeLPadding, Gutters.regularRPadding, Gutters.largeTPadding]}>
+        {routes.map((route, i) => (
+          <DrawerItem 
+            {...route} 
+            style={ i==0 ? {marginBottom: '10%', marginTop: '5%'} : ''}
+            labelStyle={i==0 ? walkLabelStyle : labelStyle}
+          />
+        ))}
+        {walksPurchased && false ? (
           <DrawerItem
             label={t('walk.pictures')}
             onPress={() => setGalleryIsShown(true)}
             labelStyle={labelStyle}
           />) : null}
+        <TouchableOpacity
+          style={[Gutters.regularLPadding, {width: 210, marginTop: '15%'}]}
+          onPress={() => navigation.navigate('imprint')}
+        >
+          <Text style={Fonts.legalSmall}>{t('imprint')}</Text>
+        </TouchableOpacity>
       </DrawerContentScrollView>
     )
   } else {
@@ -109,13 +132,35 @@ const CustomDrawerContent = (props) => {
 }
 
 // @refresh reset
-const MainNavigator = () => {
-  const { Fonts, Colors } = useTheme()
+const MainNavigator = ({navigation}) => {
+  const { Fonts, Colors, Gutters } = useTheme()
   const dispatch = useDispatch()
   const { t } = useTranslation()
-  const selectedLanguage = useSelector(state => state.language.selectedLanguage)
+  const language = useSelector(state => state.language.selectedLanguage)
   const walksPurchased = useSelector(state => state.walks.purchased)
+  const legalAccepted = useSelector(state => state.legal.accepted)
   const [galleryIsShown, setGalleryIsShown] = useState(false)
+  useEffect(() => {
+    if (!language) {
+      navigation.reset({index: 0, routes: [{name: t('language')}]})
+      return
+    }
+    if (!legalAccepted) {
+      navigation.reset({index: 0, routes: [{name: 'legal'}]})
+      return
+    }
+    if (!walksPurchased) {
+      navigation.reset({index: 0, routes: [{name: t('activation')}]})
+      return
+    }
+  }, [])
+  useEffect(() => {
+    if (language) {
+      dispatch(FetchWalks.action({language}))
+    } else {
+      navigation.reset({index: 0, routes: [{name: t('language')}]})
+    }
+  }, [language])
   const walks = useSelector(state => {
     const walks = state.walks.fetchWalks.walks
     if (walks) {
@@ -137,21 +182,23 @@ const MainNavigator = () => {
         setGalleryIsShown,
         walks,
         dispatch,
-        Colors
+        Colors,
+        Fonts,
+        Gutters
       }}
       drawerPosition="right">
-      {selectedLanguage ? <Drawer.Screen name='Main' component={WalksNavigator} /> : null}
-      <Drawer.Screen name={t('language')} component={LanguagesContainer} />
+      <Drawer.Screen name='Main' component={WalksNavigator} />
       <Drawer.Screen name={t('about')} component={AboutContainer} />
       <Drawer.Screen name={t('news')} component={NewsContainer} />
-      <Drawer.Screen name={t('activation')} component={ActivationContainer} />
+      <Drawer.Screen name={t('language')} component={LanguagesContainer} options={{gestureEnabled: !!language}} />
+      <Drawer.Screen name={t('credits')} component={CreditsContainer} />
+      {!walksPurchased ? <Drawer.Screen name={t('activation')} component={ActivationContainer} /> : null}
       <Drawer.Screen
         name={t('payment')}
         component={ PaymentContainer }
-        options={{
-          headerShown: false
-        }}
       />
+      <Drawer.Screen name='legal' options={{gestureEnabled: legalAccepted}} component={LegalContainer} />
+      <Drawer.Screen name='imprint' component={ImprintContainer} />
     </Drawer.Navigator>
   )
 }

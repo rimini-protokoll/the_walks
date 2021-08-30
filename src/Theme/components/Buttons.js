@@ -3,10 +3,12 @@ import { StyleSheet } from 'react-native'
 export default function ({ Colors, Gutters, Layout }) {
   const base = {
     ...Layout.center,
-    ...Gutters.largeHPadding,
+    ...Gutters.regularHPadding,
     backgroundColor: Colors.primary,
-    paddingBottom: 8,
-    maxWidth: 180
+    paddingTop: 8,
+    paddingBottom: 4,
+    maxWidth: 180,
+    minHeight: 80
   }
   const rounded = {
     ...base,
@@ -19,7 +21,7 @@ export default function ({ Colors, Gutters, Layout }) {
     outline: {
       ...base,
       backgroundColor: Colors.transparent,
-      borderWidth: 3,
+      borderWidth: 2.5,
       borderColor: Colors.primary,
     },
     outlineRounded: {

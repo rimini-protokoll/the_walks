@@ -1,9 +1,10 @@
-import {
-  PermissionsAndroid
-} from 'react-native'
 import GeoLocation from 'react-native-geolocation-service'
 import firestore from '@react-native-firebase/firestore'
 import storage from '@react-native-firebase/storage'
+import {
+  PermissionsAndroid,
+  Platform
+} from 'react-native'
 
 
 // Generate a Hash from string in Javascript https://stackoverflow.com/a/52171480/3528998

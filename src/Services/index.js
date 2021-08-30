@@ -11,7 +11,7 @@ const instance = axios.create({
     'Content-Type': 'application/json',
     'Cache-Control': 'no-cache'
   },
-  timeout: 3000,
+  timeout: 30000,
 })
 
 instance.interceptors.response.use(

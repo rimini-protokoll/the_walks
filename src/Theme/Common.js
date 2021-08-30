@@ -10,7 +10,7 @@ import buttonStyles from './components/Buttons'
  * @param Theme can be spread like {Colors, NavigationColors, Gutters, Layout, Common, ...args}
  * @return {*}
  */
-export default function ({ Colors, ...args }) {
+export default function ({ Colors, FontSize, ...args }) {
   return {
     button: buttonStyles({ Colors, ...args }),
     ...StyleSheet.create({
@@ -25,10 +25,12 @@ export default function ({ Colors, ...args }) {
         borderBottomWidth: 2,
         backgroundColor: Colors.background,
         fontFamily: 'Bambino-Regular',
-        fontSize: 18,
+        fontSize: FontSize.button,
         color: Colors.text,
         textAlign: 'center',
-        minWidth: 100
+        minWidth: 90,
+        maxHeight: 35,
+        padding: 4,
       },
     }),
   }

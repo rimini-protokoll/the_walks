@@ -141,8 +141,8 @@ android {
         applicationId "com.thewalks"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 15
+        versionName '2.4'
         manifestPlaceholders = [googleMapApiKey: googleMapApiKey]
     }
     splits {

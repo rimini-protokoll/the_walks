@@ -12,20 +12,17 @@ const WalksList = ({ navigation, walks }) => {
   const { Layout } = useTheme()
   return (
     <View style={{
-      flex: 1,
-      justifyContent: 'space-evenly',
-      alignItems: 'flex-start',
-      alignContent: 'baseline',
+      justifyContent: 'flex-start',
+      alignContent: 'space-between',
+      alignItems: 'baseline',
       flexWrap: 'wrap',
       flexDirection: 'row'
       }}>
-      { walks.map(({data}, i) => (
+      { walks.map((walk, i) => (
         <Tile
           key={i}
-          identifier={data.id}
+          walk={walk}
           navigation={navigation}
-          title={data.title}
-          iconUri={data.iconUri}
           />
       ))}
     </View>

@@ -13,6 +13,7 @@ import {
 import { configureStore } from '@reduxjs/toolkit'
 
 import startup from './Startup'
+import legal from './Legal'
 import theme from './Theme'
 import language from './Language'
 import walks from './Walks'
@@ -20,6 +21,7 @@ import player from './Player'
 
 const reducers = combineReducers({
   startup,
+  legal,
   theme,
   language,
   walks,
@@ -29,8 +31,8 @@ const reducers = combineReducers({
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  whitelist: ['language', 'walks'],
-//   whitelist: ['language'],
+  whitelist: ['language', 'walks', 'legal'],
+//  whitelist: [],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

@@ -21,9 +21,11 @@ DerivedData
 *.ipa
 *.xcuserstate
 ios/GoogleService-Info.plist
+ios/TheWalks/Constants.m
 
 # Android/IntelliJ
 #
+android/app/release/
 build/
 .idea
 .gradle

@@ -23,6 +23,10 @@
 		845EF6EC2690E6AB00BD3B42 /* Bambino-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 845EF6EA2690E6AB00BD3B42 /* Bambino-Regular.otf */; };
 		846EE6922693258C00FEE1E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846EE6912693258C00FEE1E7 /* LaunchScreen.xib */; };
 		84911FA5266BD27C0051F77D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84911FA4266BD27C0051F77D /* GoogleService-Info.plist */; };
+		84C63E9026A735C10099927C /* CrimsonText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 841A708F2691366100C043AC /* CrimsonText-SemiBold.ttf */; };
+		84C63E9226A735E80099927C /* CrimsonText-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C63E9126A735D80099927C /* CrimsonText-SemiBoldItalic.ttf */; };
+		84C63E9426A737F90099927C /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C63E9326A737F40099927C /* CrimsonText-Bold.ttf */; };
+		84C63E9726A742810099927C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C63E9526A742810099927C /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		846EE6912693258C00FEE1E7 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		84911FA4266BD27C0051F77D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84BEBEDC2666E8D400A88B4C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		84C63E9126A735D80099927C /* CrimsonText-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CrimsonText-SemiBoldItalic.ttf"; path = "../src/Assets/Fonts/CrimsonText-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		84C63E9326A737F40099927C /* CrimsonText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CrimsonText-Bold.ttf"; path = "../src/Assets/Fonts/CrimsonText-Bold.ttf"; sourceTree = "<group>"; };
+		84C63E9526A742810099927C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = TheWalks/Constants.m; sourceTree = "<group>"; };
+		84C63E9626A742810099927C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = TheWalks/Constants.h; sourceTree = "<group>"; };
 		857C661CAA094AEA8E6304D2 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		8AB52B4EBD874C089EA5BA20 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		8CE8F60935CC7F1EA8FB7E0E /* libPods-TheWalks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TheWalks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +159,8 @@
 		13B07FAE1A68108700A75B9A /* TheWalks */ = {
 			isa = PBXGroup;
 			children = (
+				84C63E9626A742810099927C /* Constants.h */,
+				84C63E9526A742810099927C /* Constants.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -204,8 +214,10 @@
 				84566AC226775EB30091DB33 /* Bambino.ttf */,
 				845EF6E92690E6AB00BD3B42 /* Bambino-Bold.otf */,
 				845EF6EA2690E6AB00BD3B42 /* Bambino-Regular.otf */,
+				84C63E9326A737F40099927C /* CrimsonText-Bold.ttf */,
 				841A708B2691327200C043AC /* CrimsonText-Regular.ttf */,
 				841A708D2691353800C043AC /* CrimsonText-Italic.ttf */,
+				84C63E9126A735D80099927C /* CrimsonText-SemiBoldItalic.ttf */,
 				841A708F2691366100C043AC /* CrimsonText-SemiBold.ttf */,
 				84911FA4266BD27C0051F77D /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* TheWalks */,
@@ -327,6 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C63E9426A737F90099927C /* CrimsonText-Bold.ttf in Resources */,
+				84C63E9226A735E80099927C /* CrimsonText-SemiBoldItalic.ttf in Resources */,
+				84C63E9026A735C10099927C /* CrimsonText-SemiBold.ttf in Resources */,
 				841A708E2691353D00C043AC /* CrimsonText-Italic.ttf in Resources */,
 				841A708C2691332A00C043AC /* CrimsonText-Regular.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
@@ -375,6 +390,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TheWalks/Pods-TheWalks-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -396,6 +412,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -507,6 +524,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TheWalks-TheWalksTests/Pods-TheWalks-TheWalksTests-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -528,6 +546,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -590,6 +609,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				84062C892666D755001FF673 /* void.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				84C63E9726A742810099927C /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,12 +682,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = SFHBR4YHFC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TheWalks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -691,11 +711,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = SFHBR4YHFC;
 				INFOPLIST_FILE = TheWalks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.4;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

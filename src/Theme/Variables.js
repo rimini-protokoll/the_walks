@@ -16,10 +16,13 @@ export const Colors = {
   white: '#ffffff',
   text: '#212529',
   primary: '#555',
+  legal: 'rgba(240, 50, 10, 1)',
   secondary: '#AAA',
+  tertiary: 'rgb(250,0,0)',
   success: '#28a745',
   error: '#dc3545',
-  card: 'rgb(239,239,241)'
+  card: 'rgb(239,239,241)',
+  player: 'rgb(188,188,188)'
 }
 
 export const NavigationColors = {
@@ -28,6 +31,18 @@ export const NavigationColors = {
   card: Colors.background,
   text: Colors.text,
 }
+
+/**
+ * IconSize
+ */
+export const IconSize = {
+  xSmall: 17,
+  small: 20,
+  regular: 27,
+  large: 30,
+  xLarge: 35,
+}
+
 
 /**
  * FontSize

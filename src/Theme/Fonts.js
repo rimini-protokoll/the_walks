@@ -1,61 +1,101 @@
 /**
  * This file contains all application's style relative to fonts
  */
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
 
 /**
  *
  * @param Theme can be spread like {Colors, NavigationColors, Gutters, Layout, Common, ...args}
  * @return {*}
  */
-export default function ({ FontSize, Colors }) {
+
+const textBase = {
+  textAlignVertical: 'center',
+  includeFontPadding: false
+}
+
+export default function ({ FontSize, Colors, IconSize }) {
   return StyleSheet.create({
     textSmall: {
       fontFamily: 'Bambino-Regular',
-      fontSize: FontSize.small,
+      fontSize: FontSize.small * 0.95,
       color: Colors.text,
+      lineHeight: FontSize.small * 1.1,
     },
     textRegular: {
+      ...textBase,
       fontFamily: 'CrimsonText-Regular',
-      fontSize: FontSize.regular,
+      fontSize: FontSize.regular * 1,
       color: Colors.text,
+      lineHeight: FontSize.regular * 1.5,
     },
     textBold: {
-      fontFamily: 'CrimsonText-SemiBold',
-      fontWeight: 'normal',
-      fontSize: FontSize.regular,
-      color: Colors.text,
+      ...textBase,
+      fontFamily: 'CrimsonText-Bold',
+      fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
+      fontSize: FontSize.regular * 1.05,
+      color: Colors.text
     },
     textItalic: {
+      ...textBase,
       fontFamily: 'CrimsonText-Italic',
-      fontStyle: 'normal',
-      fontSize: FontSize.regular,
+      fontStyle: Platform.OS == 'android' ? 'normal' : 'italic',
+      fontSize: FontSize.regular * 1.05,
       color: Colors.text,
+      lineHeight: FontSize.regular * 1.5,
     },
     textButton: {
-      fontFamily: 'Bambino-Regular',
+      fontFamily: 'Bambino-Bold',
       fontSize: FontSize.button,
+      fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       color: Colors.text,
+      lineHeight: FontSize.button * 1.15,
+    },
+    textPlayerTitle: {
+      fontFamily: 'Bambino',
+      fontSize: FontSize.button * 0.95,
+      color: Colors.text,
+      lineHeight: FontSize.button * 1.15,
     },
     textLarge: {
       fontFamily: 'Bambino-Regular',
       fontSize: FontSize.large,
       color: Colors.text,
+      lineHeight: FontSize.large * 1.2,
+    },
+    labelSmall: {
+      fontFamily: 'Bambino-Bold',
+      fontSize: FontSize.small * 0.7,
+      fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
+      color: Colors.text,
+      textTransform: 'uppercase',
+      lineHeight: FontSize.small * 0.85,
+    },
+    legalSmall: {
+      fontFamily: 'Bambino-Bold',
+      fontSize: FontSize.small * 0.65,
+      fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
+      color: Colors.text,
+      lineHeight: FontSize.regular,
     },
     titleSmall: {
       fontFamily: 'Bambino-Bold',
       fontSize: FontSize.small * 1.5,
+      fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       color: Colors.text,
     },
     titleRegular: {
       fontFamily: 'Bambino-Bold',
       fontSize: FontSize.regular * 1.5,
+      fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       color: Colors.text,
+      lineHeight: FontSize.regular * 1.9,
     },
     titleLarge: {
       fontFamily: 'Bambino',
       fontSize: FontSize.large * 1.5,
       color: Colors.text,
+      lineHeight: FontSize.large * 1.9,
     },
     textCenter: {
       textAlign: 'center',
@@ -69,5 +109,29 @@ export default function ({ FontSize, Colors }) {
     textRight: {
       textAlign: 'right',
     },
+    iconXSmall: {
+      width: IconSize.xSmall,
+      height: IconSize.xSmall,
+    },
+    iconSmall: {
+      width: IconSize.small,
+      height: IconSize.small,
+    },
+    iconRegular: {
+      width: IconSize.regular,
+      height: IconSize.regular,
+    },
+    iconLarge: {
+      width: IconSize.large,
+      height: IconSize.large,
+    },
+    iconXLarge: {
+      width: IconSize.xLarge,
+      height: IconSize.xLarge,
+    },
+    hyperlink: {
+      textDecorationLine: 'underline',
+      textDecorationColor: 'rgb(234, 192, 39)'
+    }
   })
 }

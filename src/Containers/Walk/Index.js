@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from 'react'
+import React, { useRef, useCallback, useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   ScrollView,
@@ -17,38 +17,79 @@ import FitImage from 'react-native-fit-image'
 import TrackPlayer, {
   useProgress
 } from 'react-native-track-player'
+import { store } from '@/Store'
 import StartWalk from '@/Store/Player/StartWalk'
 import ChangePlayer from '@/Store/Player/ChangePlayer'
 import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import DownloadWalk from '@/Store/Walks/DownloadWalk'
 import Markdown from '@/Components/Markdown'
+import {useNetInfo} from "@react-native-community/netinfo";
+
+const startWalk = (walk) => {
+  // console.log(walk.data.srcUri[0])
+  store.dispatch(StartWalk.action(walk.data.id))
+  store.dispatch(
+    ChangePlayer.action({
+      paused: true,
+      title: walk.data.title,
+    }),
+  )
+}
 
 const IndexWalkContainer = ({ navigation, route }) => {
+  const netinfo = useNetInfo()
+  const scrollViewRef = useRef()
   const { t } = useTranslation()
   const { Common, Fonts, Gutters, Layout, Colors } = useTheme()
   const dispatch = useDispatch()
   const walksPurchased = useSelector(state => state.walks.purchased)
   const activeWalkId = useSelector(state => state.player.activeWalk)
   const walk = useSelector(state => {
+    let _id;
     if (route.params?.walk) {
-      return route.params.walk
+      _id = route.params.walk.data.id
+    } else {
+      _id = state.waks.selectedWalk
     }
     let _walk = state.walks.fetchWalks.walks.filter(
-      walk => walk.data.id == state.walks.selectedWalk,
+      walk => walk.data.id == _id,
     )[0]
 
     return _walk
   })
   const language = useSelector(state => state.language.selectedLanguage)
   const isDownloading = useSelector(state => state.walks.downloadWalk.loading)
+  const isLocal = useSelector(state => {
+    if (walk && Object.keys(state.walks.localWalks[language] || {}).indexOf(walk.data.id) > -1) {
+      return true
+    }
+    return false
+  })
+  const hasPicture = useSelector(state => {
+    //if(walk && walk.data.userPrompt.length !== 0){
+      return true
+    //}
+    //return false
+  })
+  const hasCredits = useSelector(state => {
+    if(walk && walk.data.credits){
+      return true
+    }
+    return false
+  })
+
+  const completed = useSelector(state => walk && state.walks.completed.indexOf(walk.data.id) > -1)
+  
+  const [creditsIsShown, setCreditsIsShown] = useState(false)
 
   useEffect(() => {
     if (!walk && activeWalkId) {
       dispatch(ChangeWalk.action(activeWalkId))
     }
+    // dispatch(DownloadWalk.action({walk, language, deleteWalk: true}))
   }, [walk])
 
-  const localStorage = useCallback(() => { 
+  const localStorage = useCallback(() => {
     dispatch(StartWalk.action(false))
     dispatch(DownloadWalk.action({walk, language}))
   }, [walk, language])
@@ -56,17 +97,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
   const localStorageDelete = useCallback(() => {
     dispatch(StartWalk.action(false))
     dispatch(DownloadWalk.action({walk, language, deleteWalk: true}))
-  }, [walk, language])
-
-  const startWalk = useCallback(() => {
-    dispatch(StartWalk.action(walk.data.id))
-    dispatch(
-      ChangePlayer.action({
-        paused: true,
-        title: walk.data.title,
-      }),
-    )
-  }, [walk])
+  }, [isLocal, walk, language])
 
   const unsubscribeWalk = navigation.addListener('beforeRemove', event => {
     dispatch(ChangeWalk.action(null))
@@ -80,78 +111,118 @@ const IndexWalkContainer = ({ navigation, route }) => {
     return null
   }
 
+  const WalkButtons = () => {
+    const buttons = (_walk) => (<>
+      <TouchableOpacity
+        onPress={() => startWalk(_walk)}
+        style={[Common.button.outline, {opacity: ((!netinfo.isConnected && !isLocal) || isDownloading || activeWalkId) ? .5 : 1}]}
+        disabled={(!netinfo.isConnected && !isLocal) || isDownloading || activeWalkId}
+      >
+        <Text style={[Fonts.textButton, Fonts.textCenter]}>{t('walk.start')}</Text>
+      </TouchableOpacity>
+      {completed && hasPicture ? 
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Pictures', {walk: walk})}
+          style={[Common.button.outline, {marginLeft: 20}, {opacity: !netinfo.isConnected ? .5 : 1 }]}
+          disabled={!netinfo.isConnected}
+        >
+          <Text style={Fonts.textButton}>{t('walk.pictures')}</Text>
+        </TouchableOpacity> : null }
+    </>)
+    return buttons(walk)
+  }
+
+  const creditsOpen = !creditsIsShown ? require('Assets/Icons/Plus.png') : require('Assets/Icons/Minus.png')
   return (
     <ScrollView
-      contentContainerStyle={[Layout.colCenter, Gutters.regularBPadding, { alignContent: 'flex-start' }]}
+      ref={scrollViewRef}
+      contentContainerStyle={[Layout.colCenter, Gutters.largeBPadding, { alignContent: 'flex-start' }]}
     >
       <View style={{height: 50}}/>
-      <View style={{ width: '100%', paddingRight: 100, paddingLeft: 100 }}>
+      <View style={{ width: '40%' }}>
         <FitImage
-          originalWidth={100}
-          originalHeight={100}
+          originalWidth={1024}
+          originalHeight={1024}
           source={{ uri: walk.data.iconUri }}
         />
       </View>
       <View style={(Layout.fill, Gutters.smallHPadding)}>
-        <Text style={[Fonts.titleRegular, {
-          textAlign: 'center',
-        }]}>
-          {walk.data.preTitle}
-        </Text>
-        <Text style={[Fonts.titleLarge, {
-          textAlign: 'center',
-        }]}>
-          {walk.data.title}
-        </Text>
+        <View>
+          {walk.data.preTitle ? <Text style={[Fonts.titleRegular, Fonts.textCenter]}>
+            {walk.data.preTitle}
+          </Text> : null}
+          {walk.data.title ? <Text style={[Fonts.titleLarge, Fonts.textCenter]}>
+            {walk.data.title}
+          </Text> : null}
+          {walk.data.afterTitle ? <Text style={[Fonts.titleRegular, Fonts.textCenter]}>
+            {walk.data.afterTitle}
+          </Text> : null}
+          {walk.data.afterTitle ? <View style={{height: Fonts.titleSmall.fontSize/2}}/> : null}
+        </View>
         <Markdown
           markdown={walk.content}
         />
         <View
-          style={[Gutters.regularVMargin, {
-            flexDirection: 'row',
-            justifyContent: 'center',
-          }]}
+          style={[Gutters.regularVMargin, Layout.row, Layout.center]}
         >
-          <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+          <View style={[Layout.center, { width: '33%'}]}>
+            <Image style={Fonts.iconSmall}
+              source={require('Assets/Icons/Dauer.png')}
+            />
             <Text 
               style={[
-                Gutters.smallHMargin, 
-                Fonts.textItalic
-              ]}>{t('credits')}</Text>
-            <Image style={{width:20, height:20}}
-                source={require('Assets/Icons/Plus.png')}
-              />
+                Gutters.smallVMargin, 
+                Fonts.labelSmall
+              ]}>{walk.data.duration}</Text>
           </View>
+          { walk.data.twoPerson ? (
+          <View style={[Layout.center, { width: '33%'}]}>
+            <Image style={Fonts.iconSmall}
+              source={require('Assets/Icons/Teilnehmer.png')}
+            />
+            <Text 
+              style={[
+                Gutters.smallVMargin, 
+                Fonts.labelSmall
+              ]}>{t('walk.twoPerson')}</Text>
+          </View>): null }
+          { walk.data.penPaper ? (
+          <View style={[Layout.center, { width: '33%'}]}>
+            <Image style={Fonts.iconSmall}
+              source={require('Assets/Icons/Mitnehmen.png')}
+            />
+            <Text 
+              style={[
+                Gutters.smallVMargin, 
+                Fonts.labelSmall
+              ]}>{t('walk.penPaper')}</Text>
+          </View>): null }
         </View>
         <View
-          style={[Gutters.regularVMargin, {
-            flexDirection: 'row',
-            justifyContent: 'center',
-          }]}
+          style={[Gutters.regularVMargin, Layout.row, Layout.center]}
         >
           {!walksPurchased ? 
-          <TouchableOpacity
-            onPress={activation}
-            style={[Common.button.outline, {opacity: (isDownloading || activeWalkId) ? .5 : 1}]}
-          >
-            <Text style={Fonts.textButton}>{t('activation')}</Text>
-          </TouchableOpacity>
-          : <>
-          <TouchableOpacity
-            onPress={startWalk}
-            style={[Common.button.outline, {opacity: (isDownloading || activeWalkId) ? .5 : 1}]}
-            disabled={isDownloading || activeWalkId}
-          >
-            <Text style={[Fonts.textButton, Fonts.textCenter]}>{t('walk.start')}</Text>
-          </TouchableOpacity>
-          <View style={{ width: 30 }}></View>
-          {walk.data.srcUri.startsWith('https') ? (
+            <TouchableOpacity
+              onPress={activation}
+              style={[Common.button.outline, {opacity: (isDownloading || activeWalkId) ? .5 : 1}]}
+            >
+              <Text style={Fonts.textButton}>{t('activation')}</Text>
+            </TouchableOpacity>
+            : (isDownloading ? <ActivityIndicator size='small' color={Colors.primary}/> : <WalkButtons/>)}
+        </View>
+        { }
+      </View>
+      {
+        walksPurchased ? (
+          !isLocal ? (
             <TouchableOpacity
               disabled={isDownloading || activeWalkId}
-              style={{opacity: isDownloading || activeWalkId ? .5 : 1, alignSelf: 'center'}}
-              onPress={localStorage}>
+              style={[Gutters.regularVMargin,
+                {opacity: !netinfo.isConnected || isDownloading || activeWalkId ? .5 : 1, alignSelf: 'center'}]}
+              onPress={localStorage}
+              disabled={!netinfo.isConnected || isDownloading || activeWalkId}>
               <Image
-                style={{width:25, height:25}}
+                style={Fonts.iconRegular}
                 source={require('Assets/Icons/Download.png')}
               />
             </TouchableOpacity>
@@ -159,27 +230,46 @@ const IndexWalkContainer = ({ navigation, route }) => {
             <TouchableOpacity
               disabled={isDownloading || activeWalkId}
               onPress={localStorageDelete}
-              style={{opacity: isDownloading || activeWalkId ? .5 : 1, alignSelf: 'center'}}>
-              <Image
-                style={{width:25, height:25}}
-                source={require('Assets/Icons/Download.png')}
-              />
+              style={{...Gutters.regularVMargin, opacity: isDownloading || activeWalkId ? .5 : 1, alignSelf: 'center'}}>
+              <Icon name="trash-outline" size={Fonts.iconRegular.width} color={Colors.text}/>
             </TouchableOpacity>
-          ) }
-          </>}
-        </View>
-        {isDownloading ? <ActivityIndicator size='large' color={Colors.primary}/> : null }
-      </View>
-      {/*
-      <View style={Layout.fill}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('Pictures', {walk: walk.data})}
-          style={Common.button.outline}
-        >
-          <Text style={Fonts.textRegular}>{t('walk.pictures')}</Text>
-        </TouchableOpacity>
-      </View>
-      */}
+          )
+        ) : null }
+      { hasCredits ? (
+          <View style={[Layout.row, Layout.center]}>
+            <TouchableOpacity 
+              onPress={() => {
+                if(creditsIsShown)
+                  setCreditsIsShown(false) 
+                else {
+                  setCreditsIsShown(true) 
+                  setTimeout(() => {
+                    scrollViewRef.current.scrollToEnd()
+                  }, 400)
+                }
+              }}
+              style={[Layout.row, Layout.center]}
+            >
+              <Text 
+                style={[
+                  Gutters.largeVMargin, Gutters.smallHMargin, 
+                  Fonts.textItalic
+                ]}>{t('walk.credits')}</Text>
+              {!creditsIsShown ? (
+                <Image style={Fonts.iconSmall}
+                  source={creditsOpen}
+                />
+              ):(
+                <Image style={Fonts.iconSmall}
+                  source={creditsOpen}
+                />
+              )}
+            </TouchableOpacity>
+          </View>
+      ) : null }
+      {creditsIsShown && typeof walk.data.credits == 'string' ? (
+        <Markdown markdown={walk.data.credits} textCenter={true}/>
+      ) : null}
     </ScrollView>
   )
 }
