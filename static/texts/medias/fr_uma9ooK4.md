@@ -25,7 +25,7 @@ credits: >-
 
   Composition
 
-  *Rimini Protokoll utilisant la musique d'Anton Rose & Thomas Mielmann, et du film "Four Rebounds to Death" de Laurids Koehne et Tibor Koehne, composé par Linus Rogsch, produit par Laurids Koehne et Tibor Koehne*
+  *Rimini Protokoll utilisant la musique d'Anton Rose & Thomas Mielmann, et du film "Four Rebounds to Death" de Laurids Koehne & Tibor Koehne, composé par Linus Rogsch, produit par Laurids Koehne & Tibor Koehne*
 userPrompt: []
 ---
 Il s'agit d'un duo. Prends rendez-vous avec quelqu'un devant un supermarché. Pour garantir l'écoute simultanée de vos promenades,
