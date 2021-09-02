@@ -18,7 +18,7 @@ credits: >-
   *Antonio Tagliarini*
 
 
-  Spreche*in\
+  Sprecher*in\
 
   *Timur Isik*
 
