@@ -13,19 +13,15 @@ srcUri:
   - de_ooZohb7c
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 credits: >-
-  Expert*in\
-
-  *Antonio Tagliarini*
+  Expert*in*Antonio Tagliarini*
 
 
-  Sprecher*in\
-
-  *Timur Isik*
+  Sprecher*in*Timur Isik*
 
 
   Komposition
 
-  *Rimini Protokoll unter Verwendung von Musik von Anton Rose & Thomas Mielmann, sowie aus dem Film “Four rebounds to death” von Laurids Koehne und Tibor Koehne, komponiert von Linus Rogsch, produziert von Laurids Koehne und Tibor Koehne*
+  *Rimini Protokoll unter Verwendung von Musik von Anton Rose & Thomas Mielmann sowie aus dem Film “Four rebounds to death” von Laurids Koehne & Tibor Koehne, komponiert von Linus Rogsch, produziert von Laurids Koehne & Tibor Koehne*
 userPrompt: []
 ---
 Dies ist ein Duett. Verabrede dich mit jemandem vor demselben Supermarkt. Wenn du Englisch verstehst, empfehlen wir dir die englische Version dieses Walks ( → Menü → Sprache).
