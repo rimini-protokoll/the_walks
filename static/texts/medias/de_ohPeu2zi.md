@@ -17,9 +17,7 @@ credits: >-
   *Mitarbeiter*innen von Barcelona Cicle de l’Aigua*
 
 
-  Sprecher*innen\
-
-  *Christiane Hommelsheim, Daniel Wetzel*
+  Sprecher*innenChristiane Hommelsheim, Daniel Wetzel
 
 
   Komposition / Mischung
