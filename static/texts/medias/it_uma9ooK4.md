@@ -25,7 +25,7 @@ credits: >-
 
   Composizione
 
-  *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann, nonché dal film "Four rebounds to death" di Laurids Koehne & Tibor Koehne, composta da Linus Rogsch, prodotta da Laurids Koehne & Tibor Koehne*
+  *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann, nonché dal film "Four rebounds to death" di Laurids Köhne & Tibor Köhne, composta da Linus Rogsch, prodotta da Laurids Köhne & Tibor Köhne*
 userPrompt: []
 ---
 Questa passeggiata è un duetto. Dai appuntamento a qualcuno davanti a un supermercato. Per assicurarvi di ascoltare le tracce audio in maniera sincronizzata, attivate la modalità ‘Non disturbare’. Diversamente dalla modalità aereo, vi permetterà di mantenere la connessione internet.
