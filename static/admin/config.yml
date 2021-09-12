@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
-  branch: content-staging
+  branch: api-v1
 # backend:
 #   name: proxy
 #   proxy_url: http://localhost:8081/api/v1
 #   branch: content
 
-site_url: https://content-staging--the-walks.netlify.app/admin/
+site_url: https://api-v1--the-walks.netlify.app/admin/
 media_folder: /static/medias/
 editor:
   preview: false
