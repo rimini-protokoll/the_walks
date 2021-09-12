@@ -3,7 +3,8 @@ const exec = require('child_process').exec;
 
 
 module.exports = {
-  target:'node',
+  target: 'node',
+  mode: 'none',
   entry: [
     './src/main.js'
   ],
@@ -19,9 +20,6 @@ module.exports = {
     alias: {
       'static': path.resolve(__dirname, 'static/')
     },
-  },
-  optimization: {
-    minimize: false,
   },
   plugins: [
     {
