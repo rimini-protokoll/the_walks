@@ -27,7 +27,7 @@ module.exports = {
     {
       apply: (compiler) => {
         compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-          exec('rm -rf api && time node ./dist/main.js', (err, stdout, stderr) => {
+          exec('rm -rf api && node ./dist/main.js', (err, stdout, stderr) => {
             if (stdout) process.stdout.write(stdout);
             if (stderr) process.stderr.write(stderr);
           });
