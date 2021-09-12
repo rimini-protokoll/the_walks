@@ -1,0 +1,9 @@
+[build]
+  command = "yarn build"
+  publish = "api"
+
+[dev]
+  command = "yarn serve"
+  targetPort = 8080
+  framework = "#custom"
+  publish = "api"

@@ -1,0 +1,31 @@
+{
+  "name": "@the_walks/content",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rimini-protokoll/the_walks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rimini-protokoll/the_walks/issues"
+  },
+  "homepage": "https://github.com/rimini-protokoll/the_walks#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "gray-matter-loader": "^0.0.10",
+    "ncp": "^2.0.0",
+    "webpack": "4",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.0"
+  }
+}
