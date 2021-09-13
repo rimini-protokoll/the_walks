@@ -1,11 +1,11 @@
 ---
+twoPerson: false
+popups: []
 id: ChaiJ0yo
 listed: true
 language: de
 shortTitle: Friedhof
 title: Friedhof
-twoPerson: false
-popups: []
 penPaper: false
 duration: ~ 30 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo.mp3?alt=media&token=35f0a775-19ce-47eb-abde-5809c7fee3c6
@@ -35,7 +35,7 @@ userPrompt:
         action: continue
   - title: Foto machen und fortfahren oder ohne Foto fortfahren.
     triggerTime: 800
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ChaiJ0yo%2Fen_ChaiJ0yo_loop_3.mp3?alt=media&token=94279463-9d0c-4ef4-96cd-e4ca88d70bc5
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_3.mp3?alt=media&token=b4c8e675-6388-4320-b404-272956d57f7e
     actions:
       - title: Foto machen
         action: picture
