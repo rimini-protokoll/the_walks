@@ -1,11 +1,7 @@
-local_backend: true
+# local_backend: true
 backend:
   name: git-gateway
   branch: api-v1
-# backend:
-#   name: proxy
-#   proxy_url: http://localhost:8081/api/v1
-#   branch: content
 
 site_url: https://api-v1--the-walks.netlify.app/admin/
 media_folder: /static/medias/
