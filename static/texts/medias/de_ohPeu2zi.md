@@ -12,14 +12,14 @@ duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi.mp3?alt=media&token=61fedcc9-aad0-447c-b9ee-eef38eeaf712
 iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
-  Expert*innen / Mitwirkende*
+  Expert\*innen / Mitwirkende
 
-  Mitarbeiterinnen von Barcelona Cicle de l’Aigua
+  *Mitarbeiterinnen von Barcelona Cicle de l’Aigua*
 
 
-  Sprecher*innen\
+  Sprecher\*innen\
 
-  Christiane Hommelsheim, Daniel Wetzel
+  *Christiane Hommelsheim, Daniel Wetzel*
 
 
   Komposition / Mischung
@@ -29,7 +29,7 @@ credits: >-
 
   Danke an
 
-  Enric Tello und die Kolleginnen von Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber und Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+  *Enric Tello und die Kolleg\*innen von Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber und Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
 userPrompt:
   - title: Aktiviere dann den nächsten Track.
     triggerTime: 90
