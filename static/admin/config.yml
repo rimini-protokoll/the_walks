@@ -1,3 +1,4 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: api-v1
@@ -123,6 +124,10 @@ collections:
       - label: Credits
         name: credits
         widget: markdown
+        required: false
+      - label: User Images
+        name: userImages
+        widget: userImages
         required: false
       - label: User Prompts
         name: userPrompt
