@@ -22,7 +22,7 @@ credits: |-
   *Ant Hampton*
 userPrompt:
   - title: Take a photo and continue or continue without photo.
-    triggerTime: 1141
+    triggerTime: 1143
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
     actions:
       - title: Take photo
