@@ -1,11 +1,11 @@
 ---
-twoPerson: false
-popups: []
 id: Apheek3e
 listed: true
 language: de
 shortTitle: Straße
 title: Straße
+twoPerson: false
+popups: []
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
 iconUri: https://the-walks.netlify.app/icons/Strasse.png
@@ -23,7 +23,7 @@ credits: |-
   *Ant Hampton*
 userPrompt:
   - title: Foto machen und fortfahren oder ohne Foto fortfahren.
-    triggerTime: 1141
+    triggerTime: 1142
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
     actions:
       - title: Foto machen
