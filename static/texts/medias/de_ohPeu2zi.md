@@ -1,12 +1,12 @@
 ---
-twoPerson: false
-popups: []
 id: ohPeu2zi
 listed: true
 language: de
 shortTitle: Wasser
 preTitle: Am
 title: Wasser
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 25 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ohPeu2zi%2Fde_ohPeu2zi.mp3?alt=media&token=61fedcc9-aad0-447c-b9ee-eef38eeaf712
@@ -24,7 +24,7 @@ credits: >-
 
   Komposition / Mischung
 
-  Rimini Protokoll sowie Anton Rose & Thomas Mielmann
+  *Rimini Protokoll sowie Anton Rose & Thomas Mielmann*
 
 
   Danke an
