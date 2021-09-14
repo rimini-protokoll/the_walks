@@ -1,7 +1,7 @@
 ---
 popups: []
 id: ooZohb7c
-listed: true
+listed: false
 language: de
 shortTitle: B
 title: Supermarkt B
