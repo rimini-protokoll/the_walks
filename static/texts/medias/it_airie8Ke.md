@@ -20,7 +20,7 @@ userPrompt:
       - title: Nessuna foto
         action: continue
   - title: Fare una foto e proseguire oppure proseguire senza foto.
-    triggerTime: 958
+    triggerTime: 959
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ahvo7Cee%2Fit_ahvo7Cee_loop_2.mp3?alt=media&token=0c1806f2-b99d-488e-987b-d9e38fbcdd14
     actions:
       - title: Fare una foto
