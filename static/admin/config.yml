@@ -11,15 +11,6 @@ show_preview_links: false
 
 
 collections:
-  - name: userActions
-    label: "User Actions"
-    folder: static/actions/
-    slug: name
-    hide: true
-    fields:
-      - {label: Label, name: label, widget: string}
-      - {label: Name, name: name, widget: string}
-      - {label: Description, name: description, widget: string}
   - name: languages
     label: "Languages"
     folder: static/texts/
@@ -61,13 +52,17 @@ collections:
     identifier_field: id
     summary: "{{language}} {{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
     fields:
+      - label: Walk icon
+        name: iconUri
+        widget: image
+        required: false
+        media_library:
+          config:
+            multiple: false
+            media_folder: /static/icons
       - label: Id
         name: id
         widget: string
-      - label: Listed
-        name: listed
-        widget: boolean
-        default: true
       - label: Language
         name: language
         widget: relation
@@ -93,6 +88,10 @@ collections:
         name: body
         widget: markdown
         required: false
+      - label: Credits
+        name: credits
+        widget: markdown
+        required: false
       - label: Two person
         name: twoPerson
         widget: boolean
@@ -105,31 +104,19 @@ collections:
         name: duration
         widget: string
         required: false
+      - label: Listed
+        name: listed
+        widget: boolean
+        default: true
       - label: Audio File
         name: srcUri
-        widget: string
-        required: false
-      - label: Walk icon
-        name: iconUri
-        widget: image
-        required: false
-        media_library:
-          config:
-            multiple: false
-            media_folder: /static/icons
-      - label: Credits
-        name: credits
-        widget: markdown
-        required: false
-      - label: User Images
-        name: userImages
-        widget: userImages
-        required: false
+        widget: firebaseFile
       - label: User Prompts
         name: userPrompt
         widget: list
         required: false
-        collapsed: false
+        collapsed: true
+        add_to_top: true
         fields:
           - label: Title
             name: title
@@ -139,7 +126,7 @@ collections:
             widget: number
           - label: Loop Audio File
             name: srcUri
-            widget: string
+            widget: firebaseFile
           - label: Actions
             name: actions
             widget: list
@@ -163,6 +150,10 @@ collections:
                 search_fields: ["label", "name", "description"]
                 display_fields: ["{{label}} - {{description}}"]
                 required: false
+      - label: User Images
+        name: userImages
+        widget: userImages
+        required: false
   - name: news-index
     label: "News Index"
     folder: static/
@@ -254,4 +245,31 @@ collections:
       - label: "Body"
         name: body
         widget: markdown
-
+  - name: userActions
+    label: "User Actions"
+    folder: static/actions/
+    slug: name
+    hide: true
+    fields:
+      - {label: Label, name: label, widget: string}
+      - {label: Name, name: name, widget: string}
+      - {label: Description, name: description, widget: string}
+  - name: userImages
+    label: User Images
+    folder: static/userImages
+    summary: "User Images"
+    create: false
+    slug: "index"
+    hide: true
+    fields:
+      - name: title
+        hide: true
+        widget: string
+      - label: Walks
+        name: walks
+        widget: list
+        allow_add: false
+        fields:
+          - label: Walk
+            name: walk
+            widget: userImages
