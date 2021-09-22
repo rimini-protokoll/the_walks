@@ -1,15 +1,11 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 id: bee5Zah7
-listed: true
 language: fr
 shortTitle: Départ
 title: Départ,
 afterTitle: c’est parti!
-penPaper: true
-duration: ~ 16 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_bee5Zah7%2Ffr_bee5Zah7.mp3?alt=media&token=6cd2fe63-aed6-4b53-ac82-42b941a1e46d
-iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 credits: |-
   Narrateur
   *Max Lechat*
@@ -19,6 +15,10 @@ credits: |-
 
   Merci à
   *Barbara Morgenstern, Aljoscha Begrich*
+penPaper: true
+duration: ~ 16 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_bee5Zah7%2FWalk_7__AUFBRUCH__FRZ_19_9.mp3?alt=media&token=0167d9c8-4055-4f91-92e1-3d186655f248
 userPrompt:
   - title: |-
       Oui, je suis prêt. 
