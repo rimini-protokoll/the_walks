@@ -182,7 +182,7 @@ collections:
     create: true
     media_folder: /static/news/media/
     identifier_field: id
-    slug: id
+    slug: "{{id}}"
     fields:
       - {label: "Id", name: "id", widget: "string"}
       - label: "Title"
