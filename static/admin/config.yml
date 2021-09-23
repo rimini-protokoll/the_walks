@@ -188,6 +188,7 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
+        required: false
       - label: "Place"
         name: "place"
         widget: "string"
@@ -195,12 +196,15 @@ collections:
       - label: "Language"
         name: "language"
         widget: "string"
+        required: false
       - label: "Date"
         name: "date"
         widget: "string"
+        required: false
       - label: "Link"
         name: "linkUri"
         widget: "string"
+        required: false
   - name: imprint
     identifier_field: languageCode
     label: Imprint
