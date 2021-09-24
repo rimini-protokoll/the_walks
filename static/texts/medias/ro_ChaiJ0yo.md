@@ -1,21 +1,21 @@
 ---
 twoPerson: false
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 id: ChaiJ0yo
-listed: true
 language: ro
 shortTitle: Cimitir
 title: Cimitir
-penPaper: false
-duration: ~ 30 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo.mp3?alt=media&token=35f0a775-19ce-47eb-abde-5809c7fee3c6
-iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 credits: |-
   Voci
   *Nicoleta Lefter*
 
   Compozitor
   *Frank Böhle*
+penPaper: false
+duration: ~ 30 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_ChaiJ0yo%2Fwalk_5_graveyard__RO__.mp3?alt=media&token=1ebcf146-983a-41b2-8f90-f17de6db72f4
 userPrompt:
   - title: |-
       Sarcina ta e să cauți oameni vii.
@@ -35,7 +35,7 @@ userPrompt:
         action: continue
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 800
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_3.mp3?alt=media&token=b4c8e675-6388-4320-b404-272956d57f7e
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_ChaiJ0yo%2Fwalk_5_Loop-FOTO__RO__13_20min_.mp3?alt=media&token=54b30fe2-e36e-4fb7-9d81-fb616cb11b11
     actions:
       - title: Fotografiază
         action: picture
