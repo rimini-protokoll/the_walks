@@ -1,0 +1,62 @@
+---
+id: siQu3iex
+listed: true
+language: ro
+shortTitle: Sens giratoriu
+preTitle: În senul
+title: giratoriu
+twoPerson: false
+popups: []
+duration: ~ 20 Min
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex.mp3?alt=media&token=f1069f05-3d13-4d87-a4e6-7866eb6dabbb
+iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
+credits: |-
+  Expert*in
+  *Erdem Gunduz*
+
+  Sprecher*in
+  *Kamran Sorusch*
+
+  Komposition\
+  *Frank Böhle*
+
+  Danke an
+  *Jannis Grimm (Institut für Protest und Bewegungsforschung)*
+userPrompt:
+  - title: |-
+      Fă o fotografie și continuă sau continuă fără fotografie.
+    triggerTime: 381
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_1.mp3?alt=media&token=108baec2-420c-4710-bec0-4598ffd48b0d
+    actions:
+      - title: Fotografiază
+        action: picture
+        postAction: continue
+      - title: Nu fotografia
+        action: continue
+  - title: |-
+      Da, am ajuns. Putem să continuăm.
+    triggerTime: 545
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_2.mp3?alt=media&token=b978b083-8eaa-49e9-8334-c8f614055dc8
+    actions:
+      - title: Continuă
+        action: continue
+  - title: |-
+      Fă o fotografie și continuă sau continuă fără fotografie.
+    triggerTime: 1057
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_3.mp3?alt=media&token=a22170b8-94e3-45d5-af9a-0a4e9da283d8
+    actions:
+      - title: Fotografiază
+        action: picture
+        postAction: continue
+      - title: Nu fotografia
+        action: continue
+  - title: Mai departe către galerie
+    triggerTime: 1066
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
+    actions:
+      - title: Galerie
+        action: map
+      - title: Nu
+        action: continue
+---
+Această plimbare începe într-un sens giratoriu. Un loc în care totul se învârte și se află în mișcare. Locul potrivit pentru o revoluție? Câte sensuri giratorii există în proximitatea ta? Și ce se întâmplă dacă mișcarea aceasta este oprită dintr-o dată? Caută un sens giratoriu și începe plimbarea, imediat ce ai ajuns în el.
