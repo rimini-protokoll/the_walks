@@ -1,28 +1,30 @@
 ---
+twoPerson: false
+popups: []
+iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 id: siQu3iex
-listed: true
 language: ro
 shortTitle: Sens giratoriu
 preTitle: În senul
 title: giratoriu
-twoPerson: false
-popups: []
-duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex.mp3?alt=media&token=f1069f05-3d13-4d87-a4e6-7866eb6dabbb
-iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 credits: |-
   Experți / colaboratori
   *Erdem Gunduz*
+
   Voci
   *Nicholas Cațianis*
+
   Compozitor
   *Frank Böhle*
+
   Mulțumiri
   *Jannis Grimm*
   *Institutul pentru cercetarea protestelor și mișcărilor sociale*
+duration: ~ 20 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_siQu3iex%2Fwalk_4_RO_17.9..mp3?alt=media&token=6ec8b345-bb8c-4e4e-bd2d-19dd529bb1a1
 userPrompt:
-  - title: |-
-      Fă o fotografie și continuă sau continuă fără fotografie.
+  - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 381
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_1.mp3?alt=media&token=108baec2-420c-4710-bec0-4598ffd48b0d
     actions:
@@ -31,15 +33,13 @@ userPrompt:
         postAction: continue
       - title: Nu fotografia
         action: continue
-  - title: |-
-      Da, am ajuns. Putem să continuăm.
+  - title: Da, am ajuns. Putem să continuăm.
     triggerTime: 545
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_2.mp3?alt=media&token=b978b083-8eaa-49e9-8334-c8f614055dc8
     actions:
       - title: Continuă
         action: continue
-  - title: |-
-      Fă o fotografie și continuă sau continuă fără fotografie.
+  - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 1057
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex_loop_3.mp3?alt=media&token=a22170b8-94e3-45d5-af9a-0a4e9da283d8
     actions:
