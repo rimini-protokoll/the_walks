@@ -1,17 +1,17 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 id: thie3IVu
-listed: false
 language: ro
 shortTitle: A
 title: Supermarket A
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_thie3IVu.mp3?alt=media&token=00568ce1-249c-4df9-b78c-e9745f4cdacd
-iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
+listed: false
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_thie3IVu%2Fwalk_9_Supermarkt_RO_A_.mp3?alt=media&token=e120aa35-f06e-44b6-af6b-d7006927e1ba
 userPrompt:
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 645
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_uma9ooK4_loop_1.mp3?alt=media&token=e2eeee6c-c6e8-4432-8e07-228bdecf0ec6
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_thie3IVu%2Fwalk_9_Supermarkt_RO__LOOP_%2010_45min.mp3?alt=media&token=72b7b938-f928-46aa-b047-fda5bcd23d02
     actions:
       - title: Fotografiază
         action: picture
