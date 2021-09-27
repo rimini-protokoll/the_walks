@@ -1,16 +1,12 @@
 ---
+twoPerson: false
+popups: []
+iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 id: bee5Zah7
-listed: true
 language: ro
 shortTitle: Pornim la drum
 title: Pornim la drum.
 afterTitle: Hai, să mergem!
-twoPerson: false
-popups: []
-penPaper: true
-duration: ~ 16 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7.mp3?alt=media&token=3c1b438f-00e3-44eb-b400-352aa2f0ee44
-iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 credits: |-
   Voci
   *Maria Bărbulescu*
@@ -20,6 +16,10 @@ credits: |-
 
   Mulțumiri
   *Barbara Morgenstern, Aljoscha Begrich*
+penPaper: true
+duration: ~ 16 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_bee5Zah7%2FWalk_7__AUFBRUCH__RO_.mp3?alt=media&token=58983886-97bb-4a94-b8b9-b63f114ac7a1
 userPrompt:
   - title: Da – sunt gata. Să mergem!
     triggerTime: 72
