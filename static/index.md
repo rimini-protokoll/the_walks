@@ -13,4 +13,7 @@ languages:
 - title: Italiano
   languageCode: it
   language: italy
+- title: Română
+  languageCode: ro
+  language: romania
 ---
