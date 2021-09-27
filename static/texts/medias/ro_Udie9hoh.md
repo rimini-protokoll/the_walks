@@ -1,7 +1,7 @@
 ---
 id: Udie9hoh
 listed: true
-language: de
+language: ro
 shortTitle: Semafor
 preTitle: Plimbare cu
 title: Steff
