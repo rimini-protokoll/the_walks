@@ -18,7 +18,7 @@ credits: |-
 penPaper: true
 duration: ~ 16 Min
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_bee5Zah7%2FWalk_7__AUFBRUCH__FRZ_19_9.mp3?alt=media&token=0167d9c8-4055-4f91-92e1-3d186655f248
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_bee5Zah7%2FWalk_7__AUFBRUCH__FRZ_19_9.mp3?alt=media&token=af76940a-64bf-483d-9be0-c36f77d8e25a
 userPrompt:
   - title: |-
       Oui, je suis prêt. 
