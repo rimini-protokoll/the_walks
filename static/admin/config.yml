@@ -17,6 +17,7 @@ collections:
     slug: languageCode
     identifier_field: languageCode
     media_folder: /static/medias/
+    create: true
     fields:
       - label: Id
         name: id
