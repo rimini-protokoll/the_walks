@@ -1,28 +1,28 @@
 ---
+twoPerson: false
+popups: []
+iconUri: https://the-walks.netlify.app/icons/Ampel.png
 id: Udie9hoh
-listed: true
 language: ro
 shortTitle: Semafor
 preTitle: Plimbare cu
 title: Steff
-twoPerson: false
-popups: []
-duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh.mp3?alt=media&token=75603db2-b189-4fec-935c-1a4b1bdcab9f
-iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
   Experți / colaboratori
   *Stephanie Haug*
-  
+
   Voci
   *Carmen Ghiurco, Georgia Măciuceanu*
 
   Compozitor
   *Rimini Protokoll*
+duration: ~ 20 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_Udie9hoh%2Fwalk_3_traffic-light_RO_.mp3?alt=media&token=320113a6-d11c-4863-9635-a218fc23451e
 userPrompt:
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 114
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh_loop_1.mp3?alt=media&token=91db6ba4-7f54-4086-af67-935a2a27cfe9
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_Udie9hoh%2Fwalk_3_LOOP__RO__1_54_613min.mp3?alt=media&token=9e4a5622-4be8-484f-a099-88a2780fc2c2
     actions:
       - title: Fotografiază
         action: picture
