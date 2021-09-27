@@ -6,14 +6,13 @@ shortTitle: Supermarkt
 preTitle: Duett im
 title: Supermarkt
 credits: >-
-  Expert*inAntonio Tagliarini
+  Expert\*in
+  *Antonio Tagliarini*
 
-
-  Sprecher*inTimur Isik
-
+  Sprecher\*in
+  *Timur Isik*
 
   Komposition
-
   *Rimini Protokoll unter Verwendung von Musik von Anton Rose & Thomas Mielmann sowie aus dem Film “Four rebounds to death” von Laurids Köhne & Tibor Köhne, komponiert von Linus Rogsch, produziert von Laurids Köhne & Tibor Köhne*
 twoPerson: true
 popups: []
