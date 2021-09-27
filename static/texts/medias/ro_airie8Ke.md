@@ -1,18 +1,18 @@
 ---
 twoPerson: true
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Park.png
 id: airie8Ke
-listed: false
 language: ro
 shortTitle: B
 title: Parc B
 duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ahvo7Cee%2Fde_airie8Ke.mp3?alt=media&token=5047e4dd-7c06-470c-b445-12e53ded9446
-iconUri: https://the-walks.netlify.app/icons/Park.png
+listed: false
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fwalk_8_PARK__RO__B__.mp3?alt=media&token=af0142b7-e969-45cc-ac10-478b5e1f41df
 userPrompt:
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 786
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ahvo7Cee%2Fde_ahvo7Cee_loop_1.mp3?alt=media&token=7a551962-46cb-43f4-a172-70036f06cce9
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fwalk_8_PARK__Loop_Foto__RO__13_06min_.mp3?alt=media&token=a9267452-7478-49e0-8e5e-5a75b29e6ce7
     actions:
       - title: Fotografiază
         action: picture
@@ -21,7 +21,7 @@ userPrompt:
         action: continue
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 992
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ahvo7Cee%2Fde_ahvo7Cee_loop_2.mp3?alt=media&token=8804115a-8015-44dd-b74d-86529859400a
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fwalk_8_Loop_Foto_2_RO_16_31_865min_.mp3?alt=media&token=7ba9c72f-7fb6-4b28-a558-18fc7f050680
     actions:
       - title: Fotografiază
         action: picture
