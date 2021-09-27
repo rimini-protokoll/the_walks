@@ -11,17 +11,15 @@ duration: ~ 20 Min
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fde_siQu3iex.mp3?alt=media&token=f1069f05-3d13-4d87-a4e6-7866eb6dabbb
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 credits: |-
-  Expert*in
+  Experți / colaboratori
   *Erdem Gunduz*
-
-  Sprecher*in
-  *Kamran Sorusch*
-
-  Komposition\
+  Voci
+  *Nicholas Cațianis*
+  Compozitor
   *Frank Böhle*
-
-  Danke an
-  *Jannis Grimm (Institut für Protest und Bewegungsforschung)*
+  Mulțumiri
+  *Jannis Grimm*
+  *Institutul pentru cercetarea protestelor și mișcărilor sociale*
 userPrompt:
   - title: |-
       Fă o fotografie și continuă sau continuă fără fotografie.
