@@ -1,14 +1,11 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 id: siQu3iex
-listed: true
 language: en
 shortTitle: Roundabout
 preTitle: Around a
 title: Roundabout
-duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_siQu3iex%2Fen_siQu3iex.mp3?alt=media&token=257bd656-0a3f-4cc9-a787-ebee8f139a41
-iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 credits: |-
   Expert / Contributor
   *Erdem Gunduz*
@@ -21,6 +18,9 @@ credits: |-
 
   Thank you
   *Jannis Grimm (Institute for the Study of Protest and Social Movements)*
+duration: ~ 20 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fen_siQu3iex%2Fwalk_4_ENG_17.9..mp3?alt=media&token=e37b94bc-4c73-49f8-8749-7684e24cce8c
 userPrompt:
   - title: Take a photo and continue or continue without photo.
     triggerTime: 381
