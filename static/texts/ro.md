@@ -17,6 +17,21 @@ credits: >
   *Steffen Klaue, Alexander Morosow*
 
 
+  Coordonare artistică & editare audio
+
+  *Vlaicu Golcea*
+
+
+  Asistent coordonare artistică
+
+  *Carmen Ghiurco*
+
+
+  Regie tehnică & înregistrare voci
+
+  *Alexandru Andrei (RO), Rimini Protokoll, studio lärm și Lorenz Rollhäuser*
+
+
   Sounddesign / mix
 
   *Frank Böhle*
@@ -29,12 +44,7 @@ credits: >
 
   Grafică
 
-  *Ilona Marti*
-
-
-  Înregistrare voci
-
-  *Rimini Protokoll, studio lärm și Lorenz Rollhäuser*
+  *Ilona Marti, Mihai Păcurar (RO)*
 
 
   Coordonare producție
@@ -54,7 +64,7 @@ credits: >
 
   Traducere
 
-  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata), Ondine Cristina Dascălița & Adina Olaru (RO)*
 
 
   Experți / colaboratori
@@ -67,9 +77,9 @@ credits: >
   *Cătălina Bălălău, Maria Bărbulescu, Bente Bausum, Melanie Baxter-Jones, Vlad Bîrzanu, Rosario Bona, Lena Bruun Bondeson, Lène Calvez, Nicholas Cațianis, Maïmouna Coulibaly, Luisa Devins, Paul Dunca/Paula Dunker, Noa Eleodori, Paolo Eleodori, Carmen Ghiurco, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Nicoleta Lefter, Joshua Lerner, Daniela Lucato, Georgia Măciuceanu, Steve Mekoudja, Conrad Mericoffer, Mela Mihai, Lara-Sophie Milagro, Gabriela Pîrlițeanu, Alina Rotaru, Silvia Sassetti, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
-  Documentare/trailer
+  Documentare / trailer
 
-  *Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+  *Expander Film (Stefan Korsinsky, Lilli Kuschel), Bogdan Botofei & Alina Calotă (RO)*
 
 
   Mulțumiri
