@@ -94,6 +94,11 @@ credits: >
   *creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.*
 
   *Sprijinit de Fonds Darstellende Künste, cu fonduri de la Departamentul Guvernamental Federal pentru Cultură și Mass-Media, platforma Kulturpolitische Gesellschaft e.V. și Departamentul pentru Cultură și Europa al Senatului.*
+
+
+  În parteneriat cu
+
+  *Goethe Institut Bucharest*
 medias:
   - ro_bee5Zah7
   - ro_ahvo7Cee
