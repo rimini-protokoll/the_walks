@@ -8,13 +8,24 @@ shortTitle: Apă
 preTitle: Pe malul
 title: apei
 credits: >-
-  Experți / colaboratori *Colaborare cu Barcelona Cicle de l’Aigua*
+  Experți / colaboratori
 
-  Voci *Cătălina Bălălău, Conrad Mericoffer*
+  *Colaborare cu Barcelona Cicle de l’Aigua*
 
-  Compozitor *Rimini Protokoll*
 
-  Mulțumiri *Enric Tello und den Kolleg:innen vom Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber și Gustavo Ramon Wilhelmi*
+  Voci
+
+  *Cătălina Bălălău, Conrad Mericoffer*
+
+
+  Compozitor
+
+  *Rimini Protokoll*
+
+
+  Mulțumiri
+
+  *Enric Tello und den Kolleg:innen vom Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber și Gustavo Ramon Wilhelmi*
 penPaper: false
 duration: ~ 25 Min
 listed: true
