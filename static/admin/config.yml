@@ -51,7 +51,8 @@ collections:
     folder: static/texts/medias/
     slug: "{{language}}_{{id}}"
     identifier_field: id
-    summary: "{{language}} {{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
+    summary: "{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
+    create: true
     fields:
       - label: Walk icon
         name: iconUri
