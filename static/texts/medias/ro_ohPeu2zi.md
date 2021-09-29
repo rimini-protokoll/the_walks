@@ -1,6 +1,4 @@
 ---
-twoPerson: false
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Wasser.png
 id: ohPeu2zi
 language: ro
@@ -26,6 +24,8 @@ credits: >-
   Mulțumiri
 
   *Enric Tello und den Kolleg:innen vom Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber și Gustavo Ramon Wilhelmi*
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 25 Min
 listed: true
@@ -61,7 +61,7 @@ userPrompt:
         postAction: continue
       - title: Nu fotografia
         action: continue
-  - title: Dacă nu vrei să mai asculți, apasă SF RȘIT.
+  - title: Dacă nu vrei să mai asculți, apasă SFÂRȘIT.
     triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_ohPeu2zi%2Fwalk_6_RO_Loop5_21Min41Sec.mp3?alt=media&token=c826af8b-85d3-4b2c-a074-79a316a06e6c
     actions:
