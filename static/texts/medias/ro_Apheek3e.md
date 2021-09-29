@@ -23,7 +23,7 @@ listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_Apheek3e%2Fwalk_2_Street_RO__22_09.mp3?alt=media&token=a06280ed-1541-4750-a196-e25d110f0f40
 userPrompt:
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
-    triggerTime: 1143
+    triggerTime: 1144
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
     actions:
       - title: Fotografiază
