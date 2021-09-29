@@ -35,13 +35,13 @@ userPrompt:
     triggerTime: 90
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_ohPeu2zi%2Fwalk_6_RO_Loop1_01Min30Sec.mp3?alt=media&token=1a2cc822-c95e-4ca4-9ab1-aa1ab9e17250
     actions:
-      - title: Urrmătorul track
+      - title: Următorul track
         action: continue
   - title: Activează atunci când vrei al treilea track.
     triggerTime: 277
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_ohPeu2zi%2Fwalk_6_RO_Loop2_04Min37.Sec.mp3?alt=media&token=d6b12706-9e53-44f3-99af-085f8041f172
     actions:
-      - title: Urrmătorul track
+      - title: Următorul track
         action: continue
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 1105
