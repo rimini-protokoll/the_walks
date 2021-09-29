@@ -1,6 +1,4 @@
 ---
-twoPerson: false
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 id: ChaiJ0yo
 language: ro
@@ -12,6 +10,8 @@ credits: |-
 
   Compozitor
   *Frank Böhle*
+twoPerson: false
+popups: []
 penPaper: false
 duration: ~ 30 Min
 listed: true
@@ -23,7 +23,7 @@ userPrompt:
     triggerTime: 384
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=7d3b45a7-12e5-4400-8c15-33886e2204a1
     actions:
-      - title: Urrmătorul track
+      - title: Următorul track
         action: continue
   - title: |-
       Continuă să mergi până când găsești mormântul potrivit.
@@ -31,7 +31,7 @@ userPrompt:
     triggerTime: 618
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_2.mp3?alt=media&token=375131c9-94b6-4097-b026-003be5056fbc
     actions:
-      - title: Urrmătorul track
+      - title: Următorul track
         action: continue
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 800
@@ -50,7 +50,7 @@ userPrompt:
     triggerTime: 832
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_4.mp3?alt=media&token=ffd6fa93-15dd-4036-bbf7-b173a7c67e9e
     actions:
-      - title: Urrmătorul track
+      - title: Următorul track
         action: continue
   - title: Mai departe către galerie
     triggerTime: 1100
