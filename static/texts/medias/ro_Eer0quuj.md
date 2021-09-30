@@ -5,7 +5,7 @@ iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 id: Eer0quuj
 language: ro
 shortTitle: Teatru
-preTitle: În fața
+preTitle: În fața
 title: unui teatru
 credits: |-
   Voci
