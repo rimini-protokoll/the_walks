@@ -1,6 +1,4 @@
 ---
-twoPerson: false
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Ampel.png
 id: Udie9hoh
 language: de
@@ -16,6 +14,8 @@ credits: |-
 
   Komposition
   *Rimini Protokoll*
+twoPerson: false
+popups: []
 duration: ~ 20 Min
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Udie9hoh%2Fde_Udie9hoh.mp3?alt=media&token=75603db2-b189-4fec-935c-1a4b1bdcab9f
@@ -30,7 +30,7 @@ userPrompt:
       - title: Kein Foto
         action: continue
   - title: Weiter zur Bildergalerie
-    triggerTime: 1002
+    triggerTime: 983
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Galerie
