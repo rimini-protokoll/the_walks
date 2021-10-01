@@ -3,7 +3,7 @@ iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 id: siQu3iex
 language: ro
 shortTitle: Sens giratoriu
-preTitle: "În sensul "
+preTitle: În sensul
 title: giratoriu
 credits: |-
   Experți / colaboratori
