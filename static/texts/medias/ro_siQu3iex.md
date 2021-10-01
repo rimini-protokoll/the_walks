@@ -1,9 +1,11 @@
 ---
+twoPerson: false
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 id: siQu3iex
 language: ro
 shortTitle: Sens giratoriu
-preTitle: În sensul
+preTitle: În sensul
 title: giratoriu
 credits: |-
   Experți / colaboratori
@@ -18,8 +20,6 @@ credits: |-
   Mulțumiri
   *Jannis Grimm*
   *Institutul pentru cercetarea protestelor și mișcărilor sociale*
-twoPerson: false
-popups: []
 duration: ~ 20 Min
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_siQu3iex%2Fwalk_4_RO_17.9..mp3?alt=media&token=6ec8b345-bb8c-4e4e-bd2d-19dd529bb1a1
