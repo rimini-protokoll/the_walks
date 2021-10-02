@@ -14,7 +14,7 @@ collections:
   - name: languages
     label: "Languages"
     folder: static/texts/
-    slug: languageCode
+    slug: "{{languageCode}}"
     identifier_field: languageCode
     media_folder: /static/medias/
     create: true
