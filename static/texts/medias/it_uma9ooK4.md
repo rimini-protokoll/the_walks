@@ -1,17 +1,10 @@
 ---
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 id: uma9ooK4
-listed: true
 language: it
 shortTitle: Supermercato
 preTitle: Duetto al
 title: Supermercato
-twoPerson: true
-popups: []
-duration: ~ 17 Min
-srcUri:
-  - it_thie3IVu
-  - it_ooZohb7c
-iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 credits: >-
   Esperti / collaboratori
 
@@ -26,12 +19,15 @@ credits: >-
   Composizione
 
   *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann, nonché dal film "Four rebounds to death" di Laurids Köhne & Tibor Köhne, composta da Linus Rogsch, prodotta da Laurids Köhne & Tibor Köhne*
+twoPerson: true
+popups: []
+duration: ~ 17 Min
+listed: true
+srcUri:
+  - it_thie3IVu
+  - it_ooZohb7c
 userPrompt: []
 ---
-Questa passeggiata è un duetto. Dai appuntamento a qualcuno davanti a un supermercato. Per assicurarvi di ascoltare le tracce audio in maniera sincronizzata, attivate la modalità ‘Non disturbare’. Diversamente dalla modalità aereo, vi permetterà di mantenere la connessione internet.
+Questa passeggiata è un duetto. Dai appuntamento a qualcuno davanti a un supermercato. 
 
-iOS → Impostazioni → Non disturbare
-
-Android → Impostazioni → Suoni e vibrazione → Non disturbare
-
-Ascolterete in contemporanea due tracce diverse. Una persona ascolterà A, l’altra B. Fate il conto alla rovescia insieme a partire da 3. A 0, inizierete le vostre passeggiate simultaneamente.
+Ascolterete in contemporanea due tracce diverse. Una persona ascolterà A, l’altra B. Per garantire la riproduzione simultanea delle tue passeggiate, seleziona l'opzione di download qui sotto.
