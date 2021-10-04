@@ -6,15 +6,11 @@ shortTitle: Supermarket
 preTitle: Duet în
 title: supermarket
 credits: >-
-  Experți / colaboratori
-  *Antonio Tagliarini*
+  Experți / colaboratori *Antonio Tagliarini*
 
-  Voci
-  *Paul Dunca / Paula Dunker*
+  Voci *Paul Dunca / Paula Dunker*
 
-  Compozitori
-  *Rimini Protokoll, incluzând muzică semnată de Anton Rose & Thomas Mielmann, precum și muzică din filmul “Four rebounds to death” de Laurids Köhne & Tibor Köhne, compusă de Linus Rogsch, producător: Laurids Köhne & Tibor Köhne.*
-
+  Compozitori *Rimini Protokoll, incluzând muzică semnată de Anton Rose & Thomas Mielmann, precum și muzică din filmul “Four rebounds to death” de Laurids Köhne & Tibor Köhne, compusă de Linus Rogsch, producător: Laurids Köhne & Tibor Köhne.*
 twoPerson: true
 popups: []
 duration: ~ 17 Min
@@ -24,11 +20,6 @@ srcUri:
   - ro_ooZohb7c
 userPrompt: []
 ---
-Acesta este un duet. Stabilește o întâlnire cu cineva în fața unui supermarket. Dacă știi engleză, își recomandăm să asculți varianta în engleză a acestei plimbări ( → Meniu → Limbă).
-Pentru a beneficia de o redare sincronizată, parcurgeți următorii pași:
+Acesta este un duet. Stabilește o întâlnire cu cineva în fața unui supermarket. 
 
-→ selectați opțiunea de descărcare de mai jos
-→ setați-vă telefoanele mobile pe modul "Nu deranjați". Nu este același lucru cu ”Modul avion” și păstrează conexiunea la internet:
-iOS → Setări → Nu deranjați/Do Not Disturb
-Android → Setări  → Sunete și vibrații → Nu deranjați
-Apoi numărați împreună de la 3 la 0 și porniți înregistrările în același timp.
+Dați cu banul și lăsați soarta să decidă cine va asculta versiunea A și cine va asculta versiunea B. Pentru a asigura redarea simultană a plimbărilor, selectați opțiunea de descărcare de mai jos.
