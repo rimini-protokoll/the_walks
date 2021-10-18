@@ -11,7 +11,8 @@ credits: |-
   *Stephanie Haug*
 
   Narradores
-  *Daniela Lucato, Simonetta Solder*
+  *María García Beato*\
+  *Maitén Charlotte Arns*
 
   Composición
   *Rimini Protokoll*
