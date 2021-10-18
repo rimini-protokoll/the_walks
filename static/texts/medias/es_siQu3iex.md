@@ -1,26 +1,26 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 id: siQu3iex
-listed: true
 language: es
 shortTitle: Rotonda
 preTitle: Alrededor de una
 title: rotonda
-duration: ~ 20 minutos
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_siQu3iex%2Fit_siQu3iex.mp3?alt=media&token=fde5056c-db11-44b0-be44-18f88e974871
-iconUri: https://the-walks.netlify.app/icons/Kreisverkehr.png
 credits: |-
   Expertos/as / Colaboradores\
   *Erdem Gunduz*
 
   Narradores\
-  *Paolo Eleodori*
+  *Ausencio Serrano Garcia​*
 
   Composición\
   *Frank Böhle*
 
   Agradecimientos a\
   *Jannis Grimm (Institute for the Study of Protest and Social Movements)*
+duration: ~ 20 minutos
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_siQu3iex%2Fit_siQu3iex.mp3?alt=media&token=fde5056c-db11-44b0-be44-18f88e974871
 userPrompt:
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 381
