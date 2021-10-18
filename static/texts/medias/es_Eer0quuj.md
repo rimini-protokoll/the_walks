@@ -1,21 +1,22 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Theater.png
 id: Eer0quuj
-listed: true
 language: es
 shortTitle: Teatro
 preTitle: Frente al
 title: teatro
-penPaper: true
-duration: ~ 20 minutos
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Eer0quuj%2Fit_Eer0quuj.mp3?alt=media&token=c1683779-08e3-4161-9559-29c4cd47b988
-iconUri: https://the-walks.netlify.app/icons/Theater.png
 credits: |-
   Narradores
-  *Daniela Lucato*
+  *Daniela Lucato*\
+  *Maitén Charlotte Arns*
 
   Composición
   *Frank Böhle*
+penPaper: true
+duration: ~ 20 minutos
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Eer0quuj%2Fit_Eer0quuj.mp3?alt=media&token=c1683779-08e3-4161-9559-29c4cd47b988
 userPrompt:
   - title: |-
       ¡Sí, llegué al destino! 
@@ -43,7 +44,7 @@ userPrompt:
         postAction: continue
       - title: Sin foto
         action: continue
-  - title: Continuar a galería 
+  - title: Continuar a galería
     triggerTime: 791
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
