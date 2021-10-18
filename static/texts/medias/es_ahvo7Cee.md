@@ -1,4 +1,6 @@
 ---
+twoPerson: true
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: ahvo7Cee
 language: es
@@ -6,12 +8,10 @@ shortTitle: Parque
 title: Parque
 credits: |-
   Narradores
-  *Silvia Sassetti*
+  *María Magdalena González Atao*
 
   Composición
   *Frank Böhle*
-twoPerson: true
-popups: []
 duration: ~ 20 minutos
 listed: true
 srcUri:
