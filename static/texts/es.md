@@ -1,6 +1,87 @@
 ---
 id: Eme5ceLi
 languageCode: es
+credits: >-
+  Texto, Dirección
+
+  *Helgard Haug, Stefan Kaegi, Daniel Wetzel*
+
+
+  Idea, Dramaturgia
+
+  *Cornelius Puschke*
+
+
+  Desarrollo de aplicación
+
+  *Steffen Klaue, Alexander Morosow*
+
+
+  Diseño de sonido / Mezcla
+
+  *Frank Böhle* 
+
+
+  Música / Composición
+
+  *Frank Böhle y otros (ver cada Walk)* 
+
+
+  Diseño gráfico
+
+  *Ilona Marti*
+
+
+  Grabaciones de voz
+
+  *Rimini Protokoll, studio lärm y Lorenz Rollhäuser*
+
+
+  Dirección de producción
+
+  *Maitén Arns* 
+
+
+  Colaboración en producción
+
+  *Steven Sander*
+
+
+  Colaboración en el desarrollo de la aplicación
+
+  *Gaétan Langlois-Meurinne*
+
+
+  Traducción
+
+  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata)*
+
+
+  Expertos/as / Colaboradores
+
+  *Erdem Gündüz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+
+
+  Narradores
+
+  *Bente Bausum, Melanie Baxter-Jones, Lena Bruun Bondeson, Lène Calvez, Maïmouna Coulibaly, Louisa Devins, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Joshua Lerner, Steve Mekoudja, Lara-Sophie Milagro, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+
+
+  Documentación/Tráiler
+
+  *Expander Film (Stefan Korsinsky, Lilli Kuschel)*
+
+
+  Agradecimientos a
+
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
+
+
+  Una producción de Rimini Apparat.
+
+  *En coproducción con creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – European Centre for the Arts, International Summer Festival Kampnagel, Zona K, Festival PERSPECTIVES.
+
+  Con el apoyo de Fonds Darstellende Künste aus Mitteln der Beauftragten der Bundesregierung für Kultur und Medien und der Senatsverwaltung für Kultur und Europa.*
 medias: []
 ---
 
