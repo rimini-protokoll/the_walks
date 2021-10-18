@@ -21,7 +21,7 @@ credits: |-
   *Ant Hampton*
 duration: ~ 25 minutos
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Apheek3e%2Fit_Apheek3e.mp3?alt=media&token=4e6cd6ff-6cb9-4dbd-8fa7-59b251ea0fb5
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Apheek3e%2Fwalk_2_Street_SP_.mp3?alt=media&token=9d1c76b6-176b-4be4-927d-44209966f12e
 userPrompt:
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 1144
