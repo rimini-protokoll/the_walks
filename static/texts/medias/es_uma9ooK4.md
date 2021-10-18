@@ -20,7 +20,7 @@ credits: >-
 
   Composición\
 
-  *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann, nonché dal film "Four rebounds to death" di Laurids Köhne & Tibor Köhne, composta da Linus Rogsch, prodotta da Laurids Köhne & Tibor Köhne*
+  *Rimini Protokoll utilizando música de Anton Rose y Thomas Mielmann, así como de la película "Four rebounds to death" de Laurids Köhne y Tibor Köhne, compuesta por Linus Rogsch, producida por: Laurids Köhne y Tibor Köhne.*
 duration: ~ 17 minutos
 listed: true
 srcUri:
