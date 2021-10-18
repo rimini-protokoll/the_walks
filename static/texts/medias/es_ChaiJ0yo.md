@@ -1,20 +1,20 @@
 ---
+twoPerson: false
+popups: []
+iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 id: ChaiJ0yo
-listed: true
 language: es
 shortTitle: Cementerio
 title: Cementerio
-twoPerson: false
-popups: []
-duration: ~ 30 minutos
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo.mp3?alt=media&token=36fd8563-cc39-441d-9c2f-f4982dc7dbbc
-iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 credits: |-
   Narradores
-  *Silvia Sassetti*
+  *Liliana Bong-Schmidt*
 
   Composición
   *Frank Böhle*
+duration: ~ 30 minutos
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo.mp3?alt=media&token=36fd8563-cc39-441d-9c2f-f4982dc7dbbc
 userPrompt:
   - title: |-
       Tarea: Buscar vivos.
@@ -24,8 +24,8 @@ userPrompt:
     actions:
       - title: Siguiente pista
         action: continue
-  - title: |-
-      Caminar hasta encontrar la tumba adecuada. Después iniciar la siguiente pista.
+  - title: Caminar hasta encontrar la tumba adecuada. Después iniciar la siguiente
+      pista.
     triggerTime: 618
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_2.mp3?alt=media&token=375131c9-94b6-4097-b026-003be5056fbc
     actions:
