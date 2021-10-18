@@ -13,6 +13,9 @@ languages:
 - title: Italiano
   languageCode: it
   language: italy
+- title: Español
+  languageCode: es
+  language: spain
 - title: Română
   languageCode: ro
   language: romania
