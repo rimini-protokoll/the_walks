@@ -18,7 +18,7 @@ credits: |-
 penPaper: true
 duration: ~ 16 minutos
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_bee5Zah7%2Fit_bee5Zah7.mp3?alt=media&token=b04001e6-c829-4cd4-930e-bc74215a0830
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_bee5Zah7%2FWalk_7__AUFBRUCH__SP_.mp3?alt=media&token=c35a74ee-9862-45ea-acd5-986baf92ecf9
 userPrompt:
   - title: Sí – estoy listo. ¡Podemos continuar!
     triggerTime: 72
