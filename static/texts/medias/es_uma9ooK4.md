@@ -1,4 +1,6 @@
 ---
+twoPerson: true
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 id: uma9ooK4
 language: es
@@ -7,17 +9,18 @@ preTitle: Dúo en el
 title: Supermercado
 credits: >-
   Expertos/as / Colaboradores\
+
   *Antonio Tagliarini*
 
 
   Narradores\
-  *Antonio Tagliarini*
+
+  *Juan Sáenz de Tejada Urruzola*
 
 
   Composición\
+
   *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann, nonché dal film "Four rebounds to death" di Laurids Köhne & Tibor Köhne, composta da Linus Rogsch, prodotta da Laurids Köhne & Tibor Köhne*
-twoPerson: true
-popups: []
 duration: ~ 17 minutos
 listed: true
 srcUri:
