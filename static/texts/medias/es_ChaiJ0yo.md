@@ -14,7 +14,7 @@ credits: |-
   *Frank Böhle*
 duration: ~ 30 minutos
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo.mp3?alt=media&token=36fd8563-cc39-441d-9c2f-f4982dc7dbbc
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ChaiJ0yo%2Fwalk_5_graveyard__SP_.mp3?alt=media&token=4fa9f686-75bf-49e0-af62-7da7d2361ef4
 userPrompt:
   - title: |-
       Tarea: Buscar vivos.
@@ -33,7 +33,7 @@ userPrompt:
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 800
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ChaiJ0yo%2Fit_ChaiJ0yo_loop_3.mp3?alt=media&token=566d6f23-5cf6-49d8-8f08-7a3f787d3fd0
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ChaiJ0yo%2Fwalk_5_Loop-FOTO__SP__13_20min_.mp3?alt=media&token=a3a238bf-d62f-4861-af9e-7ab196f22bff
     actions:
       - title: Tomar foto
         action: picture
