@@ -17,7 +17,7 @@ credits: |-
   *Frank Böhle*
 
   Agradecimientos a\
-  *Jannis Grimm (Institute for the Study of Protest and Social Movements)*
+  *Jannis Grimm, Institut für Protest und Bewegungsforschung*
 duration: ~ 20 minutos
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_siQu3iex%2Fit_siQu3iex.mp3?alt=media&token=fde5056c-db11-44b0-be44-18f88e974871
