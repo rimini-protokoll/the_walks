@@ -8,26 +8,26 @@ shortTitle: Agua
 preTitle: Un paseo por
 title: el agua
 credits: >-
-  Expertos/as / Colaboradores\ *I* \
+  Expertos/as / Colaboradores\
 
-  *colleghe e colleghi del Barcelona Cicle de l’Aigua*
+  *Mitarbeiter von Barcelona Cicle de l’Aigua*
 
 
-  Narradores\ \
+  Narradores\
 
   *María Magdalena González Atao*\
 
   *Juan Sáenz de Tejada Urruzola*
 
 
-  Composición\ \
+  Composición\
 
   *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann*
 
 
-  Agradecimientos a\ \
+  Agradecimientos a\
 
-  *Enric Tello e alle colleghe e colleghi del Barcelona Cicle de l'Aigua, in particolare Ignasi Batalle Barber e Gustavo Ramon Wilhelmi, Peter Breitenbach, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+  *Enric Tello y colegas del Barcelona Cicle de l’Aigua, en particular a Ignasi Batalle Barber y Gustavo Ramon Wilhelmi*
 penPaper: false
 duration: ~ 25 minutos
 listed: true
