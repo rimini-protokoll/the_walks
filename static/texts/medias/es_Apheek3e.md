@@ -1,25 +1,27 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Strasse.png
 id: Apheek3e
-listed: true
 language: es
 shortTitle: Calle
 title: Calle
-duration: ~ 25 minutos
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Apheek3e%2Fit_Apheek3e.mp3?alt=media&token=4e6cd6ff-6cb9-4dbd-8fa7-59b251ea0fb5
-iconUri: https://the-walks.netlify.app/icons/Strasse.png
 credits: |-
   Expertos/as / Colaboradores
   *Martin Schmitz, Katja Otto*
 
   Narradores
-  *Rosario Bona, Daniela Lucato, Simonetta Solder*
+  *María García Beato*\
+  *Juan Sáenz de Tejada Urruzola*\
+  *Maitén Charlotte Arns*
 
   Composición
   *Rimini Protokoll*
 
   Agradecimientos a
   *Ant Hampton*
+duration: ~ 25 minutos
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Apheek3e%2Fit_Apheek3e.mp3?alt=media&token=4e6cd6ff-6cb9-4dbd-8fa7-59b251ea0fb5
 userPrompt:
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 1144
