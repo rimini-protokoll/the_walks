@@ -16,7 +16,7 @@ credits: |-
 penPaper: true
 duration: ~ 20 minutos
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_Eer0quuj%2Fit_Eer0quuj.mp3?alt=media&token=c1683779-08e3-4161-9559-29c4cd47b988
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Eer0quuj%2FWalk_1_theater__SP_.mp3?alt=media&token=f02737a7-4dd7-4367-84a8-744b3f325275
 userPrompt:
   - title: |-
       ¡Sí, llegué al destino! 
