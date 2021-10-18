@@ -20,7 +20,7 @@ credits: |-
   *Jannis Grimm, Institut für Protest und Bewegungsforschung*
 duration: ~ 20 minutos
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_siQu3iex%2Fit_siQu3iex.mp3?alt=media&token=fde5056c-db11-44b0-be44-18f88e974871
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_siQu3iex%2Fwalk_4_roundabout__SP__..mp3?alt=media&token=bc09f6f7-0353-4ed3-bab8-df4cbbd2bea7
 userPrompt:
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 381
