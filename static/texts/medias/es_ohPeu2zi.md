@@ -1,31 +1,37 @@
 ---
+twoPerson: false
+popups: []
+iconUri: https://the-walks.netlify.app/icons/Wasser.png
 id: ohPeu2zi
-listed: true
 language: es
 shortTitle: Agua
 preTitle: Un paseo por
 title: el agua
-twoPerson: false
-popups: []
-penPaper: false
-duration: ~ 25 minutos
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
-iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
-  Expertos/as / Colaboradores\
-  *I colleghe e colleghi del Barcelona Cicle de l’Aigua*
+  Expertos/as / Colaboradores\ *I* \
+
+  *colleghe e colleghi del Barcelona Cicle de l’Aigua*
 
 
-  Narradores\
-  *Rosario Bona, Simonetta Solder*
+  Narradores\ \
+
+  *María Magdalena González Atao*\
+
+  *Juan Sáenz de Tejada Urruzola*
 
 
-  Composición\
+  Composición\ \
+
   *Rimini Protokoll su musiche di Anton Rose & Thomas Mielmann*
 
 
-  Agradecimientos a\
+  Agradecimientos a\ \
+
   *Enric Tello e alle colleghe e colleghi del Barcelona Cicle de l'Aigua, in particolare Ignasi Batalle Barber e Gustavo Ramon Wilhelmi, Peter Breitenbach, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+penPaper: false
+duration: ~ 25 minutos
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
 userPrompt:
   - title: Activa después la siguiente pista.
     triggerTime: 90
