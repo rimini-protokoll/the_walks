@@ -1,4 +1,4 @@
-local_backend: true
+# local_backend: true
 backend:
   name: git-gateway
   branch: api-v1
@@ -126,9 +126,6 @@ collections:
           - label: Trigger Time (seconds)
             name: triggerTime
             widget: number
-          - label: Loop Audio File
-            name: srcUri
-            widget: firebaseFile
           - label: Actions
             name: actions
             widget: list
