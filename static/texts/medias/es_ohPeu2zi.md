@@ -31,23 +31,23 @@ credits: >-
 penPaper: false
 duration: ~ 25 minutos
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ohPeu2zi%2Fwalk_6_ES.mp3?alt=media&token=e4f41765-58c0-4688-926a-87ebea17801c
 userPrompt:
   - title: Activa después la siguiente pista.
     triggerTime: 90
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_1.mp3?alt=media&token=5f4e8047-2ca7-4e3e-bcce-bb0503423400
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ohPeu2zi%2Fwalk_6_ES_LOOP1.mp3?alt=media&token=03cf37c6-c9fa-49b0-aa42-d0d4056563c9
     actions:
       - title: Siguiente pista
         action: continue
   - title: Activa cuando quieras la siguiente pista.
     triggerTime: 277
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_2.mp3?alt=media&token=64051fc3-af66-4baa-b5d0-b844a517b9d4
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ohPeu2zi%2Fwalk_6_ES_LOOP2.mp3?alt=media&token=80f3940d-dac8-41fc-a0e3-7594841ac2e2
     actions:
       - title: Siguiente pista
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 1105
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_3.mp3?alt=media&token=d3fd3443-8285-4d88-9806-4269bcedb797
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ohPeu2zi%2Fwalk_6_ES_LOOP3.mp3?alt=media&token=b7406312-4bc0-471c-8301-b05619ac4297
     actions:
       - title: Tomar foto
         action: picture
@@ -56,7 +56,7 @@ userPrompt:
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 1283
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_4.mp3?alt=media&token=7adb10bc-5d82-44de-b049-79b1bce21a18
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ohPeu2zi%2Fwalk_6_ES_LOOP4.mp3?alt=media&token=b2e4d7c6-fbec-4023-a229-613205a1e459
     actions:
       - title: Tomar foto
         action: picture
@@ -65,7 +65,7 @@ userPrompt:
         action: continue
   - title: Si quieres dejar de escuchar, oprime FIN.
     triggerTime: 1301
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi_loop_5.mp3?alt=media&token=b8e90627-a7ad-4c6a-80d9-44b61889fea3
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ohPeu2zi%2Fwalk_6_ES_LOOP5.mp3?alt=media&token=40b152f9-f849-42c2-b7d6-7f499e5f30a3
     actions:
       - title: FIN
         action: continue
