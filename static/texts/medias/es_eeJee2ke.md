@@ -1,11 +1,11 @@
 ---
-twoPerson: true
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: eeJee2ke
 language: es
 shortTitle: A
 title: Parque A
+twoPerson: true
+popups: []
 duration: ~ 20 minutos
 listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_eeJee2ke%2Fwalk_8_PARK__SP__A__.mp3?alt=media&token=44d743d6-14e5-435c-b5d5-67799bf52739
@@ -56,7 +56,7 @@ userPrompt:
       - title: Inizio
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
-    triggerTime: 787
+    triggerTime: 786
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_eeJee2ke%2Fwalk_8_PARK__Loop_Foto_1__SP__13_06min_.mp3?alt=media&token=b53d78ca-4b58-4bec-8e83-d8cff4aa04ad
     actions:
       - title: Tomar foto
@@ -65,7 +65,7 @@ userPrompt:
       - title: Sin foto
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
-    triggerTime: 959
+    triggerTime: 960
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_eeJee2ke%2Fwalk_8_Loop_Foto_2_SP_16_31_865min_.mp3?alt=media&token=5015f318-fb91-48c0-a851-eff518aeea69
     actions:
       - title: Tomar foto
