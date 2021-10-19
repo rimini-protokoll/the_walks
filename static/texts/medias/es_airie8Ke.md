@@ -65,7 +65,7 @@ userPrompt:
       - title: Sin foto
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
-    triggerTime: 960
+    triggerTime: 992
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fwalk_8_Loop_Foto_2_SP_16_31_865min_.mp3?alt=media&token=8eb21dc8-3fbf-429d-a081-cfef17d5c5ae
     actions:
       - title: Tomar foto
