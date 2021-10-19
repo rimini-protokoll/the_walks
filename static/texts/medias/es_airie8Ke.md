@@ -1,11 +1,11 @@
 ---
-twoPerson: true
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: airie8Ke
 language: es
 shortTitle: B
 title: Parque B
+twoPerson: true
+popups: []
 duration: ~ 20 minutos
 listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fwalk_8_PARK__SP__B__.mp3?alt=media&token=fe75c8d7-4f45-4ae3-b442-9a34423df739
@@ -56,7 +56,7 @@ userPrompt:
       - title: Inizio
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
-    triggerTime: 787
+    triggerTime: 786
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fwalk_8_PARK__Loop_Foto_1__SP__13_06min_.mp3?alt=media&token=6100d432-d4bb-4204-83e6-fc19900e5d45
     actions:
       - title: Tomar foto
@@ -65,7 +65,7 @@ userPrompt:
       - title: Sin foto
         action: continue
   - title: Tomar una foto y continuar o continuar sin foto.
-    triggerTime: 959
+    triggerTime: 960
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fwalk_8_Loop_Foto_2_SP_16_31_865min_.mp3?alt=media&token=8eb21dc8-3fbf-429d-a081-cfef17d5c5ae
     actions:
       - title: Tomar foto
