@@ -1,6 +1,4 @@
 ---
-twoPerson: false
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 id: ChaiJ0yo
 language: es
@@ -12,13 +10,15 @@ credits: |-
 
   Composición
   *Frank Böhle*
+twoPerson: false
+popups: []
 duration: ~ 30 minutos
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_ChaiJ0yo%2Fwalk_5_graveyard__SP_.mp3?alt=media&token=4fa9f686-75bf-49e0-af62-7da7d2361ef4
 userPrompt:
   - title: |-
       Tarea: Buscar vivos.
-      Después empezar/disparar la siguiente pista.
+      Después iniciar la siguiente pista.
     triggerTime: 384
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ChaiJ0yo%2Fde_ChaiJ0yo_loop_1.mp3?alt=media&token=7d3b45a7-12e5-4400-8c15-33886e2204a1
     actions:
