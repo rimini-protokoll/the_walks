@@ -1,4 +1,4 @@
-# local_backend: true
+local_backend: true
 backend:
   name: git-gateway
   branch: api-v1
@@ -133,6 +133,7 @@ collections:
             name: actions
             widget: list
             required: false
+            default: []
             fields:
               - label: Title
                 name: title
