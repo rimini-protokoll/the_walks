@@ -8,7 +8,6 @@ preTitle: Frente al
 title: teatro
 credits: |-
   Narradores
-  *Daniela Lucato*\
   *Maitén Charlotte Arns*
 
   Composición
