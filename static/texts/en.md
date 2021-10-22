@@ -95,7 +95,7 @@ medias:
   - en_ohPeu2zi
   - en_Apheek3e
 ---
-**The Walks 123** is an app with a collection of audio walks by Rimini Protokoll. Each walk is a short audio experience covering specific locations in your city and an invitation to rediscover and interact with your environment. 
+The Walks is an app with a collection of audio walks by Rimini Protokoll. Each walk is a short audio experience covering specific locations in your city and an invitation to rediscover and interact with your environment. 
 It only takes 20 minutes to do an audio walk. Get going whenever you want. You decide how many of the walks you’d like to do and in what order.
 The stories and soundscapes in the short audio experiences are global in scope. The Walks connects people around the world in a local experience via the fundamental human act of walking.
 
