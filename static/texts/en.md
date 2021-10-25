@@ -19,7 +19,7 @@ credits: >-
 
   Artistic coordination / audio editing
 
-  *Vlaicu Golcea*
+  *Vlaicu Golcea (RO)*
 
 
   Sounddesign / Mastering
