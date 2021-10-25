@@ -1,23 +1,27 @@
 ---
+twoPerson: false
+popups: []
+iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 id: Eer0quuj
-listed: true
 language: de
 shortTitle: Theater
 preTitle: Vor dem
 title: Theater
-twoPerson: false
-popups: []
-penPaper: true
-duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj.mp3?alt=media&token=7f363b6f-032e-4bed-9c14-2581cee96c29
-iconUri: https://the-walks.netlify.app/icons/Walk-Icon7.png
 credits: |-
   Sprecher*in
   *Alexandra Lauck*
 
   Komposition
   *Frank Böhle*
+penPaper: true
+duration: ~ 20 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj.mp3?alt=media&token=7f363b6f-032e-4bed-9c14-2581cee96c29
 userPrompt:
+  - actions: []
+    triggerTime: 10000
+    title: hljk
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Eer0quuj%2Fde_ahvo7Cee_loop_2.mp3?alt=media&token=c56aaa3a-b78a-4ff5-a7aa-f7a45d3c8ce5
   - title: Ja, ich bin am Ziel angekommen! Weiter geht’s!
     triggerTime: 632
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Eer0quuj%2Fde_Eer0quuj_loop_1.mp3?alt=media&token=d5ae65db-cdd5-4d16-974b-2337da49711d
