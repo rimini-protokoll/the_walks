@@ -64,7 +64,7 @@ credits: >
 
   Traducere
 
-  *Panthea (Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata), Ondine Cristina Dascălița & Adina Olaru (RO)*
+  *Panthea (EN/FR/IT: Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata), Ondine Cristina Dascălița & Adina Olaru (RO), Alexander Schmiedel (ES)*
 
 
   Experți / colaboratori
