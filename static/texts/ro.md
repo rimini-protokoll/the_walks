@@ -74,7 +74,7 @@ credits: >
 
   Voci
 
-  *Cătălina Bălălău, Maria Bărbulescu, Bente Bausum, Melanie Baxter-Jones, Vlad Bîrzanu, Rosario Bona, Lena Bruun Bondeson, Lène Calvez, Nicholas Cațianis, Maïmouna Coulibaly, Luisa Devins, Paul Dunca/Paula Dunker, Noa Eleodori, Paolo Eleodori, Carmen Ghiurco, Margot Gödrös, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Nicoleta Lefter, Joshua Lerner, Daniela Lucato, Georgia Măciuceanu, Steve Mekoudja, Conrad Mericoffer, Mela Mihai, Lara-Sophie Milagro, Gabriela Pîrlițeanu, Alina Rotaru, Silvia Sassetti, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+  *Dido Antonia Aquilanti, Maitén Charlotte Arns, Cătălina Bălălău, Maria Bărbulescu, Bente Bausum, Melanie Baxter-Jones, Vlad Bîrzanu, Rosario Bona, Liliana Bong-Schmidt, Lena Bruun Bondeson, Lène Calvez, Nicholas Cațianis, Maïmouna Coulibaly, Luisa Devins, Paul Dunca/Paula Dunker, Noa Eleodori, Paolo Eleodori, María García Beato, Carmen Ghiurco, Margot Gödrös, María Magdalena González Atao, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Nicoleta Lefter, Joshua Lerner, Daniela Lucato, Georgia Măciuceanu, Steve Mekoudja, Conrad Mericoffer, Mela Mihai, Lara-Sophie Milagro, Gabriela Pîrlițeanu, Alina Rotaru, Juan Sáenz de Tejada Urruzola, Silvia Sassetti, Ausencio Serrano Garcia, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
   Documentare / trailer
