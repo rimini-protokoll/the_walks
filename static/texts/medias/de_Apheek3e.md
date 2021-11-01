@@ -22,10 +22,6 @@ duration: ~ 25 Min
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e.mp3?alt=media&token=0b828c5e-1ae6-42fa-b0d4-5cff2b91c196
 userPrompt:
-  - actions: []
-    title: asdf
-    triggerTime: 123
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Apheek3e%2Fde_ahvo7Cee_loop_1.mp3?alt=media&token=32bd54f1-d783-43cf-937c-92a6d9a6b39b
   - title: Foto machen und fortfahren oder ohne Foto fortfahren.
     triggerTime: 1141
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_Apheek3e%2Fde_Apheek3e_loop_1.mp3?alt=media&token=22464db2-4fbe-4197-9dde-9115c26039e4
