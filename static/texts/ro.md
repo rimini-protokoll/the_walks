@@ -84,7 +84,7 @@ credits: >-
 
   Mulțumiri
 
-  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Gustavo Ramon Wilhelmi*
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steinert, Enric Tello, Valentin Wetzel, Gustavo Ramon Wilhelmi*
 
 
   O producție a Rimini Apparat.
