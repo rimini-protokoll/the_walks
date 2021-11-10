@@ -17,7 +17,7 @@ credits: >-
   *Steffen Klaue, Alexander Morosow*
 
 
-  Küstlerische Koordination / Audio editing
+  Künstlerische Koordination / Audio editing
 
   *Vlaicu Golcea (RO)*
 
