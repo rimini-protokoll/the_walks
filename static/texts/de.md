@@ -62,14 +62,14 @@ credits: >-
   *Panthea (EN/FR/IT: Naomi Boyce, Aurélien Foster, Anna Galt, Erica Grossi, Vivian Ia, Adrien Leroux, Lianna Mark, Samuel Petit, Yanik Riedo, Lorenzo de Sabbata), Ondine Cristina Dascălița & Adina Olaru (RO), Alexander Schmiedel (ES)*
 
 
-  Expert*innen / Mitwirkende
+  Expert*innen / Mitwirkende*
 
-  *Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+  Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
 
 
-  Sprecher*innen
+  Sprecher*innen*
 
-  *Dido Antonia Aquilanti, Maitén Charlotte Arns, Cătălina Bălălău, Maria Bărbulescu, Bente Bausum, Melanie Baxter-Jones, Vlad Bîrzanu, Rosario Bona, Liliana Bong-Schmidt, Lena Bruun Bondeson, Lène Calvez, Nicholas Cațianis, Maïmouna Coulibaly, Luisa Devins, Paul Dunca/Paula Dunker, Noa Eleodori, Paolo Eleodori, María García Beato, Carmen Ghiurco, Margot Gödrös, María Magdalena González Atao, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Nicoleta Lefter, Joshua Lerner, Daniela Lucato, Georgia Măciuceanu, Steve Mekoudja, Conrad Mericoffer, Mela Mihai, Lara-Sophie Milagro, Gabriela Pîrlițeanu, Alina Rotaru, Juan Sáenz de Tejada Urruzola, Silvia Sassetti, Ausencio Serrano Garcia, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
+  Dido Antonia Aquilanti, Maitén Charlotte Arns, Cătălina Bălălău, Maria Bărbulescu, Bente Bausum, Melanie Baxter-Jones, Vlad Bîrzanu, Rosario Bona, Liliana Bong-Schmidt, Lena Bruun Bondeson, Lène Calvez, Nicholas Cațianis, Maïmouna Coulibaly, Luisa Devins, Paul Dunca/Paula Dunker, Noa Eleodori, Paolo Eleodori, María García Beato, Carmen Ghiurco, Margot Gödrös, María Magdalena González Atao, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Nicoleta Lefter, Joshua Lerner, Daniela Lucato, Georgia Măciuceanu, Steve Mekoudja, Conrad Mericoffer, Mela Mihai, Lara-Sophie Milagro, Gabriela Pîrlițeanu, Alina Rotaru, Juan Sáenz de Tejada Urruzola, Silvia Sassetti, Ausencio Serrano Garcia, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
   Dokumentation/Trailer
@@ -82,7 +82,8 @@ credits: >-
   *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Zoï Wetzel, Gustavo Ramon Wilhelmi*
 
 
-  Eine Produktion von Rimini Apparat.
+  Eine Produktion von Rimini Apparat.\
+
 
   In Koproduktion mit creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.
 
