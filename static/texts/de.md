@@ -79,7 +79,7 @@ credits: >-
 
   Danke an
 
-  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Zoï Wetzel, Gustavo Ramon Wilhelmi*
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steinert, Enric Tello, Valentin Wetzel, Zoï Wetzel, Gustavo Ramon Wilhelmi*
 
 
   Eine Produktion von Rimini Apparat.
