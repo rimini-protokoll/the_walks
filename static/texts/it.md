@@ -82,9 +82,8 @@ credits: >-
   *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Peter Breitenbach, Andreas Fischbach, Jannis Grimm (Institute for the Study of Protest and Social Movements), Ant Hampton, Lilli Kuschel, Dima Levytskyi, Jan Meuel, Barbara Morgenstern, Niki Neecke (Jardin Sonore), Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Zoï Wetzel, Gustavo Ramon Wilhelmi*
 
 
-  Una produzione di Rimini Apparat.\
+  Una produzione di Rimini Apparat
 
-  \
 
   In coproduzione con creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – European Centre for the Arts, International Summer Festival Kampnagel, Zona K, Festival PERSPECTIVES.
 
