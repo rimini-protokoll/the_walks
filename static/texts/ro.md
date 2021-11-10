@@ -1,7 +1,7 @@
 ---
 id: gai9Azee
 languageCode: ro
-credits: >
+credits: >-
   Text, regie
 
   *Helgard Haug, Stefan Kaegi, Daniel Wetzel*
@@ -84,21 +84,19 @@ credits: >
 
   Mulțumiri
 
-  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, SA, Gustavo Ramon Wilhelmi*
-   
+  *Barcelona Cicle de l’Aigua, Milagro Alvarez, Ignasi Batalle Barber, Aljoscha Begrich, Andreas Fischbach, Jannis Grimm (Institut für Protest und Bewegungsforschung), Ant Hampton, Lilli Kuschel, Jan Meuel, Barbara Morgenstern, Ricardo Sarmiento, Hilla Steiner, Enric Tello, Valentin Wetzel, Gustavo Ramon Wilhelmi*
+
+
   O producție a Rimini Apparat.
 
 
-  În co-producție cu
-
-  *creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.*
-
-  *Sprijinit de Fonds Darstellende Künste, cu fonduri de la Departamentul Guvernamental Federal pentru Cultură și Mass-Media, platforma Kulturpolitische Gesellschaft e.V. și Departamentul pentru Cultură și Europa al Senatului.*
+  În co-producție cu creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – Europäisches Zentrum der Künste, Internationales Sommerfestival Kampnagel, Zona K, Festival PERSPECTIVES.
 
 
-  În parteneriat cu
+  Sprijinit de Fonds Darstellende Künste, cu fonduri de la Departamentul Guvernamental Federal pentru Cultură și Mass-Media, platforma Kulturpolitische Gesellschaft e.V. și Departamentul pentru Cultură și Europa al Senatului.
 
-  *Goethe Institut Bucharest*
+
+  În parteneriat cu Goethe Institut Bucharest.
 medias:
   - ro_bee5Zah7
   - ro_ahvo7Cee
