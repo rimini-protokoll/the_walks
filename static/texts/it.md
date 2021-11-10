@@ -84,6 +84,8 @@ credits: >-
 
   Una produzione di Rimini Apparat.\
 
+  \
+
   In coproduzione con creart / Teatrelli, BorderLight – International Theatre + Fringe Festival Cleveland, European Forum Alpbach, Fondazione Armonie d’Arte, HAU – Hebbel am Ufer, Hellerau – European Centre for the Arts, International Summer Festival Kampnagel, Zona K, Festival PERSPECTIVES.
 
 
