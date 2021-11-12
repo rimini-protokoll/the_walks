@@ -89,6 +89,12 @@ credits: >-
 
 
   Supported by Fonds Darstellende Künste with funds from the Federal Government Commissioner for Culture and the Media and the Senate Department for Culture and Europe.
+
+
+  The Rumanian version was supported by the Goethe-Institut Bukarest.
+
+
+  The Spanish version is commissioned by the Goethe-Institut Mexiko.
 medias:
   - en_bee5Zah7
   - en_ahvo7Cee
