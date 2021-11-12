@@ -97,6 +97,9 @@ credits: >-
 
 
   În parteneriat cu Goethe Institut Bucharest.
+
+
+  The Spanish version is commissioned by the Goethe-Institut Mexiko.
 medias:
   - ro_bee5Zah7
   - ro_ahvo7Cee
