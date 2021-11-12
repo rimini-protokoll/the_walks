@@ -94,7 +94,7 @@ credits: >-
   Die rumänische Version wurde gefördert vom Goethe-Institut Bukarest.
 
 
-  Die spanische Version wurde beautragt vom Goethe-Institut Mexiko.
+  Die spanische Version wurde beauftragt vom Goethe-Institut Mexiko.
 medias:
   - de_bee5Zah7
   - de_ahvo7Cee
