@@ -89,6 +89,12 @@ credits: >-
 
 
   Gefördert vom Fonds Darstellende Künste aus Mitteln der Beauftragten der Bundesregierung für Kultur und Medien und der Senatsverwaltung für Kultur und Europa.
+
+
+  Die rumänische Version wurde gefördert vom Goethe-Institut Bukarest.
+
+
+  Die spanische Version wurde beautragt vom Goethe-Institut Mexiko.
 medias:
   - de_bee5Zah7
   - de_ahvo7Cee
