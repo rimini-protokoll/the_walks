@@ -252,6 +252,27 @@ collections:
       - label: "Body"
         name: body
         widget: markdown
+  - name: voucherAnalytics
+    label: "Voucher Analytics"
+    summary: "{{dateStart}}_{{dateEnd}}"
+    folder: static/analytics
+    slug: "{{dateStart}}_{{dateEnd}}"
+    create: true
+    fields:
+      - label: "Start Date"
+        name: dateStart
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        time_format: false
+      - label: "End Date"
+        name: dateEnd
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        time_format: false
+      - label: "Get + Export CSV"
+        name: voucherAnalytics
+        widget: "voucherAnalytics"
+        required: false
   - name: userActions
     label: "User Actions"
     folder: static/actions/
