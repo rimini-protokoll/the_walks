@@ -64,7 +64,7 @@ credits: >-
 
   Expert*innen / Mitwirkende*
 
-  Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+  Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini
 
 
   Sprecher*innen*
