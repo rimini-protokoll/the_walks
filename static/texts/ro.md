@@ -69,7 +69,7 @@ credits: >-
 
   Experți / colaboratori
 
-  *Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+  *Erdem Gündüz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
 
 
   Voci
