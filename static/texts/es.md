@@ -72,7 +72,7 @@ credits: >-
   *Dido Antonia Aquilanti, Maitén Charlotte Arns, Cătălina Bălălău, Maria Bărbulescu, Bente Bausum, Melanie Baxter-Jones, Vlad Bîrzanu, Rosario Bona, Liliana Bong-Schmidt, Lena Bruun Bondeson, Lène Calvez, Nicholas Cațianis, Maïmouna Coulibaly, Luisa Devins, Paul Dunca/Paula Dunker, Noa Eleodori, Paolo Eleodori, María García Beato, Carmen Ghiurco, Margot Gödrös, María Magdalena González Atao, Melissa Holroyd, Christiane Hommelsheim, Stéphane Hugel, Timur Isik, Mmakgosi Kgabi, Lara Körte, Koffi Kra, Alexandra Lauck, Max Lechat, Nicoleta Lefter, Joshua Lerner, Daniela Lucato, Georgia Măciuceanu, Steve Mekoudja, Conrad Mericoffer, Mela Mihai, Lara-Sophie Milagro, Gabriela Pîrlițeanu, Alina Rotaru, Juan Sáenz de Tejada Urruzola, Silvia Sassetti, Ausencio Serrano Garcia, Simonetta Solder, Kamran Sorusch, Antonio Tagliarini, Lucie Zelger*
 
 
-  Documentación/Tráiler
+  Documentación / Tráiler
 
   *Expander Film (Stefan Korsinsky, Lilli Kuschel)*
 
