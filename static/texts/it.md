@@ -64,7 +64,7 @@ credits: >-
 
   Esperti / collaboratori\
 
-  *Erdem Gunduz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
+  *Erdem Gündüz, Stephanie Haug, Katja Otto, Martin Schmitz, Antonio Tagliarini*
 
 
   Speakers\
