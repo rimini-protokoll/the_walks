@@ -1,16 +1,12 @@
 ---
 twoPerson: false
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Ampel.png
 id: Udie9hoh
-listed: true
 language: en
 shortTitle: Pedestrian Lights
 preTitle: Walking with
 title: Steff
-penPaper: false
-duration: ~ 20 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh.mp3?alt=media&token=5ffd14db-3d37-4ac6-8c01-31cdbcf21dc3
-iconUri: https://the-walks.netlify.app/icons/Ampel.png
 credits: |-
   Expert / Contributor
   *Stephanie Haug*
@@ -20,10 +16,14 @@ credits: |-
 
   Composition
   *Rimini Protokoll*
+penPaper: false
+duration: ~ 20 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fen_Udie9hoh%2Fwalk_3_EN_korr.mp3?alt=media&token=17d83237-95e0-4b8a-927a-5a2e1bd7ec93
 userPrompt:
   - title: Take a photo and continue or continue without photo.
-    triggerTime: 114
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_Udie9hoh%2Fen_Udie9hoh_loop_1.mp3?alt=media&token=a4d3c98e-d01b-4638-b307-6709e3babc7b
+    triggerTime: 131
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fen_Udie9hoh%2Fwalk_3_EN_loop_02_11min.mp3?alt=media&token=15f4acf4-80ed-430a-b465-a5f61a0ad491
     actions:
       - title: Take photo
         action: picture
