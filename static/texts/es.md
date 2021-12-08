@@ -1,6 +1,6 @@
 ---
 id: Eme5ceLi
-languageCode: "es "
+languageCode: es
 credits: >-
   Texto, Dirección
 
@@ -113,4 +113,4 @@ Las historias y los mundos sonoros de los radioteatros breves pueden vivirse en 
 
 Con la pandemia, caminar en espacios públicos adquirió un nuevo significado. Un ritual ancestral y cotidiano se convirtió en un componente central de la nueva normalidad: las personas se reúnen, pasean, caminan por barrios, juegan en paisajes y, con cada caminata, perciben su entorno de otra manera.
 
-"The Walks" entiende el caminar como escenario teatral: un paseo audio-guiado en parques, una visita escenificada a supermercados o una interacción sincronizada en aguas. En cada ciudad, bajo el acompañamiento de voces, ruidos y música, lugares familiares se convierten en estrados - y paisajes en escenarios: mediante narraciones, situaciones dialogales, exploraciones coreográficas o variaciones musicales-rítmicas del caminar. El título corto de cada Walk te indica dónde o cómo se representa: "Cementerio", "En el agua" o "Glorieta".
+"The Walks" entiende el caminar como escenario teatral: un paseo audio-guiado en parques, una visita escenificada a supermercados o una interacción sincronizada en aguas. En cada ciudad, bajo el acompañamiento de voces, ruidos y música, lugares familiares se convierten en estrados - y paisajes en escenarios: mediante narraciones, situaciones dialogales, exploraciones coreográficas o variaciones musicales-rítmicas del caminar. El título corto de cada Walk te indica dónde o cómo se representa: "Cementerio", "En el agua" o "Rotonda".
