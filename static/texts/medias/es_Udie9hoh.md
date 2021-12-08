@@ -1,5 +1,5 @@
 ---
-iconUri: /static/medias/Ampel.png
+iconUri: https://the-walks.netlify.app/icons/Ampel.png
 id: Udie9hoh
 language: es
 shortTitle: Semáforo
