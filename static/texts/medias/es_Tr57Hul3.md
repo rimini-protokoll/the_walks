@@ -1,5 +1,5 @@
 ---
-iconUri: /static/medias/Spielplatz.png
+iconUri: /static/medias/spielplatz.png
 id: Tr57Hul3
 language: es
 shortTitle: "Parque infantil "
