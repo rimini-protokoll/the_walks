@@ -38,7 +38,7 @@ userPrompt:
       mit deiner Kamera machst und dieses in der App hochlädst. Dafür brauchen
       wir dein Einverständnis."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=a512c38b-5547-4b7c-ae18-1d185bb961ea
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=91fad395-6559-4bc1-8319-8be33b041327
   - actions:
       - title: Ja
         action: geoLocation
@@ -48,7 +48,7 @@ userPrompt:
       können, benötigen wir deine GPS-Koordinate. Diese wird in der Foto-Datei
       gespeichert. Bist du damit einverstanden?
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=6ed52aa7-0221-4992-8ab8-509dfd1413ff
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=398f999e-3966-4028-937b-714a6375aa13
   - actions:
       - title: Start
         action: continue
