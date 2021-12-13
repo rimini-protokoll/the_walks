@@ -10,9 +10,6 @@ credits: |-
 
   Composición
   *Rimini Protokoll, Frank Böhle*
-
-  Agradecimientos a
-  *Ant Hampton*
 twoPerson: true
 duration: ~ 20 minutos
 listed: true
@@ -28,7 +25,7 @@ userPrompt:
       mayoría de los dispositivos Android (Google), esta función la encuentras
       bajo Ajustes → Sonidos → No molestar.'
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=bb0e879f-5b87-4a41-8b08-48e2346d8822
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=3a2e2205-f8ee-4e01-a086-5a021399d7d2
   - actions:
       - title: Aceptar
         action: camera
@@ -39,7 +36,7 @@ userPrompt:
       que se trata es que durante el Walk tomes una foto con tu cámara y la
       cargues en la aplicación. Para ello necesitamos tu consentimiento."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=9f4917a0-6c33-44ef-a5c5-c06a7abd3310
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=d163ec7f-e9a7-4f8b-b968-df021c1b886a
   - actions:
       - title: Sí
         action: geoLocation
