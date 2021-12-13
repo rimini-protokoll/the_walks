@@ -48,7 +48,7 @@ userPrompt:
     title: "Merci pour votre confiance. Vous êtes prêt à partir. Appuyez le
       bouton en même temps. Commencer à compter ensemble : 3. 2. 1."
     triggerTime: -1
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_thie3IVu%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=0c87c8ee-aefc-4b3a-b55f-8237b350a810
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_thie3IVu%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=9e7ca22a-85a4-43b7-864e-8ebf8e4201a4
   - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 645
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_uma9ooK4%2Ffr_uma9ooK4_loop_1.mp3?alt=media&token=1c9f1b7c-1917-4c97-90ed-84e2e50a6b99
