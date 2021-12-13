@@ -2,8 +2,8 @@
 iconUri: https://api-v1--the-walks.netlify.app/icons/spielplatz.png
 id: Tr57Hul3
 language: es
-shortTitle: "Parque infantil"
-title: "Parque infantil"
+shortTitle: Parque infantil
+title: Parque infantil
 credits: |-
   Narradores
   *Eva-Maria Kurz*
@@ -18,6 +18,45 @@ duration: ~ 20 minutos
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fwalk_10_sp_10_12.mp3?alt=media&token=50b20bdc-2ecf-497f-97b1-17ed5dd04579
 userPrompt:
+  - actions:
+      - title: Okey, continuar.
+        action: continue
+    title: 'Para que este Walk funcione de manera sincronizada debes hacer dos
+      ajustes. Empecemos con el más fácil: la función "No molestar". El ajuste
+      "No molestar" no es el modo avión. Mantiene la conexión a internet durante
+      tu Walk. Con iOS (Apple) vas a "Ajustes". Ahí activas "No molestar". En la
+      mayoría de los dispositivos Android (Google), esta función la encuentras
+      bajo Ajustes → Sonidos → No molestar.'
+    triggerTime: 0
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=bb0e879f-5b87-4a41-8b08-48e2346d8822
+  - actions:
+      - title: Aceptar
+        action: camera
+      - title: Sin foto
+        action: continue
+    title: "Ahora viene el segundo ajuste: permitir el acceso a tu cámara. No te
+      preocupes, no queremos asumir el control de tu dispositivo. De lo único
+      que se trata es que durante el Walk tomes una foto con tu cámara y la
+      cargues en la aplicación. Para ello necesitamos tu consentimiento."
+    triggerTime: 0
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=9f4917a0-6c33-44ef-a5c5-c06a7abd3310
+  - actions:
+      - title: Sí
+        action: geoLocation
+      - title: No
+        action: continue
+    title: Para poder posicionar geográficamente tu foto en el mapa mundial de The
+      Walks, necesitamos tus coordenadas GPS. Las coordenadas se guardan en el
+      archivo de foto. ¿Estás de acuerdo?
+    triggerTime: 0
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=1c68c298-3c53-4795-8649-dddff56081db
+  - actions:
+      - title: Inicio
+        action: continue
+    title: "Gracias por tu confianza. Eso fue todo. Ahora podemos empezar. Opriman
+      simultáneamente el botón. Cuenten juntos: 3. 2. 1."
+    triggerTime: 0
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=afa472be-4066-4cc7-bb01-f2d1bfa2e75a
   - actions:
       - title: Tomar foto
         action: picture
