@@ -1,5 +1,5 @@
 ---
-iconUri: /static/medias/spielplatz.png
+iconUri: /static/icons/spielplatz.png
 id: Tr57Hul3
 language: de
 shortTitle: Spielplatz
