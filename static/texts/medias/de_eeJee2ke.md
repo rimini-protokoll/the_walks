@@ -1,14 +1,14 @@
 ---
 twoPerson: true
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Park.png
 id: eeJee2ke
-listed: false
 language: de
 shortTitle: A
 title: Park A
 duration: ~ 20 Min
+listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_ahvo7Cee%2Fde_eeJee2ke.mp3?alt=media&token=764581f7-8a5d-4dd0-9f79-8f45b3f5bd69
-iconUri: https://the-walks.netlify.app/icons/Park.png
 userPrompt:
   - title: >-
       Damit dieser Walk synchron funktioniert, solltest du ein paar
@@ -27,7 +27,7 @@ userPrompt:
       mit deiner Kamera machst und dieses in der App hochlädst. Dafür brauchen
       wir dein Einverständnis."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_eeJee2ke%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=b3bc5083-81d9-4301-8fbe-f94f9162ed0e
     actions:
       - title: Einverstanden
         action: camera
