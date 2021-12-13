@@ -19,7 +19,7 @@ userPrompt:
       “Ne pas déranger”.
 
       Le paramètre “Ne pas déranger” n'est pas le mode Avion. Au contraire elle maintient la connexion internet pendant votre promenade. Sur iOS (Apple), vous vous dirigez dans « Paramètres ». Ensuite activez "Ne pas déranger". Sur la plupart des appareils Android (Google), vous pouvez trouver cette fonction sous Paramètres → Sons → Ne pas déranger.
-    triggerTime: -1
+    triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_airie8Ke%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=2ee0a607-b679-4281-893b-b2196a23a964
   - actions:
       - title: Autoriser
@@ -48,7 +48,7 @@ userPrompt:
         action: continue
     title: "Merci pour votre confiance. Vous êtes prêt à partir. Appuyez le
       bouton en même temps. Commencer à compter ensemble : 3. 2. 1."
-    triggerTime: -1
+    triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_airie8Ke%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=4a66772b-9113-4709-87f1-5803d93f70f6
   - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 786
