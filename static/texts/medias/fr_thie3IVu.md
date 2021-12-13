@@ -40,14 +40,14 @@ userPrompt:
     title: Afin de pouvoir situer votre photo sur la carte du monde The Walks, nous
       avons besoin de vos coordonnées GPS. Les coordonnées sont enregistrées
       dans le fichier photo. Êtes-vous d'accord avec cela?
-    triggerTime: -1
+    triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_thie3IVu%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=75afad8b-d0d7-4b6d-8527-2c4894d51fbe
   - actions:
       - title: Démarrer
         action: continue
     title: "Merci pour votre confiance. Vous êtes prêt à partir. Appuyez le
       bouton en même temps. Commencer à compter ensemble : 3. 2. 1."
-    triggerTime: -1
+    triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_thie3IVu%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=9e7ca22a-85a4-43b7-864e-8ebf8e4201a4
   - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 645
