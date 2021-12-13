@@ -31,7 +31,7 @@ userPrompt:
       avec votre appareil photo pendant la promenade et de la télécharger sur
       l'application. Pour cela nous avons besoin de votre consentement."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_ooZohb7c%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=79bd385f-5007-44b1-9bfa-527fee25311a
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_ooZohb7c%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=333b8d19-b5d9-4f3e-8d03-1bd615b03bb7
   - actions:
       - title: Oui
         action: geoLocation
@@ -41,14 +41,14 @@ userPrompt:
       avons besoin de vos coordonnées GPS. Les coordonnées sont enregistrées
       dans le fichier photo. Êtes-vous d'accord avec cela?
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_ooZohb7c%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=8732a64a-cfb7-4053-b8c1-a7656e30b1d9
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_ooZohb7c%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=07219c7a-ba70-4aeb-83fc-9c14976c2340
   - actions:
       - title: Démarrer
         action: continue
     title: "Merci pour votre confiance. Vous êtes prêt à partir. Appuyez le
       bouton en même temps. Commencer à compter ensemble : 3. 2. 1."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_ooZohb7c%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=40ef5f76-e9a8-448a-ac0b-9d6e960149df
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_ooZohb7c%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=c930be96-06af-4fae-985f-0662b1d425d8
   - title: Prendre une photo et continuer ou continuer sans photo.
     triggerTime: 645
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_uma9ooK4%2Ffr_uma9ooK4_loop_1.mp3?alt=media&token=1c9f1b7c-1917-4c97-90ed-84e2e50a6b99
