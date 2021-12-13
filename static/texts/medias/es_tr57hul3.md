@@ -40,6 +40,6 @@ userPrompt:
         action: continue
     title: "Continuar a galería "
     triggerTime: 1053
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fwalk_10_sp_10_12.mp3?alt=media&token=01b4c618-1963-476d-99c2-b70943004f0a
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_tr57hul3%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=8d2844b4-5f93-4776-9c76-0ab4016fccb6
 ---
 Reúnanse en parejas o de tres frente a un parque infantil, pero no entren todavía.
