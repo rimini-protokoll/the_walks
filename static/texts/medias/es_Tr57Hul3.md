@@ -1,5 +1,5 @@
 ---
-iconUri: /static/icons/spielplatz.png
+iconUri: https://api-v1--the-walks.netlify.app/icons/spielplatz.png
 id: Tr57Hul3
 language: es
 shortTitle: "Parque infantil"
