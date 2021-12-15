@@ -69,7 +69,8 @@ userPrompt:
       - title: HIER
         action: continue
     triggerTime: 890
-    title: Gleichzeitig mit den anderen HIER drücken, wenn ihr die Fotos gemacht habt.
+    title: Gleichzeitig mit den anderen HIER drücken, wenn ihr die Fotos – oder auch
+      keine Fotos – gemacht habt.
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=0c19f191-940e-429b-8952-6a51543a38b8
   - actions:
       - title: Galerie
