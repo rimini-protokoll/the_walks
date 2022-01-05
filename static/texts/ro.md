@@ -109,7 +109,6 @@ medias:
   - ro_Eer0quuj
   - ro_ohPeu2zi
   - ro_Apheek3e
-  - ro_Apheek3e
   - ro_Tr57Hul3
 ---
 "The Walks" este o colecție de scurte spectacole audio concepute pentru anumite locuri concrete din orașul tău și o invitație de a-ți redescoperi împrejurimile și de a interacționa cu ele. 
