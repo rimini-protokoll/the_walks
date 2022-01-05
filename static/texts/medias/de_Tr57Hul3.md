@@ -55,7 +55,7 @@ userPrompt:
     title: "Danke für dein Vertrauen. Das war’s schon. Jetzt geht’s los. Drückt
       gleichzeitig auf den Button. Zählt gemeinsam: 3. 2. 1."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=c3e125af-2faa-47dc-b4ac-1ced13c70436
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fmulti_Zeubeel8_loop%20(2).mp3?alt=media&token=3dbbad0c-0965-43e7-b329-2c3317a01dc4
   - actions:
       - title: Foto machen
         action: picture
