@@ -1,5 +1,5 @@
 ---
-iconUri: /static/medias/spielplatz.png
+iconUri: https://api-v1--the-walks.netlify.app/icons/spielplatz.png
 id: Tr57Hul3
 language: ro
 shortTitle: Loc de joacă
