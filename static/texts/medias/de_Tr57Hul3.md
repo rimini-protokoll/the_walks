@@ -13,7 +13,7 @@ credits: |-
 twoPerson: true
 duration: ~ 20 Min
 listed: true
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_10_12.mp3?alt=media&token=7df0cdc7-2609-4c11-9acf-56139aeda9ab
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_20_12.mp3?alt=media&token=7368610b-0fc0-4cc9-9fd3-74e8be4ad0bc
 userPrompt:
   - actions:
       - title: Okay, weiter.
@@ -63,12 +63,12 @@ userPrompt:
       - title: Kein Foto
         action: continue
     title: Foto machen und fortfahren oder ohne Foto fortfahren.
-    triggerTime: 890
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=8706d469-45ff-4844-887d-e66babb266ac
+    triggerTime: 864
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_LOOP_14-24min___20_12.mp3?alt=media&token=d7d800d4-d2e0-4e36-96d7-1bafa4c6bdb6
   - actions:
       - title: HIER
         action: continue
-    triggerTime: 890
+    triggerTime: 864
     title: Gleichzeitig mit den anderen HIER drücken, wenn ihr die Fotos – oder auch
       keine Fotos – gemacht habt.
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=0c19f191-940e-429b-8952-6a51543a38b8
