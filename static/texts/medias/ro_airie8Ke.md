@@ -30,7 +30,7 @@ userPrompt:
       a încărca poza în aplicație. Avem nevoie de permisiunea ta pentru a face
       acest lucru."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fmulti_Zeubeel8_loop%20(2).mp3?alt=media&token=6e335cef-ec2f-4809-89b6-e2394396feda
     actions:
       - title: De acord
         action: camera
