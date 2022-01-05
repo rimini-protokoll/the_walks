@@ -10,6 +10,7 @@ credits: |-
 
   Komposition
   *Frank Böhle, Rimini Protokoll*
+twoPerson: true
 duration: ~ 20 Min
 listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_RO_20_12.mp3?alt=media&token=b2ad6cf1-5e4b-46b7-90b5-e0d260199a88
