@@ -77,4 +77,4 @@ userPrompt:
     triggerTime: 1053
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fmulti_Zeubeel8_loop%20(2).mp3?alt=media&token=e3a0c3ca-992f-4e2b-8eb1-ee2a6f547deb
 ---
-Întâlniți-vă doi sau trei L NGĂ un loc de joacă, dar nu intrați încă în el.
+Întâlniți-vă doi sau trei LÂNGĂ un loc de joacă, dar nu intrați încă în el.
