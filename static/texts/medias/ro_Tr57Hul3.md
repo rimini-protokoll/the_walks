@@ -58,7 +58,11 @@ userPrompt:
       pornim! Apăsați butonul în același timp. Numărați împreună: 3. 2. 1."
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fmulti_Zeubeel8_loop%20(2).mp3?alt=media&token=4965aa18-a5aa-41b4-b188-831b6df206df
-  - actions: []
+  - actions:
+      - title: Fotografiază
+        action: picture
+      - title: Nu fotografia
+        action: continue
     title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 864
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_RO_LOOP_14-24min___20_12.mp3?alt=media&token=c3452a02-488d-43a2-b831-b7d6b4277b15
