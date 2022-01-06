@@ -57,7 +57,7 @@ userPrompt:
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
-      - title: Începe
+      - title: "Începe "
         action: continue
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 786
