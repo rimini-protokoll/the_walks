@@ -63,6 +63,13 @@ userPrompt:
     triggerTime: 864
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_RO_LOOP_14-24min___20_12.mp3?alt=media&token=c3452a02-488d-43a2-b831-b7d6b4277b15
   - actions:
+      - title: AICI
+        action: continue
+    triggerTime: 864
+    title: În același timp cu ceilalți, apăsați AICI, dacă ați făcut fotografiile
+      sau chiar și dacă nu le-ați făcut.
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_Tr57Hul3%2Fwalk_10_de_Loop1__14-50-650__08_12%20(1).mp3?alt=media&token=0b5c4e02-de62-4156-b729-5c91a3268408
+  - actions:
       - title: Galerie
         action: map
       - title: Nu
