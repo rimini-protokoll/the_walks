@@ -11,10 +11,10 @@ srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o
 userPrompt:
   - title: 'Pentru ca plimbarea să se realizeze sincronizat, trebuie modificate
       câteva setări. Să începem cu cea mai ușoară: funcția “Nu deranjați / Do
-      Not Disturb “. Setarea “Nu deranjați/ Do Not Disturb“ nu este aceeași cu
+      Not Disturb“. Setarea “Nu deranjați / Do Not Disturb“ nu este aceeași cu
       modul avion. Această setare te menține conectat la internet în timpul
       plimbării. De pe iOS (Apple), accesează "Setări". Activează acolo opțiunea
-      "Nu deranjați/ Do Not Disturb". În cazul majorității dispozitivelor
+      "Nu deranjați / Do Not Disturb". În cazul majorității dispozitivelor
       Android (Google), vei găsi această funcție la Setări → Sunete → Nu
       deranjați.'
     triggerTime: 0
