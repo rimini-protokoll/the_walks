@@ -12,7 +12,7 @@ credits: |-
   *Frank Böhle, Rimini Protokoll*
 twoPerson: true
 duration: ~ 20 Min
-listed: false
+listed: true
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_RO_20_12.mp3?alt=media&token=b2ad6cf1-5e4b-46b7-90b5-e0d260199a88
 userPrompt:
   - actions:
@@ -62,12 +62,6 @@ userPrompt:
     title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 864
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_RO_LOOP_14-24min___20_12.mp3?alt=media&token=c3452a02-488d-43a2-b831-b7d6b4277b15
-  - actions:
-      - title: SFÂRȘIT
-        action: continue
-    title: Dacă nu vrei să mai asculți, apasă SFÂRȘIT.
-    triggerTime: 864
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_de_Loop1__14-50-650__08_12%20(1).mp3?alt=media&token=e29a9e9d-2141-4cb7-959a-d7bec2e91dec
   - actions:
       - title: Galerie
         action: map
