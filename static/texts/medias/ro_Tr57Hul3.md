@@ -66,7 +66,7 @@ userPrompt:
       - title: SFÂRȘIT
         action: continue
     title: Dacă nu vrei să mai asculți, apasă SFÂRȘIT.
-    triggerTime: 863
+    triggerTime: 864
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fwalk_10_de_Loop1__14-50-650__08_12%20(1).mp3?alt=media&token=e29a9e9d-2141-4cb7-959a-d7bec2e91dec
   - actions:
       - title: Galerie
