@@ -1,4 +1,6 @@
 ---
+twoPerson: true
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: ahvo7Cee
 language: ro
@@ -6,13 +8,11 @@ shortTitle: Parc
 preTitle: Summit în
 title: parc
 credits: |-
-  Voci
+  Voce
   *Alina Rotaru*
 
   Compozitor
   *Frank Böhle*
-twoPerson: true
-popups: []
 duration: ~ 20 Min
 listed: true
 srcUri:
