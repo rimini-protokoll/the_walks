@@ -5,10 +5,10 @@ language: ro
 shortTitle: Loc de joacă
 title: Loc de joacă
 credits: |-
-  Voci
+  Voce
   *Coca Bloos*
 
-  Compozitor
+  Compozitori
   *Frank Böhle, Rimini Protokoll*
 twoPerson: true
 duration: ~ 20 Min
