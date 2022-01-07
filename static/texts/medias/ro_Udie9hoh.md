@@ -8,7 +8,7 @@ shortTitle: Semafor
 preTitle: Plimbare cu
 title: Steff
 credits: |-
-  Experți / colaboratori
+  Expert / colaborator
   *Stephanie Haug*
 
   Voci
