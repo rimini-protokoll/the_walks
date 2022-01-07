@@ -8,10 +8,10 @@ shortTitle: Sens giratoriu
 preTitle: În sensul
 title: giratoriu
 credits: |-
-  Experți / colaboratori
+  Expert / colaborator
   *Erdem Gunduz*
 
-  Voci
+  Voce
   *Nicholas Cațianis*
 
   Compozitor
