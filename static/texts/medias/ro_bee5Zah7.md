@@ -8,7 +8,7 @@ shortTitle: Pornim la drum
 title: Pornim la drum.
 afterTitle: Hai, să mergem!
 credits: |-
-  Voci
+  Voce
   *Maria Bărbulescu*
 
   Compozitor
