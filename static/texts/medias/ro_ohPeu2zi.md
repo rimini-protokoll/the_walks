@@ -25,7 +25,7 @@ credits: >-
 
   Mulțumiri
 
-  *Enric Tello und den Kolleg:innen vom Barcelona Cicle de l’Aigua, besonders Ignasi Batalle Barber și Gustavo Ramon Wilhelmi*
+  *Lui Enric Tello și colegilor de la Barcelona Cicle de l'Aigua, în special lui Ignasi Batalle Barber și lui Gustavo Ramon Wilhelmi*
 penPaper: false
 duration: ~ 25 Min
 listed: true
