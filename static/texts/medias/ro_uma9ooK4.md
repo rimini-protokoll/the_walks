@@ -1,4 +1,6 @@
 ---
+twoPerson: true
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 id: uma9ooK4
 language: ro
@@ -6,13 +8,19 @@ shortTitle: Supermarket
 preTitle: Duet în
 title: supermarket
 credits: >-
-  Experți / colaboratori *Antonio Tagliarini*
+  Expert / colaborator 
 
-  Voci *Paul Dunca / Paula Dunker*
+  *Antonio Tagliarini*
 
-  Compozitori *Rimini Protokoll, incluzând muzică semnată de Anton Rose & Thomas Mielmann, precum și muzică din filmul “Four rebounds to death” de Laurids Köhne & Tibor Köhne, compusă de Linus Rogsch, producător: Laurids Köhne & Tibor Köhne.*
-twoPerson: true
-popups: []
+
+  Voce 
+
+  *Paul Dunca / Paula Dunker*
+
+
+  Compozitori 
+
+  *Rimini Protokoll, incluzând muzică semnată de Anton Rose & Thomas Mielmann, precum și muzică din filmul “Four rebounds to death” de Laurids Köhne & Tibor Köhne, compusă de Linus Rogsch, producător: Laurids Köhne & Tibor Köhne.*
 duration: ~ 17 Min
 listed: true
 srcUri:
