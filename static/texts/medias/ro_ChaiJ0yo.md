@@ -1,17 +1,17 @@
 ---
+twoPerson: false
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Friedhof.png
 id: ChaiJ0yo
 language: ro
 shortTitle: Cimitir
 title: Cimitir
 credits: |-
-  Voci
+  Voce
   *Nicoleta Lefter*
 
   Compozitor
   *Frank Böhle*
-twoPerson: false
-popups: []
 penPaper: false
 duration: ~ 30 Min
 listed: true
