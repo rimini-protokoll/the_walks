@@ -8,7 +8,7 @@ shortTitle: Teatru
 preTitle: În fața
 title: unui teatru
 credits: |-
-  Voci
+  Voce
   *Gabriela Pîrlițeanu*
 
   Compozitor
