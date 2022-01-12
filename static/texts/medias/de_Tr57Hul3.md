@@ -5,7 +5,7 @@ language: de
 shortTitle: Spielplatz
 title: Spielplatz
 credits: |-
-  Sprecher*in
+  Sprecherin
   *Eva-Maria Kurz*
 
   Komposition
