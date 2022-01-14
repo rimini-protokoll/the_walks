@@ -52,7 +52,7 @@ userPrompt:
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_tr57hul3%2Fmulti_Zeubeel8_loop%20(2).mp3?alt=media&token=550d48cc-c22c-4785-aa4c-eae2a7177267
   - actions:
-      - title: "U+00CEncepe "
+      - title: "&Icirc;ncepe "
         action: continue
     title: "Îți mulțumim pentru încrederea acordată. Asta a fost tot. Și acum, să
       pornim! Apăsați butonul în același timp. Numărați împreună: 3. 2. 1."
