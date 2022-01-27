@@ -61,7 +61,7 @@ userPrompt:
         action: continue
     title: Take a photo and continue or continue without photo.
     triggerTime: 864
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=fbbc734e-9039-4841-be7a-d0591a00a783
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fen_tr57hul3%2Fwalk_10_engl_LOOP_14-24min_.mp3?alt=media&token=96fa67c7-0bf7-4cf4-8e11-70a62a4e2afd
   - actions:
       - title: HERE
         action: continue
