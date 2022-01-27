@@ -75,7 +75,7 @@ userPrompt:
       - title: No
         action: continue
     title: Continue to the gallery
-    triggerTime: 1053
+    triggerTime: 1026
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=8251e701-f57a-4855-9d92-753a404e4fbb
 ---
 Meet in pairs or as a group of three AT a playground, but don’t go in yet. 
