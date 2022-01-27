@@ -1,4 +1,5 @@
 ---
+iconUri: /static/medias/spielplatz.png
 id: Tr57Hul3
 language: en
 shortTitle: Playground
