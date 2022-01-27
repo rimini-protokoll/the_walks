@@ -79,6 +79,6 @@ userPrompt:
         action: continue
     title: Weiter zur Bildergalerie
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fde_Tr57Hul3%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=769b330e-9971-4cc6-9850-dcdbda839e5d
-    triggerTime: 1053
+    triggerTime: 1026
 ---
 Trefft euch zu zweit oder zu dritt AN einem Spielplatz, aber betretet ihn noch nicht.
