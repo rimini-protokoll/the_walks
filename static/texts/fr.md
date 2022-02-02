@@ -105,6 +105,7 @@ medias:
   - fr_Eer0quuj
   - fr_ohPeu2zi
   - fr_Apheek3e
+  - fr_Tr57Hul3
 ---
 « The Walks » est une application qui contient une série de promenades audioguidées de Rimini Protokoll. Chaque promenade est une courte pièce audio conçue pour un lieu spécifique de ta ville et une invitation à redécouvrir ton environnement et à interagir avec. Pour faire une promenade-audio, il faut compter environ 20 minutes. Tu peux les faire quand tu veux  et en décider toi-même l’ordre et le nombre.
 Les histoires et les univers sonores de ces pièces-audio peuvent être écoutés dans le monde entier. Ainsi, « The Walks » relie des personnes tout autour du globe par une expérience locale, la pratique d´une activité humaine fondamentale : la marche.
