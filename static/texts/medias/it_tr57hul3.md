@@ -27,7 +27,7 @@ userPrompt:
       troverete questa funzione su \"Impostazioni\" → \"Suoni\" → \"Non
       disturbare\"."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=7f95ffc8-9693-44ac-8c3a-a08990eaec78
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=1f2cf4bb-2879-4196-b707-4d7cda8001df
   - actions:
       - title: D'accordo
         action: camera
@@ -39,7 +39,7 @@ userPrompt:
       durante la passeggiata e caricarla sull'app. Abbiamo bisogno del tuo
       permesso per farlo."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=f631a4fd-4dc5-4c99-b871-e90ae6462fdd
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=e02395bf-9bc9-4d59-bb7d-3d2230a585a8
   - actions:
       - title: Sì
         action: geoLocation
@@ -49,14 +49,14 @@ userPrompt:
       The Walks, abbiamo bisogno delle tue coordinate GPS. Questo sarà salvato
       nel file della foto. Sei d'accordo?
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=e22daacc-24af-475e-8660-5a412364ac1c
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=33654a8f-2d32-4d6e-b0df-84489b52b7c9
   - actions:
       - title: Inizio
         action: continue
     title: "Grazie per la tua fiducia. Questo è tutto. Ora andiamo. Premete entrambi
       nello stesso momento il pulsante. Contate insieme: 3. 2. 1."
     triggerTime: 0
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fwalk_10_FRZ_.mp3?alt=media&token=7a51558f-5e98-45b7-ad16-4139d4a47517
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=739b7383-cdde-4deb-bec6-56d31559131a
   - actions:
       - title: Fare una foto
         action: picture
@@ -64,14 +64,14 @@ userPrompt:
         action: continue
     title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 864
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=a5db1cbc-8f38-4af3-bd4e-2ed77223ea01
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fwalk_10_IT_LOOP_14-24min_.mp3?alt=media&token=56e0257e-9a1b-478a-b7cb-2a96debea5e2
   - actions:
       - title: QUI
         action: continue
     triggerTime: 864
     title: Premete QUI allo stesso tempo degli altri se avete fatto delle foto – o
       nessuna foto.
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fwalk_10_FRZ_.mp3?alt=media&token=e3de53c7-6ad1-432b-b411-b86b50cd8c47
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=ece4eba4-5136-4df4-927e-6982014a01e0
   - actions:
       - title: Galleria
         action: map
@@ -79,6 +79,6 @@ userPrompt:
         action: continue
     title: Continua alla galleria
     triggerTime: 1028
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=285dafaf-0dc4-4e9d-8992-d8f1e05aaa8f
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=268fa5eb-ce30-404f-8318-870e12ba7056
 ---
 Due o tre persone si incontrano AL parco giochi, ma non devono entrare.
