@@ -64,7 +64,7 @@ userPrompt:
         action: continue
     title: Fare una foto e proseguire oppure proseguire senza foto.
     triggerTime: 864
-    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fwalk_10_IT_LOOP_14-24min_.mp3?alt=media&token=56e0257e-9a1b-478a-b7cb-2a96debea5e2
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fwalk_10_IT_LOOP_14-24min_.mp3?alt=media&token=4b09bf09-86d4-4cc4-8819-648c8b77f5c9
   - actions:
       - title: QUI
         action: continue
@@ -78,7 +78,7 @@ userPrompt:
       - title: No
         action: continue
     title: Continua alla galleria
-    triggerTime: 1028
+    triggerTime: 1026
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fit_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=268fa5eb-ce30-404f-8318-870e12ba7056
 ---
 Due o tre persone si incontrano AL parco giochi, ma non devono entrare.
