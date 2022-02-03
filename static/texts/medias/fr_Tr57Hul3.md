@@ -2,8 +2,8 @@
 iconUri: https://api-v1--the-walks.netlify.app/icons/spielplatz.png
 id: Tr57Hul3
 language: fr
-shortTitle: Aire de jeu
-title: Aire de jeux
+shortTitle: Terrain de jeux
+title: Terrain de jeux
 credits: |-
   Narratrice
   *Monika Zimmering*
@@ -79,4 +79,4 @@ userPrompt:
     triggerTime: 1026
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_tr57hul3%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=dea74d83-4424-4c3c-a324-0565bb76bad5
 ---
-Rendez-vous à deux ou trois À une aire de jeux, mais n'y entrez pas encore.
+Rendez-vous à deux ou trois À un terrain de jeux, mais n'y entrez pas encore.
