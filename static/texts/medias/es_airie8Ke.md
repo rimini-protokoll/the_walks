@@ -1,11 +1,11 @@
 ---
-twoPerson: true
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: airie8Ke
 language: es
 shortTitle: B
 title: Parque B
+twoPerson: true
+popups: []
 duration: ~ 20 minutos
 listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fwalk_8_PARK__SP__B__.mp3?alt=media&token=fe75c8d7-4f45-4ae3-b442-9a34423df739
@@ -61,6 +61,13 @@ userPrompt:
         postAction: continue
       - title: Sin foto
         action: continue
+  - actions:
+      - title: CONTINUAR
+        action: continue
+    title: ¿Listos para continuar? Opriman entonces ambos simultáneamente en
+      CONTINUAR.
+    triggerTime: 786
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=66453fa7-4036-4f66-98a0-bc95b123fab6
   - title: Tomar una foto y continuar o continuar sin foto.
     triggerTime: 992
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_airie8Ke%2Fwalk_8_Loop_Foto_2_SP_16_31_865min_.mp3?alt=media&token=8eb21dc8-3fbf-429d-a081-cfef17d5c5ae
