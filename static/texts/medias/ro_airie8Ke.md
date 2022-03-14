@@ -1,11 +1,11 @@
 ---
-twoPerson: true
-popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: airie8Ke
 language: ro
 shortTitle: B
 title: Parc B
+twoPerson: true
+popups: []
 duration: ~ 20 Min
 listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fwalk_8_PARK__RO__B__.mp3?alt=media&token=af0142b7-e969-45cc-ac10-478b5e1f41df
@@ -68,6 +68,13 @@ userPrompt:
         postAction: continue
       - title: Nu fotografia
         action: continue
+  - actions:
+      - title: MAI DEPARTE
+        action: continue
+    title: Sunteți gata să continuați? În acest caz, apăsați amândoi concomitent pe
+      MAI DEPARTE.
+    triggerTime: 786
+    srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=39764182-b510-4d83-9c00-f724c3986d7c
   - title: Fă o fotografie și continuă sau continuă fără fotografie.
     triggerTime: 992
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fro_airie8Ke%2Fwalk_8_Loop_2_RO_16_31_865min_02_10_.mp3?alt=media&token=d8707fbc-839a-4134-97e5-6bbd71b4bcfe
