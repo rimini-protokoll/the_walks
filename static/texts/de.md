@@ -17,11 +17,6 @@ credits: >-
   *Steffen Klaue, Alexander Morosow*
 
 
-  Künstlerische Koordination / Audio editing
-
-  *Vlaicu Golcea (RO)*
-
-
   Sounddesign / Mischung
 
   *Frank Böhle*
