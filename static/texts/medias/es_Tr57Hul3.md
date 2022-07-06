@@ -66,7 +66,7 @@ userPrompt:
   - actions:
       - title: AQUÍ
         action: continue
-    title: Pulse AQUÍ al mismo tiempo que los demás si ha tomado la foto - también
+    title: Pulse AQUÍ al mismo tiempo que los demás si ha tomado la foto – también
       si no ha tomado ninguna foto.
     triggerTime: 865
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_tr57hul3%2Fwalk_10_de_Loop1__14-50-650__08_12.mp3?alt=media&token=bb105092-a5fd-4766-ac0d-f2785cedbf18
