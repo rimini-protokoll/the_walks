@@ -79,4 +79,4 @@ userPrompt:
     triggerTime: 1026
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Fes_tr57hul3%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=8d2844b4-5f93-4776-9c76-0ab4016fccb6
 ---
-Reúnanse en parejas o de tres frente a un parque infantil, pero no entren todavía.
+Reúnanse en parejas o de tres frente A un parque infantil, pero no entren todavía.
