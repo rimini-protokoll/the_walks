@@ -1,5 +1,12 @@
 ---
 news:
+  - Shaesha3
+  - aiNg3cu4
+  - Kareeh6i
+  - Ahxaw3su
+  - eC7uxo0o
+  - Oyoomo4o
+  - Jeel3kah
   - Hie9ceiX
   - pee8Ru6o
   - thooFae6
