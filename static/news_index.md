@@ -1,5 +1,4 @@
 ---
 news:
-  - Kareeh6i
-  - Ceash8si
+  - ceash8si
 ---
