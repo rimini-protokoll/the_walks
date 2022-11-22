@@ -2,6 +2,848 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "container:"
+      name = "Google-Maps-iOS-Utils">
+      <Group
+         location = "group:../../google-maps-ios-utils/app"
+         name = "app">
+         <FileRef
+            location = "group:KMLViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:CustomMarkerViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.h">
+         </FileRef>
+         <FileRef
+            location = "group:HeatmapViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:AppApiKey.h">
+         </FileRef>
+         <FileRef
+            location = "group:BasicViewController.m">
+         </FileRef>
+         <Group
+            location = "group:Resources"
+            name = "Resources">
+            <Group
+               location = "group:GeoJSON"
+               name = "GeoJSON">
+               <FileRef
+                  location = "group:GeoJSON_Sample.geojson">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Images"
+               name = "Images">
+               <FileRef
+                  location = "group:m3.png">
+               </FileRef>
+               <FileRef
+                  location = "group:m2.png">
+               </FileRef>
+               <FileRef
+                  location = "group:m1.png">
+               </FileRef>
+               <FileRef
+                  location = "group:m5.png">
+               </FileRef>
+               <FileRef
+                  location = "group:m4.png">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:KML"
+               name = "KML">
+               <FileRef
+                  location = "group:KML_Sample.kml">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:Samples.m">
+         </FileRef>
+         <FileRef
+            location = "group:MasterViewController.h">
+         </FileRef>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:GeoJSONViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:POIItem.m">
+         </FileRef>
+         <FileRef
+            location = "group:CustomMarkerViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:main.m">
+         </FileRef>
+         <FileRef
+            location = "group:KMLViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:HeatmapViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.m">
+         </FileRef>
+         <FileRef
+            location = "group:BasicViewController.h">
+         </FileRef>
+         <FileRef
+            location = "group:POIItem.h">
+         </FileRef>
+         <FileRef
+            location = "group:GeoJSONViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:MasterViewController.m">
+         </FileRef>
+         <FileRef
+            location = "group:Samples.h">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/AUTHORS.txt">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/Cartfile">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/Cartfile.resolved">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/CODE_OF_CONDUCT.md">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/CONTRIBUTING.md">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/CONTRIBUTORS.txt">
+      </FileRef>
+      <Group
+         location = "group:../../google-maps-ios-utils/docs"
+         name = "docs">
+         <FileRef
+            location = "group:CustomMarkers.md">
+         </FileRef>
+         <FileRef
+            location = "group:HeatmapRendering.md">
+         </FileRef>
+         <FileRef
+            location = "group:Carthage.md">
+         </FileRef>
+         <FileRef
+            location = "group:GeometryRendering.md">
+         </FileRef>
+         <FileRef
+            location = "group:GeometryUtils.md">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/Google-Maps-iOS-Utils.podspec">
+      </FileRef>
+      <Group
+         location = "group:../../google-maps-ios-utils/GoogleMapsUtils"
+         name = "GoogleMapsUtils">
+         <FileRef
+            location = "group:GoogleMapsUtils.h">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/GoogleMapsUtils.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/LICENSE">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/Package.swift">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/Podfile.template">
+      </FileRef>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/README.md">
+      </FileRef>
+      <Group
+         location = "group:../../google-maps-ios-utils/samples"
+         name = "samples">
+         <Group
+            location = "group:SwiftDemoApp"
+            name = "SwiftDemoApp">
+            <FileRef
+               location = "group:SwiftDemoApp.xcodeproj">
+            </FileRef>
+            <Group
+               location = "group:SwiftDemoApp"
+               name = "SwiftDemoApp">
+               <FileRef
+                  location = "group:police_stations.json">
+               </FileRef>
+               <FileRef
+                  location = "group:ViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:SwiftDemoApp-Bridging-Header.h">
+               </FileRef>
+               <FileRef
+                  location = "group:HeatMapInterpolationViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:Sample.swift">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <FileRef
+                  location = "group:HeatmapViewController.swift">
+               </FileRef>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:ClusteringViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:KMLViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSONViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:AppDelegate.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:MasterViewController.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_Sample.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_sample.json">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Podfile">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <Group
+            location = "group:ObjCDemoApp"
+            name = "ObjCDemoApp">
+            <FileRef
+               location = "group:Podfile">
+            </FileRef>
+            <Group
+               location = "group:ObjCDemoApp"
+               name = "ObjCDemoApp">
+               <FileRef
+                  location = "group:AppDelegate.h">
+               </FileRef>
+               <Group
+                  location = "group:Assets.xcassets"
+                  name = "Assets.xcassets">
+                  <Group
+                     location = "group:AppIcon.appiconset"
+                     name = "AppIcon.appiconset">
+                     <FileRef
+                        location = "group:Contents.json">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <FileRef
+                  location = "group:ViewController.m">
+               </FileRef>
+               <Group
+                  location = "group:Base.lproj"
+                  name = "Base.lproj">
+                  <FileRef
+                     location = "group:LaunchScreen.storyboard">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Main.storyboard">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:main.m">
+               </FileRef>
+               <FileRef
+                  location = "group:AppDelegate.m">
+               </FileRef>
+               <FileRef
+                  location = "group:Info.plist">
+               </FileRef>
+               <FileRef
+                  location = "group:ViewController.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:ObjCDemoApp.xcodeproj">
+            </FileRef>
+         </Group>
+      </Group>
+      <FileRef
+         location = "group:../../google-maps-ios-utils/SECURITY.md">
+      </FileRef>
+      <Group
+         location = "group:../../google-maps-ios-utils/src"
+         name = "src">
+         <Group
+            location = "group:Clustering"
+            name = "Clustering">
+            <FileRef
+               location = "group:GMUClusterManager.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUStaticCluster.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMSMarker+GMUClusteritem.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUMarkerClustering.h">
+            </FileRef>
+            <Group
+               location = "group:Algo"
+               name = "Algo">
+               <FileRef
+                  location = "group:GMUGridBasedClusterAlgorithm.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUClusterAlgorithm.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUNonHierarchicalDistanceBasedAlgorithm.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUWrappingDictionaryKey.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUSimpleClusterAlgorithm.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGridBasedClusterAlgorithm.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUNonHierarchicalDistanceBasedAlgorithm.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUSimpleClusterAlgorithm.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUWrappingDictionaryKey.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:GMUClusterManager.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUClusterManager+Testing.h">
+            </FileRef>
+            <Group
+               location = "group:View"
+               name = "View">
+               <FileRef
+                  location = "group:GMUClusterIconGenerator.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUClusterRenderer.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterRenderer+Testing.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterRenderer.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterIconGenerator.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterIconGenerator.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterRenderer.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterIconGenerator+Testing.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:GMUStaticCluster.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUCluster.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUClusterItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMSMarker+GMUClusteritem.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:GeometryUtils"
+            name = "GeometryUtils">
+            <FileRef
+               location = "group:Math.swift">
+            </FileRef>
+            <FileRef
+               location = "group:GMSPath+GeometryUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:MapPoint.swift">
+            </FileRef>
+            <Group
+               location = "group:Internal"
+               name = "Internal">
+               <FileRef
+                  location = "group:LatLngRadians.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:CatesianPoint.swift">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:CLLocationCoordinate2D+GeometryUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:GMSPolyline+GeometryUtils.swift">
+            </FileRef>
+            <FileRef
+               location = "group:GMSPolygon+GeometryUtils.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Heatmap"
+            name = "Heatmap">
+            <FileRef
+               location = "group:GMUGradient.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUWeightedLatLng.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUHeatmapTileLayer.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUHeatmapTileLayer+Testing.h">
+            </FileRef>
+            <FileRef
+               location = "group:HeatMapInterpolationPoints.swift">
+            </FileRef>
+            <FileRef
+               location = "group:GMUWeightedLatLng.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUGradient.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUHeatmapTileLayer.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Geometry"
+            name = "Geometry">
+            <FileRef
+               location = "group:GMUKMLParser.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUGeometryRenderer.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUGeoJSONParser.h">
+            </FileRef>
+            <Group
+               location = "group:Model"
+               name = "Model">
+               <FileRef
+                  location = "group:GMUGeometryCollection.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPoint.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUStyle.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPlacemark.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPolygon.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPair.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGeometryContainer.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUStyleMap.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUFeature.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMULineString.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGroundOverlay.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUStyle.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPoint.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGeometry.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGeometryCollection.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPair.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPolygon.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPlacemark.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUStyleMap.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGroundOverlay.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMULineString.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUFeature.h">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:GMUKMLParser.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUGeometryRenderer+Testing.h">
+            </FileRef>
+            <FileRef
+               location = "group:GMUGeoJSONParser.m">
+            </FileRef>
+            <FileRef
+               location = "group:GMUGeometryRenderer.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:QuadTree"
+            name = "QuadTree">
+            <FileRef
+               location = "group:GQTPointQuadTree.m">
+            </FileRef>
+            <FileRef
+               location = "group:GQTPointQuadTreeItem.h">
+            </FileRef>
+            <FileRef
+               location = "group:GQTPointQuadTreeChild.m">
+            </FileRef>
+            <FileRef
+               location = "group:GQTPoint.h">
+            </FileRef>
+            <FileRef
+               location = "group:GQTPointQuadTree.h">
+            </FileRef>
+            <FileRef
+               location = "group:GQTPointQuadTreeChild.h">
+            </FileRef>
+            <FileRef
+               location = "group:GQTBounds.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:../../google-maps-ios-utils/test"
+         name = "test">
+         <Group
+            location = "group:unit"
+            name = "unit">
+            <Group
+               location = "group:BridgingHeader"
+               name = "BridgingHeader">
+               <FileRef
+                  location = "group:UnitTest-Bridging-Header.h">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Clustering"
+               name = "Clustering">
+               <FileRef
+                  location = "group:GMUDefaultClusterRendererTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUSimpleClusterAlgorithmTest.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGridBasedClusterAlgorithmTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUClusterAlgorithmTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUClusterManagerTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUWrappingDictionaryKeyTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUDefaultClusterIconGeneratorTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUNonHierarchicalDistanceBasedAlgorithmTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUClusterAlgorithmTest.h">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUStaticClusterTest.m">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:GeometryUtils"
+               name = "GeometryUtils">
+               <Group
+                  location = "group:Internal"
+                  name = "Internal">
+                  <FileRef
+                     location = "group:LatLngRadiansTest.swift">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:MapPointTest.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:CLLocationCoordinate2D+GeometryUtilsTest.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:GMSPath+GeometryUtilsTest.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Heatmap"
+               name = "Heatmap">
+               <FileRef
+                  location = "group:GMUWeightedLatLngTest.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:HeatMapInterpolationTests.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUHeatmapTileLayerTest.swift">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGradientTest.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Geometry"
+               name = "Geometry">
+               <FileRef
+                  location = "group:GMUKMLParserTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUStyleTest.mm">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGeometryRendererTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGeoJSONParserTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPolygonTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPlacemarkTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUPointTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUFeatureTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMULineStringTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGroundOverlayTest.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUGeometryCollectionTest.m">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:Helper"
+               name = "Helper">
+               <FileRef
+                  location = "group:GMUObectiveCTestHelper.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUObectiveCTestHelper.h">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:QuadTree"
+               name = "QuadTree">
+               <FileRef
+                  location = "group:GQTPointQuadTreeTest.m">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:resources"
+            name = "resources">
+            <Group
+               location = "group:GeoJSON"
+               name = "GeoJSON">
+               <FileRef
+                  location = "group:GeoJSON_MultiLineString_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_MultiPolygon_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_Point_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_FeatureCollection_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_MultiPoint_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_GeometryCollection_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_LineString_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_Feature_Test.geojson">
+               </FileRef>
+               <FileRef
+                  location = "group:GeoJSON_Polygon_Test.geojson">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:KML"
+               name = "KML">
+               <FileRef
+                  location = "group:KML_Polygon_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_GroundOverlay_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_Point_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_MultiGeometry_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_Placemark_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_StyleMap_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_Style_Test.kml">
+               </FileRef>
+               <FileRef
+                  location = "group:KML_LineString_Test.kml">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:common"
+            name = "common">
+            <Group
+               location = "group:Model"
+               name = "Model">
+               <FileRef
+                  location = "group:GMUTestClusterItem.m">
+               </FileRef>
+               <FileRef
+                  location = "group:GMUTestClusterItem.h">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+      <Group
+         location = "group:../../google-maps-ios-utils/third_party"
+         name = "third_party">
+         <FileRef
+            location = "group:git-clang-format">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:../../google-maps-ios-utils/XcodeConfig"
+         name = "XcodeConfig">
+         <FileRef
+            location = "group:GMU-UnitTest.release.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:GMU-UnitTest.debug.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:GMU-DevApp.debug.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:GMU-Target.common.xcconfig">
+         </FileRef>
+         <FileRef
+            location = "group:GMU-DevApp.release.xcconfig">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
       location = "group:../node_modules/react-native-vector-icons/Fonts"
       name = "Fonts">
       <FileRef

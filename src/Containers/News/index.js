@@ -35,16 +35,8 @@ const News = ({ route, navigation }) => {
   useEffect(() => {
     const _news = []
     setNews({loading: true})
-    api.get('/news_index.md').then(({data}) => {
-      data.data.news.forEach(newsId => {
-        api.get(`/news/${newsId}.md`).then(response => {
-          const itemData = response.data
-          _news.push(itemData)
-          if (_news.length == data.data.news.length) {
-            setNews({loading: false, items: _news})
-          }
-        })
-      })
+    api.get('news_index.md').then(({data}) => {
+      setNews({loading: false, items: data.data.news})
     })
   }, [])
   const NewsItem = ({ date, title, language, place, linkUri }) => (
@@ -100,25 +92,13 @@ const NewsStack = ({ navigation }) => {
   useEffect(() => {
     const _news = []
     api.get('/news_index.md').then(({data}) => {
-      data.data.news.forEach((newsId, i) => {
-
-        api.get(`/news/${newsId}.md`).then(response => {
-          const itemData = response.data
-        
-          _news[i] = itemData
-          _news[i].data.index = i
-
-          if (_news.length == data.data.news.length) {
-            setNews({loading: false, items: _news})
-          }
-        })
-      })
+      setNews({loading: false, items: data.news.data})
     })
   }, [])
 
   const headerRight = MenuButton({navigation})
   return (
-    <Stack.Navigator>
+    <Stack.Navigator headerMode="float">
       <Stack.Screen
         name={t('news')}
         component={News}

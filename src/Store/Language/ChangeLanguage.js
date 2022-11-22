@@ -5,7 +5,7 @@ export default {
   initialState: {},
   action: createAction('language/changeLanguage'),
   reducers(state, { payload }) {
-    console.log('payload', payload)
+    console.log('changeLanguage', payload)
     if (typeof payload !== 'undefined') {
       state.selectedLanguage = payload
       i18n.changeLanguage(payload)
