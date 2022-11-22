@@ -188,6 +188,7 @@ collections:
     slug: "{{id}}"
     fields:
       - {label: "Id", name: "id", widget: "string"}
+      - {label: "Published", name: "published", widget: "boolean", default: true}
       - label: "Title"
         name: "title"
         widget: "string"
