@@ -20,7 +20,16 @@ const IndexStartupContainer = () => {
   return (
     <View style={[Layout.fullSize, Layout.fill]}>
       <Brand />
-      <ActivityIndicator size={'large'} color={Colors.primary}  style={{position: 'absolute', left: '50%', marginLeft: -20, bottom: 20}} />
+      <ActivityIndicator
+        size={'large'}
+        color={Colors.primary}
+        style={{
+          position: 'absolute',
+          left: '50%',
+          marginLeft: -20,
+          bottom: 20,
+        }}
+      />
     </View>
   )
 }

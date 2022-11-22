@@ -16,7 +16,7 @@ const App = () => {
        * @see https://github.com/rt2zz/redux-persist/blob/master/docs/PersistGate.md
        */}
       <PersistGate loading={null} persistor={persistor}>
-        <ApplicationNavigator store={ store } />
+        <ApplicationNavigator store={store} />
       </PersistGate>
     </Provider>
   )

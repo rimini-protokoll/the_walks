@@ -11,7 +11,7 @@ const sliceInitialState = {
   completed: [],
   purchased: false,
   fetchWalks: {
-    walks: []
+    walks: [],
   },
 }
 

@@ -8,7 +8,7 @@ import {
   Text,
   Button,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
@@ -23,8 +23,7 @@ import { navigateAndReset, navigate } from '@/Navigators/Root'
 import TrackPlayer, { RepeatMode } from 'react-native-track-player'
 import { uploadPicture } from './util'
 import BackgroundService from 'react-native-background-actions'
-import {useNetInfo} from "@react-native-community/netinfo";
-
+import { useNetInfo } from '@react-native-community/netinfo'
 
 const IndexUserPromptContainer = ({ navigation }) => {
   const { t } = useTranslation()
@@ -41,15 +40,18 @@ const IndexUserPromptContainer = ({ navigation }) => {
   })
   const userPrompt = useSelector(state => state.player.userPrompt)
   const picture = action => {
-    const postAction = actions[action.postAction] || actions['continue']
-    launchCamera({
-      mediaType: 'photo',
-      maxWidth: 2560,
-      maxHeight: 2560,
-      quality: .7
-    }, response => uploadPicture({response, postAction, walk}))
+    const postAction = actions[action.postAction] || actions.continue
+    launchCamera(
+      {
+        mediaType: 'photo',
+        maxWidth: 2560,
+        maxHeight: 2560,
+        quality: 0.7,
+      },
+      response => uploadPicture({ response, postAction, walk }),
+    )
     if (BackgroundService.isRunning()) {
-      BackgroundService.updateNotification({description: ' '}).catch(() => {})
+      BackgroundService.updateNotification({ description: ' ' }).catch(() => {})
     }
   }
   const resumeWalk = async () => {
@@ -76,14 +78,14 @@ const IndexUserPromptContainer = ({ navigation }) => {
             state: {
               routes: [
                 { name: 'The Walks' },
-                { name: walk.data.id, params: { walk } }
-              ]
-            }
-          }
-        ]
+                { name: walk.data.id, params: { walk } },
+              ],
+            },
+          },
+        ],
       })
       if (BackgroundService.isRunning()) {
-        BackgroundService.updateNotification({description: ' '})
+        BackgroundService.updateNotification({ description: ' ' })
       }
     })
   }, [walk])
@@ -104,14 +106,14 @@ const IndexUserPromptContainer = ({ navigation }) => {
             routes: [
               { name: 'The Walks' },
               { name: walk.data.id, params: { walk } },
-              { name: 'Pictures', params: { walk } }
-            ]
-          }
-        }
-      ]
+              { name: 'Pictures', params: { walk } },
+            ],
+          },
+        },
+      ],
     })
     if (BackgroundService.isRunning()) {
-      BackgroundService.updateNotification({taskDesc: ' '})
+      BackgroundService.updateNotification({ taskDesc: ' ' })
     }
   }
   const actions = {
@@ -141,10 +143,18 @@ const IndexUserPromptContainer = ({ navigation }) => {
             <TouchableOpacity
               key={index}
               onPress={() => actions[action.action](action)}
-              style={[Common.button.outline, {opacity: !netinfo.isConnected && action.action == 'map' ? .5 : 1 }]}
+              style={[
+                Common.button.outline,
+                {
+                  opacity:
+                    !netinfo.isConnected && action.action == 'map' ? 0.5 : 1,
+                },
+              ]}
               disabled={!netinfo.isConnected && action.action == 'map'}
             >
-              <Text style={[Fonts.textButton, Fonts.textCenter]}>{action.title}</Text>
+              <Text style={[Fonts.textButton, Fonts.textCenter]}>
+                {action.title}
+              </Text>
             </TouchableOpacity>
           ))}
         </View>

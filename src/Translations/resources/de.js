@@ -19,6 +19,6 @@ export default {
     noPictures: 'Noch keine Bilder',
     twoPerson: 'zu Zweit',
     penPaper: 'Stift & Zettel',
-    credits: 'Walk-Credits'
+    credits: 'Walk-Credits',
   },
 }

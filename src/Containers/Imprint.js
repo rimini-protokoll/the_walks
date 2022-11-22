@@ -1,10 +1,10 @@
-import React, {useEffect, useState, useCallback} from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import {
   View,
   Text,
   TouchableOpacity,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
 } from 'react-native'
 import { useSelector } from 'react-redux'
 import { useTheme } from '@/Theme'
@@ -17,7 +17,7 @@ import api, { handleError } from '@/Services'
 
 const Stack = createStackNavigator()
 
-const ImprintContainer = ({navigation}) => {
+const ImprintContainer = ({ navigation }) => {
   const { Colors, Fonts, Gutters, Layout } = useTheme()
   const { t } = useTranslation()
 
@@ -26,15 +26,17 @@ const ImprintContainer = ({navigation}) => {
 
   return (
     <ScrollView style={Gutters.smallPadding}>
-      <View style={{height: 50}}/>
-      <Markdown markdown={imprint.content}/>
+      <View style={{ height: 50 }} />
+      <Markdown markdown={imprint.content} />
       <TouchableOpacity
-        style={{flex: 1, paddingVertical: 50}}
-        onPress={() => navigation.navigate('legal', {stay: true})}
+        style={{ flex: 1, paddingVertical: 50 }}
+        onPress={() => navigation.navigate('legal', { stay: true })}
       >
-        <Text style={[Fonts.labelSmall, Fonts.textCenter, Fonts.hyperlink]}>{t('legal')}</Text>
+        <Text style={[Fonts.labelSmall, Fonts.textCenter, Fonts.hyperlink]}>
+          {t('legal')}
+        </Text>
       </TouchableOpacity>
-      <Markdown markdown={legal ? legal.content : ''}/>
+      <Markdown markdown={legal ? legal.content : ''} />
     </ScrollView>
   )
 }
@@ -44,18 +46,18 @@ const ImprintStack = ({ navigation }) => {
   const accepted = useSelector(state => {
     return state.legal.accepted
   })
-  const headerRight = MenuButton({navigation})
+  const headerRight = MenuButton({ navigation })
   return (
     <Stack.Navigator headerMode="float">
       <Stack.Screen
-        name='Imprint'
+        name="Imprint"
         component={ImprintContainer}
         options={{
           headerTitle: null,
           headerRight,
-          headerTransparent: true
+          headerTransparent: true,
         }}
-        />
+      />
     </Stack.Navigator>
   )
 }

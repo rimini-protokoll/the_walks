@@ -8,10 +8,10 @@ const Brand = ({ height, width, mode }) => {
   const { Layout, Fonts } = useTheme()
 
   return (
-    <FitImage 
+    <FitImage
       originalWidth={100}
       originalHeight={100}
-      resizeMode='cover'
+      resizeMode="cover"
       style={Layout.fill}
       source={require('Assets/Images/Splashscreen.png')}
     />

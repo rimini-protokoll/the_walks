@@ -13,7 +13,7 @@ const LanguagesList = ({ navigation, languages }) => {
         Layout.fullSize,
         Layout.center,
         {
-          flex: 1
+          flex: 1,
         },
       ]}
     >

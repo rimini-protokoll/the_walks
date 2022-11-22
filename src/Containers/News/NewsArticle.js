@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import {
-  View,
-  ScrollView,
-  Text
-} from 'react-native'
+import { View, ScrollView, Text } from 'react-native'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import Markdown from '@/Components/Markdown'
@@ -15,8 +11,8 @@ const NewsArticle = ({ route }) => {
 
   return (
     <ScrollView style={[Gutters.smallHPadding]}>
-      <View style={{height: 50}}/>
-      <Markdown markdown={newsBody}/>
+      <View style={{ height: 50 }} />
+      <Markdown markdown={newsBody} />
     </ScrollView>
   )
 }

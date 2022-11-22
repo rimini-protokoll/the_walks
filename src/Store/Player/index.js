@@ -8,7 +8,11 @@ const sliceInitialState = {
   duration: null,
   currentTime: 0,
   progress: 0,
-  seek: null
+  seek: null,
 }
 
-export default buildSlice('player', [ChangePlayer, UserPrompt, StartWalk], sliceInitialState).reducer
+export default buildSlice(
+  'player',
+  [ChangePlayer, UserPrompt, StartWalk],
+  sliceInitialState,
+).reducer

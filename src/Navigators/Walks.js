@@ -1,17 +1,12 @@
 import React from 'react'
-import { 
-  Platform, 
-  View,
-  Text,
-  Pressable,
-  Image } from 'react-native'
+import { Platform, View, Text, Pressable, Image } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import { createStackNavigator } from '@react-navigation/stack'
-import { 
+import {
   MenuContainer,
   IndexWalkContainer,
   IndexUserPromptContainer,
-  IndexMapContainer
+  IndexMapContainer,
 } from '@/Containers'
 import { useTheme } from '@/Theme'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -27,12 +22,20 @@ const WalksNavigator = ({ navigation }) => {
   const { colors } = NavigationTheme
   const dispatch = useDispatch()
   const { t } = useTranslation()
-  
-  const headerRight = MenuButton({navigation})
+
+  const headerRight = MenuButton({ navigation })
   const headerBackImage = () => (
     <Image
-      style={[{marginTop: 5, marginHorizontal: 10, backgroundColor: Colors.background}, Fonts.iconRegular]}
-      source={require('@/Assets/Icons/Back.png')}/>
+      style={[
+        {
+          marginTop: 5,
+          marginHorizontal: 10,
+          backgroundColor: Colors.background,
+        },
+        Fonts.iconRegular,
+      ]}
+      source={require('@/Assets/Icons/Back.png')}
+    />
   )
 
   const walk = useSelector(state => {
@@ -42,60 +45,59 @@ const WalksNavigator = ({ navigation }) => {
       )[0]?.data
     }
   })
-  
-  const walks = useSelector((state) => {
+
+  const walks = useSelector(state => {
     const walks = state.walks.fetchWalks.walks
     if (walks) {
       return walks.filter(walk => walk.data.listed)
     } else {
       return []
-    } 
+    }
   })
 
   return (
     <Stack.Navigator headerMode="float">
-      { walks ?
-        <Stack.Screen 
-          name='The Walks' 
-          component={ MenuContainer } 
+      {walks ? (
+        <Stack.Screen
+          name="The Walks"
+          component={MenuContainer}
           options={{
             headerTitle: () => null,
             headerRight,
             headerTransparent: true,
           }}
-        /> : null
-      }
-      { walks.map((walk, index) => (
+        />
+      ) : null}
+      {walks.map((walk, index) => (
         <Stack.Screen
           key={walk.data.id}
           name={walk.data.id}
-          component={ IndexWalkContainer }
+          component={IndexWalkContainer}
           options={{
             headerBackImage,
             headerBackTitleVisible: false,
             headerTitle: () => null,
             headerRight,
-            headerTransparent: true
+            headerTransparent: true,
           }}
         />
-        )
-      )}
+      ))}
       <Stack.Screen
-        name='Pictures'
-        component={ IndexMapContainer }
+        name="Pictures"
+        component={IndexMapContainer}
         options={{
           headerBackImage,
           headerBackTitleVisible: false,
           headerTitle: null,
           headerTransparent: true,
-          headerRight
+          headerRight,
         }}
       />
       <Stack.Screen
         name={t('walk.action')}
-        component={ IndexUserPromptContainer }
+        component={IndexUserPromptContainer}
         options={{
-          headerShown: false
+          headerShown: false,
         }}
       />
     </Stack.Navigator>
@@ -103,4 +105,3 @@ const WalksNavigator = ({ navigation }) => {
 }
 
 export default WalksNavigator
-

@@ -8,7 +8,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  Image
+  Image,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
@@ -28,35 +28,36 @@ const About = ({ navigation }) => {
       return languages.languages
     } else {
       return []
-    } 
+    }
   })
   const aboutText = useSelector(state => state.walks.about)
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow:1 }} style={ Gutters.smallHPadding }>
-      <View style={{height: 50}}/>
-      <Text
-        style={[
-        Gutters.smallBMargin,
-        Fonts.titleLarge,
-        Fonts.textCenter
-        ]}>
-      {t('about')}
+    <ScrollView
+      contentContainerStyle={{ flexGrow: 1 }}
+      style={Gutters.smallHPadding}
+    >
+      <View style={{ height: 50 }} />
+      <Text style={[Gutters.smallBMargin, Fonts.titleLarge, Fonts.textCenter]}>
+        {t('about')}
       </Text>
-      <Markdown markdown={aboutText}/>
+      <Markdown markdown={aboutText} />
       <View style={Layout.center}>
-        <Text style={[
-          Gutters.regularVMargin, 
-          Gutters.regularBPadding, 
-          Fonts.titleRegular]}>{t('support')}</Text>
+        <Text
+          style={[
+            Gutters.regularVMargin,
+            Gutters.regularBPadding,
+            Fonts.titleRegular,
+          ]}
+        >
+          {t('support')}
+        </Text>
       </View>
-      <PartnersList/>
-      <View style={{height: 50}}/>
+      <PartnersList />
+      <View style={{ height: 50 }} />
     </ScrollView>
   )
 }
-
-
 
 const AboutStack = ({ navigation }) => {
   const { Colors, Fonts } = useTheme()
@@ -64,7 +65,7 @@ const AboutStack = ({ navigation }) => {
     <></>
     //<Icon name='information-outline' size={35} color={Colors.text}/>
   }
-  const headerRight = MenuButton({navigation})
+  const headerRight = MenuButton({ navigation })
   return (
     <Stack.Navigator headerMode="float">
       <Stack.Screen
@@ -73,9 +74,9 @@ const AboutStack = ({ navigation }) => {
         options={{
           headerTitle,
           headerRight,
-          headerTransparent: true
+          headerTransparent: true,
         }}
-        />
+      />
     </Stack.Navigator>
   )
 }

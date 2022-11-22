@@ -10,7 +10,7 @@ import {
   ActivityIndicator,
   Image,
   Linking,
-  StyleSheet
+  StyleSheet,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import FitImage from 'react-native-fit-image'
@@ -24,19 +24,21 @@ const Stack = createStackNavigator()
 
 const dateString = (date, locale) => {
   //console.log(locale, Intl.DateTimeFormat(locale, {dateStyle: 'full'}).format(new Date(date)))
-  return Intl.DateTimeFormat(locale, {dateStyle: 'full'}).format(new Date(date))
+  return Intl.DateTimeFormat(locale, { dateStyle: 'full' }).format(
+    new Date(date),
+  )
 }
 
 const News = ({ route, navigation }) => {
   const { Gutters, Fonts, Colors, Layout } = useTheme()
   const { t, i18n } = useTranslation()
   const userLocale = useSelector(state => state.language.userLocale)
-  const [news, setNews] = useState({loading: true, items: []})
+  const [news, setNews] = useState({ loading: true, items: [] })
   useEffect(() => {
     const _news = []
-    setNews({loading: true})
-    api.get('news_index.md').then(({data}) => {
-      setNews({loading: false, items: data.data.news})
+    setNews({ loading: true })
+    api.get('news_index.md').then(({ data }) => {
+      setNews({ loading: false, items: data.data.news })
     })
   }, [])
   const NewsItem = ({ date, title, language, place, linkUri }) => (
@@ -46,41 +48,49 @@ const News = ({ route, navigation }) => {
       style={[Gutters.largeVPadding, Layout.center]}
     >
       <Text style={Fonts.textRegular}>*{date}*</Text>
-      <Text style={[{
-        ...Fonts.textBold, 
-        textAlign:'center',
-      },
-      linkUri ? Fonts.hyperlink : '']}>{title}</Text>
-      {place ? <Text style={Fonts.textItalic}>{place}</Text>:null}
+      <Text
+        style={[
+          {
+            ...Fonts.textBold,
+            textAlign: 'center',
+          },
+          linkUri ? Fonts.hyperlink : '',
+        ]}
+      >
+        {title}
+      </Text>
+      {place ? <Text style={Fonts.textItalic}>{place}</Text> : null}
     </TouchableOpacity>
   )
   const getItemCount = () => news.items.length
   if (news.loading) {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <ActivityIndicator size='large' color={Colors.primary}/>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <ActivityIndicator size="large" color={Colors.primary} />
       </View>
     )
   }
 
   const _newsSorted = [...news.items].sort((a, b) => {
-    return a.data.index - b.data.index;
-  });
-  
+    return a.data.index - b.data.index
+  })
+
   return (
     <ScrollView contentContainerStyle={Gutters.smallHPadding}>
-      <View style={{height: 50}}/>
-      <Text style={[Fonts.titleLarge, Fonts.textCenter, Gutters.largeBMargin]}>{t('news')}</Text>
-        {_newsSorted.map((item, i) => (
-          <NewsItem
-            key={i}
-            date={item.data.date}
-            title={item.data.title}
-            language={item.data.language}
-            place={item.data.place}
-            linkUri={item.data.linkUri}
-          />
-        ))}
+      <View style={{ height: 50 }} />
+      <Text style={[Fonts.titleLarge, Fonts.textCenter, Gutters.largeBMargin]}>
+        {t('news')}
+      </Text>
+      {_newsSorted.map((item, i) => (
+        <NewsItem
+          key={i}
+          date={item.data.date}
+          title={item.data.title}
+          language={item.data.language}
+          place={item.data.place}
+          linkUri={item.data.linkUri}
+        />
+      ))}
     </ScrollView>
   )
 }
@@ -88,15 +98,15 @@ const News = ({ route, navigation }) => {
 const NewsStack = ({ navigation }) => {
   const { Gutters, Colors, Fonts } = useTheme()
   const { t } = useTranslation()
-  const [news, setNews] = useState({loading: true, items: []})
+  const [news, setNews] = useState({ loading: true, items: [] })
   useEffect(() => {
     const _news = []
-    api.get('/news_index.md').then(({data}) => {
-      setNews({loading: false, items: data.news.data})
+    api.get('/news_index.md').then(({ data }) => {
+      setNews({ loading: false, items: data.news.data })
     })
   }, [])
 
-  const headerRight = MenuButton({navigation})
+  const headerRight = MenuButton({ navigation })
   return (
     <Stack.Navigator headerMode="float">
       <Stack.Screen
@@ -105,9 +115,9 @@ const NewsStack = ({ navigation }) => {
         options={{
           headerRight,
           headerTitle: null,
-          headerTransparent: true
+          headerTransparent: true,
         }}
-        initialParams={{news}}
+        initialParams={{ news }}
       />
       {news.items.map((item, index) => (
         <Stack.Screen
@@ -119,7 +129,12 @@ const NewsStack = ({ navigation }) => {
             headerBackTitleVisible: false,
             headerTitle: null,
             headerTransparent: true,
-            headerBackImage: () => <Image style={[Fonts.iconRegular, Gutters.smallTMargin]} source={require('@/Assets/Icons/Back.png')}/>,
+            headerBackImage: () => (
+              <Image
+                style={[Fonts.iconRegular, Gutters.smallTMargin]}
+                source={require('@/Assets/Icons/Back.png')}
+              />
+            ),
           }}
           initialParams={item}
         />

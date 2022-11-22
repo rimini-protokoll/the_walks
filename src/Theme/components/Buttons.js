@@ -8,7 +8,7 @@ export default function ({ Colors, Gutters, Layout }) {
     paddingTop: 8,
     paddingBottom: 4,
     maxWidth: 180,
-    minHeight: 80
+    minHeight: 80,
   }
   const rounded = {
     ...base,

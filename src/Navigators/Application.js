@@ -1,17 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { IndexStartupContainer } from '@/Containers'
-import LanguagesContainer  from '@/Containers/Language'
+import LanguagesContainer from '@/Containers/Language'
 import { useSelector, useDispatch } from 'react-redux'
 import { NavigationContainer } from '@react-navigation/native'
 import { navigationRef } from '@/Navigators/Root'
-import { 
-  SafeAreaView, 
-  StatusBar, 
-  View, 
-  Text,
-  Linking
-} from 'react-native'
+import { SafeAreaView, StatusBar, View, Text, Linking } from 'react-native'
 import { useTheme } from '@/Theme'
 import TrackPlayer, { useProgress, Capability } from 'react-native-track-player'
 import VideoControls from '@/Components/VideoControls'
@@ -24,7 +18,6 @@ import '@/Translations'
 import i18n from 'i18next'
 import BackgroundService from 'react-native-background-actions'
 
-
 const Stack = createStackNavigator()
 
 let MainNavigator
@@ -36,7 +29,7 @@ const ApplicationNavigator = ({ store }) => {
   const [isApplicationLoaded, setIsApplicationLoaded] = useState(false)
   const applicationIsLoading = useSelector(state => state.startup.loading)
   const dispatch = useDispatch()
-  const selectedLanguage = useSelector((state) => state.language.selectedLanguage)
+  const selectedLanguage = useSelector(state => state.language.selectedLanguage)
 
   useEffect(() => {
     dispatch(ChangeTheme.action({ theme: 'default', darkMode: false }))
@@ -62,44 +55,41 @@ const ApplicationNavigator = ({ store }) => {
   )
 
   useEffect(() => {
-    if(isApplicationLoaded && MainNavigator != null) {
+    if (isApplicationLoaded && MainNavigator != null) {
       TrackPlayer.removeUpcomingTracks()
       TrackPlayer.setupPlayer({
-        maxCacheSize: 50000
+        maxCacheSize: 50000,
       })
-        .then(() => TrackPlayer.updateOptions({
-          stopWithApp: true,
-          capabilities: [
-            Capability.Play,
-            Capability.Pause,
-            Capability.Stop
-          ],
-          notificationCapabilites: [
-            Capability.Play,
-            Capability.Pause,
-            Capability.Stop
-          ],
-          compactCapabilites: [
-            Capability.Play,
-            Capability.Pause,
-            Capability.Stop
-          ],
-          waitForBuffer: true
-        }))
+        .then(() =>
+          TrackPlayer.updateOptions({
+            stopWithApp: true,
+            capabilities: [Capability.Play, Capability.Pause, Capability.Stop],
+            notificationCapabilites: [
+              Capability.Play,
+              Capability.Pause,
+              Capability.Stop,
+            ],
+            compactCapabilites: [
+              Capability.Play,
+              Capability.Pause,
+              Capability.Stop,
+            ],
+            waitForBuffer: true,
+          }),
+        )
         .then(() => navigateAndSimpleReset('Main'))
     }
   }, [isApplicationLoaded])
 
   return (
-    <SafeAreaView style={[Layout.fill, {backgroundColor: colors.card}]}>
+    <SafeAreaView style={[Layout.fill, { backgroundColor: colors.card }]}>
       <NavigationContainer theme={NavigationTheme} ref={navigationRef}>
         <StatusBar barStyle={darkMode ? 'light-content' : 'dark-content'} />
-        <Stack.Navigator
-          screenOptions= {{ headerShown: false }}>
-          <Stack.Screen name='Startup' component={IndexStartupContainer} />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Startup" component={IndexStartupContainer} />
           {isApplicationLoaded && MainNavigator != null && (
             <Stack.Screen
-              name='Main'
+              name="Main"
               component={MainNavigator}
               options={{
                 animationEnabled: false,
@@ -108,10 +98,7 @@ const ApplicationNavigator = ({ store }) => {
           )}
         </Stack.Navigator>
       </NavigationContainer>
-      { isApplicationLoaded && MainNavigator != null ? (
-        <VideoControls/>
-      ) : null
-      }
+      {isApplicationLoaded && MainNavigator != null ? <VideoControls /> : null}
     </SafeAreaView>
   )
 }

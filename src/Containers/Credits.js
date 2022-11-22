@@ -1,10 +1,10 @@
-import React, {useEffect, useState, useCallback} from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import {
   View,
   Text,
   TouchableOpacity,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
 } from 'react-native'
 import { useSelector } from 'react-redux'
 import { useTheme } from '@/Theme'
@@ -17,7 +17,7 @@ import MenuButton from '@/Components/MenuButton'
 
 const Stack = createStackNavigator()
 
-const CreditsContainer = ({navigation}) => {
+const CreditsContainer = ({ navigation }) => {
   const { Colors, Fonts, Gutters, Layout } = useTheme()
   const { t } = useTranslation()
 
@@ -27,17 +27,12 @@ const CreditsContainer = ({navigation}) => {
 
   return (
     <ScrollView style={[Gutters.smallPadding]}>
-      <View style={{height: 50}}/>
-      <Text
-        style={[
-        Gutters.smallBMargin,
-        Fonts.titleLarge,
-        Fonts.textCenter
-        ]}>
+      <View style={{ height: 50 }} />
+      <Text style={[Gutters.smallBMargin, Fonts.titleLarge, Fonts.textCenter]}>
         {t('credits')}
       </Text>
-      <Markdown markdown={body}/>
-      <View style={{height: 50}}/>
+      <Markdown markdown={body} />
+      <View style={{ height: 50 }} />
     </ScrollView>
   )
 }
@@ -47,18 +42,18 @@ const CreditsStack = ({ navigation }) => {
   const accepted = useSelector(state => {
     return state.legal.accepted
   })
-  const headerRight = MenuButton({navigation})
+  const headerRight = MenuButton({ navigation })
   return (
     <Stack.Navigator headerMode="float">
       <Stack.Screen
-        name='Credits'
+        name="Credits"
         component={CreditsContainer}
         options={{
           headerTitle: null,
           headerRight,
-          headerTransparent: true
+          headerTransparent: true,
         }}
-        />
+      />
     </Stack.Navigator>
   )
 }

@@ -9,7 +9,7 @@ const instance = axios.create({
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'Cache-Control': 'no-cache'
+    'Cache-Control': 'no-cache',
   },
   timeout: 30000,
 })
@@ -22,8 +22,8 @@ instance.interceptors.response.use(
         ...response,
         data: {
           data: data.data,
-          content: data.content
-        }
+          content: data.content,
+        },
       }
     } catch (e) {
       return response

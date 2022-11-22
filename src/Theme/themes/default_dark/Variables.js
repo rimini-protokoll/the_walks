@@ -5,14 +5,14 @@ const Colors = {
   inputBackground: '#333',
   white: '#ffffff',
   card: '#202020',
-  background: 'black'
+  background: 'black',
 }
 
 const NavigationColors = {
   primary: Colors.primary,
   secondary: Colors.secondary,
   card: Colors.card,
-  background: Colors.background
+  background: Colors.background,
 }
 
 export default {

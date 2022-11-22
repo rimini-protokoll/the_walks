@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  View,
-  Image,
-  TouchableOpacity
-} from 'react-native'
+import { View, Image, TouchableOpacity } from 'react-native'
 import { WebView } from 'react-native-webview'
 import firestore from '@react-native-firebase/firestore'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -17,18 +13,18 @@ const Payment = ({ navigation }) => {
   const dispatch = useDispatch()
   const { t } = useTranslation()
   const language = useSelector(state => state.language.selectedLanguage)
-  const onPaymentComplete = async (voucherCode) => {
+  const onPaymentComplete = async voucherCode => {
     console.log('voucherCode', voucherCode)
     if (voucherCode == 'undefined') {
-      navigation.reset({index: 0, routes: [{name: t('activation')}]})
+      navigation.reset({ index: 0, routes: [{ name: t('activation') }] })
       return
     }
     const voucherCollection = firestore().collection('vouchers')
     const voucher = (await voucherCollection.doc(voucherCode).get()).data()
     if (voucher && !voucher.used) {
-      await voucherCollection.doc(voucherCode).update({used: true})
+      await voucherCollection.doc(voucherCode).update({ used: true })
       dispatch(PurchaseWalks.action(voucherCode))
-      navigation.reset({index: 0, routes: [{name: 'Main'}]})
+      navigation.reset({ index: 0, routes: [{ name: 'Main' }] })
     } else {
       alert(`There has been an error. Your voucher code is ${voucherCode}`)
     }
@@ -36,13 +32,22 @@ const Payment = ({ navigation }) => {
 
   return (
     <>
-      <TouchableOpacity onPress={navigation.goBack} style={{backgroundColor: 'white'}}>
+      <TouchableOpacity
+        onPress={navigation.goBack}
+        style={{ backgroundColor: 'white' }}
+      >
         <Image
-          style={[{marginTop: 15, marginHorizontal: 15, marginBottom: 15}, Fonts.iconRegular]}
-          source={require('@/Assets/Icons/Back.png')}/>
+          style={[
+            { marginTop: 15, marginHorizontal: 15, marginBottom: 15 },
+            Fonts.iconRegular,
+          ]}
+          source={require('@/Assets/Icons/Back.png')}
+        />
       </TouchableOpacity>
       <WebView
-        source={{ uri: `http://the-walks-payment.netlify.app/?lng=${language}` }}
+        source={{
+          uri: `http://the-walks-payment.netlify.app/?lng=${language}`,
+        }}
         onMessage={event => onPaymentComplete(event.nativeEvent.data)}
       />
     </>

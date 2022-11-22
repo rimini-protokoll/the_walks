@@ -31,14 +31,14 @@ export default {
 
       // const userSelectedLanguage = state.selectedLanguage
       // if (!userSelectedLanguage) {
-      //   const setDefaultLanguage = () => { 
-      //     state.selectedLanguage = detectedLanguages[0].languageCode 
+      //   const setDefaultLanguage = () => {
+      //     state.selectedLanguage = detectedLanguages[0].languageCode
       //   }
 
       //   if (detectedLanguages.length > 0) {
       //     setDefaultLanguage()
       //   }
       // }
-    }
-  }
+    },
+  },
 }

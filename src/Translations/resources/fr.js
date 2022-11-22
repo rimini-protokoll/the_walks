@@ -19,6 +19,6 @@ export default {
     noPictures: 'Pas encore de photos',
     twoPerson: 'par deux',
     penPaper: 'Stylo et papier',
-    credits: 'Walk-Crédits'
+    credits: 'Walk-Crédits',
   },
 }

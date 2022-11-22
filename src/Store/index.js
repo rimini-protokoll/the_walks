@@ -25,7 +25,7 @@ const reducers = combineReducers({
   theme,
   language,
   walks,
-  player
+  player,
 })
 
 const persistConfig = {

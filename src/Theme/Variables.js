@@ -22,7 +22,7 @@ export const Colors = {
   success: '#28a745',
   error: '#dc3545',
   card: 'rgb(239,239,241)',
-  player: 'rgb(188,188,188)'
+  player: 'rgb(188,188,188)',
 }
 
 export const NavigationColors = {
@@ -42,7 +42,6 @@ export const IconSize = {
   large: 30,
   xLarge: 35,
 }
-
 
 /**
  * FontSize

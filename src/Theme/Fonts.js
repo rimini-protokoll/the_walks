@@ -11,7 +11,7 @@ import { StyleSheet, Platform } from 'react-native'
 
 const textBase = {
   textAlignVertical: 'center',
-  includeFontPadding: false
+  includeFontPadding: false,
 }
 
 export default function ({ FontSize, Colors, IconSize }) {
@@ -34,7 +34,7 @@ export default function ({ FontSize, Colors, IconSize }) {
       fontFamily: 'CrimsonText-Bold',
       fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       fontSize: FontSize.regular * 1.05,
-      color: Colors.text
+      color: Colors.text,
     },
     textItalic: {
       ...textBase,
@@ -131,7 +131,7 @@ export default function ({ FontSize, Colors, IconSize }) {
     },
     hyperlink: {
       textDecorationLine: 'underline',
-      textDecorationColor: 'rgb(234, 192, 39)'
-    }
+      textDecorationColor: 'rgb(234, 192, 39)',
+    },
   })
 }

@@ -8,7 +8,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
-  Image
+  Image,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
@@ -26,38 +26,40 @@ const Languages = ({ navigation }) => {
       return languages.languages
     } else {
       return []
-    } 
+    }
   })
 
   return (
-    <ScrollView contentContainerStyle={{ flexGrow:1 }} style={ Gutters.smallHPadding }>
-      <LanguagesList navigation={navigation} languages={languages}/>
+    <ScrollView
+      contentContainerStyle={{ flexGrow: 1 }}
+      style={Gutters.smallHPadding}
+    >
+      <LanguagesList navigation={navigation} languages={languages} />
     </ScrollView>
   )
 }
 
-
 const LanguagesStack = ({ navigation }) => {
   const { Colors, Fonts } = useTheme()
   const language = useSelector(state => state.language.selectedLanguage)
-  const Button = MenuButton({navigation})
+  const Button = MenuButton({ navigation })
   const headerRight = () => {
     if (!language) {
       return null
     }
-    return <Button/>
+    return <Button />
   }
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name='Language'
+        name="Language"
         component={Languages}
         options={{
           headerTitle: null,
           headerRight,
-          headerTransparent: true
+          headerTransparent: true,
         }}
-        />
+      />
     </Stack.Navigator>
   )
 }

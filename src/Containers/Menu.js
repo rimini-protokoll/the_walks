@@ -21,19 +21,22 @@ const Menu = ({ navigation, route }) => {
   const dispatch = useDispatch()
   const language = useSelector(state => state.language.selectedLanguage)
 
-  const localWalks = useSelector(state => Object.keys(state.walks.localWalks[language] || {}))
+  const localWalks = useSelector(state =>
+    Object.keys(state.walks.localWalks[language] || {}),
+  )
 
   const [walks, completedWalks] = useSelector(state => {
-    let walks = state.walks.fetchWalks.walks.filter(({data}) => data.listed)
-    walks = walks.map(walk => ({content: walk.content, data: {...walk.data, local: localWalks.indexOf(walk.data.id) > -1}}))
+    let walks = state.walks.fetchWalks.walks.filter(({ data }) => data.listed)
+    walks = walks.map(walk => ({
+      content: walk.content,
+      data: { ...walk.data, local: localWalks.indexOf(walk.data.id) > -1 },
+    }))
     if (walks) {
       return [
         walks.filter(
-          ({data}) => state.walks.completed.indexOf(data.id) == -1
+          ({ data }) => state.walks.completed.indexOf(data.id) == -1,
         ),
-        walks.filter(
-          ({data}) => state.walks.completed.indexOf(data.id) > -1
-        )
+        walks.filter(({ data }) => state.walks.completed.indexOf(data.id) > -1),
       ]
     } else {
       return []
@@ -46,7 +49,7 @@ const Menu = ({ navigation, route }) => {
   const onRefresh = useCallback(() => {
     setRefreshing(true)
     // setTimeout(() => setRefreshing(false), 3000)
-    dispatch(FetchWalks.action({language}))
+    dispatch(FetchWalks.action({ language }))
     setRefreshing(false)
   })
 
@@ -61,23 +64,27 @@ const Menu = ({ navigation, route }) => {
         />
       }
     >
-      <View style={{height: 70}}/>
-      <Text
-        style={[
-        Gutters.smallBMargin,
-        Fonts.titleLarge,
-        Fonts.textCenter
-        ]}>
-      The Walks
+      <View style={{ height: 70 }} />
+      <Text style={[Gutters.smallBMargin, Fonts.titleLarge, Fonts.textCenter]}>
+        The Walks
       </Text>
       {!isLoading && !refreshing ? (
         <View>
           <WalksList navigation={navigation} walks={walks} />
-          {completedWalks.length ? <View style={{...Gutters.largeLMargin, ...Gutters.largeTMargin, width: '15%', height: 4, backgroundColor: Colors.text}}/> : null }
+          {completedWalks.length ? (
+            <View
+              style={{
+                ...Gutters.largeLMargin,
+                ...Gutters.largeTMargin,
+                width: '15%',
+                height: 4,
+                backgroundColor: Colors.text,
+              }}
+            />
+          ) : null}
           <WalksList navigation={navigation} walks={completedWalks} />
-        </View>) :
-          null
-      }
+        </View>
+      ) : null}
     </ScrollView>
   )
 }

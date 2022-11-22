@@ -6,4 +6,8 @@ const sliceInitialState = {
   selectedLanguage: null,
 }
 
-export default buildSlice('language', [FetchLanguages, ChangeLanguage], sliceInitialState).reducer
+export default buildSlice(
+  'language',
+  [FetchLanguages, ChangeLanguage],
+  sliceInitialState,
+).reducer
