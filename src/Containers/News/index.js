@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   ScrollView,
   VirtualizedList,
-  ActivityIndicator,
   Image,
   Linking,
   StyleSheet,
@@ -19,6 +18,7 @@ import { useTranslation } from 'react-i18next'
 import NewsArticle from './NewsArticle'
 import api, { handleError } from '@/Services'
 import MenuButton from '@/Components/MenuButton'
+import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const Stack = createStackNavigator()
 

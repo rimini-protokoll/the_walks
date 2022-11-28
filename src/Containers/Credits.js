@@ -4,7 +4,6 @@ import {
   Text,
   TouchableOpacity,
   ScrollView,
-  ActivityIndicator,
 } from 'react-native'
 import { useSelector } from 'react-redux'
 import { useTheme } from '@/Theme'
@@ -14,6 +13,8 @@ import Markdown from '@/Components/Markdown'
 import Icon from 'react-native-vector-icons/Ionicons'
 import api, { handleError } from '@/Services'
 import MenuButton from '@/Components/MenuButton'
+import ActivityIndicator from '@/Components/ActivityIndicator'
+
 
 const Stack = createStackNavigator()
 

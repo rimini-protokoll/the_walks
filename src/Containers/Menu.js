@@ -60,12 +60,18 @@ const Menu = ({ navigation, route }) => {
       refreshControl={
         <RefreshControl
           refreshing={isLoading || refreshing}
+          colors={['#000']}
+          tintColor='#CCC'
           onRefresh={onRefresh}
         />
       }
     >
       <View style={{ height: 70 }} />
-      <Text style={[Gutters.smallBMargin, Fonts.titleLarge, Fonts.textCenter]}>
+      <Text style={[
+          Gutters.smallBMargin,
+          Fonts.titleWalks,
+          Fonts.textCenter
+        ]}>
         The Walks
       </Text>
       {!isLoading && !refreshing ? (

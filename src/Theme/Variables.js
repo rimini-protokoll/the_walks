@@ -37,8 +37,8 @@ export const NavigationColors = {
  */
 export const IconSize = {
   xSmall: 17,
-  small: 20,
-  regular: 27,
+  small: 18,
+  regular: 25,
   large: 30,
   xLarge: 35,
 }
@@ -48,9 +48,10 @@ export const IconSize = {
  */
 export const FontSize = {
   small: 18,
-  regular: 20,
+  regular: 18,
   button: 20,
-  large: 30,
+  large: 22,
+  walks: 30,
 }
 
 /**

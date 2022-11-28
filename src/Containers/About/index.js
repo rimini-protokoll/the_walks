@@ -4,12 +4,12 @@ import { createStackNavigator } from '@react-navigation/stack'
 import {
   View,
   ScrollView,
-  ActivityIndicator,
   Text,
   TextInput,
   TouchableOpacity,
   Image,
 } from 'react-native'
+import ActivityIndicator from '@/Components/ActivityIndicator'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
 import PartnersList from '@/Components/PartnersList'
@@ -41,17 +41,10 @@ const About = ({ navigation }) => {
       <Text style={[Gutters.smallBMargin, Fonts.titleLarge, Fonts.textCenter]}>
         {t('about')}
       </Text>
-      <Markdown markdown={aboutText} />
-      <View style={Layout.center}>
-        <Text
-          style={[
-            Gutters.regularVMargin,
-            Gutters.regularBPadding,
-            Fonts.titleRegular,
-          ]}
-        >
-          {t('support')}
-        </Text>
+      <Markdown markdown={aboutText}/>
+      <View style={[
+          Gutters.regularVMargin, 
+          Gutters.regularBPadding]}>
       </View>
       <PartnersList />
       <View style={{ height: 50 }} />

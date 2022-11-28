@@ -1,16 +1,19 @@
 export default {
   back: 'Fermer la Galerie',
   partners: 'Partenaire',
-  language: 'Langue',
-  about: 'Á propos',
+  language: 'Langues',
+  about: 'A propos',
   support: 'Co-producteurs',
   credits: 'Crédits',
   news: 'Calendrier',
   purchase: 'Acheter The Walks',
-  legal: 'Modifier le contrat',
+  purchaseTitle: 'Acheter un billet',
+  purchaseDescription: 'Un billet vous donne l\'accès à tous les Walks.',
+  purchaseButton: 'Achèter pour {{price}}',
+  legal: 'Adapter le contrat',
   imprint: 'Mentions légales et protection de données',
   activation: 'Code d‘activation',
-  preview: 'Menu sans activation',
+  preview: 'Continuer sans activation',
   voucherA: 'Code d‘activation:',
   voucherB: '',
   walk: {
@@ -18,7 +21,7 @@ export default {
     pictures: 'Galerie',
     noPictures: 'Pas encore de photos',
     twoPerson: 'par deux',
-    penPaper: 'Stylo et papier',
-    credits: 'Walk-Crédits',
+    penPaper: 'Stylo & papier',
+    credits: 'Crédits'
   },
 }

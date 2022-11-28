@@ -7,8 +7,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { navigationRef } from '@/Navigators/Root'
 import { SafeAreaView, StatusBar, View, Text, Linking } from 'react-native'
 import { useTheme } from '@/Theme'
-import TrackPlayer, { useProgress, Capability } from 'react-native-track-player'
 import VideoControls from '@/Components/VideoControls'
+import { usePlayer, usePrompt } from '@/Components/VideoControls/Player'
 import ChangeTheme from '@/Store/Theme/ChangeTheme'
 import ChangePlayer from '@/Store/Player/ChangePlayer'
 import StartWalk from '@/Store/Player/StartWalk'
@@ -30,6 +30,8 @@ const ApplicationNavigator = ({ store }) => {
   const applicationIsLoading = useSelector(state => state.startup.loading)
   const dispatch = useDispatch()
   const selectedLanguage = useSelector(state => state.language.selectedLanguage)
+  const PlayerWalk = usePlayer()
+  const PlayerPrompt = usePrompt()
 
   useEffect(() => {
     dispatch(ChangeTheme.action({ theme: 'default', darkMode: false }))
@@ -45,39 +47,42 @@ const ApplicationNavigator = ({ store }) => {
     () => () => {
       setIsApplicationLoaded(false)
       MainNavigator = null
-      TrackPlayer.reset()
-      TrackPlayer.destroy()
       dispatch(StartWalk.action(false))
       BackgroundService.stop()
+      PlayerWalk.destroy()
+      PlayerPrompt.destroy()
       console.log('destroy')
     },
     [],
   )
 
   useEffect(() => {
-    if (isApplicationLoaded && MainNavigator != null) {
-      TrackPlayer.removeUpcomingTracks()
-      TrackPlayer.setupPlayer({
-        maxCacheSize: 50000,
-      })
-        .then(() =>
-          TrackPlayer.updateOptions({
-            stopWithApp: true,
-            capabilities: [Capability.Play, Capability.Pause, Capability.Stop],
-            notificationCapabilites: [
-              Capability.Play,
-              Capability.Pause,
-              Capability.Stop,
-            ],
-            compactCapabilites: [
-              Capability.Play,
-              Capability.Pause,
-              Capability.Stop,
-            ],
-            waitForBuffer: true,
-          }),
-        )
-        .then(() => navigateAndSimpleReset('Main'))
+    if(isApplicationLoaded && MainNavigator != null) {
+      // TrackPlayer.removeUpcomingTracks()
+      // TrackPlayer.setupPlayer({
+      //   maxCacheSize: 50000
+      // })
+      //   .then(() => TrackPlayer.updateOptions({
+      //     stopWithApp: true,
+      //     capabilities: [
+      //       Capability.Play,
+      //       Capability.Pause,
+      //       Capability.Stop
+      //     ],
+      //     notificationCapabilites: [
+      //       Capability.Play,
+      //       Capability.Pause,
+      //       Capability.Stop
+      //     ],
+      //     compactCapabilites: [
+      //       Capability.Play,
+      //       Capability.Pause,
+      //       Capability.Stop
+      //     ],
+      //     waitForBuffer: true
+      //   }))
+      //   .then(() => {})
+      navigateAndSimpleReset('Main')
     }
   }, [isApplicationLoaded])
 

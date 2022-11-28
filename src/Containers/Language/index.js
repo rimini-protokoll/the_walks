@@ -4,7 +4,6 @@ import { createStackNavigator } from '@react-navigation/stack'
 import {
   View,
   ScrollView,
-  ActivityIndicator,
   Text,
   TextInput,
   TouchableOpacity,
@@ -15,6 +14,7 @@ import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import LanguagesList from '@/Components/LanguagesList'
 import MenuButton from '@/Components/MenuButton'
+import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const Stack = createStackNavigator()
 

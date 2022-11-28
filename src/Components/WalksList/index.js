@@ -6,18 +6,23 @@ import Tile from './Tile'
 const WalksList = ({ navigation, walks }) => {
   const { Layout } = useTheme()
   return (
-    <View
-      style={{
+    <View>
+      <View style={{
         justifyContent: 'flex-start',
         alignContent: 'space-between',
         alignItems: 'baseline',
         flexWrap: 'wrap',
-        flexDirection: 'row',
-      }}
-    >
-      {walks.map((walk, i) => (
-        <Tile key={i} walk={walk} navigation={navigation} />
-      ))}
+        flexDirection: 'row'
+        }}>
+        { walks.map((walk, i) => (
+          <Tile
+            key={i}
+            walk={walk}
+            navigation={navigation}
+            />
+        ))}
+      </View>
+      <View style={{height:20}}></View>
     </View>
   )
 }

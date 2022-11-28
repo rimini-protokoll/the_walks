@@ -22,20 +22,12 @@ const WalksNavigator = ({ navigation }) => {
   const { colors } = NavigationTheme
   const dispatch = useDispatch()
   const { t } = useTranslation()
-
-  const headerRight = MenuButton({ navigation })
+  const headerRight = MenuButton({navigation})
+  const headerRightTransparent = MenuButton({navigation, transparent: true})
   const headerBackImage = () => (
     <Image
-      style={[
-        {
-          marginTop: 5,
-          marginHorizontal: 10,
-          backgroundColor: Colors.background,
-        },
-        Fonts.iconRegular,
-      ]}
-      source={require('@/Assets/Icons/Back.png')}
-    />
+      style={[{marginTop: 5, marginHorizontal: 10, backgroundColor: 'transparent'}, Fonts.iconRegular]}
+      source={require('@/Assets/Icons/Back.png')}/>
   )
 
   const walk = useSelector(state => {
@@ -90,7 +82,11 @@ const WalksNavigator = ({ navigation }) => {
           headerBackTitleVisible: false,
           headerTitle: null,
           headerTransparent: true,
+<<<<<<< HEAD
           headerRight,
+=======
+          headerRight: headerRightTransparent
+>>>>>>> a606985ef801e5d5e9da6468400380c8737d1cae
         }}
       />
       <Stack.Screen

@@ -5,7 +5,6 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
-  ActivityIndicator,
   Image,
   PermissionsAndroid,
   Platform,
@@ -20,6 +19,7 @@ import MenuButton from '@/Components/MenuButton'
 import Icon from 'react-native-vector-icons/Ionicons'
 import api from '@/Services'
 import Accept from '@/Store/Legal/Accept'
+import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const Stack = createStackNavigator()
 

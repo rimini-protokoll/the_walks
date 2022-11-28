@@ -4,7 +4,6 @@ import {
   ScrollView,
   View,
   Image,
-  ActivityIndicator,
   Text,
   Button,
   TextInput,
@@ -14,7 +13,6 @@ import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import Icon from 'react-native-vector-icons/Ionicons'
 import FitImage from 'react-native-fit-image'
-import TrackPlayer, { useProgress } from 'react-native-track-player'
 import { store } from '@/Store'
 import StartWalk from '@/Store/Player/StartWalk'
 import ChangePlayer from '@/Store/Player/ChangePlayer'
@@ -22,6 +20,7 @@ import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import DownloadWalk from '@/Store/Walks/DownloadWalk'
 import Markdown from '@/Components/Markdown'
 import { useNetInfo } from '@react-native-community/netinfo';
+import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const startWalk = walk => {
   // console.log(walk.data.srcUri[0])
@@ -138,7 +137,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
             !!activeWalkId
           }
         >
-          <Text style={[Fonts.textButton, Fonts.textCenter]}>
+          <Text style={[Fonts.textButton, Fonts.textCenter, { minWidth: '50%' }]}>
             {t('walk.start')}
           </Text>
         </TouchableOpacity>
@@ -172,8 +171,8 @@ const IndexWalkContainer = ({ navigation, route }) => {
         { alignContent: 'flex-start' },
       ]}
     >
-      <View style={{ height: 50 }}/>
-      <View style={{ width: '40%' }}>
+      <View style={{height: 10}}/>
+      <View style={{ width: '35%' }}>
         <FitImage
           originalWidth={1024}
           originalHeight={1024}
@@ -201,11 +200,15 @@ const IndexWalkContainer = ({ navigation, route }) => {
             <View style={{ height: Fonts.titleSmall.fontSize / 2 }} />
           ) : null}
         </View>
-        <Markdown markdown={walk.content} />
-        <View style={[Gutters.regularVMargin, Layout.row, Layout.center]}>
-          <View style={[Layout.center, { width: '33%' }]}>
-            <Image
-              style={Fonts.iconSmall}
+        <View style={{height: 10}}/>
+        <Markdown
+          markdown={walk.content}
+        />
+        <View
+          style={[Gutters.regularVMargin, Layout.row, Layout.center]}
+        >
+          <View style={[Layout.center, { width: '33%'}]}>
+            <Image style={Fonts.iconSmall}
               source={require('Assets/Icons/Dauer.png')}
             />
             <Text

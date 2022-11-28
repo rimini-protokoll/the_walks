@@ -210,6 +210,7 @@ const MainNavigator = ({ navigation }) => {
         Fonts,
         Gutters,
       }}
+      edgeWidth={0}
       drawerPosition="right"
     >
       <Drawer.Screen name="Main" component={WalksNavigator} />
