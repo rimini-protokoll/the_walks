@@ -53,6 +53,7 @@ const Menu = ({ navigation, route }) => {
   return (
     <ScrollView
       style={[Gutters.smallVPadding]}
+      contentContainerStyle={{ zIndex: -10 }}
       refreshControl={
         <RefreshControl
           refreshing={isLoading || refreshing}

@@ -1,3 +1,3 @@
-export default function ({ message, data, status }) {
-  return Promise.reject({ message, data, status })
+export default function ({ request, message, data, status }) {
+  return Promise.reject({ request, message, data, status })
 }

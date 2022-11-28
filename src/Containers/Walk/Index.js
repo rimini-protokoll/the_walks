@@ -113,7 +113,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
       <TouchableOpacity
         onPress={() => startWalk(_walk)}
         style={[Common.button.outline, {opacity: ((!netinfo.isConnected && !isLocal) || isDownloading || activeWalkId) ? .5 : 1}]}
-        disabled={(!netinfo.isConnected && !isLocal) || isDownloading || activeWalkId}
+        disabled={(!netinfo.isConnected && !isLocal) || isDownloading || !!activeWalkId}
       >
         <Text style={[Fonts.textButton, Fonts.textCenter, { minWidth: '50%' }]}>{t('walk.start')}</Text>
       </TouchableOpacity>
@@ -208,25 +208,12 @@ const IndexWalkContainer = ({ navigation, route }) => {
             </TouchableOpacity>
             : (isDownloading ? <ActivityIndicator size='small' color={Colors.primary}/> : <WalkButtons/>)}
         </View>
-        { }
       </View>
       {
         walksPurchased ? (
-          !isLocal ? (
+          !isLocal ? null : (
             <TouchableOpacity
-              disabled={isDownloading || activeWalkId}
-              style={[Gutters.regularVMargin,
-                {opacity: !netinfo.isConnected || isDownloading || activeWalkId ? .5 : 1, alignSelf: 'center'}]}
-              onPress={localStorage}
-              disabled={!netinfo.isConnected || isDownloading || activeWalkId}>
-              <Image
-                style={Fonts.iconRegular}
-                source={require('Assets/Icons/Download.png')}
-              />
-            </TouchableOpacity>
-          ) : (
-            <TouchableOpacity
-              disabled={isDownloading || activeWalkId}
+              disabled={isDownloading || !!activeWalkId}
               onPress={localStorageDelete}
               style={{...Gutters.regularVMargin, opacity: isDownloading || activeWalkId ? .5 : 1, alignSelf: 'center'}}>
               <Icon name="trash-outline" size={Fonts.iconRegular.width} color={Colors.text}/>

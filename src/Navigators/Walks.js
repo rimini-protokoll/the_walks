@@ -54,8 +54,7 @@ const WalksNavigator = ({ navigation }) => {
   })
 
   return (
-    <Stack.Navigator
-    >
+    <Stack.Navigator headerMode="float">
       { walks ?
         <Stack.Screen 
           name='The Walks' 
@@ -63,7 +62,7 @@ const WalksNavigator = ({ navigation }) => {
           options={{
             headerTitle: () => null,
             headerRight,
-            headerTransparent: true
+            headerTransparent: true,
           }}
         /> : null
       }

@@ -199,21 +199,23 @@ const VideoControl = () => {
     })
   })
 
-  useEffect(async () => {
-    setSetup(true)
-    if ((await TrackPlayer.getQueue()).length) {
-      console.log('resetting')
-      await TrackPlayer.reset()
-    }
-    if (walk) {
-      console.log('useEffect walk', activeWalk)
-      if (typeof walk.data.srcUri == 'string') {
-        buildWalk(walk.data)
-      } else {
-        setSelection(walk.data.srcUri)
+  useEffect(() => {
+    const setup = async () => {
+      setSetup(true)
+      if ((await TrackPlayer.getQueue()).length) {
+        console.log('resetting')
+        await TrackPlayer.reset()
+      }
+      if (walk) {
+        console.log('useEffect walk', activeWalk)
+        if (typeof walk.data.srcUri == 'string') {
+          buildWalk(walk.data)
+        } else {
+          setSelection(walk.data.srcUri)
+        }
       }
     }
-
+    setup()
   }, [walk])
 
   useEffect(() => {

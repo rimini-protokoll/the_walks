@@ -134,7 +134,7 @@ const LegalStack = ({ route, navigation }) => {
     )
   }
   return (
-    <Stack.Navigator>
+    <Stack.Navigator headerMode="float">
       <Stack.Screen
         name='Legal'
         component={LegalContainer}
