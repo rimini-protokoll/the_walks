@@ -7,6 +7,9 @@ export default {
   credits: 'Credits',
   news: 'Kalender',
   purchase: 'The Walks kaufen',
+  purchaseTitle: 'Ticket kaufen',
+  purchaseDescription: 'Mit einem Ticket hast du Zugang zu allen Walks.',
+  purchaseButton: 'Kaufen für {{price}}',
   legal: 'Vertrag anpassen',
   imprint: 'Impressum, Datenschutz & Rechtliches',
   activation: 'Aktivierung',
@@ -14,11 +17,11 @@ export default {
   voucherA: 'Anmelden mit',
   voucherB: 'Aktivierungscode:',
   walk: {
-    start: 'Walk starten',
+    start: 'Walk\nstarten',
     pictures: 'Galerie',
     noPictures: 'Noch keine Bilder',
     twoPerson: 'zu Zweit',
     penPaper: 'Stift & Zettel',
-    credits: 'Walk-Credits'
+    credits: 'Credits'
   },
 }

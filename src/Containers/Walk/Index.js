@@ -4,7 +4,6 @@ import {
   ScrollView,
   View,
   Image,
-  ActivityIndicator,
   Text,
   Button,
   TextInput,
@@ -14,9 +13,6 @@ import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import Icon from 'react-native-vector-icons/Ionicons'
 import FitImage from 'react-native-fit-image'
-import TrackPlayer, {
-  useProgress
-} from 'react-native-track-player'
 import { store } from '@/Store'
 import StartWalk from '@/Store/Player/StartWalk'
 import ChangePlayer from '@/Store/Player/ChangePlayer'
@@ -24,6 +20,7 @@ import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import DownloadWalk from '@/Store/Walks/DownloadWalk'
 import Markdown from '@/Components/Markdown'
 import {useNetInfo} from "@react-native-community/netinfo";
+import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const startWalk = (walk) => {
   // console.log(walk.data.srcUri[0])
@@ -118,7 +115,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
         style={[Common.button.outline, {opacity: ((!netinfo.isConnected && !isLocal) || isDownloading || activeWalkId) ? .5 : 1}]}
         disabled={(!netinfo.isConnected && !isLocal) || isDownloading || activeWalkId}
       >
-        <Text style={[Fonts.textButton, Fonts.textCenter]}>{t('walk.start')}</Text>
+        <Text style={[Fonts.textButton, Fonts.textCenter, { minWidth: '50%' }]}>{t('walk.start')}</Text>
       </TouchableOpacity>
       {completed && hasPicture ? 
         <TouchableOpacity
@@ -138,8 +135,8 @@ const IndexWalkContainer = ({ navigation, route }) => {
       ref={scrollViewRef}
       contentContainerStyle={[Layout.colCenter, Gutters.largeBPadding, { alignContent: 'flex-start' }]}
     >
-      <View style={{height: 50}}/>
-      <View style={{ width: '40%' }}>
+      <View style={{height: 10}}/>
+      <View style={{ width: '35%' }}>
         <FitImage
           originalWidth={1024}
           originalHeight={1024}
@@ -159,6 +156,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
           </Text> : null}
           {walk.data.afterTitle ? <View style={{height: Fonts.titleSmall.fontSize/2}}/> : null}
         </View>
+        <View style={{height: 10}}/>
         <Markdown
           markdown={walk.content}
         />

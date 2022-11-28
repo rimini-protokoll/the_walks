@@ -29,9 +29,10 @@ const WalksNavigator = ({ navigation }) => {
   const { t } = useTranslation()
   
   const headerRight = MenuButton({navigation})
+  const headerRightTransparent = MenuButton({navigation, transparent: true})
   const headerBackImage = () => (
     <Image
-      style={[{marginTop: 5, marginHorizontal: 10, backgroundColor: Colors.background}, Fonts.iconRegular]}
+      style={[{marginTop: 5, marginHorizontal: 10, backgroundColor: 'transparent'}, Fonts.iconRegular]}
       source={require('@/Assets/Icons/Back.png')}/>
   )
 
@@ -89,7 +90,7 @@ const WalksNavigator = ({ navigation }) => {
           headerBackTitleVisible: false,
           headerTitle: null,
           headerTransparent: true,
-          headerRight
+          headerRight: headerRightTransparent
         }}
       />
       <Stack.Screen

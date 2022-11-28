@@ -56,6 +56,8 @@ const Menu = ({ navigation, route }) => {
       refreshControl={
         <RefreshControl
           refreshing={isLoading || refreshing}
+          colors={['#000']}
+          tintColor='#CCC'
           onRefresh={onRefresh}
         />
       }
@@ -64,7 +66,7 @@ const Menu = ({ navigation, route }) => {
       <Text
         style={[
         Gutters.smallBMargin,
-        Fonts.titleLarge,
+        Fonts.titleWalks,
         Fonts.textCenter
         ]}>
       The Walks

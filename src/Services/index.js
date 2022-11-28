@@ -6,11 +6,11 @@ import { Config } from '@/Config'
 
 const instance = axios.create({
   baseURL: Config.API_URL,
-  headers: {
+  /*headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
     'Cache-Control': 'no-cache'
-  },
+  },*/
   timeout: 30000,
 })
 

@@ -7,8 +7,11 @@ export default {
   credits: 'Crediti',
   news: 'Calendario', 
   purchase: 'Acquistare The Walks',
+  purchaseTitle: 'Acquista un biglietto',
+  purchaseDescription: 'Un biglietto ti darà accesso a tutte le passeggiate.',
+  purchaseButton: 'Acquista per {{price}}',
   legal: 'Adeguare il contratto',
-  imprint: 'Impressum, protezione dei dati & avvisi legali',
+  imprint: 'Crediti, note legali e privacy',
   activation: 'Attivazione',
   preview: 'Anteprima senza attivazione',
   voucherA: 'Accedere con il',
@@ -17,8 +20,8 @@ export default {
     start: 'Avviare passeggiata',
     pictures: 'Galleria',
     noPictures: 'Ancora nessuna foto',
-    twoPerson: 'a due a due',
-    penPaper: 'Carta e penna',
-    credits: 'Crediti delle passeggiate'
+    twoPerson: 'I due',
+    penPaper: 'carta & penna',
+    credits: 'Crediti'
   },
 }

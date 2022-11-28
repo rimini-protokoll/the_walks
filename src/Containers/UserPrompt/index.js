@@ -4,7 +4,6 @@ import {
   ScrollView,
   View,
   Image,
-  ActivityIndicator,
   Text,
   Button,
   TextInput,
@@ -20,10 +19,12 @@ import StartWalk from '@/Store/Player/StartWalk'
 import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import UserPrompt from '@/Store/Player/UserPrompt'
 import { navigateAndReset, navigate } from '@/Navigators/Root'
-import TrackPlayer, { RepeatMode } from 'react-native-track-player'
-import { uploadPicture } from './util'
+import { uploadPicture, permissionsGeoLocation, permissionsCamera } from './util'
 import BackgroundService from 'react-native-background-actions'
 import {useNetInfo} from "@react-native-community/netinfo";
+import { usePlayer, usePrompt } from '@/Components/VideoControls/Player'
+import DownloadWalk from '@/Store/Walks/DownloadWalk'
+import ActivityIndicator from '@/Components/ActivityIndicator'
 
 
 const IndexUserPromptContainer = ({ navigation }) => {
@@ -31,6 +32,11 @@ const IndexUserPromptContainer = ({ navigation }) => {
   const { Common, Fonts, Gutters, Layout, Colors } = useTheme()
   const dispatch = useDispatch()
   const netinfo = useNetInfo()
+  const PlayerWalk = usePlayer()
+  const PlayerPrompt = usePrompt()
+  const language = useSelector(state => state.language.selectedLanguage)
+  const isDownloading = useSelector(state => state.walks.downloadWalk.loading)
+  const [isLoading, setIsLoading] = useState(false)
 
   const walk = useSelector(state => {
     if (state.player.activeWalk) {
@@ -42,55 +48,67 @@ const IndexUserPromptContainer = ({ navigation }) => {
   const userPrompt = useSelector(state => state.player.userPrompt)
   const picture = action => {
     const postAction = actions[action.postAction] || actions['continue']
+    setIsLoading(true)
     launchCamera({
       mediaType: 'photo',
       maxWidth: 2560,
       maxHeight: 2560,
       quality: .7
-    }, response => uploadPicture({response, postAction, walk}))
+    }, ({didCancel, errorCode, errorMessage, assets}) => {
+      if (didCancel) {
+        setIsLoading(false)
+      } else if (errorCode || !assets) {
+        setIsLoading(false)
+        postAction()
+      } else {
+        uploadPicture({
+          assets,
+          postAction: () => {setIsLoading(false); postAction()},
+          onError: () => {setIsLoading(false); postAction()},
+          walk
+        })
+      }
+    })
     if (BackgroundService.isRunning()) {
       BackgroundService.updateNotification({description: ' '}).catch(() => {})
     }
   }
   const resumeWalk = async () => {
-    await TrackPlayer.setVolume(0)
-    await TrackPlayer.setRepeatMode(RepeatMode.Off)
-    await TrackPlayer.pause()
-    await TrackPlayer.skipToNext()
-    await TrackPlayer.play()
-    await TrackPlayer.seekTo(0)
-    dispatch(ChangePlayer.action({ position: userPrompt.triggerTime }))
+    PlayerWalk.seekTo(userPrompt.triggerTime)
+    PlayerPrompt.stop()
+    PlayerWalk.play()
   }
   const continueWalk = useCallback(() => {
-    resumeWalk().then(() => {
-      dispatch(UserPrompt.action(false))
-      if (userPrompt.isLast) {
-        dispatch(StartWalk.action(false))
-      }
-      // dispatch(ChangeWalk.action(walk.data.id))
-      navigation.reset({
-        index: 0,
-        routes: [
-          {
-            name: 'Main',
-            state: {
-              routes: [
-                { name: 'The Walks' },
-                { name: walk.data.id, params: { walk } }
-              ]
-            }
+    resumeWalk()
+    dispatch(UserPrompt.action(false))
+    setIsLoading(false)
+    if (userPrompt.isLast) {
+      console.log('userPrompt.isLast')
+      dispatch(StartWalk.action(false))
+    }
+    // dispatch(ChangeWalk.action(walk.data.id))
+    navigation.reset({
+      index: 0,
+      routes: [
+        {
+          name: 'Main',
+          state: {
+            routes: [
+              { name: 'The Walks' },
+              { name: walk.data.id, params: { walk } }
+            ]
           }
-        ]
-      })
-      if (BackgroundService.isRunning()) {
-        BackgroundService.updateNotification({description: ' '})
-      }
+        }
+      ]
     })
+    if (BackgroundService.isRunning()) {
+      BackgroundService.updateNotification({description: ' '})
+    }
   }, [walk])
 
   const map = () => {
     dispatch(UserPrompt.action(false))
-    TrackPlayer.setRepeatMode(RepeatMode.Off)
+    PlayerPrompt.destroy()
     if (userPrompt.isLast) {
       dispatch(StartWalk.action(false))
     }
@@ -118,6 +136,27 @@ const IndexUserPromptContainer = ({ navigation }) => {
     continue: continueWalk,
     picture,
     map,
+    async geoLocation() {
+      setIsLoading(true)
+      await permissionsGeoLocation()
+      continueWalk()
+    },
+    async camera() {
+      setIsLoading(true)
+      await permissionsCamera()
+      continueWalk()
+    },
+    downloadWalk() {
+      dispatch(DownloadWalk.action({walk, language, callback: localWalk => {
+        let srcUri
+        if (typeof localWalk.srcUri == 'string') {
+          srcUri = localWalk.srcUri
+        } else {
+          srcUri = localWalk.srcUri[localWalk.srcUri.map(({data}) => data.id).indexOf(userPrompt.walkId)]
+        }
+        PlayerWalk.replaceSrc(srcUri, continueWalk)
+      }}))
+    }
   }
 
   if (!walk || !userPrompt) {
@@ -137,12 +176,18 @@ const IndexUserPromptContainer = ({ navigation }) => {
             justifyContent: 'space-evenly',
           }}
         >
-          {userPrompt.actions.map((action, index) => (
+          {isDownloading ? (
+            <ActivityIndicator
+              size="large"
+              color={Colors.primary}
+              style={[Gutters.largePadding]}
+            />
+          ) : userPrompt.actions.map((action, index) => (
             <TouchableOpacity
               key={index}
               onPress={() => actions[action.action](action)}
-              style={[Common.button.outline, {opacity: !netinfo.isConnected && action.action == 'map' ? .5 : 1 }]}
-              disabled={!netinfo.isConnected && action.action == 'map'}
+              style={[Common.button.outline, {opacity: isLoading || (!netinfo.isConnected && action.action == 'map') ? .5 : 1 }]}
+              disabled={isLoading || (!netinfo.isConnected && action.action == 'map')}
             >
               <Text style={[Fonts.textButton, Fonts.textCenter]}>{action.title}</Text>
             </TouchableOpacity>

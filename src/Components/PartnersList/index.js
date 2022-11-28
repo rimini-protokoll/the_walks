@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 import { useTheme } from '@/Theme'
 import Tile from './TilePartner'
 import FitImage from 'react-native-fit-image'
+import { Config } from '@/Config'
 
 const PartnersList = () => {
   const { t } = useTranslation()
@@ -44,7 +45,7 @@ const PartnersList = () => {
       originalWidth={636}
       originalHeight={1232}
       resizeMode="contain"
-      source={{uri: 'https://the-walks.netlify.app/partners/Koproduzenten.png'}}
+      source={{uri: `${Config.API_URL}partners/Koproduzenten.png`}}
     />
   )
 }
