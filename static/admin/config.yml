@@ -53,6 +53,7 @@ collections:
     identifier_field: id
     summary: "{{preTitle}} {{title}} {{afterTitle}} ({{language}}_{{id}})"
     create: true
+    sortable_fields: [title, language, id]
     fields:
       - label: Walk icon
         name: iconUri
@@ -259,6 +260,7 @@ collections:
     folder: static/analytics
     slug: "{{dateStart}}_{{dateEnd}}"
     create: true
+    sortable_fields: [dateStart]
     fields:
       - label: "Start Date"
         name: dateStart
@@ -273,6 +275,21 @@ collections:
       - label: "Get + Export CSV"
         name: voucherAnalytics
         widget: "voucherAnalytics"
+        required: false
+  - name: vouchers
+    label: "Vouchers"
+    label_singular: "Guest Venue"
+    summary: "{{guestVenue}}"
+    folder: static/vouchers
+    slug: "{{guestVenue}}"
+    create: true
+    fields:
+      - label: "Guest Venue"
+        name: guestVenue
+        widget: string
+      - label: "Vouchers"
+        name: vouchers
+        widget: vouchers
         required: false
   - name: userActions
     label: "User Actions"
