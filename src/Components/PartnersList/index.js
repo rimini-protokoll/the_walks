@@ -42,7 +42,7 @@ const PartnersList = () => {
       originalWidth={636}
       originalHeight={1232}
       resizeMode="contain"
-      source={{uri: `${Config.API_URL}partners/Koproduzenten.png`}}
+      source={{ uri: `${Config.API_URL}partners/Koproduzenten.png` }}
     />
   )
 }

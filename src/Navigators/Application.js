@@ -7,12 +7,14 @@ import { NavigationContainer } from '@react-navigation/native'
 import { navigationRef } from '@/Navigators/Root'
 import { SafeAreaView, StatusBar, View, Text, Linking } from 'react-native'
 import { useTheme } from '@/Theme'
+import TrackPlayer, {
+  AppKilledPlaybackBehavior,
+  Capability,
+} from 'react-native-track-player'
 import VideoControls from '@/Components/VideoControls'
-import { usePlayer, usePrompt } from '@/Components/VideoControls/Player'
 import ChangeTheme from '@/Store/Theme/ChangeTheme'
-import ChangePlayer from '@/Store/Player/ChangePlayer'
 import StartWalk from '@/Store/Player/StartWalk'
-import Icon from 'react-native-vector-icons/Ionicons'
+import UserPrompt from '@/Store/Player/UserPrompt'
 import { navigateAndSimpleReset } from '@/Navigators/Root'
 import '@/Translations'
 import i18n from 'i18next'
@@ -22,16 +24,42 @@ const Stack = createStackNavigator()
 
 let MainNavigator
 
+const setupPlayer = async () => {
+  try {
+    await TrackPlayer.getCurrentTrack()
+    await TrackPlayer.removeUpcomingTracks()
+  } catch {
+    await TrackPlayer.setupPlayer({
+      maxCacheSize: 50000,
+    })
+    await TrackPlayer.updateOptions({
+      progressUpdateEventInterval: 1,
+      forwardJumpInterval: 0,
+      capabilities: [Capability.Play, Capability.Pause, Capability.Stop],
+      notificationCapabilites: [
+        Capability.Play,
+        Capability.Pause,
+        Capability.Stop,
+      ],
+      compactCapabilites: [Capability.Play, Capability.Pause, Capability.Stop],
+      waitForBuffer: true,
+      android: {
+        appKilledPlaybackBehavior:
+          AppKilledPlaybackBehavior.StopPlaybackAndRemoveNotification,
+      },
+    })
+  }
+}
+
 // @refresh reset
 const ApplicationNavigator = ({ store }) => {
   const { Fonts, Layout, darkMode, NavigationTheme, Colors } = useTheme()
   const { colors } = NavigationTheme
   const [isApplicationLoaded, setIsApplicationLoaded] = useState(false)
+  const [isTrackPlayerSetup, setIsTrackPlayerSetup] = useState(false)
   const applicationIsLoading = useSelector(state => state.startup.loading)
   const dispatch = useDispatch()
   const selectedLanguage = useSelector(state => state.language.selectedLanguage)
-  const PlayerWalk = usePlayer()
-  const PlayerPrompt = usePrompt()
 
   useEffect(() => {
     dispatch(ChangeTheme.action({ theme: 'default', darkMode: false }))
@@ -40,49 +68,29 @@ const ApplicationNavigator = ({ store }) => {
       MainNavigator = require('@/Navigators/Main').default
       setIsApplicationLoaded(true)
     }
-  }, [applicationIsLoading])
+  }, [dispatch, selectedLanguage, applicationIsLoading])
 
   // on destroy needed to be able to reset when app close in background (Android)
   useEffect(
     () => () => {
       setIsApplicationLoaded(false)
       MainNavigator = null
+      TrackPlayer.reset()
+
+      dispatch(UserPrompt.action(false))
       dispatch(StartWalk.action(false))
       BackgroundService.stop()
-      PlayerWalk.destroy()
-      PlayerPrompt.destroy()
       console.log('destroy')
     },
-    [],
+    [dispatch],
   )
 
   useEffect(() => {
-    if(isApplicationLoaded && MainNavigator != null) {
-      // TrackPlayer.removeUpcomingTracks()
-      // TrackPlayer.setupPlayer({
-      //   maxCacheSize: 50000
-      // })
-      //   .then(() => TrackPlayer.updateOptions({
-      //     stopWithApp: true,
-      //     capabilities: [
-      //       Capability.Play,
-      //       Capability.Pause,
-      //       Capability.Stop
-      //     ],
-      //     notificationCapabilites: [
-      //       Capability.Play,
-      //       Capability.Pause,
-      //       Capability.Stop
-      //     ],
-      //     compactCapabilites: [
-      //       Capability.Play,
-      //       Capability.Pause,
-      //       Capability.Stop
-      //     ],
-      //     waitForBuffer: true
-      //   }))
-      //   .then(() => {})
-      navigateAndSimpleReset('Main')
+    if (isApplicationLoaded && MainNavigator != null) {
+      setupPlayer().then(() => {
+        setIsTrackPlayerSetup(true)
+        navigateAndSimpleReset('Main')
+      })
     }
   }, [isApplicationLoaded])
 
@@ -103,7 +111,7 @@ const ApplicationNavigator = ({ store }) => {
           )}
         </Stack.Navigator>
       </NavigationContainer>
-      {isApplicationLoaded && MainNavigator != null ? <VideoControls /> : null}
+      {isTrackPlayerSetup ? <VideoControls /> : null}
     </SafeAreaView>
   )
 }

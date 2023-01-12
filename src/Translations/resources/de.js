@@ -7,6 +7,7 @@ export default {
   credits: 'Credits',
   news: 'Kalender',
   purchase: 'The Walks kaufen',
+  restore: 'The Walks wiederherstellen',
   purchaseTitle: 'Ticket kaufen',
   purchaseDescription: 'Mit einem Ticket hast du Zugang zu allen Walks.',
   purchaseButton: 'Kaufen für {{price}}',
@@ -22,6 +23,6 @@ export default {
     noPictures: 'Noch keine Bilder',
     twoPerson: 'zu Zweit',
     penPaper: 'Stift & Zettel',
-    credits: 'Credits'
+    credits: 'Credits',
   },
 }

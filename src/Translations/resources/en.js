@@ -7,6 +7,7 @@ export default {
   credits: 'Credits',
   news: 'Calendar',
   purchase: 'Purchase The Walks',
+  restore: 'Restore The Walks',
   purchaseTitle: 'Purchase a Ticket',
   purchaseDescription: 'A ticket will give you access to all Walks.',
   purchaseButton: 'Buy for {{price}}',

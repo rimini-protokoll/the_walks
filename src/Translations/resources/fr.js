@@ -7,8 +7,9 @@ export default {
   credits: 'Crédits',
   news: 'Calendrier',
   purchase: 'Acheter The Walks',
+  restore: 'Restaurer The Walks',
   purchaseTitle: 'Acheter un billet',
-  purchaseDescription: 'Un billet vous donne l\'accès à tous les Walks.',
+  purchaseDescription: "Un billet vous donne l'accès à tous les Walks.",
   purchaseButton: 'Achèter pour {{price}}',
   legal: 'Adapter le contrat',
   imprint: 'Mentions légales et protection de données',
@@ -22,6 +23,6 @@ export default {
     noPictures: 'Pas encore de photos',
     twoPerson: 'par deux',
     penPaper: 'Stylo & papier',
-    credits: 'Crédits'
+    credits: 'Crédits',
   },
 }

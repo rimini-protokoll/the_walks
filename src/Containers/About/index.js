@@ -41,11 +41,8 @@ const About = ({ navigation }) => {
       <Text style={[Gutters.smallBMargin, Fonts.titleLarge, Fonts.textCenter]}>
         {t('about')}
       </Text>
-      <Markdown markdown={aboutText}/>
-      <View style={[
-          Gutters.regularVMargin, 
-          Gutters.regularBPadding]}>
-      </View>
+      <Markdown markdown={aboutText} />
+      <View style={[Gutters.regularVMargin, Gutters.regularBPadding]} />
       <PartnersList />
       <View style={{ height: 50 }} />
     </ScrollView>

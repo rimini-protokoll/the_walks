@@ -1,28 +1,41 @@
-import React, { useState } from 'react'
-import { View, Text, TouchableOpacity, Image } from 'react-native'
-import { useTheme } from '@/Theme'
+import React, { useState, useEffect } from 'react'
+import { View, useWindowDimensions } from 'react-native'
 import Tile from './Tile'
 
-const WalksList = ({ navigation, walks }) => {
-  const { Layout } = useTheme()
+const ListStyle = {
+  width: '100%',
+  justifyContent: 'flex-start',
+  alignContent: 'stretch',
+  alignItems: 'flex-end',
+  flexWrap: 'wrap',
+  flexDirection: 'row',
+}
+
+const WalksList = ({ navigation, walks, onLoad }) => {
+  const { width } = useWindowDimensions()
+  const [loaded, setLoaded] = useState(0)
+
+  const iconLoaded = () => setLoaded(prevLoaded => prevLoaded + 1)
+
+  useEffect(() => {
+    if (loaded >= walks.length) {
+      onLoad && onLoad()
+    }
+  }, [loaded, onLoad, walks])
+
   return (
     <View>
-      <View style={{
-        justifyContent: 'flex-start',
-        alignContent: 'space-between',
-        alignItems: 'baseline',
-        flexWrap: 'wrap',
-        flexDirection: 'row'
-        }}>
-        { walks.map((walk, i) => (
+      <View style={ListStyle}>
+        {walks.map((walk, i) => (
           <Tile
             key={i}
             walk={walk}
             navigation={navigation}
-            />
+            onLoad={iconLoaded}
+            width={Math.floor(width / 3)}
+          />
         ))}
       </View>
-      <View style={{height:20}}></View>
     </View>
   )
 }

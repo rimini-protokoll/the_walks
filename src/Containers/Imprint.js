@@ -1,10 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { useSelector } from 'react-redux'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
@@ -37,6 +32,7 @@ const ImprintContainer = ({ navigation }) => {
         </Text>
       </TouchableOpacity>
       <Markdown markdown={legal ? legal.content : ''} />
+      <View style={{ height: 50 }} />
     </ScrollView>
   )
 }

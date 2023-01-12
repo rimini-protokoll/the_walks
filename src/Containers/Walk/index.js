@@ -5,13 +5,10 @@ import {
   View,
   Image,
   Text,
-  Button,
-  TextInput,
   TouchableOpacity,
 } from 'react-native'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
-import Icon from 'react-native-vector-icons/Ionicons'
 import FitImage from 'react-native-fit-image'
 import { store } from '@/Store'
 import StartWalk from '@/Store/Player/StartWalk'
@@ -19,7 +16,7 @@ import ChangePlayer from '@/Store/Player/ChangePlayer'
 import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import DownloadWalk from '@/Store/Walks/DownloadWalk'
 import Markdown from '@/Components/Markdown'
-import { useNetInfo } from '@react-native-community/netinfo';
+import { useNetInfo } from '@react-native-community/netinfo'
 import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const startWalk = walk => {
@@ -49,7 +46,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
       _id = state.waks.selectedWalk
     }
     let _walk = state.walks.fetchWalks.walks.filter(
-      walk => walk.data.id == _id,
+      walk => walk.data.id === _id,
     )[0]
 
     return _walk
@@ -74,7 +71,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
     //return false
   })
   const hasCredits = useSelector(state => {
-    if (walk && walk.data.credits){
+    if (walk && walk.data.credits) {
       return true
     }
     return false
@@ -93,23 +90,9 @@ const IndexWalkContainer = ({ navigation, route }) => {
     // dispatch(DownloadWalk.action({walk, language, deleteWalk: true}))
   }, [walk])
 
-  const localStorage = useCallback(() => {
-    dispatch(StartWalk.action(false))
-    dispatch(DownloadWalk.action({ walk, language }))
-  }, [walk, language])
-
-  const localStorageDelete = useCallback(() => {
-    dispatch(StartWalk.action(false))
-    dispatch(DownloadWalk.action({ walk, language, deleteWalk: true }))
-  }, [isLocal, walk, language])
-
-  const unsubscribeWalk = navigation.addListener('beforeRemove', event => {
-    dispatch(ChangeWalk.action(null))
-  })
-
   const activation = useCallback(() => {
     navigation.navigate(t('activation'))
-  })
+  }, [navigation, t])
 
   if (!walk) {
     return null
@@ -137,13 +120,15 @@ const IndexWalkContainer = ({ navigation, route }) => {
             !!activeWalkId
           }
         >
-          <Text style={[Fonts.textButton, Fonts.textCenter, { minWidth: '50%' }]}>
+          <Text
+            style={[Fonts.textButton, Fonts.textCenter, { minWidth: '50%' }]}
+          >
             {t('walk.start')}
           </Text>
         </TouchableOpacity>
         {completed && hasPicture ? (
           <TouchableOpacity
-            onPress={() => navigation.navigate('Pictures', { walk: walk })}
+            onPress={() => navigation.navigate(`${walk.data.id}-Pictures`, { walk: walk })}
             style={[
               Common.button.outline,
               { marginLeft: 20 },
@@ -171,7 +156,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
         { alignContent: 'flex-start' },
       ]}
     >
-      <View style={{height: 10}}/>
+      <View style={{ height: 10 }} />
       <View style={{ width: '35%' }}>
         <FitImage
           originalWidth={1024}
@@ -180,7 +165,10 @@ const IndexWalkContainer = ({ navigation, route }) => {
         />
       </View>
       <View style={(Layout.fill, Gutters.smallHPadding)}>
-        <View>
+        <View
+          accessible={true}
+          accessibilityLabel={[walk.data.preTitle, walk.data.title, walk.data.afterTitle].join(' ')}
+        >
           {walk.data.preTitle ? (
             <Text style={[Fonts.titleRegular, Fonts.textCenter]}>
               {walk.data.preTitle}
@@ -200,22 +188,15 @@ const IndexWalkContainer = ({ navigation, route }) => {
             <View style={{ height: Fonts.titleSmall.fontSize / 2 }} />
           ) : null}
         </View>
-        <View style={{height: 10}}/>
-        <Markdown
-          markdown={walk.content}
-        />
-        <View
-          style={[Gutters.regularVMargin, Layout.row, Layout.center]}
-        >
-          <View style={[Layout.center, { width: '33%'}]}>
-            <Image style={Fonts.iconSmall}
+        <View style={{ height: 10 }} />
+        <Markdown markdown={walk.content} />
+        <View style={[Gutters.regularVMargin, Layout.row, Layout.center]}>
+          <View style={[Layout.center, { width: '33%' }]}>
+            <Image
+              style={Fonts.iconSmall}
               source={require('Assets/Icons/Dauer.png')}
             />
-            <Text
-              style={[
-                Gutters.smallVMargin,
-                Fonts.labelSmall,
-              ]}>
+            <Text style={[Gutters.smallVMargin, Fonts.labelSmall]}>
               {walk.data.duration}
             </Text>
           </View>
@@ -260,31 +241,16 @@ const IndexWalkContainer = ({ navigation, route }) => {
           )}
         </View>
       </View>
-      {walksPurchased ? (
-        !isLocal ? null : (
-          <TouchableOpacity
-            disabled={isDownloading || !!activeWalkId}
-            onPress={localStorageDelete}
-            style={{
-              ...Gutters.regularVMargin,
-              opacity: isDownloading || activeWalkId ? 0.5 : 1,
-              alignSelf: 'center',
-            }}
-          >
-            <Icon
-              name="trash-outline"
-              size={Fonts.iconRegular.width}
-              color={Colors.text}
-            />
-          </TouchableOpacity>
-        )
-      ) : null}
       {hasCredits ? (
         <View style={[Layout.row, Layout.center]}>
           <TouchableOpacity
+            accessibilityLabel={
+              creditsIsShown ? 'Close Walk credits' : 'Open Walk credits'
+            }
             onPress={() => {
-              if (creditsIsShown) setCreditsIsShown(false)
-              else {
+              if (creditsIsShown) {
+                setCreditsIsShown(false)
+              } else {
                 setCreditsIsShown(true)
                 setTimeout(() => {
                   scrollViewRef.current.scrollToEnd()

@@ -1,68 +1,96 @@
-import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import React, { useState, useEffect, useRef } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import {
   View,
   Text,
   TouchableOpacity,
   ScrollView,
-  VirtualizedList,
   Image,
   Linking,
   StyleSheet,
 } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
-import FitImage from 'react-native-fit-image'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import NewsArticle from './NewsArticle'
-import api, { handleError } from '@/Services'
+import api from '@/Services'
 import MenuButton from '@/Components/MenuButton'
 import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const Stack = createStackNavigator()
 
-const dateString = (date, locale) => {
-  //console.log(locale, Intl.DateTimeFormat(locale, {dateStyle: 'full'}).format(new Date(date)))
-  return Intl.DateTimeFormat(locale, { dateStyle: 'full' }).format(
-    new Date(date),
-  )
-}
+const createStyles = ({ Fonts }) =>
+  StyleSheet.create({
+    title: {
+      ...Fonts.textBold,
+      textAlign: 'center',
+    },
+  })
 
 const News = ({ route, navigation }) => {
   const { Gutters, Fonts, Colors, Layout } = useTheme()
-  const { t, i18n } = useTranslation()
-  const userLocale = useSelector(state => state.language.userLocale)
+  const styles = useRef(createStyles({ Fonts }))
+  const { t } = useTranslation()
   const [news, setNews] = useState({ loading: true, items: [] })
   useEffect(() => {
-    const _news = []
     setNews({ loading: true })
     api.get('news_index.md').then(({ data }) => {
       setNews({ loading: false, items: data.data.news })
     })
   }, [])
-  const NewsItem = ({ date, title, language, place, linkUri }) => (
-    <TouchableOpacity
-      onPress={() => Linking.openURL(linkUri)}
-      disabled={!linkUri}
-      style={[Gutters.largeVPadding, Layout.center]}
+
+  const NewsItemWrapper = ({
+    children,
+    published,
+    title,
+    date,
+    place,
+    linkUri,
+  }) => {
+    if (linkUri) {
+      return (
+        <TouchableOpacity
+          accessibilityLabel={`Hyperlink. ${date} ${place ? place : ''}, ${title}`}
+          onPress={() => linkUri && Linking.openURL(linkUri)}
+          style={[
+            Gutters.largeVPadding,
+            Layout.center,
+            { opacity: published ? 1 : 0.6 },
+          ]}
+        >
+          {children}
+        </TouchableOpacity>
+      )
+    } else {
+      return (
+        <View
+          accesible={true}
+          accessibilityLabel={`${date} ${place ? place : ''} , ${title}`}
+          style={[
+            Gutters.largeVPadding,
+            Layout.center,
+            { opacity: published ? 1 : 0.6 },
+          ]}
+        >
+          {children}
+        </View>
+      )
+    }
+  }
+  const NewsItem = ({ date, title, language, place, linkUri, published }) => (
+    <NewsItemWrapper
+      linkUri={linkUri}
+      published={published}
+      title={title}
+      place={place}
+      date={date}
     >
       <Text style={Fonts.textRegular}>*{date}*</Text>
-      <Text
-        style={[
-          {
-            ...Fonts.textBold,
-            textAlign: 'center',
-          },
-          linkUri ? Fonts.hyperlink : '',
-        ]}
-      >
+      <Text style={[linkUri ? Fonts.hyperlink : '', styles.current.title]}>
         {title}
       </Text>
       {place ? <Text style={Fonts.textItalic}>{place}</Text> : null}
-    </TouchableOpacity>
+    </NewsItemWrapper>
   )
-  const getItemCount = () => news.items.length
   if (news.loading) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -89,6 +117,7 @@ const News = ({ route, navigation }) => {
           language={item.data.language}
           place={item.data.place}
           linkUri={item.data.linkUri}
+          published={item.data.published}
         />
       ))}
     </ScrollView>

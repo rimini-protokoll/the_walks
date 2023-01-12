@@ -1,7 +1,7 @@
 import { createAction } from '@reduxjs/toolkit'
 
 export default {
-  initialState: {},
+  initialState: { paused: true, title: 0, position: null },
   action: createAction('player/changePlayer'),
   reducers(state, { payload }) {
     if (typeof payload.paused !== 'undefined') {
@@ -13,7 +13,7 @@ export default {
     }
 
     if (typeof payload.position !== 'undefined') {
-      console.log(payload.position)
+      console.log('store/changePlayer', payload.position)
       state.position = payload.position
     }
   },

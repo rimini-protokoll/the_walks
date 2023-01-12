@@ -9,6 +9,8 @@ const LanguagesList = ({ navigation, languages }) => {
   const legalAccepted = useSelector(state => state.legal.accepted)
   return (
     <View
+      accessible={true}
+      accessibilityLabel={languages.map(({ title }) => title).join(', ')}
       style={[
         Layout.fullSize,
         Layout.center,

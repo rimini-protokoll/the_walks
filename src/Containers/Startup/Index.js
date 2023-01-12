@@ -8,9 +8,7 @@ import { Brand } from '@/Components'
 import ActivityIndicator from '@/Components/ActivityIndicator'
 
 const IndexStartupContainer = () => {
-  const { Layout, Gutters, Fonts, Colors } = useTheme()
-
-  const { t } = useTranslation()
+  const { Layout, Colors } = useTheme()
 
   const dispatch = useDispatch()
 

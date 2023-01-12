@@ -5,8 +5,9 @@ export default {
   about: 'Despre',
   support: 'Co-producători',
   credits: 'Au contribuit',
-  news: 'Calendar', 
+  news: 'Calendar',
   purchase: 'Achiziționează The Walks',
+  restore: 'Restabiliți The Walks',
   purchaseTitle: 'Cumpără un bilet',
   purchaseDescription: 'Biletul îți oferă acces la toate Walks.',
   purchaseButton: 'Preț: {{price}}',
@@ -22,6 +23,6 @@ export default {
     noPictures: 'Încă nu există imagini',
     twoPerson: 'În doi',
     penPaper: 'Pix & hârtie',
-    credits: 'Contribuții'
+    credits: 'Contribuții',
   },
 }

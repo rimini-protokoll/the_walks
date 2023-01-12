@@ -64,3 +64,4 @@ buck-out/
 /ios/Pods/
 
 template/plugins/typescript/template/tsconfig.json
+android/app/src/main/assets/index.android.bundle

@@ -35,7 +35,7 @@ export default function ({ FontSize, Colors, IconSize }) {
       fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       fontSize: FontSize.regular,
       lineHeight: FontSize.regular * 1.4,
-      color: Colors.text
+      color: Colors.text,
     },
     textItalic: {
       ...textBase,

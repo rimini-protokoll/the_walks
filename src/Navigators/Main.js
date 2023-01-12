@@ -3,14 +3,12 @@ import { Platform, View, Text, TouchableOpacity } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import {
   DrawerContentScrollView,
-  DrawerItemList,
   DrawerItem,
   createDrawerNavigator,
 } from '@react-navigation/drawer'
 import { useTheme } from '@/Theme'
 import Icon from 'react-native-vector-icons/Ionicons'
 import FetchWalks from '@/Store/Walks/FetchWalks'
-import { navigate } from './Root'
 import WalksNavigator from '@/Navigators/Walks'
 import ImprintContainer from '@/Containers/Imprint'
 import LegalContainer from '@/Containers/Legal'
@@ -58,7 +56,7 @@ const CustomDrawerContent = props => {
   }
   routes = routes.map((name, i) => {
     let onPress = () => navigation.navigate(t(name))
-    if (name == 'The Walks') {
+    if (name === 'The Walks') {
       onPress = () =>
         navigation.reset({
           index: 0,
@@ -104,7 +102,7 @@ const CustomDrawerContent = props => {
           />
         ) : null}
         <TouchableOpacity
-          style={[Gutters.regularLPadding, { width: 210, marginTop: '15%' }]}
+          style={[Gutters.regularLPadding, Gutters.regularVPadding, { width: 210, marginTop: '15%' }]}
           onPress={() => navigation.navigate('imprint')}
         >
           <Text style={Fonts.legalSmall}>{t('imprint')}</Text>

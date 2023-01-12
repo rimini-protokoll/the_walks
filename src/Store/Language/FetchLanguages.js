@@ -4,7 +4,6 @@ import {
   buildAsyncActions,
 } from '@thecodingmachine/redux-toolkit-wrapper'
 import fetchLanguages from '@/Services/FetchLanguages'
-import * as RNLocalize from 'react-native-localize'
 
 export default {
   initialState: buildAsyncState('fetchLanguages'),

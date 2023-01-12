@@ -1,26 +1,31 @@
-import React from 'react'
-import { Text, View, TouchableOpacity, Image } from 'react-native'
+import React, { useState, useCallback } from 'react'
+import { Text, View, TouchableOpacity } from 'react-native'
 import { useDispatch } from 'react-redux'
 import { useTheme } from '@/Theme'
 import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import FitImage from 'react-native-fit-image'
 
-const Tile = ({ navigation, walk, style }) => {
+const Tile = ({ navigation, walk, style, onLoad, width }) => {
   const { id, shortTitle, iconUri, local } = walk.data
-  const { Fonts } = useTheme()
+  const { Gutters, Fonts } = useTheme()
   const dispatch = useDispatch()
-  const selectWalk = () => {
+  const selectWalk = useCallback(() => {
     dispatch(ChangeWalk.action(id))
     navigation.navigate(id, { walk })
-  }
+  }, [navigation, dispatch, walk, id])
+  const [show, setShow] = useState(false)
   return (
     <TouchableOpacity
+      accessible={true}
+      accessibilityLabel={shortTitle}
       style={[
         style,
         {
-          width: '33%',
+          width: Math.min(150, width),
           paddingVertical: 10,
           justifySelf: 'flex-start',
+          aspectRatio: 0.75,
+          opacity: show ? 1 : 0,
         },
       ]}
       onPress={selectWalk}
@@ -30,22 +35,23 @@ const Tile = ({ navigation, walk, style }) => {
           originalWidth={1024}
           originalHeight={1024}
           source={{ uri: iconUri }}
+          onLoadEnd={() => { setShow(true); onLoad && onLoad(iconUri); }}
         />
       </View>
-      <View>
-        <Text
-          style={[
-            Fonts.textSmall,
-            {
-              fontSize: Fonts.textSmall.fontSize * 0.95,
-              textAlign: 'center',
-              textDecorationLine: local ? 'underline' : undefined,
-            },
-          ]}
-        >
-          {shortTitle}
-        </Text>
-      </View>
+      <Text
+        numberOfLines={2}
+        style={[
+          Fonts.textSmall,
+          Gutters.tinyHPadding,
+          {
+            fontSize: Fonts.textSmall.fontSize * 0.95,
+            textAlign: 'center',
+            textDecorationLine: local ? 'underline' : undefined,
+          },
+        ]}
+      >
+        {!setShow ? "\n" : shortTitle}
+      </Text>
     </TouchableOpacity>
   )
 }

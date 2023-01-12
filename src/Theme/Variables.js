@@ -30,6 +30,7 @@ export const NavigationColors = {
   background: Colors.background,
   card: Colors.background,
   text: Colors.text,
+  border: Colors.background,
 }
 
 /**

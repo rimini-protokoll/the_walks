@@ -7,6 +7,7 @@ export default {
   credits: 'Créditos',
   news: 'Calendario',
   purchase: 'Comprar The Walks',
+  restore: 'Restaurar The Walks',
   purchaseTitle: 'Comprar boleto',
   purchaseDescription: 'Con un solo boleto tienes acceso a todos los Walks.',
   purchaseButton: 'Comprar por {{price}}',

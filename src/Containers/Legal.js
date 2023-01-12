@@ -107,7 +107,10 @@ const LegalContainer = ({ route, navigation }) => {
     )
   }
   return (
-    <ScrollView style={[Gutters.smallPadding, Layout.fill]}>
+    <ScrollView
+      accessible={true}
+      accessibilityLabel="Agree to terms of use"
+      style={[Gutters.smallPadding, Layout.fill]}>
       <View style={{ height: 50 }} />
       <Markdown markdown={legal ? legal.content : ''} />
       <View style={[Gutters.regularPadding]}>
@@ -115,13 +118,12 @@ const LegalContainer = ({ route, navigation }) => {
           <TouchableOpacity
             key={`legal_${key}`}
             onPress={() => agree(key)}
-            style={[Layout.row, Gutters.smallBMargin]}
+            style={[Layout.row, Gutters.smallBMargin, Gutters.smallVPadding]}
           >
             <View
               style={[
-                Gutters.smallTMargin,
                 {
-                  ...Fonts.iconSmall,
+                  ...Fonts.iconRegular,
                   borderColor: agreements[key].accepted
                     ? Colors.primary
                     : Colors.legal,
@@ -133,9 +135,9 @@ const LegalContainer = ({ route, navigation }) => {
               {agreements[key].accepted ? (
                 <Icon
                   name="checkmark-outline"
-                  size={Fonts.iconSmall.width * 0.8}
+                  size={Fonts.iconRegular.width * 0.8}
                   style={{
-                    lineHeight: Fonts.iconSmall.height,
+                    lineHeight: Fonts.iconRegular.height,
                     paddingLeft: 1,
                   }}
                 />

@@ -1,14 +1,18 @@
-import { useCallback, useState, useEffect } from 'react'
-import { Player, MediaStates, PlaybackCategories } from '@react-native-community/audio-toolkit'
+import { useState } from 'react'
+import {
+  Player,
+  PlaybackCategories,
+} from '@react-native-community/audio-toolkit'
 
-let playerWalk, playerPrompt = {};
+let playerWalk,
+  playerPrompt = {}
 
 const playbackOptions = {
   continuesToPlayInBackground: true,
   autoDestroy: false,
   wakeLock: true,
   mixWithOthers: true,
-  category: PlaybackCategories.Playback
+  category: PlaybackCategories.Playback,
 }
 
 function usePrompt() {
@@ -43,19 +47,19 @@ function usePrompt() {
     }
   }
 
-  const play = async (srcUri) => {
+  const play = async srcUri => {
     (await prepare(srcUri)).play()
   }
 
   const stop = () => {
-    if (Object.keys(playerPrompt).length == 0) {
+    if (Object.keys(playerPrompt).length === 0) {
       return new Promise(resolve => resolve())
     }
     return new Promise((resolve, reject) => {
       let stopped = Object.keys(playerPrompt)
       const cb = path => {
         stopped = stopped.filter(s => s !== path)
-        if (stopped.length == 0) {
+        if (stopped.length === 0) {
           resolve()
         }
       }
@@ -74,13 +78,13 @@ const updateProgress = (player, setProgress) => {
   setProgress({
     position: player.currentTime / 1000,
     duration: player.duration / 1000,
-    canPlay: player.canPlay
+    canPlay: player.canPlay,
   })
 }
 
 function usePlayer() {
   const [progressInterval, setProgressInterval] = useState()
-  const [progress, setProgress] = useState({position: -1, duration: -1})
+  const [progress, setProgress] = useState({ position: -1, duration: -1 })
 
   const start = (path, callback) => {
     playerWalk?.stop()
@@ -91,14 +95,13 @@ function usePlayer() {
     player.on('ended', ev => {
       console.log(ev)
       clearInterval(progressInterval)
-      player.destroy(() => playerWalk = undefined)
+      player.destroy(() => (playerWalk = undefined))
       setProgress({
         ...progress,
-        position: progress.duration
+        position: progress.duration,
       })
     })
     player.play(() => {
-      console.log('start', player)
       playerWalk = player
       clearInterval(progressInterval)
       setProgressInterval(setInterval(updateProgress, 200, player, setProgress))
@@ -128,7 +131,7 @@ function usePlayer() {
     setProgress({
       position: -1,
       duration: -1,
-      canPlay: false
+      canPlay: false,
     })
     playerWalk?.destroy(() => {
       playerWalk = undefined
@@ -144,7 +147,8 @@ function usePlayer() {
   }
 
   const seek = direction => {
-    let position = playerWalk.currentTime + 30000 * direction * (direction == 1 ? 2 : 1)
+    let position =
+      playerWalk.currentTime + 30000 * direction * (direction === 1 ? 2 : 1)
     position = Math.min(playerWalk.duration - 1000, position)
     playerWalk?.seek(position)
   }
@@ -157,7 +161,18 @@ function usePlayer() {
     return playerWalk ? playerWalk.currentTime / 1000 : -1
   }
 
-  return { start, setVolume, replaceSrc, destroy, play, pause, seek, seekTo, progress, getTime }
+  return {
+    start,
+    setVolume,
+    replaceSrc,
+    destroy,
+    play,
+    pause,
+    seek,
+    seekTo,
+    progress,
+    getTime,
+  }
 }
 
 export { usePlayer, usePrompt }

@@ -1,10 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import { useSelector } from 'react-redux'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
@@ -14,7 +9,6 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import api, { handleError } from '@/Services'
 import MenuButton from '@/Components/MenuButton'
 import ActivityIndicator from '@/Components/ActivityIndicator'
-
 
 const Stack = createStackNavigator()
 
