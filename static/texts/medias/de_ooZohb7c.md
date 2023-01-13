@@ -1,13 +1,13 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 id: ooZohb7c
-listed: false
 language: de
 shortTitle: B
 title: Supermarkt B
 duration: ~ 20 Min
+listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_ooZohb7c.mp3?alt=media&token=9290c064-fac2-416f-9e90-e46471d5350a
-iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt:
   - srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
@@ -18,7 +18,7 @@ userPrompt:
       Einstellungen vorzunehmen. Fangen wir mit der Leichtesten an: der Funktion
       “Nicht stören”.
 
-      Die Einstellung “Nicht stören” ist nicht der Flugmodus. Sie erhält während deines Walks die Internet-Verbindung. Mit iOS (Apple) gehst du jetzt zu “Einstellungen”. Aktiviere dort “Nicht stören”. Bei den meisten Android-Geräten (Google) findest du diese Funktion unter Einstellungen → Töne → Nicht stören."
+      Die Einstellung “Nicht stören” ist nicht der Flugmodus. Sie erhält während deines Walks die Internet-Verbindung. Mit iOS (Apple) gehst du jetzt zu “Einstellungen” → "Fokus". Aktiviere dort “Nicht stören”. Bei den meisten Android-Geräten (Google) findest du diese Funktion unter Einstellungen → Töne → Nicht stören."
     triggerTime: 0
   - title: "Jetzt kommen wir zur zweiten Einstellung: der Erlaubnis auf deine Kamera
       zugreifen zu können. Keine Sorge, wir wollen nicht die Kontrolle über dein
