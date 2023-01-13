@@ -13,9 +13,9 @@ userPrompt:
   - title: 'Para que este Walk funcione de manera sincronizada debes hacer dos
       ajustes. Empecemos con el más fácil: la función "No molestar". El ajuste
       "No molestar" no es el modo avión. Mantiene la conexión a internet durante
-      tu Walk. Con iOS (Apple) vas a "Ajustes". Ahí activas "No molestar". En la
-      mayoría de los dispositivos Android (Google), esta función la encuentras
-      bajo Ajustes → Sonidos → No molestar.'
+      tu Walk. Con iOS (Apple) vas a "Ajustes" → "Concentración". Ahí activas
+      "No molestar". En la mayoría de los dispositivos Android (Google), esta
+      función la encuentras bajo Ajustes → Sonidos → No molestar.'
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
