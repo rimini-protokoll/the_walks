@@ -1,16 +1,10 @@
 ---
+iconUri: https://the-walks.netlify.app/icons/Wasser.png
 id: ohPeu2zi
-listed: true
 language: it
 shortTitle: Acqua
 preTitle: Lungo un
 title: corso d‘acqua
-twoPerson: false
-popups: []
-penPaper: false
-duration: ~ 25 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
-iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
   Esperti / collaboratori\
 
@@ -30,6 +24,12 @@ credits: >-
   Un ringraziamento a\
 
   *Enric Tello e alle colleghe e colleghi del Barcelona Cicle de l'Aigua, in particolare Ignasi Batalle Barber e Gustavo Ramon Wilhelmi, Peter Breitenbach, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+twoPerson: false
+popups: []
+penPaper: false
+duration: ~ 25 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fit_ohPeu2zi%2Fit_ohPeu2zi.mp3?alt=media&token=85052125-476d-4cb9-a895-16a9ad28991b
 userPrompt:
   - title: Attiva la traccia successiva.
     triggerTime: 90
@@ -68,7 +68,7 @@ userPrompt:
       - title: FINE
         action: continue
   - title: Continua alla galleria
-    triggerTime: 1305
+    triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Galleria
