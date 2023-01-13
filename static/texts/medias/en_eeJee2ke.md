@@ -14,9 +14,9 @@ userPrompt:
       Let's start with the easiest one: the \"Do not disturb\" function. The
       \"Do not disturb\" setting is not the flight mode. It maintains your
       internet connection during your Walk. Now, with iOS (Apple), go to
-      \"Settings.\" Activate \"Do not disturb\" there. With most Android devices
-      (Google), you can find this feature under Settings → Sounds → Do Not
-      Disturb."
+      \"Settings\" → \"Focus\". Activate \"Do not disturb\" there. With most
+      Android devices (Google), you can find this feature under Settings →
+      Sounds → Do Not Disturb."
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
