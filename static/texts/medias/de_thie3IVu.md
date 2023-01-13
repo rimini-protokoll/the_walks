@@ -1,20 +1,20 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 id: thie3IVu
-listed: false
 language: de
 shortTitle: A
 title: Supermarkt A
 duration: ~ 20 Min
+listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_uma9ooK4%2Fde_thie3IVu.mp3?alt=media&token=00568ce1-249c-4df9-b78c-e9745f4cdacd
-iconUri: https://the-walks.netlify.app/icons/Supermarkt.png
 userPrompt:
   - title: >-
       Damit dieser Walk synchron funktioniert, solltest du ein paar
       Einstellungen vorzunehmen. Fangen wir mit der Leichtesten an: der Funktion
       “Nicht stören”.
 
-      Die Einstellung “Nicht stören” ist nicht der Flugmodus. Sie erhält während deines Walks die Internet-Verbindung. Mit iOS (Apple) gehst du jetzt zu “Einstellungen”. Aktiviere dort “Nicht stören”. Bei den meisten Android-Geräten (Google) findest du diese Funktion unter Einstellungen → Töne → Nicht stören."
+      Die Einstellung “Nicht stören” ist nicht der Flugmodus. Sie erhält während deines Walks die Internet-Verbindung. Mit iOS (Apple) gehst du jetzt zu “Einstellungen” → "Fokus". Aktiviere dort “Nicht stören”. Bei den meisten Android-Geräten (Google) findest du diese Funktion unter Einstellungen → Töne → Nicht stören."
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     triggerTime: 0
     actions:
