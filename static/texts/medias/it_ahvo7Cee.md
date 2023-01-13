@@ -21,4 +21,4 @@ userPrompt: []
 ---
 Cosa porta i politici nel verde? Cosa c’è di politico in una relazione a due? Inizia questa passeggiata dando appuntamento a qualcuno in un parco. 
 
-Ascolterete in contemporanea due tracce diverse. Tirate a sorte per decidere chi ascolterà A e chi B. Per garantire la riproduzione simultanea delle tue passeggiate, seleziona l'opzione di download qui sotto.
+Ascolterete in contemporanea due tracce diverse. Tirate a sorte per decidere chi ascolterà A e chi B.
