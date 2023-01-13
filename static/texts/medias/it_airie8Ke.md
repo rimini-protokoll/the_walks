@@ -14,10 +14,10 @@ userPrompt:
       configurare alcune impostazioni. Cominciamo con la più semplice: la
       funzione \"Non disturbare\". L'impostazione \"Non disturbare\" non è come
       la \"modalità aereo\". Durante la passeggiata si rimane connessi a
-      internet. Con iOS (Apple), vai su \"Impostazioni\". Attiva \"Non
-      disturbare\". Con la maggior parte dei dispositivi Android (Google),
-      troverete questa funzione su \"Impostazioni\" → \"Suoni\" → \"Non
-      disturbare\"."
+      internet. Con iOS (Apple), vai su \"Impostazioni\" → \"Full immersion\".
+      Attiva \"Non disturbare\". Con la maggior parte dei dispositivi Android
+      (Google), troverete questa funzione su \"Impostazioni\" → \"Suoni\" →
+      \"Non disturbare\"."
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
