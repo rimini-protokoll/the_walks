@@ -21,4 +21,4 @@ userPrompt: []
 ---
 ¿Qué lleva a los políticos a las áreas verdes? ¿Cuál es el aspecto político en una relación de dos con otra persona? Inicia esta caminata encontrándote con alguien en un parque.\
 
-Decidan lanzando una moneda quién escucha A y quién B. Para que esté garantizada la reproducción simultánea de sus caminatas, seleccionen abajo la opción download.
+Decidan lanzando una moneda quién escucha A y quién B.
