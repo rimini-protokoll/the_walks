@@ -1,15 +1,11 @@
 ---
 popups: []
+iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 id: bee5Zah7
-listed: true
 language: en
 shortTitle: Departure
 title: Departure,
 afterTitle: let’s go!
-penPaper: true
-duration: ~ 16 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_bee5Zah7%2Fen_bee5Zah7.mp3?alt=media&token=f9392f56-8d77-41e1-8e07-3d6a61850e6f
-iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 credits: |-
   Speaker
   *Luisa Devins*
@@ -19,8 +15,12 @@ credits: |-
 
   Thank you
   *Barbara Morgenstern, Aljoscha Begrich*
+penPaper: true
+duration: ~ 16 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_bee5Zah7%2Fen_bee5Zah7.mp3?alt=media&token=f9392f56-8d77-41e1-8e07-3d6a61850e6f
 userPrompt:
-  - title: Yes - I’m ready. Let’s continue!
+  - title: Yes – I’m ready. Let’s continue!
     triggerTime: 72
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_1.mp3?alt=media&token=61c4d8ff-7332-4b83-8ca9-d0951f94261c
     actions:
