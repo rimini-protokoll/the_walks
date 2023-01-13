@@ -30,4 +30,4 @@ userPrompt: []
 ---
 Questa passeggiata è un duetto. Dai appuntamento a qualcuno davanti a un supermercato. 
 
-Ascolterete in contemporanea due tracce diverse. Una persona ascolterà A, l’altra B. Per garantire la riproduzione simultanea delle tue passeggiate, seleziona l'opzione di download qui sotto.
+Ascolterete in contemporanea due tracce diverse. Una persona ascolterà A, l’altra B.
