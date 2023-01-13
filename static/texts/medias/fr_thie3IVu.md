@@ -17,7 +17,7 @@ userPrompt:
       effectuer quelques réglages. Commençons par le plus simple : L’option
       “Ne pas déranger”.
 
-      Le paramètre “Ne pas déranger” n'est pas le mode Avion. Au contraire elle maintient la connexion internet pendant votre promenade. Sur iOS (Apple), vous vous dirigez dans « Paramètres ». Ensuite activez "Ne pas déranger". Sur la plupart des appareils Android (Google), vous pouvez trouver cette fonction sous Paramètres → Sons → Ne pas déranger.
+      Le paramètre “Ne pas déranger” n'est pas le mode Avion. Au contraire elle maintient la connexion internet pendant votre promenade. Sur iOS (Apple), vous vous dirigez dans "Réglares" → "Concentration". Ensuite activez "Ne pas déranger". Sur la plupart des appareils Android (Google), vous pouvez trouver cette fonction sous Réglares → Sons → Ne pas déranger.
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fapi-v1%2Ffr_thie3IVu%2Fmulti_Zeubeel8_loop%20(1).mp3?alt=media&token=ef7a15f9-3922-4b22-900b-be2d6b372f24
   - actions:
