@@ -1,16 +1,10 @@
 ---
+iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 id: bee5Zah7
-listed: true
 language: de
 shortTitle: Aufbruch
 title: Aufbruch,
 afterTitle: los raus jetzt!
-twoPerson: false
-popups: []
-penPaper: true
-duration: ~ 16 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7.mp3?alt=media&token=3c1b438f-00e3-44eb-b400-352aa2f0ee44
-iconUri: https://the-walks.netlify.app/icons/Aufbruch.png
 credits: |-
   Sprecher*in
   *Bente Bausum*
@@ -20,6 +14,12 @@ credits: |-
 
   Danke an
   *Barbara Morgenstern, Aljoscha Begrich*
+twoPerson: false
+popups: []
+penPaper: true
+duration: ~ 16 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7.mp3?alt=media&token=3c1b438f-00e3-44eb-b400-352aa2f0ee44
 userPrompt:
   - title: Ja - ich bin soweit. Es kann weitergehen!
     triggerTime: 72
@@ -27,7 +27,7 @@ userPrompt:
     actions:
       - title: Weiter
         action: continue
-  - title: Ja - ich habe einen Ort gefunden. Weiter geht’s!
+  - title: Ja – ich habe einen Ort gefunden. Weiter geht’s!
     triggerTime: 431
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fde_bee5Zah7%2Fde_bee5Zah7_loop_2.mp3?alt=media&token=5cc78231-0772-44cb-b4bb-7efd873ad045
     actions:
