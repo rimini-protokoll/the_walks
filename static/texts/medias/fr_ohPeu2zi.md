@@ -1,16 +1,10 @@
 ---
+iconUri: https://the-walks.netlify.app/icons/Wasser.png
 id: ohPeu2zi
-listed: true
 language: fr
 shortTitle: Eau
 preTitle: Promenade au bord
 title: de l‘eau
-twoPerson: false
-popups: []
-penPaper: false
-duration: ~ 25 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ohPeu2zi%2Ffr_ohPeu2zi.mp3?alt=media&token=33a75a76-5dc5-483d-9a69-097b6bcff748
-iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
   Expertes / Contributeurs
 
@@ -30,6 +24,12 @@ credits: >-
   Merci à
 
   *Enric Tello et les collaborateurs de Barcelona Cicle de l’Aigua, notamment Ignasi Batalle Barber et Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+twoPerson: false
+popups: []
+penPaper: false
+duration: ~ 25 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Ffr_ohPeu2zi%2Ffr_ohPeu2zi.mp3?alt=media&token=33a75a76-5dc5-483d-9a69-097b6bcff748
 userPrompt:
   - title: Active ensuite la prochaine piste.
     triggerTime: 90
@@ -68,7 +68,7 @@ userPrompt:
       - title: FIN
         action: continue
   - title: Continuer vers la galerie de photos
-    triggerTime: 1305
+    triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Galerie
