@@ -13,10 +13,10 @@ userPrompt:
       câteva setări. Să începem cu cea mai ușoară: funcția “Nu deranjați / Do
       Not Disturb“. Setarea “Nu deranjați / Do Not Disturb“ nu este aceeași cu
       modul avion. Această setare te menține conectat la internet în timpul
-      plimbării. De pe iOS (Apple), accesează "Setări". Activează acolo opțiunea
-      "Nu deranjați / Do Not Disturb". În cazul majorității dispozitivelor
-      Android (Google), vei găsi această funcție la Setări → Sunete → Nu
-      deranjați.'
+      plimbării. De pe iOS (Apple), accesează "Configurări" → "Concentrare".
+      Activează acolo opțiunea "Nu deranjați". În cazul majorității
+      dispozitivelor Android (Google), vei găsi această funcție la Configurări →
+      Sunete → Nu deranjați.'
     triggerTime: 0
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
