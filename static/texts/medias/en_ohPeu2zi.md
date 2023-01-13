@@ -1,16 +1,10 @@
 ---
+iconUri: https://the-walks.netlify.app/icons/Wasser.png
 id: ohPeu2zi
-listed: true
 language: en
 shortTitle: Water
 preTitle: A Walk by the
 title: Water
-twoPerson: false
-popups: []
-penPaper: false
-duration: ~ 25 Min
-srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi.mp3?alt=media&token=e0124ffd-760a-4e86-a568-ae488e69b368
-iconUri: https://the-walks.netlify.app/icons/Wasser.png
 credits: >-
   Experts / Contributors
 
@@ -30,6 +24,12 @@ credits: >-
   Thank you
 
   *Enric Tello, all the people we met at Barcelona Cicle de l’Aigua, especially Ignasi Batalle Barber and Gustavo Ramon Wilhelmi, Peter Breitenbach, Lilli Kuschel, Niki Neecke (Jardin Sonore), Zoï Wetzel*
+twoPerson: false
+popups: []
+penPaper: false
+duration: ~ 25 Min
+listed: true
+srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ohPeu2zi%2Fen_ohPeu2zi.mp3?alt=media&token=e0124ffd-760a-4e86-a568-ae488e69b368
 userPrompt:
   - title: Then activate the next track.
     triggerTime: 90
@@ -68,7 +68,7 @@ userPrompt:
       - title: END
         action: continue
   - title: Continue to the gallery
-    triggerTime: 1305
+    triggerTime: 1301
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Gallery
