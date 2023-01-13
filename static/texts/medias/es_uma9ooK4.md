@@ -30,4 +30,4 @@ userPrompt: []
 ---
 Éste es un dúo. Queda con alguien en verte frente al mismo supermercado. Si entiendes inglés, te recomendamos la versión en inglés de esta caminata ( → Menú → Idioma).
 
-Decidan lanzando una moneda quién escucha A y quién B. Para garantizar la reproducción simultánea de sus caminatas, seleccionen abajo la opción download.
+Decidan lanzando una moneda quién escucha A y quién B.
