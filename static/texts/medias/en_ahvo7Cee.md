@@ -22,4 +22,4 @@ userPrompt: []
 ---
 What leads politicians to green spaces? What is political about a relationship between two people? Start this walk by arranging to meet someone in a park.
 
-You and your partner will simultaneously listen to different tracks. Settle on who listens to A and who listens to B with a coin toss. To ensure the simultaneous playback of your Walks, select the download option below.
+You and your partner will simultaneously listen to different tracks. Settle on who listens to A and who listens to B with a coin toss.
