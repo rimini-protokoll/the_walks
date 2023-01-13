@@ -22,4 +22,4 @@ userPrompt: []
 ---
 Dies ist ein Duett. Verabrede dich mit jemandem vor demselben Supermarkt. Wenn du Englisch verstehst, empfehlen wir dir die englische Version dieses Walks ( → Menü → Sprache).
 
-Ihr werdet gleichzeitig unterschiedliche Tracks hören. Eine Person wählt A und die andere B. Damit die simultane Wiedergabe eurer Walks gewährleistet ist, wählt unten die Download-Option.
+Ihr werdet gleichzeitig unterschiedliche Tracks hören. Eine Person wählt A und die andere B.
