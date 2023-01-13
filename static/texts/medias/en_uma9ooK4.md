@@ -30,4 +30,4 @@ userPrompt: []
 ---
 This a duet. Arrange to meet a companion in front of a supermarket. 
 
-You will simultaneously be listening to two different tracks. One person chooses A and the other chooses B. To ensure the simultaneous playback of your Walks, select the download option below.
+You will simultaneously be listening to two different tracks. One person chooses A and the other chooses B.
