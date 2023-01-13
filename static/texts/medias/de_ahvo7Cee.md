@@ -21,4 +21,4 @@ userPrompt: []
 ---
 Was führt Politiker*innen ins Grüne? Was ist das Politische an einer Zweier-Beziehung mit einer anderen Person? Beginne diesen Walk, indem du dich in einem Park verabredest.
 
-Ihr werdet gleichzeitig unterschiedliche Tracks hören. Klärt durch einen Münzwurf, wer A und wer B hört. Damit die simultane Wiedergabe eurer Walks gewährleistet ist, wählt unten die Download-Option.
+Ihr werdet gleichzeitig unterschiedliche Tracks hören. Klärt durch einen Münzwurf, wer A und wer B hört.
