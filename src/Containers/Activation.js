@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, useRef, useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -69,13 +69,15 @@ const Activation = ({ navigation }) => {
     <View
       accessible={true}
       accessibilityLabel="Activate or preview The Walks"
-      style={[Layout.fullSize, Layout.center, Gutters.regularHPadding]}>
+      style={[Layout.fullSize, Layout.center, Gutters.regularHPadding]}
+    >
       <View style={Layout.center}>
         <TouchableOpacity
           accessible={true}
           accessibilityLabel="Enter the four character activation code"
           onPress={() => codeRef.current.focus()}
-          style={{ maxWidth: 300 }}>
+          style={{ maxWidth: 300 }}
+        >
           <Text style={[Fonts.textLarge, Fonts.textCenter]}>
             {t('voucherA')}
           </Text>
@@ -101,7 +103,10 @@ const Activation = ({ navigation }) => {
         </TouchableOpacity>
         <View style={{ height: 90 }} />
         {isRestorable ? (
-          <TouchableOpacity style={Gutters.smallVPadding} onPress={handleRestore}>
+          <TouchableOpacity
+            style={Gutters.smallVPadding}
+            onPress={handleRestore}
+          >
             <Text style={Fonts.textLarge}>{t('restore')}</Text>
           </TouchableOpacity>
         ) : (

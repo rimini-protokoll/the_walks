@@ -1,12 +1,6 @@
 import React, { useRef, useCallback, useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {
-  ScrollView,
-  View,
-  Image,
-  Text,
-  TouchableOpacity,
-} from 'react-native'
+import { ScrollView, View, Image, Text, TouchableOpacity } from 'react-native'
 import { useTheme } from '@/Theme'
 import { useTranslation } from 'react-i18next'
 import FitImage from 'react-native-fit-image'
@@ -128,7 +122,9 @@ const IndexWalkContainer = ({ navigation, route }) => {
         </TouchableOpacity>
         {completed && hasPicture ? (
           <TouchableOpacity
-            onPress={() => navigation.navigate(`${walk.data.id}-Pictures`, { walk: walk })}
+            onPress={() =>
+              navigation.navigate(`${walk.data.id}-Pictures`, { walk: walk })
+            }
             style={[
               Common.button.outline,
               { marginLeft: 20 },
@@ -167,7 +163,11 @@ const IndexWalkContainer = ({ navigation, route }) => {
       <View style={(Layout.fill, Gutters.smallHPadding)}>
         <View
           accessible={true}
-          accessibilityLabel={[walk.data.preTitle, walk.data.title, walk.data.afterTitle].join(' ')}
+          accessibilityLabel={[
+            walk.data.preTitle,
+            walk.data.title,
+            walk.data.afterTitle,
+          ].join(' ')}
         >
           {walk.data.preTitle ? (
             <Text style={[Fonts.titleRegular, Fonts.textCenter]}>

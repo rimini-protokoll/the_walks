@@ -95,7 +95,12 @@ const IndexMapContainer = ({ navigation, route }) => {
     const { width, height } = Dimensions.get('window')
     setMapIndex(0)
     _scrollView.current?.scrollToIndex({ index: 0, animated: false })
-    setImageWidth(imageWidthList.find(listWidth => listWidth >= Math.max(CARD_WIDTH, height * MapLayout.open) * 2))
+    setImageWidth(
+      imageWidthList.find(
+        listWidth =>
+          listWidth >= Math.max(CARD_WIDTH, height * MapLayout.open) * 2,
+      ),
+    )
     firestoreSubscriber()
     // dispatch(ChangeWalk.action(walk.data.id))
     const subscriber = firestore()
@@ -234,20 +239,23 @@ const IndexMapContainer = ({ navigation, route }) => {
       setScrollTo(state => ({ ...state, index: markerIndex }))
       _scrollView.current?.scrollToIndex({ index: markerIndex, animated: true })
     },
-    [
-      markers,
-      mapAnimation,
-      _scrollView,
-      scrollTo.timeout,
-      scrollTo.index,
-    ],
+    [markers, mapAnimation, _scrollView, scrollTo.timeout, scrollTo.index],
   )
 
   const imageMarkers = useMemo(
     () =>
       markers.map(marker => [
-        <ImageMarker key={`imageMarker_${marker.id}`} marker={marker} onMarkerPress={onMarkerPress} />,
-        <ImageMarker key={`imageMarker_active_${marker.id}`} marker={marker} active={true} onMarkerPress={onMarkerPress} />,
+        <ImageMarker
+          key={`imageMarker_${marker.id}`}
+          marker={marker}
+          onMarkerPress={onMarkerPress}
+        />,
+        <ImageMarker
+          key={`imageMarker_active_${marker.id}`}
+          marker={marker}
+          active={true}
+          onMarkerPress={onMarkerPress}
+        />,
       ]),
     [markers, onMarkerPress],
   )

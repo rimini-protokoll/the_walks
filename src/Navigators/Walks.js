@@ -47,7 +47,10 @@ const MapPicker = ({ navigation, walk }) => {
                 routes: [
                   { name: 'The Walks' },
                   { name: walk.data.id, params: { walk } },
-                  { name: `${value.data.id}-Pictures`, params: { walk: value } },
+                  {
+                    name: `${value.data.id}-Pictures`,
+                    params: { walk: value },
+                  },
                 ],
               },
             },
@@ -65,7 +68,10 @@ const MapPicker = ({ navigation, walk }) => {
                   routes: [
                     { name: 'The Walks' },
                     { name: walk.data.id, params: { walk } },
-                    { name: `${selection.data.id}-Pictures`, params: { walk: selection } },
+                    {
+                      name: `${selection.data.id}-Pictures`,
+                      params: { walk: selection },
+                    },
                   ],
                 },
               },
@@ -118,9 +124,9 @@ const WalksNavigator = ({ navigation }) => {
   })
 
   const walks = useSelector(state => {
-    const walks = state.walks.fetchWalks.walks
-    if (walks) {
-      return walks.filter(walk => walk.data.listed)
+    const _walks = state.walks.fetchWalks.walks
+    if (_walks) {
+      return _walks.filter(walk => walk.data.listed)
     } else {
       return []
     }
@@ -162,7 +168,9 @@ const WalksNavigator = ({ navigation }) => {
           options={{
             headerBackImage,
             headerBackTitleVisible: false,
-            headerTitle: () => <MapPicker navigation={navigation} walk={walk} />,
+            headerTitle: () => (
+              <MapPicker navigation={navigation} walk={walk} />
+            ),
             headerTransparent: false,
             headerRight: headerRightTransparent,
           }}
