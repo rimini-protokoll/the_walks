@@ -1,37 +1,15 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useCallback, useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Platform,
-  Linking,
-} from 'react-native'
-import DeviceInfo from 'react-native-device-info'
+import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { createStackNavigator } from '@react-navigation/stack'
 import { useTranslation } from 'react-i18next'
 import firestore from '@react-native-firebase/firestore'
-import { getAvailablePurchases, getPurchaseHistory } from 'react-native-iap'
 import { useTheme } from '@/Theme'
 import PurchaseWalks from '@/Store/Walks/PurchaseWalks'
 import MenuButton from '@/Components/MenuButton'
 
 const Stack = createStackNavigator()
-
-const isPro = DeviceInfo.getBundleId() === 'de.rimini-protokoll.thewalkspro'
-
-const useIsRestorable = () => {
-  const [isRestorable, setIsRestorable] = useState(false)
-  if (Platform.OS === 'ios') {
-    return false
-  }
-  getPurchaseHistory().then(history => {
-    setIsRestorable(!!history.length)
-  })
-  return isRestorable
-}
 
 const PurchaseOrRestore = ({ isRestorable, handleRestore, purchase }) => {
   const { Fonts, Gutters } = useTheme()
@@ -62,23 +40,6 @@ const Activation = ({ navigation }) => {
   const { t } = useTranslation()
   const dispatch = useDispatch()
   const codeRef = useRef()
-  const isRestorable = useIsRestorable()
-
-  const purchase = useCallback(() => {
-    navigation.navigate(t('payment'))
-  }, [navigation, t])
-
-  const handleRestore = async () => {
-    try {
-      const purchases = await getAvailablePurchases()
-      // console.log(purchases)
-      if (purchases.length) {
-        dispatch(PurchaseWalks.action('restored'))
-      }
-    } catch (error) {
-      console.warn(error)
-    }
-  }
 
   const navigateToWalks = useCallback(() => {
     navigation.reset({
@@ -138,32 +99,6 @@ const Activation = ({ navigation }) => {
             />
           </View>
         </TouchableOpacity>
-        {Platform.OS === 'android' ? (
-          <PurchaseOrRestore
-            isRestorable={isRestorable}
-            handleRestore={handleRestore}
-            purchase={purchase}
-          />
-        ) : null}
-        {Platform.OS === 'ios' && !isPro ? (
-          <TouchableOpacity
-            onPress={() =>
-              Linking.openURL(
-                'https://apps.apple.com/de/app/the-walks-pro/id6446093925',
-              )
-            }
-            style={{ marginTop: 100, ...Layout.row, ...Layout.center }}
-          >
-            <Text style={[Fonts.textSmall, { maxWidth: 150 }]}>
-              {t('purchase')}
-            </Text>
-            <Icon
-              name="chevron-forward-outline"
-              size={35}
-              color={Colors.text}
-            />
-          </TouchableOpacity>
-        ) : null}
         <TouchableOpacity
           onPress={navigateToWalks}
           style={{ marginTop: 100, ...Layout.row, ...Layout.center }}

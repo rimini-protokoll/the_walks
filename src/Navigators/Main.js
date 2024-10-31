@@ -171,8 +171,9 @@ const MainNavigator = ({ navigation }) => {
   const showActivationScreen = useMemo(() => {
     console.log(bundleIdentifier)
     if (
-      Platform.OS === 'android' ||
-      bundleIdentifier === 'de.rimini-protokoll.thewalks'
+      ['de.rimini-protokoll.thewalks', 'com.thewalks'].includes(
+        bundleIdentifier,
+      )
     ) {
       return !walksPurchased
     } else {
@@ -196,6 +197,7 @@ const MainNavigator = ({ navigation }) => {
       return
     }
   }, [])
+
   useEffect(() => {
     if (language) {
       dispatch(FetchWalks.action({ language }))
