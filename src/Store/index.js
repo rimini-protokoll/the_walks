@@ -32,7 +32,6 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   whitelist: ['language', 'walks', 'legal'],
-  // whitelist: ['language', 'legal'],
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers)

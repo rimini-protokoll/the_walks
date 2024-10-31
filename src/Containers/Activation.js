@@ -1,6 +1,14 @@
 import React, { useCallback, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Platform,
+  Linking,
+} from 'react-native'
+import DeviceInfo from 'react-native-device-info'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { createStackNavigator } from '@react-navigation/stack'
 import { useTranslation } from 'react-i18next'
@@ -12,12 +20,41 @@ import MenuButton from '@/Components/MenuButton'
 
 const Stack = createStackNavigator()
 
+const isPro = DeviceInfo.getBundleId() === 'de.rimini-protokoll.thewalkspro'
+
 const useIsRestorable = () => {
   const [isRestorable, setIsRestorable] = useState(false)
+  if (Platform.OS === 'ios') {
+    return false
+  }
   getPurchaseHistory().then(history => {
     setIsRestorable(!!history.length)
   })
   return isRestorable
+}
+
+const PurchaseOrRestore = ({ isRestorable, handleRestore, purchase }) => {
+  const { Fonts, Gutters } = useTheme()
+  const { t } = useTranslation()
+  if (isRestorable) {
+    return (
+      <TouchableOpacity
+        style={[Gutters.smallVPadding, { marginTop: 90 }]}
+        onPress={handleRestore}
+      >
+        <Text style={Fonts.textLarge}>{t('restore')}</Text>
+      </TouchableOpacity>
+    )
+  } else {
+    return (
+      <TouchableOpacity
+        style={[Gutters.smallVPadding, { marginTop: 90 }]}
+        onPress={purchase}
+      >
+        <Text style={Fonts.textLarge}>{t('purchase')}</Text>
+      </TouchableOpacity>
+    )
+  }
 }
 
 const Activation = ({ navigation }) => {
@@ -101,19 +138,32 @@ const Activation = ({ navigation }) => {
             />
           </View>
         </TouchableOpacity>
-        <View style={{ height: 90 }} />
-        {isRestorable ? (
+        {Platform.OS === 'android' ? (
+          <PurchaseOrRestore
+            isRestorable={isRestorable}
+            handleRestore={handleRestore}
+            purchase={purchase}
+          />
+        ) : null}
+        {Platform.OS === 'ios' && !isPro ? (
           <TouchableOpacity
-            style={Gutters.smallVPadding}
-            onPress={handleRestore}
+            onPress={() =>
+              Linking.openURL(
+                'https://apps.apple.com/de/app/the-walks-pro/id6446093925',
+              )
+            }
+            style={{ marginTop: 100, ...Layout.row, ...Layout.center }}
           >
-            <Text style={Fonts.textLarge}>{t('restore')}</Text>
+            <Text style={[Fonts.textSmall, { maxWidth: 150 }]}>
+              {t('purchase')}
+            </Text>
+            <Icon
+              name="chevron-forward-outline"
+              size={35}
+              color={Colors.text}
+            />
           </TouchableOpacity>
-        ) : (
-          <TouchableOpacity style={Gutters.smallVPadding} onPress={purchase}>
-            <Text style={Fonts.textLarge}>{t('purchase')}</Text>
-          </TouchableOpacity>
-        )}
+        ) : null}
         <TouchableOpacity
           onPress={navigateToWalks}
           style={{ marginTop: 100, ...Layout.row, ...Layout.center }}

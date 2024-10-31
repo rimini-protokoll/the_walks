@@ -114,7 +114,6 @@ const createTrack = item => ({
   artwork: item.iconUri,
 })
 
-
 const CloseButton = ({ onPress }) => {
   const { Fonts, Gutters } = useTheme()
   return (
@@ -134,7 +133,6 @@ const CloseButton = ({ onPress }) => {
     </TouchableOpacity>
   )
 }
-
 
 const VideoControl = () => {
   const { Fonts, Colors, Gutters, Layout, Common } = useTheme()
@@ -289,7 +287,8 @@ const VideoControl = () => {
 
   const seek = useCallback(
     direction => {
-      let position = progress.position + 30 * direction * (direction === 1 ? 2 : 1)
+      let position =
+        progress.position + 30 * direction * (direction === 1 ? 2 : 1)
       position = Math.min(progress.duration - 1, position)
       TrackPlayer.seekTo(position)
     },
@@ -421,7 +420,9 @@ const VideoControl = () => {
           ...Gutters.smallHPadding,
         }}
         accessible={true}
-        accessibilityValue={{ text: `${Math.floor(state.progressPercentage)}%` }}
+        accessibilityValue={{
+          text: `${Math.floor(state.progressPercentage)}%`,
+        }}
       >
         <View
           style={{

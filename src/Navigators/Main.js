@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useMemo, useEffect, useState, useRef } from 'react'
 import { Platform, View, Text, TouchableOpacity } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import {
@@ -6,8 +6,9 @@ import {
   DrawerItem,
   createDrawerNavigator,
 } from '@react-navigation/drawer'
-import { useTheme } from '@/Theme'
+import DeviceInfo from 'react-native-device-info'
 import Icon from 'react-native-vector-icons/Ionicons'
+import { useTheme } from '@/Theme'
 import FetchWalks from '@/Store/Walks/FetchWalks'
 import WalksNavigator from '@/Navigators/Walks'
 import ImprintContainer from '@/Containers/Imprint'
@@ -102,7 +103,11 @@ const CustomDrawerContent = props => {
           />
         ) : null}
         <TouchableOpacity
-          style={[Gutters.regularLPadding, Gutters.regularVPadding, { width: 210, marginTop: '15%' }]}
+          style={[
+            Gutters.regularLPadding,
+            Gutters.regularVPadding,
+            { width: 210, marginTop: '15%' },
+          ]}
           onPress={() => navigation.navigate('imprint')}
         >
           <Text style={Fonts.legalSmall}>{t('imprint')}</Text>
@@ -155,6 +160,7 @@ const CustomDrawerContent = props => {
 
 // @refresh reset
 const MainNavigator = ({ navigation }) => {
+  const bundleIdentifier = useRef(DeviceInfo.getBundleId()).current
   const { Fonts, Colors, Gutters } = useTheme()
   const dispatch = useDispatch()
   const { t } = useTranslation()
@@ -162,6 +168,18 @@ const MainNavigator = ({ navigation }) => {
   const walksPurchased = useSelector(state => state.walks.purchased)
   const legalAccepted = useSelector(state => state.legal.accepted)
   const [galleryIsShown, setGalleryIsShown] = useState(false)
+  const showActivationScreen = useMemo(() => {
+    console.log(bundleIdentifier)
+    if (
+      Platform.OS === 'android' ||
+      bundleIdentifier === 'de.rimini-protokoll.thewalks'
+    ) {
+      return !walksPurchased
+    } else {
+      return false
+    }
+  }, [bundleIdentifier, walksPurchased])
+
   useEffect(() => {
     if (!language) {
       navigation.reset({ index: 0, routes: [{ name: t('language') }] })
@@ -172,7 +190,9 @@ const MainNavigator = ({ navigation }) => {
       return
     }
     if (!walksPurchased) {
-      navigation.reset({ index: 0, routes: [{ name: t('activation') }] })
+      if (showActivationScreen) {
+        navigation.reset({ index: 0, routes: [{ name: t('activation') }] })
+      }
       return
     }
   }, [])
@@ -220,7 +240,7 @@ const MainNavigator = ({ navigation }) => {
         options={{ gestureEnabled: !!language }}
       />
       <Drawer.Screen name={t('credits')} component={CreditsContainer} />
-      {!walksPurchased ? (
+      {showActivationScreen ? (
         <Drawer.Screen name={t('activation')} component={ActivationContainer} />
       ) : null}
       <Drawer.Screen name={t('payment')} component={PaymentContainer} />
