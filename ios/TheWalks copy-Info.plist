@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>The permission to access your camera. Don&apos;t worry, we&apos;re not trying to take control of your device. It&apos;s just about you taking a photo with your camera during the walk and uploading it to the app. We need your consent for that.</string>
+	<string>The permission to access your camera. Don't worry, we're not trying to take control of your device. It's just about you taking a photo with your camera during the walk and uploading it to the app. We need your consent for that.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>In order for us to be able to geographically assign your photo on the world map of The Walks, we need your GPS coordinate. This will be saved in the photo file.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -44,7 +44,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>In order for us to be able to geographically assign your photo on the world map of The Walks, we need your GPS coordinate. This will be saved in the photo file.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The permission to access your photo library. Don&apos;t worry, we&apos;re not trying to take control of your device. It&apos;s just about you selecting a photo during the walk and uploading it to the app. We need your consent for that.</string>
+	<string>The permission to access your photo library. Don't worry, we're not trying to take control of your device. It's just about you selecting a photo during the walk and uploading it to the app. We need your consent for that.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>CrimsonText-Regular.ttf</string>
