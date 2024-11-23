@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "187493639725",
+    "project_id": "thewalks-8f658",
+    "storage_bucket": "thewalks-8f658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187493639725:android:1f933dfff65193823dfaa4",
+        "android_client_info": {
+          "package_name": "com.thewalks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187493639725-4p92id5pu0i2vqp307b7cp5199b5ltfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCUCpZ5j5-SJDBGSGIzVAg8RfGIivUCEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187493639725-4p92id5pu0i2vqp307b7cp5199b5ltfd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "187493639725-kbkq9qj7if3a7v9e9nkpn03uhhnnkhdf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "de.rimini-protokoll.thewalks"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
