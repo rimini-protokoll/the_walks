@@ -73,7 +73,6 @@ const CustomDrawerContent = props => {
   if (!galleryIsShown) {
     return (
       <DrawerContentScrollView
-        {...state}
         contentContainerStyle={[
           {
             justifyItems: 'center',
@@ -83,13 +82,17 @@ const CustomDrawerContent = props => {
           Gutters.regularRPadding,
           Gutters.largeTPadding,
         ]}>
-        {routes.map((route, i) => (
-          <DrawerItem
-            {...route}
-            style={i == 0 ? {marginBottom: '10%', marginTop: '5%'} : ''}
-            labelStyle={i == 0 ? walkLabelStyle : labelStyle}
-          />
-        ))}
+        {routes.map((route, i) => {
+          const {key, ...routeProps} = route;
+          return (
+            <DrawerItem
+              key={key}
+              {...routeProps}
+              style={i == 0 ? {marginBottom: '10%', marginTop: '5%'} : ''}
+              labelStyle={i == 0 ? walkLabelStyle : labelStyle}
+            />
+          );
+        })}
         {walksPurchased && false ? (
           <DrawerItem
             label={t('walk.pictures')}
@@ -110,7 +113,7 @@ const CustomDrawerContent = props => {
     );
   } else {
     return (
-      <DrawerContentScrollView {...props}>
+      <DrawerContentScrollView>
         <DrawerItem
           label={t('back')}
           icon={() => (
@@ -227,7 +230,7 @@ const MainNavigator = ({navigation}) => {
       edgeWidth={0}
       drawerPosition="right">
       <Drawer.Screen
-        name="Main"
+        name="Walks"
         component={WalksNavigator}
         options={{headerShown: false}}
       />
