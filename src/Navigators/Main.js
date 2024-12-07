@@ -1,4 +1,4 @@
-import React, {useMemo, useEffect, useState, useRef} from 'react';
+import React, {useMemo, useEffect, useCallback, useState, useRef} from 'react';
 import {Platform, View, Text, TouchableOpacity} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 import {
@@ -39,7 +39,7 @@ const CustomDrawerContent = props => {
   const {Fonts, Colors, Gutters} = useTheme();
   const {
     navigation,
-    walksPurchased,
+    isPro,
     galleryIsShown,
     setGalleryIsShown,
     walks,
@@ -49,7 +49,7 @@ const CustomDrawerContent = props => {
     ...rest
   } = props;
   let routes = ['The Walks', 'about', 'news', 'language', 'credits'];
-  if (!walksPurchased) {
+  if (!isPro) {
     routes.push(t('activation'));
   }
   routes = routes.map((name, i) => {
@@ -92,7 +92,7 @@ const CustomDrawerContent = props => {
             />
           );
         })}
-        {walksPurchased && false ? (
+        {isPro && false ? (
           <DrawerItem
             label={t('walk.pictures')}
             onPress={() => setGalleryIsShown(true)}
@@ -157,26 +157,23 @@ const CustomDrawerContent = props => {
 // @refresh reset
 const MainNavigator = ({navigation}) => {
   const bundleIdentifier = useRef(DeviceInfo.getBundleId()).current;
-  const {Fonts, Colors, Gutters} = useTheme();
   const dispatch = useDispatch();
   const {t} = useTranslation();
   const language = useSelector(state => state.language.selectedLanguage);
-  const walksPurchased = useSelector(state => state.walks.purchased);
+  const isPro = useSelector(state => state.walks.purchased);
   const legalAccepted = useSelector(state => state.legal.accepted);
   const [galleryIsShown, setGalleryIsShown] = useState(false);
   const showActivationScreen = useMemo(() => {
-    console.log(bundleIdentifier);
     if (
       ['de.rimini-protokoll.thewalks', 'com.thewalks'].includes(
         bundleIdentifier,
       )
     ) {
-      return !walksPurchased;
+      return !isPro;
     } else {
       return false;
     }
-  }, [bundleIdentifier, walksPurchased]);
-
+  }, [bundleIdentifier, isPro]);
   useEffect(() => {
     if (!language) {
       navigation.reset({index: 0, routes: [{name: t('language')}]});
@@ -186,7 +183,7 @@ const MainNavigator = ({navigation}) => {
       navigation.reset({index: 0, routes: [{name: 'legal'}]});
       return;
     }
-    if (!walksPurchased) {
+    if (!isPro) {
       if (showActivationScreen) {
         navigation.reset({index: 0, routes: [{name: t('activation')}]});
       }
@@ -211,21 +208,23 @@ const MainNavigator = ({navigation}) => {
       return [];
     }
   });
+  const DrawerContent = useCallback(
+    props => (
+      <CustomDrawerContent
+        {...props}
+        isPro={isPro}
+        galleryIsShown={galleryIsShown}
+        setGalleryIsShown={setGalleryIsShown}
+        walks={walks}
+      />
+    ),
+    [isPro, galleryIsShown, walks],
+  );
   return (
     <Drawer.Navigator
-      drawerContent={CustomDrawerContent}
+      drawerContent={DrawerContent}
       drawerStyle={{width: 265, paddingTop: 50}}
-      options={{
-        t,
-        walksPurchased,
-        galleryIsShown,
-        setGalleryIsShown,
-        walks,
-        dispatch,
-        Colors,
-        Fonts,
-        Gutters,
-      }}
+      options={{}}
       screenOptions={{headerShown: false, drawerPosition: 'right'}}
       edgeWidth={0}
       drawerPosition="left">

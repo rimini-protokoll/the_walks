@@ -14,6 +14,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {useTheme} from '@/Theme';
 import {useTranslation} from 'react-i18next';
 import {createStackNavigator} from '@react-navigation/stack';
+import {navigateAndSimpleReset} from '@/Navigators/Root';
 import Markdown from '@/Components/Markdown';
 import MenuButton from '@/Components/MenuButton';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -29,7 +30,7 @@ const LegalContainer = ({route, navigation}) => {
   const dispatch = useDispatch();
   const [stay, setStay] = useState(route.params?.stay);
 
-  const walksPurchased = useSelector(state => state.walks.purchased);
+  const isPro = useSelector(state => state.walks.purchased);
   const accepted = useSelector(state => state.legal.accepted);
   const legal = useSelector(state => state.walks.legal);
 
@@ -49,14 +50,22 @@ const LegalContainer = ({route, navigation}) => {
   }, [legal]);
 
   useEffect(() => {
+    console.log('LegalContainer.js: useEffect()');
     if (
       Object.keys(agreements).length &&
       Object.keys(agreements)
         .map(key => agreements[key])
         .every(el => el.accepted)
     ) {
+      console.log('LegalContainer.js: useEffect() - all agreements accepted');
       if (!accepted) {
+        console.log(
+          'LegalContainer.js: useEffect() - dispatch(Accept.action(true))',
+        );
         if (Platform.OS == 'android') {
+          console.log(
+            'LegalContainer.js: useEffect() - Platform.OS == android',
+          );
           PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
             {
@@ -71,17 +80,34 @@ const LegalContainer = ({route, navigation}) => {
             },
           );
         } else {
+          console.log(
+            'LegalContainer.js: useEffect() - Platform.OS != android',
+          );
           GeoLocation.requestAuthorization('whenInUse');
         }
+        console.log(
+          'LegalContainer.js: useEffect() - dispatch(Accept.action(true))',
+        );
         dispatch(Accept.action(true));
       }
-      !stay && !walksPurchased && navigation.navigate(t('activation'));
-      !stay && walksPurchased && accepted && navigation.navigate('Main');
+      if (!stay && accepted) {
+        console.log('LegalContainer.js: useEffect() - accepted');
+        if (!isPro) {
+          console.log('LegalContainer.js: useEffect() - !isPro');
+          navigateAndSimpleReset(t('activation'));
+        } else {
+          console.log('LegalContainer.js: useEffect() - isPro');
+          navigateAndSimpleReset('Main');
+        }
+      }
     } else if (
       !Object.keys(agreements)
         .map(key => agreements[key])
         .every(el => el.accepted)
     ) {
+      console.log(
+        'LegalContainer.js: useEffect() - !Object.keys(agreements).map(key => agreements[key]).every(el => el.accepted)',
+      );
       accepted && navigation.reset({index: 0, routes: [{name: 'legal'}]});
       dispatch(Accept.action(false));
     }
