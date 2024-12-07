@@ -318,8 +318,9 @@ const IndexMapContainer = ({navigation, route}) => {
         camera={mapState.camera}
         customMapStyle={mapstyles}
         toolbarEnabled={false}>
-        {imageMarkers}
-        {imageMarkers?.length ? imageMarkers[mapIndex][1] : null}
+        {imageMarkers.map(
+          (marker, index) => marker[mapIndex === index ? 1 : 0],
+        )}
       </MapView>
       {loading ? null : (
         <AnimatedFlatList
