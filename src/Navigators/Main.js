@@ -18,12 +18,11 @@ import AboutContainer from '@/Containers/About';
 import CreditsContainer from '@/Containers/Credits';
 import NewsContainer from '@/Containers/News';
 import ActivationContainer from '@/Containers/Activation';
-import PaymentContainer from '@/Containers/Payment';
 import {useTranslation} from 'react-i18next';
 
 const Drawer = createDrawerNavigator();
 const labelStyle = {
-  fontFamily: 'Bambino-Regular',
+  fontFamily: 'BambinoRegular',
   fontWeight: 'normal',
   fontSize: 18,
   color: 'black',
@@ -227,50 +226,27 @@ const MainNavigator = ({navigation}) => {
         Fonts,
         Gutters,
       }}
+      screenOptions={{headerShown: false, drawerPosition: 'right'}}
       edgeWidth={0}
-      drawerPosition="right">
-      <Drawer.Screen
-        name="Walks"
-        component={WalksNavigator}
-        options={{headerShown: false}}
-      />
-      <Drawer.Screen
-        name={t('about')}
-        component={AboutContainer}
-        options={{headerShown: false}}
-      />
-      <Drawer.Screen
-        name={t('news')}
-        component={NewsContainer}
-        options={{headerShown: false}}
-      />
+      drawerPosition="left">
+      <Drawer.Screen name="Walks" component={WalksNavigator} />
+      <Drawer.Screen name={t('about')} component={AboutContainer} />
+      <Drawer.Screen name={t('news')} component={NewsContainer} />
       <Drawer.Screen
         name={t('language')}
         component={LanguagesContainer}
-        options={{gestureEnabled: !!language, headerShown: false}}
+        options={{gestureEnabled: !!language}}
       />
-      <Drawer.Screen
-        name={t('credits')}
-        component={CreditsContainer}
-        options={{headerShown: false}}
-      />
+      <Drawer.Screen name={t('credits')} component={CreditsContainer} />
       {showActivationScreen ? (
-        <Drawer.Screen
-          name={t('activation')}
-          component={ActivationContainer}
-          options={{headerShown: false}}
-        />
+        <Drawer.Screen name={t('activation')} component={ActivationContainer} />
       ) : null}
       <Drawer.Screen
         name="legal"
-        options={{gestureEnabled: legalAccepted, headerShown: false}}
+        options={{gestureEnabled: legalAccepted}}
         component={LegalContainer}
       />
-      <Drawer.Screen
-        name="imprint"
-        component={ImprintContainer}
-        options={{headerShown: false}}
-      />
+      <Drawer.Screen name="imprint" component={ImprintContainer} />
     </Drawer.Navigator>
   );
 };
