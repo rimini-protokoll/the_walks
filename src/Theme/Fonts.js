@@ -1,7 +1,7 @@
 /**
  * This file contains all application's style relative to fonts
  */
-import { StyleSheet, Platform } from 'react-native'
+import {StyleSheet, Platform} from 'react-native';
 
 /**
  *
@@ -12,26 +12,26 @@ import { StyleSheet, Platform } from 'react-native'
 const textBase = {
   textAlignVertical: 'center',
   includeFontPadding: false,
-}
+};
 
-export default function ({ FontSize, Colors, IconSize }) {
+export default function ({FontSize, Colors, IconSize}) {
   return StyleSheet.create({
     textSmall: {
-      fontFamily: 'Bambino-Regular',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.small * 0.95,
       color: Colors.text,
       lineHeight: FontSize.small * 1.1,
     },
     textRegular: {
       ...textBase,
-      fontFamily: 'CrimsonText-Regular',
+      fontFamily: 'CrimsonTextRegular',
       fontSize: FontSize.regular,
       color: Colors.text,
       lineHeight: FontSize.regular * 1.4,
     },
     textBold: {
       ...textBase,
-      fontFamily: 'CrimsonText-Bold',
+      fontFamily: 'CrimsonTextBold',
       fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       fontSize: FontSize.regular,
       lineHeight: FontSize.regular * 1.4,
@@ -39,32 +39,32 @@ export default function ({ FontSize, Colors, IconSize }) {
     },
     textItalic: {
       ...textBase,
-      fontFamily: 'CrimsonText-Italic',
+      fontFamily: 'CrimsonTextItalic',
       fontStyle: Platform.OS == 'android' ? 'normal' : 'italic',
       fontSize: FontSize.regular,
       color: Colors.text,
       lineHeight: FontSize.regular * 1.4,
     },
     textButton: {
-      fontFamily: 'Bambino',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.button,
       color: Colors.text,
       lineHeight: FontSize.button * 1.15,
     },
     textPlayerTitle: {
-      fontFamily: 'Bambino',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.button * 0.95,
       color: Colors.text,
       lineHeight: FontSize.button * 1.15,
     },
     textLarge: {
-      fontFamily: 'Bambino-Regular',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.large,
       color: Colors.text,
       lineHeight: FontSize.large * 1.2,
     },
     labelSmall: {
-      fontFamily: 'Bambino-Bold',
+      fontFamily: 'BambinoBold',
       fontSize: FontSize.small * 0.65,
       fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       color: Colors.text,
@@ -72,31 +72,31 @@ export default function ({ FontSize, Colors, IconSize }) {
       lineHeight: FontSize.small * 0.9,
     },
     legalSmall: {
-      fontFamily: 'Bambino-Bold',
+      fontFamily: 'BambinoBold',
       fontSize: FontSize.small * 0.65,
       fontWeight: Platform.OS == 'android' ? 'normal' : 'bold',
       color: Colors.text,
       lineHeight: FontSize.regular,
     },
     titleSmall: {
-      fontFamily: 'Bambino-Bold',
+      fontFamily: 'BambinoBold',
       fontSize: FontSize.small * 1.5,
       color: Colors.text,
     },
     titleRegular: {
-      fontFamily: 'Bambino',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.regular * 1.2,
       color: Colors.text,
       lineHeight: FontSize.regular * 1.5,
     },
     titleLarge: {
-      fontFamily: 'Bambino',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.large * 1.5,
       color: Colors.text,
       lineHeight: FontSize.large * 1.9,
     },
     titleWalks: {
-      fontFamily: 'Bambino',
+      fontFamily: 'BambinoRegular',
       fontSize: FontSize.walks * 1.5,
       color: Colors.text,
       lineHeight: FontSize.walks * 1.9,
@@ -137,5 +137,5 @@ export default function ({ FontSize, Colors, IconSize }) {
       textDecorationLine: 'underline',
       textDecorationColor: 'rgb(234, 192, 39)',
     },
-  })
+  });
 }

@@ -28,7 +28,7 @@ import TrackPlayer, {
 } from 'react-native-track-player';
 import BackgroundService from 'react-native-background-actions';
 
-const debug = true;
+const debug = false;
 const PLAYER_HEIGHT = 200;
 
 const sleep = async () => {
