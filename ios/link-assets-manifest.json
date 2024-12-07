@@ -1,0 +1,97 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/Assets/Fonts/AntDesign.ttf",
+      "sha1": "4e77868439280fb434d4697c7b911271406c81f3"
+    },
+    {
+      "path": "src/Assets/Fonts/BambinoBold.ttf",
+      "sha1": "24af34b51ac5c0524149cb677a3ebb9db9dfc44a"
+    },
+    {
+      "path": "src/Assets/Fonts/BambinoRegular.ttf",
+      "sha1": "9d14c5358e0f7c6903ae8fbd14b651cb408eb6c2"
+    },
+    {
+      "path": "src/Assets/Fonts/CrimsonTextBold.ttf",
+      "sha1": "67110adc1ebe8bae06931ac66f09452fe6c0356f"
+    },
+    {
+      "path": "src/Assets/Fonts/CrimsonTextItalic.ttf",
+      "sha1": "2f9db667c3bfed77e89a19d59e5c1223cdb587df"
+    },
+    {
+      "path": "src/Assets/Fonts/CrimsonTextRegular.ttf",
+      "sha1": "e707007e0c168dfeeb4fdac211e6675cd257cc2f"
+    },
+    {
+      "path": "src/Assets/Fonts/CrimsonTextSemiBold.ttf",
+      "sha1": "2d0ab7c638e20797fe75e4b2cfcffec892ca30fc"
+    },
+    {
+      "path": "src/Assets/Fonts/CrimsonTextSemiBoldItalic.ttf",
+      "sha1": "f2f9e3beeb0f4e915254044ad96730d4ca95a1e3"
+    },
+    {
+      "path": "src/Assets/Fonts/Entypo.ttf",
+      "sha1": "47870a67dd50871765f799caa97da87219ee47c5"
+    },
+    {
+      "path": "src/Assets/Fonts/EvilIcons.ttf",
+      "sha1": "91d377ea3cf47490b256c2ed081704a7dabdae0c"
+    },
+    {
+      "path": "src/Assets/Fonts/Feather.ttf",
+      "sha1": "526e03ea68a61c4a67a70b01d7b345eab349767d"
+    },
+    {
+      "path": "src/Assets/Fonts/FontAwesome.ttf",
+      "sha1": "13b1eab65a983c7a73bc7997c479d66943f7c6cb"
+    },
+    {
+      "path": "src/Assets/Fonts/FontAwesome5_Brands.ttf",
+      "sha1": "66c86edfd13e63e0e981ce853335c28bc2d20cec"
+    },
+    {
+      "path": "src/Assets/Fonts/FontAwesome5_Regular.ttf",
+      "sha1": "00f569f7d8ac2497a43b25dc4d3b32213bcea31b"
+    },
+    {
+      "path": "src/Assets/Fonts/FontAwesome5_Solid.ttf",
+      "sha1": "ff8f37dfad105796bd924d0db0d37a4ff252618c"
+    },
+    {
+      "path": "src/Assets/Fonts/Fontisto.ttf",
+      "sha1": "c090a3ec96a3f1bb9b615c2f3f204ce0dcdcdbc3"
+    },
+    {
+      "path": "src/Assets/Fonts/Foundation.ttf",
+      "sha1": "4b2bce6c792493a4a5716b6fec2dbefe89492c3f"
+    },
+    {
+      "path": "src/Assets/Fonts/Ionicons.ttf",
+      "sha1": "b5281fbfa43129abc3e412dd938cfcf0b77de999"
+    },
+    {
+      "path": "src/Assets/Fonts/MaterialCommunityIcons.ttf",
+      "sha1": "80a431d6d49861d655009e9491409282d2559591"
+    },
+    {
+      "path": "src/Assets/Fonts/MaterialIcons.ttf",
+      "sha1": "1943803d652750c8ec60415f1e57401c70e72d25"
+    },
+    {
+      "path": "src/Assets/Fonts/Octicons.ttf",
+      "sha1": "28875874413503bcc0810ea2a44dc1b8312c665a"
+    },
+    {
+      "path": "src/Assets/Fonts/SimpleLineIcons.ttf",
+      "sha1": "9ffb81a5a11112e292f2cc323e98486bad597599"
+    },
+    {
+      "path": "src/Assets/Fonts/Zocial.ttf",
+      "sha1": "0bda59c7bcd3d3927de047e091875a4428bfd1ab"
+    }
+  ]
+}
