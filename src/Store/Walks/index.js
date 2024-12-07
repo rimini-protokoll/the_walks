@@ -6,7 +6,7 @@ import PurchaseWalks from './PurchaseWalks'
 import DownloadWalk from './DownloadWalk'
 import CompleteWalk from './CompleteWalk'
 
-const isPro = DeviceInfo.getBundleId() === 'de.rimini-protokoll.thewalkspro'
+const isPro = DeviceInfo.getBundleId() === 'com.thewalkspro'
 
 const sliceInitialState = {
   selectedWalk: null,
