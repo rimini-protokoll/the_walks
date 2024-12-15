@@ -1,24 +1,17 @@
-import React, {useEffect, useState, useCallback} from 'react';
-import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
+import React from 'react';
+import {View, Text, ScrollView} from 'react-native';
 import {useSelector} from 'react-redux';
 import {useTheme} from '@/Theme';
 import {useTranslation} from 'react-i18next';
 import {createStackNavigator} from '@react-navigation/stack';
 import Markdown from '@/Components/Markdown';
-import Icon from 'react-native-vector-icons/Ionicons';
-import api, {handleError} from '@/Services';
 import MenuButton from '@/Components/MenuButton';
-import ActivityIndicator from '@/Components/ActivityIndicator';
 
 const Stack = createStackNavigator();
 
 const CreditsContainer = ({navigation}) => {
-  const {Colors, Fonts, Gutters, Layout} = useTheme();
+  const {Fonts, Gutters} = useTheme();
   const {t} = useTranslation();
-
-  const selectedLanguage = useSelector(
-    state => state.language.selectedLanguage,
-  );
 
   const body = useSelector(state => state.walks.credits);
 
@@ -35,10 +28,6 @@ const CreditsContainer = ({navigation}) => {
 };
 
 const CreditsStack = ({navigation}) => {
-  const {Colors, Fonts} = useTheme();
-  const accepted = useSelector(state => {
-    return state.legal.accepted;
-  });
   const headerRight = MenuButton({navigation});
   return (
     <Stack.Navigator>

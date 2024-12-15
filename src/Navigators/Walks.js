@@ -176,7 +176,7 @@ const WalksNavigator = ({navigation}) => {
         />
       ))}
       <Stack.Screen
-        name={t('walk.action')}
+        name="walk.action"
         component={IndexUserPromptContainer}
         options={{
           headerShown: false,

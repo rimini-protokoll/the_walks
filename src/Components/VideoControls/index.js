@@ -7,7 +7,6 @@ import {
   Image,
   TouchableOpacity,
   Vibration,
-  Pressable,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useTheme} from '@/Theme';
@@ -16,7 +15,11 @@ import ChangeWalk from '@/Store/Walks/ChangeWalk';
 import ChangePlayer from '@/Store/Player/ChangePlayer';
 import StartWalk from '@/Store/Player/StartWalk';
 import UserPrompt from '@/Store/Player/UserPrompt';
-import {navigate, navigateAndReset} from '@/Navigators/Root';
+import {
+  navigate,
+  navigateAndReset,
+  navigateAndSimpleReset,
+} from '@/Navigators/Root';
 import {useTranslation} from 'react-i18next';
 import ActivityIndicator from '@/Components/ActivityIndicator';
 import TrackPlayer, {
@@ -36,7 +39,7 @@ const sleep = async () => {
 };
 
 const backgroundTask = async args => {
-  const {navigate, dispatch, t, prompts, walk, parentId} = args;
+  const {prompts, walk, t} = args;
   if (!walk) {
     return;
   }
@@ -48,15 +51,15 @@ const backgroundTask = async args => {
     const userPrompt = state.player.userPrompt;
     let prompt = promptsList.filter(p => !p.completed);
     if (!prompt.length) {
-      // console.log('return, no prompt')
+      // console.log('return, no prompt');
       return;
     }
     if (!activeWalk) {
-      // console.log('return, no activeWalk')
+      // console.log('return, no activeWalk');
       return;
     }
     if (userPrompt) {
-      // console.log('continue, userPrompt')
+      // console.log('continue, userPrompt');
       await sleep();
       continue;
     }
@@ -70,11 +73,12 @@ const backgroundTask = async args => {
     // console.log(prompt)
 
     if (prompt && !userPrompt) {
+      /// console.log(prompt);
       await BackgroundService.updateNotification({taskDesc: prompt.title});
       promptsList[prompt.index].completed = true;
-      // console.log('prompt', promptsList[prompt.index])
+      // console.log('prompt', promptsList[prompt.index]);
       await TrackPlayer.setRepeatMode(RepeatMode.Track);
-      // console.log('repeat mode set')
+      // console.log('repeat mode set');
       await TrackPlayer.skipToNext();
       if (prompt.isPrologue) {
         TrackPlayer.setVolume(0);
@@ -82,14 +86,28 @@ const backgroundTask = async args => {
         TrackPlayer.setVolume(1);
       }
       await TrackPlayer.play();
-      // console.log('skip to next')
+      // console.log('skip to next');
       await store.dispatch(ChangeWalk.action(walk.id));
       await store.dispatch(UserPrompt.action(prompt));
-      // console.log('UserPrompt action')
+      // console.log('UserPrompt action');
       navigateAndReset([
-        {name: 'Main', state: {routes: [{name: 'walk.action'}]}},
+        {
+          name: 'Main',
+          state: {
+            routes: [
+              {
+                name: 'Walks',
+                state: {
+                  routes: [{name: 'walk.action'}],
+                  index: 0,
+                },
+              },
+            ],
+            index: 0,
+          },
+        },
       ]);
-      // console.log('navigate', 'walk.action')
+      // console.log('navigate', 'walk.action');
       Vibration.vibrate(500);
     }
     await sleep();
