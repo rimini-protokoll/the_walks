@@ -30,87 +30,39 @@ import TrackPlayer, {
   Event,
 } from 'react-native-track-player';
 import BackgroundService from 'react-native-background-actions';
+import {setupPlaybackMonitor} from '@/Services/PlaybackMonitor';
 
 const debug = false;
 const PLAYER_HEIGHT = 200;
 
-const sleep = async () => {
-  await new Promise(resolve => setTimeout(resolve, 500));
-};
-
 const backgroundTask = async args => {
+  console.log('[BackgroundTask] Starting with args:', {
+    hasPrompts: !!args.prompts,
+    hasWalk: !!args.walk,
+    promptsCount: args.prompts?.length,
+    walkTitle: args.walk?.title,
+  });
+
   const {prompts, walk, t} = args;
   if (!walk) {
+    console.log('[BackgroundTask] No walk provided, returning');
     return;
   }
-  const promptsList = prompts.map(prompt => ({...prompt}));
-  console.log('start background loop');
-  while (BackgroundService.isRunning()) {
-    const state = store.getState();
-    const activeWalk = state.player.activeWalk;
-    const userPrompt = state.player.userPrompt;
-    let prompt = promptsList.filter(p => !p.completed);
-    if (!prompt.length) {
-      // console.log('return, no prompt');
-      return;
-    }
-    if (!activeWalk) {
-      // console.log('return, no activeWalk');
-      return;
-    }
-    if (userPrompt) {
-      // console.log('continue, userPrompt');
-      await sleep();
-      continue;
-    }
 
-    const position = await TrackPlayer.getPosition();
-    // console.log('prompt length', prompt.length)
+  try {
+    console.log('[BackgroundTask] Setting up PlaybackMonitor...');
+    // Set up the monitor
+    await setupPlaybackMonitor(prompts, walk, t);
+    console.log('[BackgroundTask] PlaybackMonitor setup complete');
 
-    prompt = prompt.filter(prompt => {
-      return position >= prompt.triggerTime;
-    })[0];
-    // console.log(prompt)
-
-    if (prompt && !userPrompt) {
-      /// console.log(prompt);
-      await BackgroundService.updateNotification({taskDesc: prompt.title});
-      promptsList[prompt.index].completed = true;
-      // console.log('prompt', promptsList[prompt.index]);
-      await TrackPlayer.setRepeatMode(RepeatMode.Track);
-      // console.log('repeat mode set');
-      await TrackPlayer.skipToNext();
-      if (prompt.isPrologue) {
-        TrackPlayer.setVolume(0);
-      } else {
-        TrackPlayer.setVolume(1);
-      }
-      await TrackPlayer.play();
-      // console.log('skip to next');
-      await store.dispatch(ChangeWalk.action(walk.id));
-      await store.dispatch(UserPrompt.action(prompt));
-      // console.log('UserPrompt action');
-      navigateAndReset([
-        {
-          name: 'Main',
-          state: {
-            routes: [
-              {
-                name: 'Walks',
-                state: {
-                  routes: [{name: 'walk.action'}],
-                  index: 0,
-                },
-              },
-            ],
-            index: 0,
-          },
-        },
-      ]);
-      // console.log('navigate', 'walk.action');
-      Vibration.vibrate(500);
+    // Keep the service alive with minimal work
+    console.log('[BackgroundTask] Starting background loop');
+    while (BackgroundService.isRunning()) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
     }
-    await sleep();
+    console.log('[BackgroundTask] Background service stopped running');
+  } catch (error) {
+    console.error('[BackgroundTask] Error:', error);
   }
 };
 
@@ -229,7 +181,7 @@ const VideoControl = () => {
       const options = {
         taskName: 'The Walks',
         taskTitle: _walk.title,
-        taskDesc: '',
+        taskDesc: 'Audio playback in progress',
         color: '#f00000',
         taskIcon: {
           name: 'ic_launcher',
@@ -244,16 +196,50 @@ const VideoControl = () => {
           dispatch,
           t,
         },
+        progressBar: {
+          max: 100,
+          value: 0,
+        },
+        importance: 3, // IMPORTANCE_DEFAULT
+        foregroundServiceType: 'mediaPlayback',
+        notification: {
+          channelId: 'thewalks-playback',
+          channelName: 'Playback Status',
+          channelDescription: 'Shows the current playback status',
+          ongoing: true,
+          sticky: true,
+          category: 'transport', // Android notification category for media playback
+        },
       };
-      TrackPlayer.add(tracks).then(() => {
-        BackgroundService.start(backgroundTask, options).then(async () => {
-          await TrackPlayer.play();
-          await TrackPlayer.seekTo(0);
-          dispatch(ChangePlayer.action({paused: false}));
-          console.log('walk init');
-          setSetup(false);
+      console.log(
+        '[buildWalk] Adding tracks and starting background service...',
+      );
+      TrackPlayer.add(tracks)
+        .then(() => {
+          console.log(
+            '[buildWalk] Tracks added, starting background service...',
+          );
+          BackgroundService.start(backgroundTask, options)
+            .then(async () => {
+              console.log(
+                '[buildWalk] Background service started, initializing playback...',
+              );
+              await TrackPlayer.play();
+              await TrackPlayer.seekTo(0);
+              dispatch(ChangePlayer.action({paused: false}));
+              console.log('[buildWalk] Walk initialization complete');
+              setSetup(false);
+            })
+            .catch(error => {
+              console.error(
+                '[buildWalk] Error starting background service:',
+                error,
+              );
+            });
+        })
+        .catch(error => {
+          console.error('[buildWalk] Error adding tracks:', error);
         });
-      });
     },
     [dispatch, activeWalk, t],
   );
