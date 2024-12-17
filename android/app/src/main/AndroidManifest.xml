@@ -49,6 +49,9 @@
       <meta-data
           android:name="com.google.android.geo.API_KEY"
           android:value="${googleMapApiKey}" />
-      <service android:name="com.asterinet.react.bgactions.RNBackgroundActionsTask" android:foregroundServiceType="shortService"/>
+      <service 
+        android:name="com.asterinet.react.bgactions.RNBackgroundActionsTask" 
+        android:foregroundServiceType="mediaPlayback"
+        android:exported="false" />
     </application>
 </manifest>
