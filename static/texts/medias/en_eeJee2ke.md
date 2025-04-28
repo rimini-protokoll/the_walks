@@ -1,11 +1,11 @@
 ---
+twoPerson: true
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: eeJee2ke
 language: en
 shortTitle: A
 title: Park A
-twoPerson: true
-popups: []
 duration: ~ 20 Min
 listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_eeJee2ke.mp3?alt=media&token=819857ae-b8dc-407d-85c9-536f81324f5c
@@ -81,7 +81,7 @@ userPrompt:
       - title: No photo
         action: continue
   - title: Continue to the gallery
-    triggerTime: 1028
+    triggerTime: 1027
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
     actions:
       - title: Gallery
