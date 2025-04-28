@@ -1,11 +1,11 @@
 ---
+twoPerson: true
+popups: []
 iconUri: https://the-walks.netlify.app/icons/Park.png
 id: airie8Ke
 language: en
 shortTitle: B
 title: Park B
-twoPerson: true
-popups: []
 duration: ~ 20 Min
 listed: false
 srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/mp3%2Fv0%2Fen_ahvo7Cee%2Fen_airie8Ke.mp3?alt=media&token=550fb133-a0c9-44d2-a29b-dcb97e70ed6e
@@ -87,6 +87,6 @@ userPrompt:
       - title: No
         action: continue
     srcUri: https://firebasestorage.googleapis.com/v0/b/thewalks-8f658.appspot.com/o/static%2Fmedias%2Fmulti_Zeubeel8_loop.mp3?alt=media&token=88349085-3303-48b9-bdc6-fd7b09519a26
-    triggerTime: 1028
+    triggerTime: 1000
 ---
 \-
