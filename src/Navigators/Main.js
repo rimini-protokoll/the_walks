@@ -18,7 +18,6 @@ import AboutContainer from '@/Containers/About'
 import CreditsContainer from '@/Containers/Credits'
 import NewsContainer from '@/Containers/News'
 import ActivationContainer from '@/Containers/Activation'
-import PaymentContainer from '@/Containers/Payment'
 import { useTranslation } from 'react-i18next'
 
 const Drawer = createDrawerNavigator()
@@ -217,21 +216,26 @@ const MainNavigator = ({ navigation }) => {
   })
   return (
     <Drawer.Navigator
-      drawerContent={CustomDrawerContent}
-      drawerStyle={{ width: 265, paddingTop: 50 }}
-      drawerContentOptions={{
-        t,
-        walksPurchased,
-        galleryIsShown,
-        setGalleryIsShown,
-        walks,
-        dispatch,
-        Colors,
-        Fonts,
-        Gutters,
+      drawerContent={props => (
+        <CustomDrawerContent
+          {...props}
+          t={t}
+          walksPurchased={walksPurchased}
+          galleryIsShown={galleryIsShown}
+          setGalleryIsShown={setGalleryIsShown}
+          walks={walks}
+          dispatch={dispatch}
+          Colors={Colors}
+          Fonts={Fonts}
+          Gutters={Gutters}
+        />
+      )}
+      screenOptions={{
+        headerShown: false,
+        drawerPosition: 'right',
+        drawerStyle: { width: 265, paddingTop: 50 },
+        swipeEdgeWidth: 0,
       }}
-      edgeWidth={0}
-      drawerPosition="right"
     >
       <Drawer.Screen name="Main" component={WalksNavigator} />
       <Drawer.Screen name={t('about')} component={AboutContainer} />
@@ -239,16 +243,15 @@ const MainNavigator = ({ navigation }) => {
       <Drawer.Screen
         name={t('language')}
         component={LanguagesContainer}
-        options={{ gestureEnabled: !!language }}
+        options={{ swipeEnabled: !!language }}
       />
       <Drawer.Screen name={t('credits')} component={CreditsContainer} />
       {showActivationScreen ? (
         <Drawer.Screen name={t('activation')} component={ActivationContainer} />
       ) : null}
-      <Drawer.Screen name={t('payment')} component={PaymentContainer} />
       <Drawer.Screen
         name="legal"
-        options={{ gestureEnabled: legalAccepted }}
+        options={{ swipeEnabled: legalAccepted }}
         component={LegalContainer}
       />
       <Drawer.Screen name="imprint" component={ImprintContainer} />

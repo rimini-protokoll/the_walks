@@ -137,13 +137,13 @@ const NewsStack = ({ navigation }) => {
 
   const headerRight = MenuButton({ navigation })
   return (
-    <Stack.Navigator headerMode="float">
+    <Stack.Navigator>
       <Stack.Screen
         name={t('news')}
         component={News}
         options={{
           headerRight,
-          headerTitle: null,
+          headerTitle: () => null,
           headerTransparent: true,
         }}
         initialParams={{ news }}
@@ -156,7 +156,7 @@ const NewsStack = ({ navigation }) => {
           options={{
             headerRight,
             headerBackTitleVisible: false,
-            headerTitle: null,
+            headerTitle: () => null,
             headerTransparent: true,
             headerBackImage: () => (
               <Image

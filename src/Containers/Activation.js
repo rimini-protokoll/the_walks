@@ -127,7 +127,7 @@ const ActivationStack = ({ navigation }) => {
         name={t('activation')}
         component={Activation}
         options={{
-          headerTitle: null,
+          headerTitle: () => null,
           headerRight,
         }}
       />

@@ -44,12 +44,12 @@ const ImprintStack = ({ navigation }) => {
   })
   const headerRight = MenuButton({ navigation })
   return (
-    <Stack.Navigator headerMode="float">
+    <Stack.Navigator>
       <Stack.Screen
         name="Imprint"
         component={ImprintContainer}
         options={{
-          headerTitle: null,
+          headerTitle: () => null,
           headerRight,
           headerTransparent: true,
         }}

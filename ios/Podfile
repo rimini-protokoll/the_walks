@@ -1,7 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '13.0'
+platform :ios, '15.0'
 install! 'cocoapods', :deterministic_uuids => false
 
 target 'TheWalks' do
@@ -47,13 +47,11 @@ target 'TheWalks' do
     # we make it explicit here to aid in the React Native upgrade process.
     :hermes_enabled => true,
     :fabric_enabled => flags[:fabric_enabled],
-    # Enables Flipper.
-    #
-    # Note that if you have use_frameworks! enabled, Flipper will not work and
-    # you should disable the next line.
-    :flipper_configuration => FlipperConfiguration.disabled,
+    # Flipper was removed from React Native in 0.74; the :flipper_configuration
+    # option no longer exists (it also never worked with use_frameworks!).
     # An absolute path to your application root.
-    :app_path => '#{Pod::Config.instance.installation_root}/..'
+    # (double-quoted so the #{...} interpolation is actually evaluated)
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
@@ -75,6 +73,21 @@ target 'TheWalks' do
   end
 
   post_install do |installer|
+    # BoringSSL-GRPC (pulled by Firebase) attaches a malformed per-file compiler flag
+    # "-GCC_WARN_INHIBIT_ALL_WARNINGS"; modern clang reads it as an unsupported "-G"
+    # option and fails ("unsupported option '-G' for target arm64-apple-ios"). Strip it.
+    installer.pods_project.targets.each do |target|
+      if target.name == 'BoringSSL-GRPC'
+        target.source_build_phase.files.each do |file|
+          if file.settings && file.settings['COMPILER_FLAGS']
+            flags = file.settings['COMPILER_FLAGS'].split
+            flags.reject! { |flag| flag == '-GCC_WARN_INHIBIT_ALL_WARNINGS' }
+            file.settings['COMPILER_FLAGS'] = flags.join(' ')
+          end
+        end
+      end
+    end
+
     installer.pods_project.targets.each do |target|
       if target.name == 'RCT-Folly'
           target.build_configurations.each do |config|
@@ -83,7 +96,8 @@ target 'TheWalks' do
       end
     end
     react_native_post_install(installer)
-    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    # __apply_Xcode_12_5_M1_post_install_workaround was removed from React Native in 0.72+;
+    # react_native_post_install already applies the needed fixes.
     
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
@@ -115,17 +129,32 @@ target 'TheWalks' do
         target.build_configurations.each do |config|
           config.build_settings['ONLY_ACTIVE_ARCH'] = 'YES'
           config.build_settings['EXCLUDED_ARCHS'] = 'i386'
-          config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = '$(inherited) arm64'
+          # Do NOT exclude arm64 for the simulator: Apple Silicon simulators are
+          # arm64, and excluding it leaves no buildable arch (obsolete Intel-era hack).
+          config.build_settings.delete('EXCLUDED_ARCHS[sdk=iphonesimulator*]')
+          # Xcode 15+/26 relocated some Swift overlays (e.g. swiftWebKit, autolinked by
+          # Swift pods) into the SDK's Cryptexes path, which is not on the linker's
+          # default search path -> "ld: library 'swiftWebKit' not found". Add it.
+          config.build_settings['LIBRARY_SEARCH_PATHS'] = [
+            '$(inherited)',
+            '$(SDKROOT)/usr/lib/swift',
+            '$(SDKROOT)/System/Cryptexes/OS/usr/lib/swift',
+          ]
         end
       end
       aggregate_target.user_project.save
     end
-    
+
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
         config.build_settings['EXCLUDED_ARCHS'] = 'i386'
-        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = '$(inherited) arm64'
+        config.build_settings.delete('EXCLUDED_ARCHS[sdk=iphonesimulator*]')
         config.build_settings['ENABLE_BITCODE'] = 'NO'
+        # Minimum deployment target: iOS 15. Keep every pod target at or above it
+        # (some pods default lower and would warn/fail-to-link against the app target).
+        if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 15.0
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+        end
       end
     end
   end

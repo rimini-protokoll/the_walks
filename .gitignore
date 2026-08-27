@@ -22,6 +22,7 @@ DerivedData
 *.xcuserstate
 ios/GoogleService-Info.plist
 ios/TheWalks/Constants.m
+ios/.xcode.env.local
 
 # Android/IntelliJ
 #

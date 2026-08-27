@@ -39,12 +39,12 @@ const CreditsStack = ({ navigation }) => {
   })
   const headerRight = MenuButton({ navigation })
   return (
-    <Stack.Navigator headerMode="float">
+    <Stack.Navigator>
       <Stack.Screen
         name="Credits"
         component={CreditsContainer}
         options={{
-          headerTitle: null,
+          headerTitle: () => null,
           headerRight,
           headerTransparent: true,
         }}

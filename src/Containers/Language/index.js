@@ -55,7 +55,7 @@ const LanguagesStack = ({ navigation }) => {
         name="Language"
         component={Languages}
         options={{
-          headerTitle: null,
+          headerTitle: () => null,
           headerRight,
           headerTransparent: true,
         }}

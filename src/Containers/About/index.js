@@ -57,7 +57,7 @@ const AboutStack = ({ navigation }) => {
   }
   const headerRight = MenuButton({ navigation })
   return (
-    <Stack.Navigator headerMode="float">
+    <Stack.Navigator>
       <Stack.Screen
         name="About"
         component={About}

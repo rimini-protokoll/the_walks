@@ -166,13 +166,13 @@ const LegalStack = ({ route, navigation }) => {
     return <Button />
   }
   return (
-    <Stack.Navigator headerMode="float">
+    <Stack.Navigator>
       <Stack.Screen
         name="Legal"
         component={LegalContainer}
         initialParams={route.params}
         options={{
-          headerTitle: null,
+          headerTitle: () => null,
           headerRight,
           headerTransparent: true,
         }}

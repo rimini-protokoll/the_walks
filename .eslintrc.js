@@ -3,7 +3,7 @@ module.exports = {
     'jest/globals': true,
   },
   root: true,
-  extends: ['@react-native-community'],
+  extends: ['@react-native'],
   plugins: ['jest'],
   rules: {
     semi: ['error', 'never'],
