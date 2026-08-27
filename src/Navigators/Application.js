@@ -18,7 +18,6 @@ import UserPrompt from '@/Store/Player/UserPrompt'
 import { navigateAndSimpleReset } from '@/Navigators/Root'
 import '@/Translations'
 import i18n from 'i18next'
-import BackgroundService from 'react-native-background-actions'
 
 const Stack = createStackNavigator()
 
@@ -26,7 +25,8 @@ let MainNavigator
 
 const setupPlayer = async () => {
   try {
-    await TrackPlayer.getCurrentTrack()
+    // Throws if the player has not been set up yet — that's the signal to set it up.
+    await TrackPlayer.getActiveTrackIndex()
     await TrackPlayer.removeUpcomingTracks()
   } catch {
     await TrackPlayer.setupPlayer({
@@ -36,13 +36,12 @@ const setupPlayer = async () => {
       progressUpdateEventInterval: 1,
       forwardJumpInterval: 0,
       capabilities: [Capability.Play, Capability.Pause, Capability.Stop],
-      notificationCapabilites: [
+      notificationCapabilities: [
         Capability.Play,
         Capability.Pause,
         Capability.Stop,
       ],
-      compactCapabilites: [Capability.Play, Capability.Pause, Capability.Stop],
-      waitForBuffer: true,
+      compactCapabilities: [Capability.Play, Capability.Pause, Capability.Stop],
       android: {
         appKilledPlaybackBehavior:
           AppKilledPlaybackBehavior.StopPlaybackAndRemoveNotification,
@@ -79,7 +78,6 @@ const ApplicationNavigator = ({ store }) => {
 
       dispatch(UserPrompt.action(false))
       dispatch(StartWalk.action(false))
-      BackgroundService.stop()
       console.log('destroy')
     },
     [dispatch],

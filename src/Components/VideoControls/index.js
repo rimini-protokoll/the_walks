@@ -6,95 +6,17 @@ import {
   Text,
   Image,
   TouchableOpacity,
-  Vibration,
   Pressable,
 } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
-import { store } from '@/Store'
-import ChangeWalk from '@/Store/Walks/ChangeWalk'
 import ChangePlayer from '@/Store/Player/ChangePlayer'
 import StartWalk from '@/Store/Player/StartWalk'
-import UserPrompt from '@/Store/Player/UserPrompt'
-import { navigate, navigateAndReset } from '@/Navigators/Root'
-import { useTranslation } from 'react-i18next'
 import ActivityIndicator from '@/Components/ActivityIndicator'
-import TrackPlayer, {
-  RepeatMode,
-  useProgress,
-  useTrackPlayerEvents,
-  getState,
-  Event,
-} from 'react-native-track-player'
-import BackgroundService from 'react-native-background-actions'
+import TrackPlayer, { useProgress } from 'react-native-track-player'
 
 const debug = false
 const PLAYER_HEIGHT = 200
-
-const sleep = async () => {
-  await new Promise(resolve => setTimeout(resolve, 500))
-}
-
-const backgroundTask = async args => {
-  const { navigate, dispatch, t, prompts, walk, parentId } = args
-  if (!walk) {
-    return
-  }
-  const promptsList = prompts.map(prompt => ({ ...prompt }))
-  console.log('start background loop')
-  while (BackgroundService.isRunning()) {
-    const state = store.getState()
-    const activeWalk = state.player.activeWalk
-    const userPrompt = state.player.userPrompt
-    let prompt = promptsList.filter(p => !p.completed)
-    if (!prompt.length) {
-      // console.log('return, no prompt')
-      return
-    }
-    if (!activeWalk) {
-      // console.log('return, no activeWalk')
-      return
-    }
-    if (userPrompt) {
-      // console.log('continue, userPrompt')
-      await sleep()
-      continue
-    }
-
-    const position = await TrackPlayer.getPosition()
-    // console.log('prompt length', prompt.length)
-
-    prompt = prompt.filter(prompt => {
-      return position >= prompt.triggerTime
-    })[0]
-    // console.log(prompt)
-
-    if (prompt && !userPrompt) {
-      await BackgroundService.updateNotification({ taskDesc: prompt.title })
-      promptsList[prompt.index].completed = true
-      // console.log('prompt', promptsList[prompt.index])
-      await TrackPlayer.setRepeatMode(RepeatMode.Track)
-      // console.log('repeat mode set')
-      await TrackPlayer.skipToNext()
-      if (prompt.isPrologue) {
-        TrackPlayer.setVolume(0)
-      } else {
-        TrackPlayer.setVolume(1)
-      }
-      await TrackPlayer.play()
-      // console.log('skip to next')
-      await store.dispatch(ChangeWalk.action(walk.id))
-      await store.dispatch(UserPrompt.action(prompt))
-      // console.log('UserPrompt action')
-      navigateAndReset([
-        { name: 'Main', state: { routes: [{ name: 'walk.action' }] } },
-      ])
-      // console.log('navigate', 'walk.action')
-      Vibration.vibrate(500)
-    }
-    await sleep()
-  }
-}
 
 const str_pad_left = (string, pad, length) => {
   return (new Array(length + 1).join(pad) + string).slice(-length)
@@ -106,8 +28,8 @@ const timeToString = time => {
   return str_pad_left(minutes, '0', 2) + ':' + str_pad_left(seconds, '0', 2)
 }
 
-const createTrack = item => ({
-  id: item.id,
+const createTrack = (item, id) => ({
+  id: id || item.id,
   url: item.srcUri,
   title: item.title,
   artist: 'The Walks',
@@ -136,7 +58,6 @@ const CloseButton = ({ onPress }) => {
 
 const VideoControl = () => {
   const { Fonts, Colors, Gutters, Layout, Common } = useTheme()
-  const { t } = useTranslation()
   const dispatch = useDispatch()
   const paused = useSelector(state => state.player.paused)
   const userPrompt = useSelector(state => state.player.userPrompt)
@@ -162,21 +83,16 @@ const VideoControl = () => {
     return false
   })
   const progress = useProgress()
-  const [promptState, setPromptState] = useState([])
   const [setup, setSetup] = useState(true)
   const [selection, setSelection] = useState([])
 
-  useTrackPlayerEvents([Event.PlaybackQueueEnded], () => {
-    if (!setup) {
-      dispatch(StartWalk.action(false))
-    }
-  })
-
   const buildWalk = useCallback(
     (_walk, parentId) => {
-      const walkTrack = createTrack(_walk)
-      //console.log(walkTrack)
-      const tracks = [walkTrack]
+      dispatch(ChangePlayer.action({ setup: true }))
+      // Interleaved queue: [walk0, prompt0, walk1, prompt1, ...]. Every entry gets a
+      // unique id (walk segments reuse the same audio/artwork) so track-player's queue
+      // bookkeeping stays unambiguous.
+      const tracks = [createTrack(_walk, `${_walk.id}#seg0`)]
       const prompts = []
 
       const prologues = _walk.userPrompt.filter(
@@ -187,7 +103,6 @@ const VideoControl = () => {
         prompts.push({
           ...prompt,
           index: i,
-          completed: false,
           isLast,
           isPrologue: prompt.triggerTime === 0,
           isLastPrologue: prologues.indexOf(prompt) === prologues.length - 1,
@@ -196,49 +111,31 @@ const VideoControl = () => {
         })
 
         tracks.push(
-          createTrack({
-            id: _walk.id + i,
-            srcUri: prompt.srcUri,
-            title: prompt.title,
-            iconUri: _walk.iconUri,
-          }),
+          createTrack(
+            {
+              srcUri: prompt.srcUri,
+              title: prompt.title,
+              iconUri: _walk.iconUri,
+            },
+            `${_walk.id}#p${i}`,
+          ),
         )
         if (!isLast) {
-          tracks.push(walkTrack)
+          tracks.push(createTrack(_walk, `${_walk.id}#seg${i + 1}`))
         }
       })
-      setPromptState(prompts)
 
-      const options = {
-        taskName: 'The Walks',
-        taskTitle: _walk.title,
-        taskDesc: '',
-        color: '#f00000',
-        taskIcon: {
-          name: 'ic_launcher',
-          type: 'mipmap',
-        },
-        linkingURI: 'thewalks://notification.click',
-        parameters: {
-          prompts,
-          parentId,
-          walk: _walk,
-          navigate,
-          dispatch,
-          t,
-        },
-      }
-      TrackPlayer.add(tracks).then(() => {
-        BackgroundService.start(backgroundTask, options).then(async () => {
-          await TrackPlayer.play()
-          await TrackPlayer.seekTo(0)
-          dispatch(ChangePlayer.action({ paused: false }))
-          console.log('walk init')
-          setSetup(false)
-        })
+      TrackPlayer.add(tracks).then(async () => {
+        // Prompts are stored in redux so the playback service can fire them from native
+        // progress events, which keep arriving in the background (see service.js).
+        dispatch(ChangePlayer.action({ prompts }))
+        await TrackPlayer.play()
+        await TrackPlayer.seekTo(0)
+        dispatch(ChangePlayer.action({ paused: false, setup: false }))
+        setSetup(false)
       })
     },
-    [dispatch, activeWalk, t],
+    [dispatch, activeWalk],
   )
 
   useEffect(() => {
@@ -263,19 +160,18 @@ const VideoControl = () => {
 
   useEffect(() => {
     if (seekTo) {
-      console.log('seekTo+play')
-
-      TrackPlayer.play()
+      // Mute, seek to the resume point, then un-mute once the seek resolves. The old
+      // version only un-muted when useProgress() happened to report a position within
+      // 1s of the target — which may never arrive on buffering audio, leaving playback
+      // silent and the UI stuck on the loading spinner.
       TrackPlayer.setVolume(0)
       TrackPlayer.seekTo(seekTo).then(() => {
-        if (Math.abs(progress.position - seekTo) <= 1) {
-          TrackPlayer.setVolume(1)
-          dispatch(ChangePlayer.action({ position: null }))
-        }
+        TrackPlayer.play()
+        TrackPlayer.setVolume(1)
+        dispatch(ChangePlayer.action({ position: null }))
       })
     }
-    //TrackPlayer.getQueue().then(queue => console.log(queue))
-  }, [dispatch, seekTo, progress.position])
+  }, [dispatch, seekTo])
 
   useEffect(() => {
     paused ? TrackPlayer.pause() : TrackPlayer.play()

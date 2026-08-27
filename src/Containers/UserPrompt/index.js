@@ -16,7 +16,6 @@ import {
   permissionsGeoLocation,
   permissionsCamera,
 } from './util'
-import BackgroundService from 'react-native-background-actions'
 import { useNetInfo } from '@react-native-community/netinfo'
 import TrackPlayer, { RepeatMode } from 'react-native-track-player'
 import ActivityIndicator from '@/Components/ActivityIndicator'
@@ -45,6 +44,12 @@ const IndexUserPromptContainer = ({ navigation }) => {
   const picture = action => {
     const postAction = actions[action.postAction] || actions.continue
     setIsLoading(true)
+    // Stop the looping prompt audio and release repeat before opening the camera. On
+    // iOS the camera claims the audio session, and leaving track-player looping under
+    // RepeatMode.Track while it does so can hang the app. resumeWalk() restarts audio
+    // once the user continues.
+    TrackPlayer.setRepeatMode(RepeatMode.Off)
+    TrackPlayer.pause()
     launchCamera(
       {
         mediaType: 'photo',
@@ -68,9 +73,6 @@ const IndexUserPromptContainer = ({ navigation }) => {
         }
       },
     )
-    if (BackgroundService.isRunning()) {
-      BackgroundService.updateNotification({ description: ' ' }).catch(() => {})
-    }
   }
 
   const resumeWalk = useCallback(() => {
@@ -116,9 +118,6 @@ const IndexUserPromptContainer = ({ navigation }) => {
         },
       ],
     })
-    if (BackgroundService.isRunning()) {
-      BackgroundService.updateNotification({ description: ' ' })
-    }
   }, [walk, dispatch, navigation, resumeWalk, userPrompt.isLast])
 
   const map = () => {
@@ -142,9 +141,6 @@ const IndexUserPromptContainer = ({ navigation }) => {
         },
       ],
     })
-    if (BackgroundService.isRunning()) {
-      BackgroundService.updateNotification({taskDesc: ' '})
-    }
   }
   const actions = {
     continue: continueWalk,
@@ -189,7 +185,7 @@ const IndexUserPromptContainer = ({ navigation }) => {
             <TouchableOpacity
               key={index}
               onPress={() => actions[action.action](action)}
-              style={[Common.button.outline, {opacity: isLoading || (!netinfo.isConnected && action.action == 'map') ? .5 : 1 }]}
+              style={[Common.button.outline, { opacity: isLoading || (!netinfo.isConnected && action.action == 'map') ? 0.5 : 1 }]}
               disabled={isLoading || (!netinfo.isConnected && action.action == 'map')}
             >
               <Text style={[Fonts.textButton, Fonts.textCenter]}>{action.title}</Text>
