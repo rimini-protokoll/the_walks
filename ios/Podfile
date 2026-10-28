@@ -4,7 +4,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 platform :ios, '15.0'
 install! 'cocoapods', :deterministic_uuids => false
 
-target 'TheWalks' do
+abstract_target 'TheWalksAll' do
   rn_maps_path = '../node_modules/react-native-maps'
   use_frameworks! :linkage => :static
   $static_framework = [
@@ -55,6 +55,11 @@ target 'TheWalks' do
   )
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
+
+  # Both shipping apps use the same pods. The 'TheWalks Pro' target previously had
+  # no CocoaPods integration, so it couldn't find the pod headers/frameworks.
+  target 'TheWalks'
+  target 'TheWalks Pro'
 
   target 'TheWalksTests' do
     inherit! :complete
