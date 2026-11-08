@@ -1,0 +1,11 @@
+--- a/node_modules/react-native-svg/android/src/main/java/com/horcrux/svg/VirtualView.java
++++ b/node_modules/react-native-svg/android/src/main/java/com/horcrux/svg/VirtualView.java
+@@ -105,7 +105,7 @@
+     ArrayList<PathElement> elements;
+     PointerEvents mPointerEvents;
+ 
+-    void setPointerEvents(PointerEvents pointerEvents) {
++    public void setPointerEvents(PointerEvents pointerEvents) {
+         mPointerEvents = pointerEvents;
+     }
+ 

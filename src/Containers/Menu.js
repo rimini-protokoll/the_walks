@@ -1,5 +1,6 @@
-import React, { useRef, useCallback, useState } from 'react'
+import React, { useRef, useCallback, useState, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { createSelector } from '@reduxjs/toolkit'
 import {
   View,
   ScrollView,
@@ -21,35 +22,54 @@ const createStyles = ({ Colors }) =>
     },
   })
 
+const selectLanguage = state => state.language.selectedLanguage
+const selectLocalWalksMap = state => state.walks.localWalks
+const selectAllWalks = state => state.walks.fetchWalks.walks
+const selectCompleted = state => state.walks.completed
+
+const selectCategorizedWalks = createSelector(
+  [selectLanguage, selectLocalWalksMap, selectAllWalks, selectCompleted],
+  (language, localWalksMap, allWalks, completedIds) => {
+    if (!allWalks || !allWalks.length) {
+      return { pendingWalks: [], completedWalksList: [] }
+    }
+    const localSet = new Set(Object.keys(localWalksMap?.[language] || {}))
+    const completedSet = new Set(completedIds || [])
+
+    const pendingWalks = []
+    const completedWalksList = []
+
+    for (let i = 0; i < allWalks.length; i++) {
+      const walk = allWalks[i]
+      if (!walk?.data?.listed) continue
+
+      const isLocal = localSet.has(walk.data.id)
+      const walkItem = {
+        content: walk.content,
+        data: { ...walk.data, local: isLocal },
+      }
+
+      if (completedSet.has(walk.data.id)) {
+        completedWalksList.push(walkItem)
+      } else {
+        pendingWalks.push(walkItem)
+      }
+    }
+
+    return { pendingWalks, completedWalksList }
+  },
+)
+
 const Menu = ({ navigation, route }) => {
   const { t } = useTranslation()
   const { Common, Fonts, Gutters, Layout, Colors } = useTheme()
   const styles = useRef(createStyles({ Colors }))
   const dispatch = useDispatch()
-  const language = useSelector(state => state.language.selectedLanguage)
+  const language = useSelector(selectLanguage)
   const [isDisplayable, setIsDisplayable] = useState(false)
 
-  const localWalks = useSelector(state =>
-    Object.keys(state.walks.localWalks[language] || {}),
-  )
-
-  const [walks, completedWalks] = useSelector(state => {
-    let listedWalks = state.walks.fetchWalks.walks.filter(({ data }) => data.listed)
-    listedWalks = listedWalks.map(walk => ({
-      content: walk.content,
-      data: { ...walk.data, local: localWalks.indexOf(walk.data.id) > -1 },
-    }))
-    if (listedWalks) {
-      return [
-        listedWalks.filter(
-          ({ data }) => state.walks.completed.indexOf(data.id) == -1,
-        ),
-        listedWalks.filter(({ data }) => state.walks.completed.indexOf(data.id) > -1),
-      ]
-    } else {
-      return []
-    }
-  })
+  const { pendingWalks: walks, completedWalksList: completedWalks } =
+    useSelector(selectCategorizedWalks)
 
   const [refreshing, setRefreshing] = useState(false)
   const isLoading = useSelector(state => state.walks.fetchWalks.loading)

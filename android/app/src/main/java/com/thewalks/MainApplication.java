@@ -7,6 +7,7 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
+import com.facebook.react.soloader.OpenSourceMergedSoMapping;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -43,7 +44,28 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
+    try {
+      Class<?> firebaseAppClass = Class.forName("com.google.firebase.FirebaseApp");
+      java.lang.reflect.Method getAppsMethod = firebaseAppClass.getMethod("getApps", Context.class);
+      java.util.List<?> apps = (java.util.List<?>) getAppsMethod.invoke(null, this);
+      if (apps == null || apps.isEmpty()) {
+        Class<?> optionsBuilderClass = Class.forName("com.google.firebase.FirebaseOptions$Builder");
+        Object builder = optionsBuilderClass.getDeclaredConstructor().newInstance();
+        optionsBuilderClass.getMethod("setApplicationId", String.class).invoke(builder, "1:123456789012:android:0123456789abcdef012345");
+        optionsBuilderClass.getMethod("setProjectId", String.class).invoke(builder, "the-walks");
+        optionsBuilderClass.getMethod("setApiKey", String.class).invoke(builder, "AIzaSyD0123456789abcdefghijklmnopqrstu");
+        Object options = optionsBuilderClass.getMethod("build").invoke(builder);
+        Class<?> firebaseOptionsClass = Class.forName("com.google.firebase.FirebaseOptions");
+        firebaseAppClass.getMethod("initializeApp", Context.class, firebaseOptionsClass).invoke(null, this, options);
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    try {
+      SoLoader.init(this, OpenSourceMergedSoMapping.INSTANCE);
+    } catch (java.io.IOException e) {
+      throw new RuntimeException(e);
+    }
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
 

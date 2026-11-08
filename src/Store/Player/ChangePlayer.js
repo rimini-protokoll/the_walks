@@ -6,6 +6,8 @@ export default {
     title: 0,
     position: null,
     prompts: [],
+    prologues: [],
+    midWalkPrompts: [],
     setup: false,
   },
   action: createAction('player/changePlayer'),
@@ -26,6 +28,14 @@ export default {
     // when firing prompts from native progress events (see service.js).
     if (typeof payload.prompts !== 'undefined') {
       state.prompts = payload.prompts
+    }
+
+    if (typeof payload.prologues !== 'undefined') {
+      state.prologues = payload.prologues
+    }
+
+    if (typeof payload.midWalkPrompts !== 'undefined') {
+      state.midWalkPrompts = payload.midWalkPrompts
     }
 
     // True while a walk's queue is being built; guards the service PlaybackQueueEnded

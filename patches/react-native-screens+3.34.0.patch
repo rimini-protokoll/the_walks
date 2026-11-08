@@ -1,0 +1,90 @@
+--- a/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSSearchBarManagerDelegate.java
++++ b/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSSearchBarManagerDelegate.java
+@@ -14,9 +14,10 @@
+ import com.facebook.react.bridge.ColorPropConverter;
+ import com.facebook.react.bridge.ReadableArray;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNSSearchBarManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNSSearchBarManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNSSearchBarManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNSSearchBarManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNSSearchBarManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenStackHeaderConfigManagerDelegate.java
++++ b/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenStackHeaderConfigManagerDelegate.java
+@@ -13,9 +13,10 @@
+ import androidx.annotation.Nullable;
+ import com.facebook.react.bridge.ColorPropConverter;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNSScreenStackHeaderConfigManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNSScreenStackHeaderConfigManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNSScreenStackHeaderConfigManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNSScreenStackHeaderConfigManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNSScreenStackHeaderConfigManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenStackManagerDelegate.java
++++ b/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenStackManagerDelegate.java
+@@ -12,9 +12,10 @@
+ import android.view.View;
+ import androidx.annotation.Nullable;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNSScreenStackManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNSScreenStackManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNSScreenStackManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNSScreenStackManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNSScreenStackManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenManagerDelegate.java
++++ b/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenManagerDelegate.java
+@@ -14,9 +14,10 @@
+ import com.facebook.react.bridge.ColorPropConverter;
+ import com.facebook.react.bridge.ReadableMap;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNSScreenManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNSScreenManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNSScreenManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNSScreenManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNSScreenManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenStackHeaderSubviewManagerDelegate.java
++++ b/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenStackHeaderSubviewManagerDelegate.java
+@@ -12,9 +12,10 @@
+ import android.view.View;
+ import androidx.annotation.Nullable;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNSScreenStackHeaderSubviewManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNSScreenStackHeaderSubviewManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNSScreenStackHeaderSubviewManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNSScreenStackHeaderSubviewManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNSScreenStackHeaderSubviewManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenContainerManagerDelegate.java
++++ b/node_modules/react-native-screens/android/src/paper/java/com/facebook/react/viewmanagers/RNSScreenContainerManagerDelegate.java
+@@ -12,9 +12,10 @@
+ import android.view.View;
+ import androidx.annotation.Nullable;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNSScreenContainerManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNSScreenContainerManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNSScreenContainerManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNSScreenContainerManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNSScreenContainerManagerDelegate(U viewManager) {
+     super(viewManager);
+   }

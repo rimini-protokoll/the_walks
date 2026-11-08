@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, memo } from 'react'
 import { View, useWindowDimensions } from 'react-native'
 import Tile from './Tile'
 
@@ -21,14 +21,14 @@ const WalksList = ({ navigation, walks, onLoad }) => {
     if (loaded >= walks.length) {
       onLoad && onLoad()
     }
-  }, [loaded, onLoad, walks])
+  }, [loaded, onLoad, walks?.length])
 
   return (
     <View>
       <View style={ListStyle}>
-        {walks.map((walk, i) => (
+        {walks.map(walk => (
           <Tile
-            key={i}
+            key={walk.data.id}
             walk={walk}
             navigation={navigation}
             onLoad={iconLoaded}
@@ -39,4 +39,4 @@ const WalksList = ({ navigation, walks, onLoad }) => {
     </View>
   )
 }
-export default WalksList
+export default memo(WalksList)

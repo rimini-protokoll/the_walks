@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, memo } from 'react'
 import { Text, View, TouchableOpacity } from 'react-native'
 import { useDispatch } from 'react-redux'
 import { useTheme } from '@/Theme'
@@ -50,10 +50,10 @@ const Tile = ({ navigation, walk, style, onLoad, width }) => {
           },
         ]}
       >
-        {!setShow ? "\n" : shortTitle}
+        {!shortTitle ? '\n' : shortTitle}
       </Text>
     </TouchableOpacity>
   )
 }
 
-export default Tile
+export default memo(Tile)

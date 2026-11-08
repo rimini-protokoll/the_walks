@@ -14,6 +14,8 @@ import ChangePlayer from '@/Store/Player/ChangePlayer'
 import StartWalk from '@/Store/Player/StartWalk'
 import ActivityIndicator from '@/Components/ActivityIndicator'
 import TrackPlayer, { useProgress } from 'react-native-track-player'
+import { navigateAndReset } from '@/Navigators/Root'
+import UserPrompt from '@/Store/Player/UserPrompt'
 
 const debug = false
 const PLAYER_HEIGHT = 200
@@ -62,6 +64,8 @@ const VideoControl = () => {
   const paused = useSelector(state => state.player.paused)
   const userPrompt = useSelector(state => state.player.userPrompt)
   const activeWalk = useSelector(state => state.player.activeWalk)
+  const advancedControls = useSelector(state => state.walks.advancedControls)
+  const showAdvanced = debug || Boolean(advancedControls)
   const seekTo = useSelector(state => state.player.position)
   const walk = useSelector(state => {
     if (activeWalk) {
@@ -89,27 +93,54 @@ const VideoControl = () => {
   const buildWalk = useCallback(
     (_walk, parentId) => {
       dispatch(ChangePlayer.action({ setup: true }))
-      // Interleaved queue: [walk0, prompt0, walk1, prompt1, ...]. Every entry gets a
-      // unique id (walk segments reuse the same audio/artwork) so track-player's queue
-      // bookkeeping stays unambiguous.
-      const tracks = [createTrack(_walk, `${_walk.id}#seg0`)]
-      const prompts = []
 
-      const prologues = _walk.userPrompt.filter(
-        ({ triggerTime }) => triggerTime === 0,
+      const rawPrompts = _walk.userPrompt || []
+      // Prologue setup prompts appear at the start of the walk (e.g. Park, Supermarkt, Spielplatz).
+      // They have triggerTime 0 (with a known typo of 9 for Supermarkt B prompt 2 in de.md).
+      // Mid-walk prompts all have triggerTime >= 60.
+      const firstMidWalkIdx = rawPrompts.findIndex(
+        p => typeof p.triggerTime === 'number' && p.triggerTime >= 60,
       )
-      _walk.userPrompt.forEach((prompt, i) => {
-        const isLast = i === _walk.userPrompt.length - 1
-        prompts.push({
-          ...prompt,
-          index: i,
-          isLast,
-          isPrologue: prompt.triggerTime === 0,
-          isLastPrologue: prologues.indexOf(prompt) === prologues.length - 1,
-          parentId,
-          activeWalk,
-        })
+      const prologueCutoff =
+        firstMidWalkIdx === -1
+          ? (rawPrompts[0]?.triggerTime === 0 ? rawPrompts.length : 0)
+          : (rawPrompts[0]?.triggerTime === 0 ? firstMidWalkIdx : 0)
 
+      const rawPrologues = rawPrompts.slice(0, prologueCutoff)
+      const rawMidWalk = rawPrompts.slice(prologueCutoff)
+
+      const prologues = rawPrologues.map((prompt, i) => ({
+        ...prompt,
+        triggerTime: 0,
+        index: i,
+        prologueIndex: i,
+        prologueTotal: rawPrologues.length,
+        isPrologue: true,
+        isLastPrologue: i === rawPrologues.length - 1,
+        isLast: rawMidWalk.length === 0 && i === rawPrologues.length - 1,
+        parentId,
+        activeWalk,
+      }))
+
+      const midWalkPrompts = rawMidWalk.map((prompt, k) => ({
+        ...prompt,
+        index: prologueCutoff + k,
+        midWalkIndex: k,
+        isPrologue: false,
+        isLastPrologue: false,
+        isLast: k === rawMidWalk.length - 1,
+        parentId,
+        activeWalk,
+      }))
+
+      const allPrompts = [...prologues, ...midWalkPrompts]
+
+      // Build the audio queue: only mid-walk prompts are interleaved with walk segments.
+      // Prologue prompts are setup screens handled in sequence before playback starts,
+      // avoiding duplicate ExoPlayer network streams and audio bleeding in between.
+      const tracks = [createTrack(_walk, `${_walk.id}#seg0`)]
+      midWalkPrompts.forEach((prompt, k) => {
+        const isLast = k === midWalkPrompts.length - 1
         tracks.push(
           createTrack(
             {
@@ -117,22 +148,41 @@ const VideoControl = () => {
               title: prompt.title,
               iconUri: _walk.iconUri,
             },
-            `${_walk.id}#p${i}`,
+            `${_walk.id}#p${prompt.index}`,
           ),
         )
         if (!isLast) {
-          tracks.push(createTrack(_walk, `${_walk.id}#seg${i + 1}`))
+          tracks.push(createTrack(_walk, `${_walk.id}#seg${k + 1}`))
         }
       })
 
       TrackPlayer.add(tracks).then(async () => {
-        // Prompts are stored in redux so the playback service can fire them from native
-        // progress events, which keep arriving in the background (see service.js).
-        dispatch(ChangePlayer.action({ prompts }))
-        await TrackPlayer.play()
-        await TrackPlayer.seekTo(0)
-        dispatch(ChangePlayer.action({ paused: false, setup: false }))
-        setSetup(false)
+        dispatch(
+          ChangePlayer.action({
+            prompts: allPrompts,
+            prologues,
+            midWalkPrompts,
+          }),
+        )
+
+        if (prologues.length > 0) {
+          // Preload track 0 and keep paused while user steps through prologue setup prompts
+          await TrackPlayer.seekTo(0)
+          await TrackPlayer.pause()
+          dispatch(ChangePlayer.action({ paused: true, setup: false }))
+          setSetup(false)
+
+          // Immediately display the first prologue prompt
+          dispatch(UserPrompt.action(prologues[0]))
+          navigateAndReset([
+            { name: 'Main', state: { routes: [{ name: 'walk.action' }] } },
+          ])
+        } else {
+          await TrackPlayer.play()
+          await TrackPlayer.seekTo(0)
+          dispatch(ChangePlayer.action({ paused: false, setup: false }))
+          setSetup(false)
+        }
       })
     },
     [dispatch, activeWalk],
@@ -160,16 +210,18 @@ const VideoControl = () => {
 
   useEffect(() => {
     if (seekTo) {
-      // Mute, seek to the resume point, then un-mute once the seek resolves. The old
-      // version only un-muted when useProgress() happened to report a position within
-      // 1s of the target — which may never arrive on buffering audio, leaving playback
-      // silent and the UI stuck on the loading spinner.
       TrackPlayer.setVolume(0)
-      TrackPlayer.seekTo(seekTo).then(() => {
-        TrackPlayer.play()
-        TrackPlayer.setVolume(1)
-        dispatch(ChangePlayer.action({ position: null }))
-      })
+      TrackPlayer.seekTo(seekTo)
+        .then(() => {
+          TrackPlayer.play()
+          TrackPlayer.setVolume(1)
+          dispatch(ChangePlayer.action({ position: null }))
+        })
+        .catch(() => {
+          TrackPlayer.setVolume(1)
+          TrackPlayer.play()
+          dispatch(ChangePlayer.action({ position: null }))
+        })
     }
   }, [dispatch, seekTo])
 
@@ -185,7 +237,7 @@ const VideoControl = () => {
     direction => {
       let position =
         progress.position + 30 * direction * (direction === 1 ? 2 : 1)
-      position = Math.min(progress.duration - 1, position)
+      position = Math.max(0, Math.min(progress.duration - 1, position))
       TrackPlayer.seekTo(position)
     },
     [progress.duration, progress.position],
@@ -346,11 +398,11 @@ const VideoControl = () => {
           Gutters.smallHMargin,
         ]}
       >
-        {!debug ? null : (
+        {!showAdvanced ? null : (
           <Text style={[Fonts.labelSmall]}>{state.currentTimeString}</Text>
         )}
         <View style={{ flex: 1 }} />
-        {!debug ? null : (
+        {!showAdvanced ? null : (
           <Text style={[Fonts.labelSmall]}>-{state.durationString}</Text>
         )}
       </View>
@@ -361,7 +413,7 @@ const VideoControl = () => {
           justifyContent: 'space-around',
         }}
       >
-        {!debug ? null : (
+        {!showAdvanced ? null : (
           <TouchableOpacity style={styles.iconSize} onPress={() => seek(-1)}>
             <Icon name="play-back" color={Colors.text} size={iconSize} />
           </TouchableOpacity>
@@ -373,7 +425,7 @@ const VideoControl = () => {
         >
           <Image style={Fonts.iconLarge} source={playPauseIcon} />
         </TouchableOpacity>
-        {!debug ? null : (
+        {!showAdvanced ? null : (
           <TouchableOpacity style={styles.iconSize} onPress={() => seek(1)}>
             <Icon name="play-forward" color={Colors.text} size={iconSize} />
           </TouchableOpacity>

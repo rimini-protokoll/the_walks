@@ -1,0 +1,52 @@
+--- a/node_modules/react-native-gesture-handler/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerDelegate.java
++++ b/node_modules/react-native-gesture-handler/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerDelegate.java
+@@ -13,9 +13,10 @@
+ import androidx.annotation.Nullable;
+ import com.facebook.react.bridge.ColorPropConverter;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNGestureHandlerButtonManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNGestureHandlerButtonManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNGestureHandlerButtonManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNGestureHandlerButtonManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNGestureHandlerButtonManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-gesture-handler/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerDelegate.java
++++ b/node_modules/react-native-gesture-handler/android/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerDelegate.java
+@@ -12,9 +12,10 @@
+ import android.view.View;
+ import androidx.annotation.Nullable;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNGestureHandlerRootViewManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNGestureHandlerRootViewManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNGestureHandlerRootViewManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNGestureHandlerRootViewManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNGestureHandlerRootViewManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/RNGestureHandlerPackage.kt
++++ b/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/RNGestureHandlerPackage.kt
+@@ -37,15 +37,15 @@
+       RNGestureHandlerButtonViewManager()
+     )
+ 
+-  override fun getViewManagerNames(reactContext: ReactApplicationContext?) =
++  override fun getViewManagerNames(reactContext: ReactApplicationContext) =
+     viewManagers.keys.toList()
+ 
+-  override fun getViewManagers(reactContext: ReactApplicationContext?): MutableList<ModuleSpec> =
++  override fun getViewManagers(reactContext: ReactApplicationContext): MutableList<ModuleSpec> =
+     viewManagers.values.toMutableList()
+ 
+   override fun createViewManager(
+-    reactContext: ReactApplicationContext?,
+-    viewManagerName: String?
++    reactContext: ReactApplicationContext,
++    viewManagerName: String
+   ) = viewManagers[viewManagerName]?.provider?.get() as? ViewManager<*, *>
+ 
+   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {

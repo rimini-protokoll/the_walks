@@ -5,6 +5,7 @@ import {
   View,
   Text,
   TouchableOpacity,
+  BackHandler,
 } from 'react-native'
 import { useTheme } from '@/Theme'
 import { launchCamera } from 'react-native-image-picker'
@@ -36,11 +37,45 @@ const IndexUserPromptContainer = ({ navigation }) => {
     }
   })
   const userPrompt = useSelector(state => state.player.userPrompt)
+  const prologues = useSelector(state => state.player.prologues || [])
+
   useEffect(() => {
-    if (userPrompt.isLast) {
+    const onBackPress = () => {
+      if (userPrompt?.isPrologue) {
+        TrackPlayer.reset()
+        dispatch(UserPrompt.action(false))
+        dispatch(StartWalk.action(false))
+        navigation.reset({
+          index: 0,
+          routes: [
+            {
+              name: 'Main',
+              state: {
+                routes: [
+                  { name: 'The Walks' },
+                  { name: walk?.data?.id, params: { walk } },
+                ],
+              },
+            },
+          ],
+        })
+        return true
+      }
+      return false
+    }
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      onBackPress,
+    )
+    return () => subscription.remove()
+  }, [userPrompt, walk, dispatch, navigation])
+
+  useEffect(() => {
+    if (userPrompt?.isLast) {
       dispatch(CompleteWalk.action(userPrompt.parentId || userPrompt.activeWalk))
     }
-  }, [userPrompt.isLast, userPrompt.parentId, userPrompt.activeWalk, dispatch])
+  }, [userPrompt?.isLast, userPrompt?.parentId, userPrompt?.activeWalk, dispatch])
+
   const picture = action => {
     const postAction = actions[action.postAction] || actions.continue
     setIsLoading(true)
@@ -75,35 +110,77 @@ const IndexUserPromptContainer = ({ navigation }) => {
     )
   }
 
-  const resumeWalk = useCallback(() => {
-    const cb = async () => {
+  const resumeWalk = useCallback(async () => {
+    try {
       await TrackPlayer.setRepeatMode(RepeatMode.Off)
-      await TrackPlayer.setVolume(0)
-      await TrackPlayer.pause()
-      if (userPrompt.isLastPrologue) {
-        await TrackPlayer.setVolume(1)
-      }
       await TrackPlayer.skipToNext()
-      if (!userPrompt.isPrologue || userPrompt.isLastPrologue) {
-        await TrackPlayer.play()
+      if (!userPrompt.isLast && typeof userPrompt.triggerTime === 'number') {
+        await TrackPlayer.seekTo(userPrompt.triggerTime)
       }
-      if (!userPrompt.isLast) {
-        dispatch(ChangePlayer.action({ position: userPrompt.triggerTime }))
+      await TrackPlayer.setVolume(1)
+      await TrackPlayer.play()
+    } catch (err) {
+      console.warn('Error in resumeWalk:', err)
+      try {
+        await TrackPlayer.setVolume(1)
+        await TrackPlayer.play()
+      } catch (_) {}
+    }
+  }, [userPrompt])
+
+  const advancePrologueOrResume = useCallback(async () => {
+    if (userPrompt?.isPrologue && !userPrompt.isLastPrologue) {
+      // Step sequentially to the next prologue setup prompt without playing audio
+      const nextIndex =
+        (typeof userPrompt.prologueIndex === 'number'
+          ? userPrompt.prologueIndex
+          : userPrompt.index) + 1
+      const nextPrompt = prologues[nextIndex]
+      if (nextPrompt) {
+        dispatch(UserPrompt.action(nextPrompt))
+        return
       }
     }
-    cb()
-  }, [dispatch, userPrompt])
 
-  const continueWalk = useCallback(() => {
-    TrackPlayer.setVolume(0)
-    resumeWalk()
+    setIsLoading(true)
+    if (userPrompt?.isPrologue) {
+      // Last prologue prompt ("Start" button).
+      // Dismiss the prompt screen and immediately play the pre-buffered walk audio!
+      dispatch(UserPrompt.action(false))
+      dispatch(ChangePlayer.action({ paused: false, position: null }))
+      try {
+        await TrackPlayer.setVolume(1)
+        await TrackPlayer.play()
+      } catch (err) {
+        console.warn('Error starting playback after prologue:', err)
+      }
+      setIsLoading(false)
+      navigation.reset({
+        index: 0,
+        routes: [
+          {
+            name: 'Main',
+            state: {
+              routes: [
+                { name: 'The Walks' },
+                { name: walk.data.id, params: { walk } },
+              ],
+            },
+          },
+        ],
+      })
+      return
+    }
+
+    // Normal mid-walk prompt
+    await resumeWalk()
     dispatch(UserPrompt.action(false))
+    dispatch(ChangePlayer.action({ paused: false, position: null }))
     setIsLoading(false)
-    if (userPrompt.isLast) {
+    if (userPrompt?.isLast) {
       console.log('userPrompt.isLast')
       dispatch(StartWalk.action(false))
     }
-    // dispatch(ChangeWalk.action(walk.data.id))
     navigation.reset({
       index: 0,
       routes: [
@@ -118,11 +195,11 @@ const IndexUserPromptContainer = ({ navigation }) => {
         },
       ],
     })
-  }, [walk, dispatch, navigation, resumeWalk, userPrompt.isLast])
+  }, [userPrompt, prologues, dispatch, navigation, resumeWalk, walk])
 
   const map = () => {
     dispatch(UserPrompt.action(false))
-    if (userPrompt.isLast) {
+    if (userPrompt?.isLast) {
       dispatch(StartWalk.action(false))
     }
 
@@ -143,18 +220,20 @@ const IndexUserPromptContainer = ({ navigation }) => {
     })
   }
   const actions = {
-    continue: continueWalk,
+    continue: advancePrologueOrResume,
     picture,
     map,
     async geoLocation() {
       setIsLoading(true)
       await permissionsGeoLocation()
-      continueWalk()
+      setIsLoading(false)
+      advancePrologueOrResume()
     },
     async camera() {
       setIsLoading(true)
       await permissionsCamera()
-      continueWalk()
+      setIsLoading(false)
+      advancePrologueOrResume()
     },
   }
 

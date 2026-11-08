@@ -5,14 +5,19 @@ import ChangeWalk from './ChangeWalk'
 import PurchaseWalks from './PurchaseWalks'
 import DownloadWalk from './DownloadWalk'
 import CompleteWalk from './CompleteWalk'
+import ToggleAdvancedControls from './ToggleAdvancedControls'
 
-const isPro = DeviceInfo.getBundleId() === 'de.rimini-protokoll.thewalkspro'
+const isPro = [
+  'de.rimini-protokoll.thewalkspro',
+  'com.thewalkspro',
+].includes(DeviceInfo.getBundleId())
 
 const sliceInitialState = {
   selectedWalk: null,
   localWalks: {},
   completed: [],
   purchased: isPro,
+  advancedControls: false,
   fetchWalks: {
     walks: [],
   },
@@ -20,6 +25,6 @@ const sliceInitialState = {
 
 export default buildSlice(
   'walks',
-  [FetchWalks, ChangeWalk, PurchaseWalks, DownloadWalk, CompleteWalk],
+  [FetchWalks, ChangeWalk, PurchaseWalks, DownloadWalk, CompleteWalk, ToggleAdvancedControls],
   sliceInitialState,
 ).reducer

@@ -6,6 +6,7 @@ import {
   DrawerItem,
   createDrawerNavigator,
 } from '@react-navigation/drawer'
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native'
 import DeviceInfo from 'react-native-device-info'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useTheme } from '@/Theme'
@@ -42,6 +43,7 @@ const CustomDrawerContent = props => {
     galleryIsShown,
     setGalleryIsShown,
     walks,
+    allWalks,
     showGallery,
     state,
     dispatch,
@@ -129,7 +131,7 @@ const CustomDrawerContent = props => {
           onPress={() => setGalleryIsShown(false)}
           labelStyle={{ ...labelStyle, marginLeft: -25 }}
         />
-        {walks.map((walk, i) => (
+        {(allWalks || walks).map((walk, i) => (
           <DrawerItem
             label={walk.data.title}
             key={i}
@@ -142,7 +144,7 @@ const CustomDrawerContent = props => {
                     state: {
                       routes: [
                         { name: 'The Walks' },
-                        { name: 'Pictures', params: { walk: walk } },
+                        { name: `${walk.data.id}-Pictures`, params: { walk: walk } },
                       ],
                     },
                   },
@@ -214,6 +216,14 @@ const MainNavigator = ({ navigation }) => {
       return []
     }
   })
+  const allWalks = useSelector(state => {
+    const walks = state.walks.fetchWalks.walks
+    if (walks) {
+      return walks.filter(({ data }) => data.listed)
+    } else {
+      return []
+    }
+  })
   return (
     <Drawer.Navigator
       drawerContent={props => (
@@ -224,6 +234,7 @@ const MainNavigator = ({ navigation }) => {
           galleryIsShown={galleryIsShown}
           setGalleryIsShown={setGalleryIsShown}
           walks={walks}
+          allWalks={allWalks}
           dispatch={dispatch}
           Colors={Colors}
           Fonts={Fonts}
@@ -234,10 +245,28 @@ const MainNavigator = ({ navigation }) => {
         headerShown: false,
         drawerPosition: 'right',
         drawerStyle: { width: 265, paddingTop: 50 },
-        swipeEdgeWidth: 0,
+        swipeEnabled: true,
+        swipeEdgeWidth: Platform.select({ ios: 60, android: 50 }),
+        gestureHandlerProps: {
+          activeOffsetX: [-20, 0],
+          failOffsetY: [-15, 15],
+        },
       }}
     >
-      <Drawer.Screen name="Main" component={WalksNavigator} />
+      <Drawer.Screen
+        name="Main"
+        component={WalksNavigator}
+        options={({ route }) => {
+          const focusedRoute =
+            getFocusedRouteNameFromRoute(route) ?? 'The Walks'
+          const disableSwipe =
+            focusedRoute.endsWith('-Pictures') ||
+            focusedRoute === t('walk.action')
+          return {
+            swipeEnabled: !disableSwipe,
+          }
+        }}
+      />
       <Drawer.Screen name={t('about')} component={AboutContainer} />
       <Drawer.Screen name={t('news')} component={NewsContainer} />
       <Drawer.Screen

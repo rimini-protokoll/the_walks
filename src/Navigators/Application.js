@@ -15,9 +15,25 @@ import VideoControls from '@/Components/VideoControls'
 import ChangeTheme from '@/Store/Theme/ChangeTheme'
 import StartWalk from '@/Store/Player/StartWalk'
 import UserPrompt from '@/Store/Player/UserPrompt'
+import CompleteWalk from '@/Store/Walks/CompleteWalk'
+import PurchaseWalks from '@/Store/Walks/PurchaseWalks'
+import ToggleAdvancedControls from '@/Store/Walks/ToggleAdvancedControls'
 import { navigateAndSimpleReset } from '@/Navigators/Root'
 import '@/Translations'
 import i18n from 'i18next'
+
+const ALL_WALK_IDS = [
+  'uma9ooK4', // Supermarkt
+  'bee5Zah7', // Aufbruch
+  'ahvo7Cee', // Park
+  'Udie9hoh', // Steff
+  'siQu3iex', // Verkehrsinsel
+  'ChaiJ0yo', // Friedhof
+  'Eer0quuj', // Theater
+  'ohPeu2zi', // Wasser
+  'Apheek3e', // Straße
+  'Tr57Hul3', // Spielplatz
+]
 
 const Stack = createStackNavigator()
 
@@ -82,6 +98,42 @@ const ApplicationNavigator = ({ store }) => {
     },
     [dispatch],
   )
+
+  useEffect(() => {
+    const handleDeepLink = ({ url }) => {
+      if (url && url.startsWith('thewalks://unlock-maps')) {
+        dispatch(PurchaseWalks.action())
+        const currentCompleted = store.getState().walks.completed || []
+        const fetchedIds = (store.getState().walks.fetchWalks?.walks || [])
+          .map(w => w.data?.id)
+          .filter(Boolean)
+        const allIds = Array.from(new Set([...ALL_WALK_IDS, ...fetchedIds]))
+        allIds.forEach(id => {
+          if (!currentCompleted.includes(id)) {
+            dispatch(CompleteWalk.action(id))
+          }
+        })
+      } else if (
+        url &&
+        (url.startsWith('thewalks://toggle-controls') ||
+          url.startsWith('thewalks://advanced-controls') ||
+          url.startsWith('thewalks://debug-controls'))
+      ) {
+        if (url.includes('enable=true') || url.includes('mode=on') || url.endsWith('/on')) {
+          dispatch(ToggleAdvancedControls.action(true))
+        } else if (url.includes('enable=false') || url.includes('mode=off') || url.endsWith('/off')) {
+          dispatch(ToggleAdvancedControls.action(false))
+        } else {
+          dispatch(ToggleAdvancedControls.action())
+        }
+      }
+    }
+    Linking.getInitialURL().then(url => {
+      if (url) handleDeepLink({ url })
+    })
+    const sub = Linking.addEventListener('url', handleDeepLink)
+    return () => sub.remove()
+  }, [dispatch, store])
 
   useEffect(() => {
     if (isApplicationLoaded && MainNavigator != null) {

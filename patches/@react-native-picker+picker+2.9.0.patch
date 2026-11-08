@@ -1,0 +1,30 @@
+--- a/node_modules/@react-native-picker/picker/android/src/paper/java/com/facebook/react/viewmanagers/RNCAndroidDialogPickerManagerDelegate.java
++++ b/node_modules/@react-native-picker/picker/android/src/paper/java/com/facebook/react/viewmanagers/RNCAndroidDialogPickerManagerDelegate.java
+@@ -14,9 +14,10 @@
+ import com.facebook.react.bridge.ColorPropConverter;
+ import com.facebook.react.bridge.ReadableArray;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNCAndroidDialogPickerManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNCAndroidDialogPickerManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNCAndroidDialogPickerManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNCAndroidDialogPickerManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNCAndroidDialogPickerManagerDelegate(U viewManager) {
+     super(viewManager);
+   }
+--- a/node_modules/@react-native-picker/picker/android/src/paper/java/com/facebook/react/viewmanagers/RNCAndroidDropdownPickerManagerDelegate.java
++++ b/node_modules/@react-native-picker/picker/android/src/paper/java/com/facebook/react/viewmanagers/RNCAndroidDropdownPickerManagerDelegate.java
+@@ -14,9 +14,10 @@
+ import com.facebook.react.bridge.ColorPropConverter;
+ import com.facebook.react.bridge.ReadableArray;
+ import com.facebook.react.uimanager.BaseViewManagerDelegate;
+-import com.facebook.react.uimanager.BaseViewManagerInterface;
++import com.facebook.react.uimanager.BaseViewManager;
++import com.facebook.react.uimanager.LayoutShadowNode;
+ 
+-public class RNCAndroidDropdownPickerManagerDelegate<T extends View, U extends BaseViewManagerInterface<T> & RNCAndroidDropdownPickerManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
++public class RNCAndroidDropdownPickerManagerDelegate<T extends View, U extends BaseViewManager<T, ? extends LayoutShadowNode> & RNCAndroidDropdownPickerManagerInterface<T>> extends BaseViewManagerDelegate<T, U> {
+   public RNCAndroidDropdownPickerManagerDelegate(U viewManager) {
+     super(viewManager);
+   }

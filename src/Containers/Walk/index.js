@@ -151,7 +151,7 @@ const IndexWalkContainer = ({ navigation, route }) => {
         { alignContent: 'flex-start' },
       ]}
     >
-      <View style={{ height: 10 }} />
+      <View style={{ height: 65 }} />
       <View style={{ width: '35%' }}>
         <FitImage
           originalWidth={1024}

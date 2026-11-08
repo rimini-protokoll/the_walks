@@ -1,7 +1,17 @@
-import React, { useState } from 'react'
-import { Platform, View, Text, StyleSheet, Image } from 'react-native'
+import React, { useState, useMemo } from 'react'
+import {
+  Platform,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Modal,
+  Pressable,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
-import { createStackNavigator } from '@react-navigation/stack'
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack'
 import {
   MenuContainer,
   IndexWalkContainer,
@@ -11,91 +21,143 @@ import {
 import { useTheme } from '@/Theme'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { navigate } from './Root'
-import RNPickerSelect from 'react-native-picker-select'
 import { useTranslation } from 'react-i18next'
 import MenuButton from '@/Components/MenuButton'
 
 const Stack = createStackNavigator()
 
-const MapPicker = ({ navigation, walk }) => {
+const MapPicker = React.memo(({ navigation, walk }) => {
   const { t } = useTranslation()
-  const { Fonts } = useTheme()
-  const [selection, setSelection] = useState(walk)
+  const { Fonts, Colors } = useTheme()
+  const [modalVisible, setModalVisible] = useState(false)
+  const walksList = useSelector(state => state.walks.fetchWalks.walks)
   const completed = useSelector(state => state.walks.completed)
-  const completedWalks = useSelector(state => {
-    return state.walks.fetchWalks.walks.filter(
+
+  const availableWalks = useMemo(() => {
+    if (!walksList) return []
+    const listed = walksList.filter(({ data }) => data.listed)
+    return listed.filter(
       _walk => completed?.indexOf(_walk.data.id) >= 0,
     )
-  })
+  }, [walksList, completed])
 
   if (!walk) {
     return <View />
   }
-  return (
-    <RNPickerSelect
-      onValueChange={value => {
-        if (Platform.OS === 'ios') {
-          setSelection(value)
-          return
-        }
-        navigation.reset({
-          index: 0,
-          routes: [
-            {
-              name: 'Main',
-              state: {
-                routes: [
-                  { name: 'The Walks' },
-                  { name: walk.data.id, params: { walk } },
-                  {
-                    name: `${value.data.id}-Pictures`,
-                    params: { walk: value },
-                  },
-                ],
-              },
-            },
-          ],
-        })
-      }}
-      onClose={() => {
-        if (Platform.OS === 'ios') {
-          navigation.reset({
-            index: 0,
+
+  const selectWalk = targetWalk => {
+    setModalVisible(false)
+    if (targetWalk.data.id === walk.data.id) {
+      return
+    }
+    navigation.reset({
+      index: 0,
+      routes: [
+        {
+          name: 'Main',
+          state: {
             routes: [
+              { name: 'The Walks' },
+              { name: walk.data.id, params: { walk } },
               {
-                name: 'Main',
-                state: {
-                  routes: [
-                    { name: 'The Walks' },
-                    { name: walk.data.id, params: { walk } },
-                    {
-                      name: `${selection.data.id}-Pictures`,
-                      params: { walk: selection },
-                    },
-                  ],
-                },
+                name: `${targetWalk.data.id}-Pictures`,
+                params: { walk: targetWalk },
               },
             ],
-          })
-        }
-      }}
-      style={pickerSelectStyles}
-      placeholder={{ label: `- ${t('walk.pictures')} -`, value: null }}
-      items={completedWalks.map(_walk => ({
-        ..._walk,
-        label: _walk.data.shortTitle,
-        value: _walk,
-      }))}
-    >
-      <Text
-        numberOfLines={1}
-        style={[Fonts.hyperlink, Fonts.titleRegular, Fonts.textCenter]}
+          },
+        },
+      ],
+    })
+  }
+
+  return (
+    <>
+      <TouchableOpacity
+        onPress={() => setModalVisible(true)}
+        hitSlop={{ top: 20, bottom: 20, left: 20, right: 50 }}
+        pressRetentionOffset={{ top: 40, bottom: 40, left: 40, right: 50 }}
+        delayPressIn={0}
+        activeOpacity={0.7}
+        accessibilityRole="button"
+        accessibilityLabel={`${walk.data.shortTitle}, Galerie wechseln`}
+        style={styles.headerButton}
       >
-        {walk.data.shortTitle}
-      </Text>
-    </RNPickerSelect>
+        <Text
+          numberOfLines={1}
+          style={[Fonts.hyperlink, Fonts.titleRegular, Fonts.textCenter]}
+        >
+          {walk.data.shortTitle}
+        </Text>
+        <Icon
+          name="chevron-down"
+          size={14}
+          color={Colors.text}
+          style={styles.headerChevron}
+        />
+      </TouchableOpacity>
+
+      <Modal
+        visible={modalVisible}
+        transparent={true}
+        animationType="slide"
+        onRequestClose={() => setModalVisible(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <Pressable
+            style={styles.modalBackdrop}
+            onPress={() => setModalVisible(false)}
+          />
+          <View style={styles.sheetContainer}>
+            <View style={styles.sheetHandle} />
+
+            <View style={styles.sheetHeader}>
+              <Text style={styles.sheetTitle}>{t('walk.pictures')}</Text>
+              <TouchableOpacity
+                onPress={() => setModalVisible(false)}
+                hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+                style={styles.sheetCloseBtn}
+              >
+                <Icon name="close" size={20} color="#666" />
+              </TouchableOpacity>
+            </View>
+
+            <ScrollView
+              style={styles.sheetScroll}
+              showsVerticalScrollIndicator={false}
+            >
+              {availableWalks.map((item, idx) => {
+                const isSelected = item.data.id === walk.data.id
+                return (
+                  <TouchableOpacity
+                    key={item.data.id || idx}
+                    onPress={() => selectWalk(item)}
+                    activeOpacity={0.7}
+                    style={[
+                      styles.walkRow,
+                      isSelected && styles.walkRowSelected,
+                    ]}
+                  >
+                    <Text
+                      style={[
+                        styles.walkRowTitle,
+                        isSelected && styles.walkRowTitleSelected,
+                      ]}
+                    >
+                      {item.data.shortTitle}
+                    </Text>
+                    {isSelected ? (
+                      <Icon name="checkmark" size={18} color="#000" />
+                    ) : null}
+                  </TouchableOpacity>
+                )
+              })}
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
+    </>
   )
-}
+})
 
 // @refresh reset
 const WalksNavigator = ({ navigation }) => {
@@ -133,7 +195,14 @@ const WalksNavigator = ({ navigation }) => {
   })
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        gestureEnabled: true,
+        gestureDirection: 'horizontal',
+        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        gestureResponseDistance: 135,
+      }}
+    >
       {walks ? (
         <Stack.Screen
           name="The Walks"
@@ -172,7 +241,8 @@ const WalksNavigator = ({ navigation }) => {
               <MapPicker navigation={navigation} walk={walk} />
             ),
             headerTransparent: false,
-            headerRight: headerRightTransparent,
+            headerRight: () => null,
+            gestureEnabled: false,
           }}
         />
       ))}
@@ -181,6 +251,7 @@ const WalksNavigator = ({ navigation }) => {
         component={IndexUserPromptContainer}
         options={{
           headerShown: false,
+          gestureEnabled: false,
         }}
       />
     </Stack.Navigator>
@@ -189,25 +260,89 @@ const WalksNavigator = ({ navigation }) => {
 
 export default WalksNavigator
 
-const pickerSelectStyles = StyleSheet.create({
-  inputIOS: {
-    fontSize: 16,
-    paddingVertical: 12,
-    paddingHorizontal: 10,
-    borderWidth: 1,
-    borderColor: 'gray',
-    borderRadius: 4,
-    color: 'black',
-    paddingRight: 30, // to ensure the text is never behind the icon
-  },
-  inputAndroid: {
-    fontSize: 16,
-    paddingHorizontal: 10,
+const styles = StyleSheet.create({
+  headerButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     paddingVertical: 8,
-    borderWidth: 0.5,
-    borderColor: 'purple',
-    borderRadius: 8,
-    color: 'black',
-    paddingRight: 30, // to ensure the text is never behind the icon
+    paddingHorizontal: 4,
+  },
+  headerChevron: {
+    marginTop: 2,
+    marginLeft: 4,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+    justifyContent: 'flex-end',
+  },
+  modalBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+  },
+  sheetContainer: {
+    backgroundColor: '#FFFFFF',
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    paddingTop: 12,
+    paddingBottom: Platform.OS === 'ios' ? 36 : 24,
+    paddingHorizontal: 20,
+    maxHeight: '75%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: -4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 12,
+    elevation: 16,
+  },
+  sheetHandle: {
+    width: 38,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: '#D1D5DB',
+    alignSelf: 'center',
+    marginBottom: 14,
+  },
+  sheetHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingBottom: 14,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#E5E7EB',
+    marginBottom: 8,
+  },
+  sheetTitle: {
+    fontFamily: 'Bambino-Regular',
+    fontSize: 18,
+    color: '#111827',
+  },
+  sheetCloseBtn: {
+    padding: 6,
+    borderRadius: 16,
+    backgroundColor: '#F3F4F6',
+  },
+  sheetScroll: {
+    marginTop: 6,
+  },
+  walkRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 14,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    marginVertical: 2,
+  },
+  walkRowSelected: {
+    backgroundColor: '#F3F4F6',
+  },
+  walkRowTitle: {
+    fontFamily: 'Bambino-Regular',
+    fontSize: 16,
+    color: '#1F2937',
+  },
+  walkRowTitleSelected: {
+    fontWeight: 'bold',
+    color: '#000000',
   },
 })

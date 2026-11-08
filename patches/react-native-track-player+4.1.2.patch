@@ -1,0 +1,29 @@
+diff --git a/node_modules/react-native-track-player/android/src/main/java/com/doublesymmetry/trackplayer/service/MusicService.kt b/node_modules/react-native-track-player/android/src/main/java/com/doublesymmetry/trackplayer/service/MusicService.kt
+index afa6b0f..eb37b20 100644
+--- a/node_modules/react-native-track-player/android/src/main/java/com/doublesymmetry/trackplayer/service/MusicService.kt
++++ b/node_modules/react-native-track-player/android/src/main/java/com/doublesymmetry/trackplayer/service/MusicService.kt
+@@ -120,9 +120,21 @@ class MusicService : HeadlessJsTaskService() {
+             notificationBuilder.foregroundServiceBehavior = NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE
+         }
+         val notification = notificationBuilder.build()
+-        startForeground(EMPTY_NOTIFICATION_ID, notification)
+-        @Suppress("DEPRECATION")
+-        stopForeground(true)
++        try {
++            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
++                startForeground(
++                    EMPTY_NOTIFICATION_ID,
++                    notification,
++                    ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
++                )
++            } else {
++                startForeground(EMPTY_NOTIFICATION_ID, notification)
++            }
++            @Suppress("DEPRECATION")
++            stopForeground(true)
++        } catch (e: Exception) {
++            Timber.w(e, "Could not start temporary foreground notification")
++        }
+     }
+ 
+     @MainThread

@@ -46,6 +46,8 @@ yarn-error.log
 buck-out/
 \.buckd/
 *.keystore
+*.jks
+*.pem
 !debug.keystore
 
 # fastlane
@@ -67,3 +69,12 @@ buck-out/
 
 template/plugins/typescript/template/tsconfig.json
 android/app/src/main/assets/index.android.bundle
+
+# Builds & Releases
+builds/*
+!builds/*Standard*.apk
+*TheWalks-Pro*
+scripts/deploy_*.sh
+.cxx/
+**/android/app/.cxx/
+

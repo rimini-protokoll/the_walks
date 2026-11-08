@@ -48,8 +48,11 @@ module.exports = async function () {
     if (firing) {
       return
     }
-    const { activeWalk, userPrompt, prompts } = store.getState().player
-    if (!activeWalk || !prompts || !prompts.length) {
+    const { activeWalk, userPrompt, midWalkPrompts, prompts } =
+      store.getState().player
+    const activePrompts =
+      midWalkPrompts && midWalkPrompts.length ? midWalkPrompts : prompts || []
+    if (!activeWalk || !activePrompts.length) {
       return
     }
     if (userPrompt) {
@@ -60,7 +63,7 @@ module.exports = async function () {
       // Currently inside a looping prompt track (odd index) — ignore.
       return
     }
-    const prompt = prompts[event.track / 2]
+    const prompt = activePrompts[event.track / 2]
     if (!prompt || event.position < prompt.triggerTime) {
       return
     }
@@ -69,7 +72,7 @@ module.exports = async function () {
     try {
       await TrackPlayer.setRepeatMode(RepeatMode.Track)
       await TrackPlayer.skipToNext()
-      TrackPlayer.setVolume(prompt.isPrologue ? 0 : 1)
+      TrackPlayer.setVolume(1)
       await TrackPlayer.play()
       store.dispatch(ChangeWalk.action(activeWalk))
       store.dispatch(UserPrompt.action(prompt))

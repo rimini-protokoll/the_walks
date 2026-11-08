@@ -1,22 +1,25 @@
-import React, { memo, useState, useEffect, useRef } from 'react'
+import React, { memo, useState, useRef } from 'react'
 import { View, Pressable, StyleSheet, Text } from 'react-native'
 import { useTheme } from '@/Theme'
 import FitImage from 'react-native-fit-image'
 
-const getImagePath = (uri, imageWidth) => {
-  return { uri: uri + '?w=' + imageWidth }
+const getImagePath = (uri, width) => {
+  if (!uri) return { uri: '' }
+  const targetWidth = Math.min(width || 750, 1024)
+  return { uri: `${uri}?w=${targetWidth}` }
 }
 
 const Image = ({ item, imageWidth, CARD_HEIGHT, CARD_WIDTH, onPress }) => {
   const { FontSize, Fonts, Colors } = useTheme()
   const styles = useRef(getStyles({ FontSize, Fonts, Colors })).current
-  const [show, setShow] = useState(false)
   const [loaded, setLoaded] = useState(false)
 
-  useEffect(() => {
-    const showTimeout = setTimeout(() => setShow(true), 16)
-    return () => clearTimeout(showTimeout)
-  }, [])
+  const imageUri = item.image?.uri
+  const targetWidth = Math.min(imageWidth || 750, 1024)
+  const ratio =
+    item.image?.height && item.image?.width
+      ? item.image.height / item.image.width
+      : 1
 
   return (
     <Pressable
@@ -25,7 +28,7 @@ const Image = ({ item, imageWidth, CARD_HEIGHT, CARD_WIDTH, onPress }) => {
       key={'image' + item.id}
     >
       <View style={[styles.card]}>
-        {show || loaded ? (
+        {imageUri ? (
           <>
             <View
               style={{
@@ -43,17 +46,17 @@ const Image = ({ item, imageWidth, CARD_HEIGHT, CARD_WIDTH, onPress }) => {
                 }}
                 blurRadius={1}
                 resizeMode="cover"
-                indicator={true}
+                indicator={!loaded}
                 indicatorSize="large"
-                indicatorColor="#000"
-                originalWidth={16}
-                originalHeight={16 * (item.image.height / item.image.width)}
-                source={getImagePath(item.image.uri, 16)}
+                indicatorColor="#999"
+                originalWidth={64}
+                originalHeight={Math.round(64 * ratio)}
+                source={getImagePath(imageUri, 64)}
               />
             </View>
             <View
               style={{
-                opacity: loaded ? 1 : .1,
+                opacity: loaded ? 1 : 0.05,
                 position: 'absolute',
                 left: 0,
                 top: 0,
@@ -68,17 +71,19 @@ const Image = ({ item, imageWidth, CARD_HEIGHT, CARD_WIDTH, onPress }) => {
                 }}
                 resizeMode="cover"
                 indicator={false}
-                originalWidth={imageWidth}
-                originalHeight={imageWidth * (item.image.height / item.image.width)}
-                source={getImagePath(item.image.uri, imageWidth)}
+                originalWidth={targetWidth}
+                originalHeight={Math.round(targetWidth * ratio)}
+                source={getImagePath(imageUri, targetWidth)}
                 onLoad={() => setLoaded(true)}
               />
             </View>
           </>
         ) : null}
-        <Text numberOfLines={1} style={[Fonts.titleRegular, styles.date]}>
-          {item.date}
-        </Text>
+        {item.date ? (
+          <Text numberOfLines={1} style={[Fonts.titleRegular, styles.date]}>
+            {item.date}
+          </Text>
+        ) : null}
       </View>
     </Pressable>
   )
